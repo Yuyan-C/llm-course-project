@@ -95,8 +95,8 @@ This project uses Python version 3.12.
 This project uses `uv` as a build tool. Using a build tool has the advantage of
 streamlining script use as well as fix path issues related to imports.
 
-To manage the python version for your environment, you can easily use `uv` directly. 
-See the [virtualenv](#create-projects-virtual-environment) section below, and the 
+To manage the python version for your environment, you can easily use `uv` directly.
+See the [virtualenv](#create-projects-virtual-environment) section below, and the
 [official documentation](https://docs.astral.sh/uv/concepts/python-versions/) for more info.
 
 You are also free to use other means of installing and defining your python version,
