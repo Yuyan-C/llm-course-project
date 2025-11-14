@@ -165,9 +165,8 @@ quality and code analysis.
   pre-commit run --all-files
   ```
 
-- The `pre-commit` configuration executes most of the tools described in the `nox`
-  section below, except `pylint`, the stricter cyclomatic `complexity`, `mdformat`,
-  `ruff` and, of course, `test`.
+You can examine the configuration in the [.pre-commit-config.yaml](./.pre-commit-config.yaml)
+file.
 
 #### How to contribute
 
