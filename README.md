@@ -16,7 +16,7 @@ advanced tools and coding standards (though it can be expanded for such uses).
 This template creates a python package, contained in [src/](./src), that will
 contain your different modules.
 
-For more information about python packages and modules,
+For more information about python packages and modules, see
 [Python Modules and Packages – An Introduction](https://realpython.com/python-modules-packages/).
 
 ## Initialization
@@ -93,14 +93,14 @@ This project uses Python version 3.12.
 ## Build Tool
 
 This project uses `uv` as a build tool. Using a build tool has the advantage of
-streamlining script use as well as fix path issues related to imports.
+streamlining script use as well as fixing path issues related to imports.
 
 To manage the python version for your environment, you can easily use `uv` directly.
 See the [virtualenv](#create-projects-virtual-environment) section below, and the
 [official documentation](https://docs.astral.sh/uv/concepts/python-versions/) for more info.
 
 You are also free to use other means of installing and defining your python version,
-like using available cluster modules : `module load python/3.12` (on DRAC. Mila cluster
+like using available cluster modules : `module load python/3.12` (on DRAC. The Mila cluster
 doesn't have a python version higher than 3.10 as of this writing)
 
 ## Quick setup
@@ -143,7 +143,7 @@ installed and used.
 ### Pre-commit
 
 `pre-commit` is installed by default when installing the package using `uv sync`.
-This is a very lightweight library. It is used for automated and low effort code
+This is a very lightweight library. It is used for automated and low-effort code
 quality and code analysis.
 
 - To create a git `pre-commit` hook, so the tool runs before each commit automatically,
