@@ -11,48 +11,45 @@ ______________________________________________________________________
 
 ### 1. Create Your Repository
 
-The easiest way to get started is to use the GitHub UI.
+- **Recommended:** On the [template's GitHub page](https://github.com/RolnickLab/lab-uv-template), click the `Use this template` button. Do not include all branches.
 
-1. Navigate to the [template's GitHub page](https://github.com/RolnickLab/lab-uv-template).
-2. Click the `Use this template` button (top right) and select `Create a new repository`.
-3. **Do not** check the "Include all branches" box.
-4. Choose a name and description for your new repository.
-5. Clone your new repository (not the template) to your local machine.
+- **Manual:**
 
-<details>
-<summary><b>Manual Setup (Advanced)</b></summary>
+  <details>
+      <summary>Click to expand for manual setup instructions</summary>
 
-This method is longer and more error-prone, but useful if you are adding this template to an existing repository.
+  ```
+  1. Clone or download this template repository.
+  2. Create or select your new target repository on GitHub.
+  3. Copy all files and folders (except the `.git` folder) from the template into your target repository.
+  ```
 
-1. Clone or download the `lab-basic-template` repository.
-2. In your target repository, copy all files and folders **except** for the `.git` folder.
-3. If you have existing code, move it as follows:
-   - **Modules** (Python code meant to be imported) go into the `src/` folder.
-   - **Scripts** (Python files meant to be executed) go into the `scripts/` folder.
+  </details>
 
-</details>
+### 2. Transfer Existing Code (If Applicable)
 
-### 2. Configure Your Project
+- **Modules** (Python code meant to be imported) go into the `src/` folder.
+- **Scripts** (Python files meant to be executed) go into the `scripts/` folder.
 
-1. **Rename the Package (Optional, but Recommended):**
-   This allows you to use `from <package_name> import ...` instead of `from src import ...`.
+### 3. Configure the Project
 
-   - Rename the `src/` folder to your desired package name (e.g., `my_package`).
-   - **Note:** The name *must* be in `snake_case`. (Bad: `my-package`, `MyPackage`. Good: `my_package`).
-   - Open `pyproject.toml` and change line 2: `name = "src"` to `name = "my_package"`.
-
+1. **Rename the Package (Optional but Recommended):** This changes the import name from `src`.
+   - Rename the `src/` directory to your desired package name (e.g., `my_package`).
+   - **Rule:** The name **must** be `snake_case`.
+   - Update the `pyproject.toml` file. Change `name = "src"` (line 2) to `name = "my_package"`.
 2. **Update Project Metadata:**
+   - In `pyproject.toml`, edit the `description` (line 4) and `authors` (line 5).
+3. **Review Tooling:**
+   - Read the `## 📦 Package & Environment Management` section below.
+   - Pay special attention to the note on `uv.lock` if you work across multiple clusters (e.g., DRAC and Mila).
+   - The first time you run `uv sync`, it will create the `uv.lock` file, locking your dependency versions.
 
-   - In `pyproject.toml`, edit line 4 (`description`) and line 5 (`authors`) to reflect your project and name.
+### 4. Final Cleanup
 
-3. **Update This README:**
-
-   - Change the title at the top of this file (`# <YOUR_PROJECT_NAME_HERE>`) to your project's title.
-   - Write a brief description in the section directly below the title.
-
-### 3. Final Step
-
-- **Delete this entire "Template Initialization" section.** The rest of this file will serve as the `README.md` for *your* new project.
+1. **Delete This Section:** Remove this entire `## ⚠️ ATTENTION` section from your new `README.md`.
+2. **Update the README:** Change the title and description at the top of this file.
+3. **Add Instructions:** Fill out the `## 📖 Project Usage` section with instructions for *your* project.
+4. **Commit:** Commit your changes.
 
 ______________________________________________________________________
 
