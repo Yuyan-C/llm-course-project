@@ -1,173 +1,158 @@
-# README
+# \<YOUR_PROJECT_NAME_HERE>
 
-## Description
+[Provide a brief, one-sentence description of your project here.]
 
-Repository template that focuses on simplicity and ease of use.
+______________________________________________________________________
 
-This is ideal for quick projects or code publication.
+## 🚀 Template Initialization
 
-The purpose of this template is to help with code quality, structure, and
-reproducibility.
+> **IMPORTANT:** This section is for the **initial setup** of your new repository.
+> Follow these steps **once**, then **delete this entire "Template Initialization" section** from your `README.md`.
 
-This template is not intended to be used as is for libraries or applications that will
-be maintained over time. Several things are missing from it, like change logs,
-advanced tools and coding standards (though it can be expanded for such uses).
+### 1. Create Your Repository
 
-This template creates a python package, contained in [src/](./src), that will
-contain your different modules.
+The easiest way to get started is to use the GitHub UI.
 
-For more information about python packages and modules, see
-[Python Modules and Packages – An Introduction](https://realpython.com/python-modules-packages/).
+1. Navigate to the [template's GitHub page](https://github.com/RolnickLab/lab-uv-template).
+2. Click the `Use this template` button (top right) and select `Create a new repository`.
+3. **Do not** check the "Include all branches" box.
+4. Choose a name and description for your new repository.
+5. Clone your new repository (not the template) to your local machine.
 
-## Initialization
+<details>
+<summary><b>Manual Setup (Advanced)</b></summary>
 
-Please follow these steps:
+This method is longer and more error-prone, but useful if you are adding this template to an existing repository.
 
-1. Set up the repository:
+1. Clone or download the `lab-basic-template` repository.
+2. In your target repository, copy all files and folders **except** for the `.git` folder.
+3. If you have existing code, move it as follows:
+   - **Modules** (Python code meant to be imported) go into the `src/` folder.
+   - **Scripts** (Python files meant to be executed) go into the `scripts/` folder.
 
-   - Automatic way—On the [template's GitHub page](https://github.com/RolnickLab/lab-uv-template),
-     create a new repository by using the `Use this template` button, near the top right corner.
-     Do not include all branches.
+</details>
 
-     - If you already have existing code, transfer it either in [src/](src) or [scripts/](scripts),
-       depending on its nature
-       - Modules (python code that is meant to be _imported_ in other python files) should go into the
-         [src folder](src/README.md)
-       - Python scripts that are meant to be executed via the command line
-         should go into the [scripts folder](scripts/README.md)
+### 2. Configure Your Project
 
-   - It can also be done manually (though longer and more error-prone):
+1. **Rename the Package (Optional, but Recommended):**
+   This allows you to use `from <package_name> import ...` instead of `from src import ...`.
 
-     1. Clone or download the `lab-basic-template` repository (this repository)
-     2. Either start a new GitHub repository or select an existing one (the target repository)
-     3. Copy the files and folders of the `lab-basic-template` repository into your target repository.
-        - Do not copy the `.git` folder from the `lab-basic-template`.
-        - Move your existing code
-          - Modules (python code that is meant to be _imported_ in other python files) should go into the
-            [src folder](src/README.md)
-          - Python scripts that are meant to be executed via the command line
-            should go into the [scripts folder](scripts/README.md)
+   - Rename the `src/` folder to your desired package name (e.g., `my_package`).
+   - **Note:** The name *must* be in `snake_case`. (Bad: `my-package`, `MyPackage`. Good: `my_package`).
+   - Open `pyproject.toml` and change line 2: `name = "src"` to `name = "my_package"`.
 
-2. Rename the python package (optional step)—This will allow you to use `from <package_name> import ...`
-   instead of `from src import ...` :
+2. **Update Project Metadata:**
 
-   1. Rename [src folder](src) to your package name
-      - Make sure the name is in `snake_case`, like other python modules and packages.
-      - Bad examples : `my-package`, `MyPackage`, `My Package`
-      - Good example : `my_package`
-   2. Set the package name on line #2 of the [pyproject.toml](pyproject.toml) file by replacing `src` with the
-      same package name used above.
+   - In `pyproject.toml`, edit line 4 (`description`) and line 5 (`authors`) to reflect your project and name.
 
-3. Write your name on line #5 and write a short description on line #4 in [pyproject.toml](pyproject.toml)
+3. **Update This README:**
 
-4. Follow the rest of the instructions in this README
+   - Change the title at the top of this file (`# <YOUR_PROJECT_NAME_HERE>`) to your project's title.
+   - Write a brief description in the section directly below the title.
 
-5. Remove this section (_Initialization_) from the README of your target repository and modify its title
-   and description
+### 3. Final Step
 
-**Important note**
-If you are planning to use this for a new project and expect to use the DRAC cluster
-as well as other clusters/locations, it is recommended to first set up your environment
-on DRAC. The versions of Python libraries are often a bit behind compared to the Mila
-cluster.
+- **Delete this entire "Template Initialization" section.** The rest of this file will serve as the `README.md` for *your* new project.
 
-This will make your project more portable and will prevent many dependency management
-problems while working across different clusters.
+______________________________________________________________________
 
-Installing this module for the first time (see [Installation](#install-package-and-dependencies))
-will create the `uv.lock` file, which will set the different library versions used
-by the project, and therefore help with reproducibility and reduce the classic but
-annoying "but it works on my machine" situation.
+## 🐍 Python Version
 
-However, this `uv.lock` file can be problematic when using locally compiled python
-wheels.
+This project uses **Python 3.12**.
 
-If working on multiple different clusters, it might be better to add the `uv.lock`
-file to your `.gitignore`, and manage your dependencies with either explicit versions or
-capped like so : `uv add "pandas>=1.2.3,<1.3.0"`.
+The virtual environment created by `uv venv -p 3.12` will manage this. If you use other tools (like `conda` or cluster modules), ensure you are using a compatible Python version.
 
-## Python Version
+## 📦 Package & Environment Management
 
-This project uses Python version 3.12.
+This project uses **`uv`** for high-speed package and environment management.
 
-## Build Tool
+`uv` handles:
 
-This project uses `uv` as a build tool. Using a build tool has the advantage of
-streamlining script use as well as fixing path issues related to imports.
+- Creating the virtual environment (`.venv`).
+- Resolving and installing dependencies listed in `pyproject.toml`.
+- Creating a `uv.lock` file to ensure reproducible builds.
+- Installing the project's own code (from the `src/` or renamed folder) as an **editable package**. This is what allows you to use project-wide imports (e.g., `from my_package.module_a import ...`) in your scripts and notebooks.
 
-To manage the python version for your environment, you can easily use `uv` directly.
-See the [virtualenv](#create-projects-virtual-environment) section below, and the
-[official documentation](https://docs.astral.sh/uv/concepts/python-versions/) for more info.
+For more information, see the [official `uv` documentation](https://docs.astral.sh/uv/).
 
-You are also free to use other means of installing and defining your python version,
-like using available cluster modules : `module load python/3.12` (on DRAC. The Mila cluster
-doesn't have a python version higher than 3.10 as of this writing)
+## ⚡ Quick Start
 
-## Quick setup
+These steps are for anyone cloning this project to set it up for development.
 
-How to get started:
+1. **Create and Activate Virtual Environment:**
+   This command creates a `.venv` folder using the Python version specified in the project.
 
-### Create project's virtual environment
+   ```bash
+   # Create virtualenv with UV, specifying the Python version
+   uv venv -p 3.12
 
-Create a virtual environment and activate it to install your dependencies:
+   # Activate the virtual environment
+   source .venv/bin/activate
 
-```shell
-# Create virtualenv with UV directly, specifying the wanted python version
-uv venv -p 3.12
+   # To deactivate, simply run: deactivate
 
-# Activate the created virtualenv
-source .venv/bin/activate
+   # or use directly while inside the repository
+   uv run <command>
+   ```
 
-# or use directly while inside the repository
-uv run <command>
-```
+2. **Install Dependencies:**
+   This command installs all dependencies from `pyproject.toml` and locks them using `uv.lock`. It also installs your local package (e.g., `src` or `my_package`) in editable mode.
 
-### Install package and dependencies
+   ```bash
+   uv sync
+   ```
 
-1. Command to install your package : `uv sync`
-2. Command to initialize pre-commit in activated environment : `pre-commit install`
-   - If non-activated environment : `uv run pre-commit install`
+3. **Set Up Pre-commit Hooks:**
+   This will run automated code quality checks (like `ruff` and `black`) before each commit.
 
-### How to use this repository
+   ```bash
+   pre-commit install
+   ```
+
+You are now ready to start development!
+
+## 📖 Project Usage
 
 \<INSERT_YOUR_INSTRUCTIONS_HERE>
 
-## Development
+(e.g., How to run your main scripts, what the package does, basic examples)
 
-1. [Add required dependencies](./CONTRIBUTING.md#adding-dependencies)
-2. Create some new modules in the [src](src) folder!
+______________________________________________________________________
 
-If you want to contribute to this repository, some development dependencies need to be
-installed and used.
+## 🌐 Environment & Portability Note
+
+This template is designed for reproducibility using the `uv.lock` file.
+
+**Working Across Different Clusters (e.g., DRAC, Mila):**
+
+You may encounter dependency issues if you generate the `uv.lock` file on one machine (e.g., Mila, with newer libraries) and then try to `uv sync` on another (e.g., DRAC, which often has older system libraries).
+
+**Recommendation:**
+
+- **If you work on DRAC:** It is usually recommended to **first** set up your environment on DRAC, especially if you plan on using DRAC's pre-built python wheels. This ensures you are using library versions compatible with the cluster's older environment, which will also work on newer systems like Mila or your local machine.
+- **If you encounter persistent issues:** As a last resort, you can add `uv.lock` to your `.gitignore` file. This is generally discouraged as it reduces reproducibility. If you do this, you must be very careful to manage your dependencies in `pyproject.toml` with explicit version ranges (e.g., `pandas>=1.2.3,<1.3.0`).
+
+## 🛠️ Development Workflow
+
+### Adding Dependencies
+
+To add new dependencies, see the [Contributing guidelines](CONTRIBUTING.md#adding-dependencies).
 
 ### Pre-commit
 
-`pre-commit` is installed by default when installing the package using `uv sync`.
-This is a very lightweight library. It is used for automated and low-effort code
-quality and code analysis.
+This project uses `pre-commit` for automated code formatting and linting. The hooks are defined in `.pre-commit-config.yaml`.
 
-- To create a git `pre-commit` hook, so the tool runs before each commit automatically,
-  execute the following command:
-
-  ```bash
-  pre-commit install
-  ```
-
-  - This is a hands-off approach to code quality, as most of the work will be done
-    automatically each time you create a commit. It will, however, force you to fix
-    the remaining warnings after the automatic fixes.
-
-- To remove the `pre-commit` hook, execute `pre-commit clean`
-
-- To use it manually without needing to create an actual commit:
-
+- **Installation:** The `pre-commit install` command (in the [Quick Start](#quick-start)) installs git hooks that run automatically before each commit.
+- **Automatic Fixes:** When you `git commit`, `pre-commit` will run. It will automatically fix many formatting issues (like `black`). If it makes changes, your commit will be aborted. Simply `git add .` the changes and commit again.
+- **Manual Run:** You can run all checks on all files manually at any time:
   ```bash
   pre-commit run --all-files
   ```
+- **Uninstalling:** To remove the git hooks:
+  ```bash
+  pre-commit uninstall
+  ```
 
-You can examine the configuration in the [.pre-commit-config.yaml](./.pre-commit-config.yaml)
-file.
+### Contributing
 
-#### How to contribute
-
-Read and follow the [Contributing guidelines](CONTRIBUTING.md)
+Please read and follow the [Contributing guidelines](CONTRIBUTING.md) for details on submitting code, running tests, and managing dependencies.
