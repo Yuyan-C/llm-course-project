@@ -2,12 +2,17 @@
 name = "src"
 version = "0.0.0"
 description = ""
-authors = [{ name = "Your Name", email = "you@example.com" }]
+authors = [{ name = "Yuyan Chen, Othmane Echchabi", email = "you@example.com" }]
 requires-python = ">=3.12,<3.13"
 readme = "README.md"
 license = "MIT"
 dependencies = [
     "pre-commit>=4.2.0,<5",
+    "qwen-agent[code-interpreter,gui,mcp,rag]>=0.0.34",
+    "soundfile>=0.13.1",
+    "torch>=2.10.0",
+    "torchvision>=0.25.0",
+    "transformers>=5.3.0",
 ]
 
 [dependency-groups]
