@@ -7,7 +7,10 @@ requires-python = ">=3.12,<3.13"
 readme = "README.md"
 license = "MIT"
 dependencies = [
+    "datasets>=4.8.4",
+    "opencv-python>=4.13.0.92",
     "pre-commit>=4.2.0,<5",
+    "pybioclip>=2.1.1",
     "qwen-agent[code-interpreter,gui,mcp,rag]>=0.0.34",
     "soundfile>=0.13.1",
     "torch>=2.10.0",
