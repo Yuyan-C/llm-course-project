@@ -6,6 +6,7 @@ from collections.abc import Callable
 
 from src.tools.object_detection.grounding_dino import run_grounding_dino
 from src.tools.classification.bioclip_cls import run_bioclip
+from src.tools.search.web_search import run_web_search
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -154,6 +155,7 @@ def add(a: float, b: float) -> Dict[str, Any]:
 tools: List[Dict[str, Dict]] = [
     get_json_schema(run_grounding_dino),
     get_json_schema(run_bioclip),
+    get_json_schema(run_web_search),
     get_json_schema(add)
 ]
 
@@ -161,6 +163,7 @@ tools: List[Dict[str, Dict]] = [
 function_map: Dict[str, Callable] = {
     "run_grounding_dino": run_grounding_dino,
     "run_bioclip": run_bioclip,
+    "run_web_search": run_web_search,
     "add": add
 }
 
