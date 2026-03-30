@@ -13,12 +13,16 @@ def run_bioclip(image_path: str) -> Dict[str, float]:
     classifier = TreeOfLifeClassifier()
     predictions = classifier.predict(image_path, Rank.SPECIES)
 
+    results = {}
     for prediction in predictions:
-        print(prediction["species"], "-", prediction["score"])
+        species_name = prediction["species"]
+        score = prediction["score"]
+        results[species_name] = score
+
 
     
-    return predictions
+    return results
 
 if __name__ == "__main__":
     image_path = "/network/scratch/y/yuyan.chen/inquire/train/00261_Animalia_Arthropoda_Insecta_Coleoptera_Cerambycidae_Typocerus_velutinus/4e9c98d9-1fcd-41f3-a1e3-f206982e0210.jpg"
-    run_bioclip(image_path)
+    print(run_bioclip(image_path))
