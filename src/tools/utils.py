@@ -10,15 +10,12 @@ from transformers.utils import get_json_schema
 from src.tools.object_detection.grounding_dino import run_grounding_dino
 from src.tools.classification.bioclip_cls import run_bioclip
 
-TOOLS: List[Dict[str, Dict]] = [
-    get_json_schema(run_grounding_dino),
-    get_json_schema(run_bioclip),
-]
-
 FUNCTION_MAP: Dict[str, Callable] = {
     "run_grounding_dino": run_grounding_dino,
     "run_bioclip": run_bioclip,
 }
+
+TOOLS = [get_json_schema(func) for func in FUNCTION_MAP.values()]
 
 LOGGING_LEVELS = {
     'DEBUG': logging.DEBUG,
@@ -126,7 +123,7 @@ def parse_tool_calls(response_text: str) -> List[Dict[str, Any]]:
                 
 
 
-def pipeline(model: Any, tokenizer: Any, user_query: str, thinking: bool=False, max_new_tokens: int=512, max_tool_calls: int=5) -> str:
+def pipeline(model: Any, tokenizer: Any, user_query: str, config=None) -> str:
     """
     Main pipeline to process user query, generate model response, parse tool calls, execute tools, and update conversation history.
     """
@@ -137,12 +134,17 @@ def pipeline(model: Any, tokenizer: Any, user_query: str, thinking: bool=False, 
 
     round_idx = 0
 
+    thinking = config['chat_template']["enable_thinking"]
+    max_new_tokens = config['generate']["max_new_tokens"]
+    max_tool_calls = config["max_tool_calls"]
+    temperature, do_sample, top_p = config['generate']['decode']['temperature'], config['generate']['decode']['do_sample'], config['generate']['decode']['top_p']
+    
     while round_idx < max_tool_calls:
         logger.debug(f"Round {round_idx+1}")
 
         inputs = tokenizer.apply_chat_template(messages, tools=TOOLS, add_generation_prompt=True, return_tensors="pt", enable_thinking=thinking).to(model.device)
 
-        outputs = model.generate(**inputs, max_new_tokens=max_new_tokens, temperature=0.2, do_sample=True, top_p= 0.95)
+        outputs = model.generate(**inputs, max_new_tokens=max_new_tokens, temperature=temperature, do_sample=do_sample, top_p=top_p)
 
         out_text = tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=False)
 

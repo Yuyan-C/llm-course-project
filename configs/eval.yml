@@ -1,0 +1,16 @@
+
+max_tool_calls: 5
+
+chat_template:
+  enable_thinking: false
+
+model: 
+  name: "HuggingFaceTB/SmolLM3-3B"
+
+generate: 
+  max_new_tokens: 512
+  decode: 
+    # deterministic output
+    temperature: 0 
+    do_sample: false
+    top_p: 1
