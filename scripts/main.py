@@ -53,6 +53,35 @@ def pipeline(user_query: str, thinking: bool=False, max_new_tokens: int=512, max
             func_name = tool_call.get('name')
             args = tool_call.get('arguments', {})
 
+            print(f"\n [{i+1}] Executing tool call: {func_name}({args})")
+            result = execute_tool_call(func_name, args)
+
+            if "error" in result:
+                print(f"{result}, skipping appending it to the conversation history.")
+                continue
+            elif "result" in result:
+                print(f"Result: {result['result']}")
+            else:
+                print(f"Result: {result}")
+            
+
+            tool_message = {
+                'role': 'tool',
+                'name': func_name,
+                'content': json.dumps(result),
+            }
+
+            if "id" in tool_call:
+                tool_message['tool_call_id'] = tool_call['id']
+            
+            messages.append(tool_message)
+        
+        round_idx += 1
+    
+
+    model_response = pipeline(user_query, max_new_tokens=512)
+    print('\nModel response:\n', model_response)
+
             
             
 
@@ -118,7 +147,7 @@ def parse_tool_calls(response_text: str) -> List[Dict[str, Any]]:
         except Exception as e:
             pass
     
-    if not tool_call:
+    if not tool_calls:
         try:
             match = re.sarch(r"\[TOOL_CALLS\](.*?)(\[/TOOL_CALLS\]|$)", response_text, re.DOTALL)
             if match:
@@ -181,91 +210,8 @@ if __name__ == "__main__":
         tokenizer.pad_token = tokenizer.eos_token_id
 
     print("Model and tokenizer loaded successfully.")
-    
-    # image_path = "/network/scratch/y/yuyan.chen/inquire/train/00261_Animalia_Arthropoda_Insecta_Coleoptera_Cerambycidae_Typocerus_velutinus/4e9c98d9-1fcd-41f3-a1e3-f206982e0210.jpg"
 
     image_path = 'data/demo.jpg'
-
-    text_labels = [["an insect", "a white flower","a bear"]]
-
-   # user_query = "What is in the image? Here is the image path: {}".format(image_path)
-
     user_query = "Which species is it in this image? Here is the image path: {}.".format(image_path)
-
-    conversation_messages = [
-        {"role": "system", "content": "You are a helpful assistant. Use the provided tools to answer the user's question."},
-        {"role": "user", "content": user_query}
-    ]
-
-    # print("Tools passed to tokenizer:")
-    # print(json.dumps(tools, indent=2))
-
-    inputs = tokenizer.apply_chat_template(conversation_messages, tools=tools, return_tensors="pt", enable_thinking=False).to(model.device)
-   #  print(f"Input shape: {inputs['input_ids'].shape}")
-
-    outputs = model.generate(**inputs, max_new_tokens=1024, temperature=0.2, do_sample=True, top_p= 0.95)
-
-    out_text = tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=False)
-
-    print("Model output:\n")
-    print(out_text)
-
-   
-
-   # Parse function calls
-
-    tool_calls_parsed = parse_tool_calls(out_text)
-    if tool_calls_parsed:
-        print("First tool calls found: ", tool_calls_parsed)
-    else:
-        print("No tool calls found in the model output.")
-
+    pipeline(user_query, max_new_tokens=512)
     
-
-    tool_calls = [{"type": "function", "function": f} for f in tool_calls_parsed]
-
-    conversation_messages.append({"role": "assistant", "tool_calls": tool_calls})
-
-    print("Conversation messages with tool calls:", conversation_messages)
-
-
-    # Execute tool calls
-    for i, tool_call in enumerate(tool_calls_parsed):
-        func_name = tool_call.get('name')
-        args = tool_call.get('arguments', {})
-        call_id = tool_call.get('call_id', f"call_{i}")
-
-        print(f"\n [{i+1}] Executing tool call: {func_name}({args})")
-
-        result = execute_tool_call(func_name, args)
-
-        if "error" in result:
-            print(f"{result}, skipping appending it to the conversation history.")
-            continue
-
-        print(f"Result: {result}")
-
-        conversation_messages.append({
-            "role": "tool",
-            "name": func_name,
-            "content": json.dumps(result),
-            "tool_call_id": call_id
-        })
-
-
-
-        print("Conversation message after tool execution:", conversation_messages)
-
-        inputs = tokenizer.apply_chat_template(conversation_messages, tools=tools, add_generation_prompt=True, return_dict=True, return_tensors="pt", enable_thinking=False).to(model.device)
-
-        outputs = model.generate(**inputs, max_new_tokens=1024, temperature=0.1, do_sample=False, top_p= 0.95)
-
-        model_response = tokenizer.decode(outputs[0][inputs['input_ids'].shape[1]:], skip_special_tokens=True)
-
-        print("User query:\n", user_query)
-        print("Model response after tool execution:\n", model_response)
-
-
-
-
-       
