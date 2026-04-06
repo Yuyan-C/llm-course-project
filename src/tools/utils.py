@@ -9,10 +9,13 @@ from transformers.utils import get_json_schema
 
 from src.tools.object_detection.grounding_dino import run_grounding_dino
 from src.tools.classification.bioclip_cls import run_bioclip
+from src.tools.search.web_search import run_web_search
 
 FUNCTION_MAP: Dict[str, Callable] = {
     "run_grounding_dino": run_grounding_dino,
     "run_bioclip": run_bioclip,
+    "run_web_search": run_web_search
+    
 }
 
 TOOLS = [get_json_schema(func) for func in FUNCTION_MAP.values()]
@@ -133,11 +136,12 @@ def pipeline(model: Any, tokenizer: Any, user_query: str, config=None) -> str:
     ]
 
     round_idx = 0
-
-    thinking = config['chat_template']["enable_thinking"]
-    max_new_tokens = config['generate']["max_new_tokens"]
-    max_tool_calls = config["max_tool_calls"]
-    temperature, do_sample, top_p = config['generate']['decode']['temperature'], config['generate']['decode']['do_sample'], config['generate']['decode']['top_p']
+    thinking = config.chat_template.enable_thinking
+    max_new_tokens = config.generate.max_new_tokens
+    max_tool_calls = config.max_tool_calls
+    temperature = config.generate.decode.temperature
+    do_sample = config.generate.decode.do_sample
+    top_p = config.generate.decode.top_p
     
     while round_idx < max_tool_calls:
         logger.debug(f"Round {round_idx+1}")

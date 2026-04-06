@@ -7,17 +7,23 @@ requires-python = ">=3.12,<3.13"
 readme = "README.md"
 license = "MIT"
 dependencies = [
-    "accelerate>=1.13.0",
-    "datasets>=4.8.4",
+    "accelerate>=0.26.0",
+    "all_clip==1.2.0",
+    "datasets==2.19.2",
     "ddgs>=9.12.0",
-    "opencv-python>=4.13.0.92",
+    "numpy==1.26.3",
+    "opencv-python",
+    "pandas==2.2.0",
     "pre-commit>=4.2.0,<5",
     "pybioclip>=2.1.1",
+    "pyarrow==14.0.2",
     "qwen-agent[code-interpreter,gui,mcp,rag]>=0.0.34",
+    "scikit-learn==1.4.0",
     "soundfile>=0.13.1",
-    "torch>=2.10.0",
+    "torch>=2.1.2",
     "torchvision>=0.25.0",
-    "transformers>=5.3.0",
+    "transformers>=4.53.0",
+    "tqdm>=4.66.1",
 ]
 
 [dependency-groups]
