@@ -5,7 +5,6 @@ import torchvision
 import torch
 import cv2
 import numpy as np
-from PIL import Image
 
 def draw_bounding_boxes(image_path, result, output_path=None):
     """
@@ -59,11 +58,20 @@ def draw_bounding_boxes(image_path, result, output_path=None):
     return image
 
 
-def run_grounding_dino(image_path, text_labels):
+def run_grounding_dino(
+    image_path: str | None = None,
+    text_labels=None,
+    image: Image.Image | None = None,
+):
     processor = AutoProcessor.from_pretrained("IDEA-Research/grounding-dino-tiny")
     model = GroundingDinoForObjectDetection.from_pretrained("IDEA-Research/grounding-dino-tiny").to("cuda")
     model.eval()
-    image =  Image.open(image_path)
+    if image is None:
+        if not image_path:
+            raise ValueError("run_grounding_dino requires image_path or image")
+        image = Image.open(image_path)
+    if text_labels is None:
+        text_labels = []
 
     inputs = processor(images=image, text=text_labels, return_tensors="pt").to("cuda")
 
