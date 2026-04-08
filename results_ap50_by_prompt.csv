@@ -1,0 +1,13 @@
+model,prompt_type,ap50_mean,n
+biocap,Appearance,37.0916,52
+biocap,Behavior,32.4498,59
+biocap,Context,36.9269,43
+biocap,Species,42.9421,6
+bioclip,Appearance,30.0250,52
+bioclip,Behavior,24.9367,59
+bioclip,Context,30.4309,43
+bioclip,Species,44.7368,6
+vit-b-32,Appearance,26.8665,52
+vit-b-32,Behavior,31.0028,59
+vit-b-32,Context,33.7144,43
+vit-b-32,Species,35.5367,6
