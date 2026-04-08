@@ -517,7 +517,7 @@
           "step_index": 2,
           "function": "run_bioclip",
           "arguments": {
-            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04429_Animalia_Chordata_Aves_Piciformes_Picidae_Colaptes_chrysoides/0eadc660-63e9-4791-804f-2c4fac705f5a.jpg"
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04256_Animalia_Chordata_Aves_Passeriformes_Troglodytidae_Catherpes_mexicanus/1541cd8f-8955-44f3-a937-f8cc79d293c2.jpg"
           },
           "result": {
             "Catherpes mexicanus": 0.7626983523368835,
@@ -6344,5 +6344,6 @@
         }
       ]
     }
-  ]
+  ],
+  "relevant_images": []
 }
