@@ -1,0 +1,5 @@
+model,prompt_type,ap50_mean,n
+siglip-so400m-14-384,Appearance,48.1829,52
+siglip-so400m-14-384,Behavior,52.7890,59
+siglip-so400m-14-384,Context,49.2761,43
+siglip-so400m-14-384,Species,44.4081,6

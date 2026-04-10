@@ -38,19 +38,21 @@ def run_bioclip(
     inputs = _normalize_bioclip_inputs(image_path, image)
 
     outputs: List[Dict[str, float]] = []
-    for input_image in inputs:
-        predictions = classifier.predict(input_image, Rank.SPECIES)
-        results: Dict[str, float] = {}
-        for prediction in predictions:
-            species_name = prediction["species"]
-            score = prediction["score"]
-            results[species_name] = score
-        outputs.append(results)
+    predictions = classifier.predict(inputs, Rank.SPECIES)
+    return predictions
+    # for input_image in inputs:
+    #     predictions = classifier.predict(input_image, Rank.SPECIES)
+    #     results: Dict[str, float] = {}
+    #     for prediction in predictions:
+    #         species_name = prediction["species"]
+    #         score = prediction["score"]
+    #         results[species_name] = score
+    #     outputs.append(results)
 
-    if len(outputs) == 1:
-        return outputs[0]
-    return outputs
+    # if len(outputs) == 1:
+    #     return outputs[0]
+    # return outputs
 
 if __name__ == "__main__":
     image_path = "/network/scratch/y/yuyan.chen/inquire/train/00261_Animalia_Arthropoda_Insecta_Coleoptera_Cerambycidae_Typocerus_velutinus/4e9c98d9-1fcd-41f3-a1e3-f206982e0210.jpg"
-    print(run_bioclip(image_path))
+    print(run_bioclip([image_path,image_path]))

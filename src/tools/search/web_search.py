@@ -33,6 +33,7 @@ from typing import Any, Dict, Iterable, List
 import json
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+from urllib.error import URLError
 
 
 def _normalize_search_item(item: Dict[str, Any], position: int) -> Dict[str, Any]:
@@ -329,3 +330,166 @@ def run_web_search(
             "error": "All web search providers failed.",
             "details": errors,
         }
+
+
+def _normalize_image_item(item: Dict[str, Any], position: int) -> Dict[str, Any]:
+    title = item.get("title") or item.get("heading") or ""
+    url = item.get("url") or item.get("link") or item.get("image") or ""
+    image = item.get("image") or item.get("url") or ""
+    thumbnail = item.get("thumbnail") or item.get("thumb") or ""
+    source = item.get("source") or item.get("provider")
+    width = item.get("width")
+    height = item.get("height")
+
+    return {
+        "position": position,
+        "title": title,
+        "url": url,
+        "image": image,
+        "thumbnail": thumbnail,
+        "source": source,
+        "width": width,
+        "height": height,
+    }
+
+
+def _shorten_query(query: str, max_words: int = 6) -> str:
+    words = query.split()
+    if len(words) <= max_words:
+        return query
+    return " ".join(words[:max_words])
+
+
+def run_web_image_search(
+    query: str,
+    max_results: int = 5,
+    region: str = "us-en",
+    safesearch: str = "moderate",
+    backend: str = "duckduckgo",
+) -> Dict[str, Any]:
+    """
+    Search the web for images using DDGS and return structured results.
+
+    Args:
+        query: Search query string. Must be non-empty after stripping whitespace.
+        max_results: Max number of results to return, clamped to [1, 20].
+        region: Region hint passed to DDGS.
+        safesearch: Safe-search setting passed to DDGS.
+        backend: DDGS backend hint (version-dependent support).
+
+    Returns:
+        {
+            "query": "...",
+            "provider": "ddgs"|"duckduckgo_search"|"none",
+            "results": [ {"image": "...", ...}, ...],
+            "error": "..." (optional)
+        }
+    """
+    cleaned_query = query.strip()
+    if not cleaned_query:
+        raise ValueError("query must be a non-empty string.")
+
+    max_results = max(1, min(max_results, 20))
+    errors: Dict[str, str] = {}
+
+    try:
+        ddgs_cls = None
+        provider = ""
+        try:
+            from ddgs import DDGS
+
+            ddgs_cls = DDGS
+            provider = "ddgs"
+        except Exception:
+            from duckduckgo_search import DDGS
+
+            ddgs_cls = DDGS
+            provider = "duckduckgo_search"
+
+        def _fetch_images(client: Any, query_text: str) -> List[Dict[str, Any]]:
+            try:
+                raw_results = client.images(
+                    query_text,
+                    region=region,
+                    safesearch=safesearch,
+                    max_results=max_results,
+                    backend=backend,
+                )
+            except TypeError:
+                raw_results = client.images(
+                    query_text,
+                    region=region,
+                    safesearch=safesearch,
+                    max_results=max_results,
+                )
+
+            if isinstance(raw_results, list):
+                return raw_results[:max_results]
+
+            records: List[Dict[str, Any]] = []
+            for item in raw_results:
+                records.append(item)
+                if len(records) >= max_results:
+                    break
+            return records
+
+        client = ddgs_cls()
+        try:
+            records = _fetch_images(client, cleaned_query)
+            warnings: List[str] = []
+            shortened_query = _shorten_query(cleaned_query)
+            if not records and shortened_query != cleaned_query:
+                records = _fetch_images(client, shortened_query)
+                if records:
+                    warnings.append(
+                        "No results for the original query. Retried with a shorter query."
+                    )
+            response = {
+                "query": cleaned_query,
+                "provider": provider,
+                "results": [_normalize_image_item(item, idx) for idx, item in enumerate(records, start=1)],
+            }
+            if warnings:
+                response["warnings"] = warnings
+            return response
+        finally:
+            close_fn = getattr(client, "close", None)
+            if callable(close_fn):
+                close_fn()
+    except Exception as exc:
+        if "No results found" in str(exc):
+            shortened_query = _shorten_query(cleaned_query)
+            if shortened_query != cleaned_query:
+                try:
+                    client = ddgs_cls()
+                    try:
+                        records = _fetch_images(client, shortened_query)
+                    finally:
+                        close_fn = getattr(client, "close", None)
+                        if callable(close_fn):
+                            close_fn()
+                    return {
+                        "query": cleaned_query,
+                        "provider": provider or "ddgs",
+                        "results": [_normalize_image_item(item, idx) for idx, item in enumerate(records, start=1)],
+                        "warnings": [
+                            "No results for the original query. Retried with a shorter query."
+                        ],
+                    }
+                except Exception:
+                    pass
+            return {
+                "query": cleaned_query,
+                "provider": provider or "ddgs",
+                "results": [],
+                "warnings": ["No image results found for query."],
+            }
+        errors["ddgs"] = str(exc)
+
+    return {
+        "query": cleaned_query,
+        "provider": "none",
+        "results": [],
+        "error": "All image search providers failed.",
+        "details": errors,
+    }

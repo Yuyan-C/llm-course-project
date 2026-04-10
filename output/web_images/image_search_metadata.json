@@ -1,0 +1,49 @@
+{
+  "query": "African Buffalo wallowing in mud",
+  "image_urls": [
+    "https://c8.alamy.com/comp/A5314J/african-cape-buffalo-wallowing-in-a-mud-hole-masai-mara-national-reserve-A5314J.jpg",
+    "https://c8.alamy.com/comp/F9T89A/buffalo-syncerus-caffer-caffer-wallowing-in-mud-lake-mburo-national-F9T89A.jpg",
+    "https://c8.alamy.com/comp/F9T8PJ/buffalo-syncerus-caffer-caffer-wallowing-in-mud-lake-mburo-national-F9T8PJ.jpg"
+  ],
+  "image_paths": [
+    "output/web_images/african_buffalo_wallowing_in_mud_1.jpg",
+    "output/web_images/african_buffalo_wallowing_in_mud_2.jpg",
+    "output/web_images/african_buffalo_wallowing_in_mud_3.jpg"
+  ],
+  "tool_result": {
+    "query": "African Buffalo wallowing in mud",
+    "provider": "ddgs",
+    "results": [
+      {
+        "position": 1,
+        "title": "African Cape Buffalo wallowing in a mud hole Masai Mara National ...",
+        "url": "https://www.alamy.com/stock-photo-african-cape-buffalo-wallowing-in-a-mud-hole-masai-mara-national-reserve-11180225.html",
+        "image": "https://c8.alamy.com/comp/A5314J/african-cape-buffalo-wallowing-in-a-mud-hole-masai-mara-national-reserve-A5314J.jpg",
+        "thumbnail": "https://ts4.mm.bing.net/th?id=OIP.uTa4mUmjSAOikq6TRWIZtAHaFX&pid=15.1",
+        "source": "alamy.com",
+        "width": "1300",
+        "height": "942"
+      },
+      {
+        "position": 2,
+        "title": "African buffalo in mud hi-res stock photography and images - Alamy",
+        "url": "https://www.alamy.com/stock-photo/african-buffalo-in-mud.html",
+        "image": "https://c8.alamy.com/comp/F9T89A/buffalo-syncerus-caffer-caffer-wallowing-in-mud-lake-mburo-national-F9T89A.jpg",
+        "thumbnail": "https://ts2.mm.bing.net/th?id=OIP.THAunFgB7K-Vi-DI8VjNFQHaFc&pid=15.1",
+        "source": "alamy.com",
+        "width": "1300",
+        "height": "957"
+      },
+      {
+        "position": 3,
+        "title": "African buffalo in mud hi-res stock photography and images - Alamy",
+        "url": "https://www.alamy.com/stock-photo/african-buffalo-in-mud.html",
+        "image": "https://c8.alamy.com/comp/F9T8PJ/buffalo-syncerus-caffer-caffer-wallowing-in-mud-lake-mburo-national-F9T8PJ.jpg",
+        "thumbnail": "https://ts2.mm.bing.net/th?id=OIP.5uVzELTxXv_6Tq71kcflagHaFb&pid=15.1",
+        "source": "alamy.com",
+        "width": "1300",
+        "height": "954"
+      }
+    ]
+  }
+}

@@ -1,0 +1,375 @@
+[=== Module anaconda/3 loaded ===]
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: /network/scratch/y/yuyan.chen/transformers4571
+
+  added / updated specs:
+    - python=3.11
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _openmp_mutex-4.5          |           20_gnu          28 KB  conda-forge
+    bzip2-1.0.8                |       hda65f42_9         254 KB  conda-forge
+    ca-certificates-2025.1.31  |       hbcca054_0         154 KB  conda-forge
+    ld_impl_linux-64-2.45.1    |default_hbd61a6d_102         711 KB  conda-forge
+    libexpat-2.7.5             |       hecca717_0          75 KB  conda-forge
+    libffi-3.5.2               |       h3435931_0          57 KB  conda-forge
+    libgcc-15.2.0              |      he0feb66_18        1017 KB  conda-forge
+    libgcc-ng-15.2.0           |      h69a702a_18          27 KB  conda-forge
+    libgomp-15.2.0             |      he0feb66_18         589 KB  conda-forge
+    liblzma-5.8.2              |       hb03c661_0         111 KB  conda-forge
+    libnsl-2.0.1               |       hb9d3cd8_1          33 KB  conda-forge
+    libsqlite-3.52.0           |       h0c1763c_0         928 KB  conda-forge
+    libuuid-2.42               |       h5347b49_0          39 KB  conda-forge
+    libxcrypt-4.4.36           |       hd590300_1          98 KB  conda-forge
+    libzlib-1.3.2              |       h25fd6f3_2          62 KB  conda-forge
+    ncurses-6.5                |       h2d0b736_3         871 KB  conda-forge
+    openssl-3.6.2              |       h35e630c_0         3.0 MB  conda-forge
+    packaging-26.0             |     pyhcf101f3_0          70 KB  conda-forge
+    pip-26.0.1                 |     pyh8b19718_0         1.1 MB  conda-forge
+    python-3.11.15             |hd63d673_0_cpython        29.5 MB  conda-forge
+    readline-8.3               |       h853b02a_0         337 KB  conda-forge
+    setuptools-82.0.1          |     pyh332efcf_0         625 KB  conda-forge
+    tk-8.6.13                  |noxft_h366c992_103         3.1 MB  conda-forge
+    tzdata-2025c               |       hc9c84f9_1         116 KB  conda-forge
+    wheel-0.46.3               |     pyhd8ed1ab_0          31 KB  conda-forge
+    zstd-1.5.7                 |       hb78ec9c_6         587 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        43.5 MB
+
+The following NEW packages will be INSTALLED:
+
+  _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-20_gnu
+  bzip2              conda-forge/linux-64::bzip2-1.0.8-hda65f42_9
+  ca-certificates    conda-forge/linux-64::ca-certificates-2025.1.31-hbcca054_0
+  ld_impl_linux-64   conda-forge/linux-64::ld_impl_linux-64-2.45.1-default_hbd61a6d_102
+  libexpat           conda-forge/linux-64::libexpat-2.7.5-hecca717_0
+  libffi             conda-forge/linux-64::libffi-3.5.2-h3435931_0
+  libgcc             conda-forge/linux-64::libgcc-15.2.0-he0feb66_18
+  libgcc-ng          conda-forge/linux-64::libgcc-ng-15.2.0-h69a702a_18
+  libgomp            conda-forge/linux-64::libgomp-15.2.0-he0feb66_18
+  liblzma            conda-forge/linux-64::liblzma-5.8.2-hb03c661_0
+  libnsl             conda-forge/linux-64::libnsl-2.0.1-hb9d3cd8_1
+  libsqlite          conda-forge/linux-64::libsqlite-3.52.0-h0c1763c_0
+  libuuid            conda-forge/linux-64::libuuid-2.42-h5347b49_0
+  libxcrypt          conda-forge/linux-64::libxcrypt-4.4.36-hd590300_1
+  libzlib            conda-forge/linux-64::libzlib-1.3.2-h25fd6f3_2
+  ncurses            conda-forge/linux-64::ncurses-6.5-h2d0b736_3
+  openssl            conda-forge/linux-64::openssl-3.6.2-h35e630c_0
+  packaging          conda-forge/noarch::packaging-26.0-pyhcf101f3_0
+  pip                conda-forge/noarch::pip-26.0.1-pyh8b19718_0
+  python             conda-forge/linux-64::python-3.11.15-hd63d673_0_cpython
+  readline           conda-forge/linux-64::readline-8.3-h853b02a_0
+  setuptools         conda-forge/noarch::setuptools-82.0.1-pyh332efcf_0
+  tk                 conda-forge/linux-64::tk-8.6.13-noxft_h366c992_103
+  tzdata             conda-forge/noarch::tzdata-2025c-hc9c84f9_1
+  wheel              conda-forge/noarch::wheel-0.46.3-pyhd8ed1ab_0
+  zstd               conda-forge/linux-64::zstd-1.5.7-hb78ec9c_6
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages
+_openmp_mutex-4.5    | 28 KB     |            |   0% _openmp_mutex-4.5    | 28 KB     | ########## | 100% 
+tzdata-2025c         | 116 KB    |            |   0% tzdata-2025c         | 116 KB    | ########## | 100% 
+libgcc-ng-15.2.0     | 27 KB     |            |   0% libgcc-ng-15.2.0     | 27 KB     | ########## | 100% 
+libxcrypt-4.4.36     | 98 KB     |            |   0% libxcrypt-4.4.36     | 98 KB     | ########## | 100% 
+ncurses-6.5          | 871 KB    |            |   0% ncurses-6.5          | 871 KB    | ########## | 100% 
+libffi-3.5.2         | 57 KB     |            |   0% libffi-3.5.2         | 57 KB     | ########## | 100% 
+ca-certificates-2025 | 154 KB    |            |   0% ca-certificates-2025 | 154 KB    | ########## | 100% 
+readline-8.3         | 337 KB    |            |   0% readline-8.3         | 337 KB    | ########## | 100% 
+setuptools-82.0.1    | 625 KB    |            |   0% setuptools-82.0.1    | 625 KB    | ########## | 100% 
+wheel-0.46.3         | 31 KB     |            |   0% wheel-0.46.3         | 31 KB     | ########## | 100% 
+libexpat-2.7.5       | 75 KB     |            |   0% libexpat-2.7.5       | 75 KB     | ########## | 100% 
+bzip2-1.0.8          | 254 KB    |            |   0% bzip2-1.0.8          | 254 KB    | ########## | 100% 
+libuuid-2.42         | 39 KB     |            |   0% libuuid-2.42         | 39 KB     | ########## | 100% 
+packaging-26.0       | 70 KB     |            |   0% packaging-26.0       | 70 KB     | ########## | 100% 
+python-3.11.15       | 29.5 MB   |            |   0% python-3.11.15       | 29.5 MB   | #8         |  18% python-3.11.15       | 29.5 MB   | #####6     |  56% python-3.11.15       | 29.5 MB   | ########6  |  87% python-3.11.15       | 29.5 MB   | ########## | 100% 
+liblzma-5.8.2        | 111 KB    |            |   0% liblzma-5.8.2        | 111 KB    | ########## | 100% 
+libnsl-2.0.1         | 33 KB     |            |   0% libnsl-2.0.1         | 33 KB     | ########## | 100% 
+openssl-3.6.2        | 3.0 MB    |            |   0% openssl-3.6.2        | 3.0 MB    | ########## | 100% 
+libzlib-1.3.2        | 62 KB     |            |   0% libzlib-1.3.2        | 62 KB     | ########## | 100% 
+libgomp-15.2.0       | 589 KB    |            |   0% libgomp-15.2.0       | 589 KB    | ########## | 100% 
+tk-8.6.13            | 3.1 MB    |            |   0% tk-8.6.13            | 3.1 MB    | ########## | 100% 
+zstd-1.5.7           | 587 KB    |            |   0% zstd-1.5.7           | 587 KB    | ########## | 100% 
+libsqlite-3.52.0     | 928 KB    |            |   0% libsqlite-3.52.0     | 928 KB    | ########## | 100% 
+ld_impl_linux-64-2.4 | 711 KB    |            |   0% ld_impl_linux-64-2.4 | 711 KB    | ########## | 100% 
+libgcc-15.2.0        | 1017 KB   |            |   0% libgcc-15.2.0        | 1017 KB   | ########## | 100% 
+pip-26.0.1           | 1.1 MB    |            |   0% pip-26.0.1           | 1.1 MB    | ########## | 100% 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.8.3
+  latest version: 26.3.1
+
+Please update conda by running
+
+    $ conda update -n base conda
+
+
+#
+# To activate this environment, use
+#
+#     $ conda activate /network/scratch/y/yuyan.chen/transformers4571
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Collecting transformers==4.57.1
+  Downloading transformers-4.57.1-py3-none-any.whl.metadata (43 kB)
+Collecting filelock (from transformers==4.57.1)
+  Downloading filelock-3.25.2-py3-none-any.whl.metadata (2.0 kB)
+Collecting huggingface-hub<1.0,>=0.34.0 (from transformers==4.57.1)
+  Downloading huggingface_hub-0.36.2-py3-none-any.whl.metadata (15 kB)
+Collecting numpy>=1.17 (from transformers==4.57.1)
+  Downloading numpy-2.4.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Requirement already satisfied: packaging>=20.0 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from transformers==4.57.1) (26.0)
+Collecting pyyaml>=5.1 (from transformers==4.57.1)
+  Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting regex!=2019.12.17 (from transformers==4.57.1)
+  Downloading regex-2026.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting requests (from transformers==4.57.1)
+  Downloading requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers==4.57.1)
+  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Collecting safetensors>=0.4.3 (from transformers==4.57.1)
+  Downloading safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting tqdm>=4.27 (from transformers==4.57.1)
+  Downloading tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+Collecting fsspec>=2023.5.0 (from huggingface-hub<1.0,>=0.34.0->transformers==4.57.1)
+  Downloading fsspec-2026.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting hf-xet<2.0.0,>=1.1.3 (from huggingface-hub<1.0,>=0.34.0->transformers==4.57.1)
+  Downloading hf_xet-1.4.3-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting typing-extensions>=3.7.4.3 (from huggingface-hub<1.0,>=0.34.0->transformers==4.57.1)
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting charset_normalizer<4,>=2 (from requests->transformers==4.57.1)
+  Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting idna<4,>=2.5 (from requests->transformers==4.57.1)
+  Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting urllib3<3,>=1.26 (from requests->transformers==4.57.1)
+  Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2023.5.7 (from requests->transformers==4.57.1)
+  Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+Downloading transformers-4.57.1-py3-none-any.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 78.5 MB/s  0:00:00
+Downloading huggingface_hub-0.36.2-py3-none-any.whl (566 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.4/566.4 kB 10.7 MB/s  0:00:00
+Downloading hf_xet-1.4.3-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 32.8 MB/s  0:00:00
+Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 30.0 MB/s  0:00:00
+Downloading fsspec-2026.3.0-py3-none-any.whl (202 kB)
+Downloading numpy-2.4.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 82.4 MB/s  0:00:00
+Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 8.5 MB/s  0:00:00
+Downloading regex-2026.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (799 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 799.8/799.8 kB 19.2 MB/s  0:00:00
+Downloading safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (507 kB)
+Downloading tqdm-4.67.3-py3-none-any.whl (78 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading filelock-3.25.2-py3-none-any.whl (26 kB)
+Downloading requests-2.33.1-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.7-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (214 kB)
+Downloading idna-3.11-py3-none-any.whl (71 kB)
+Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+Installing collected packages: urllib3, typing-extensions, tqdm, safetensors, regex, pyyaml, numpy, idna, hf-xet, fsspec, filelock, charset_normalizer, certifi, requests, huggingface-hub, tokenizers, transformers
+
+Successfully installed certifi-2026.2.25 charset_normalizer-3.4.7 filelock-3.25.2 fsspec-2026.3.0 hf-xet-1.4.3 huggingface-hub-0.36.2 idna-3.11 numpy-2.4.4 pyyaml-6.0.3 regex-2026.4.4 requests-2.33.1 safetensors-0.7.0 tokenizers-0.22.2 tqdm-4.67.3 transformers-4.57.1 typing-extensions-4.15.0 urllib3-2.6.3
+Collecting torch
+  Downloading torch-2.11.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (29 kB)
+Collecting pillow
+  Downloading pillow-12.2.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting einops
+  Downloading einops-0.8.2-py3-none-any.whl.metadata (13 kB)
+Collecting torchvision
+  Downloading torchvision-0.26.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting accelerate
+  Downloading accelerate-1.13.0-py3-none-any.whl.metadata (19 kB)
+Collecting decord2
+  Downloading decord2-3.3.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (686 bytes)
+Collecting molmo_utils
+  Downloading molmo_utils-0.0.1-py3-none-any.whl.metadata (17 kB)
+Requirement already satisfied: filelock in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from torch) (3.25.2)
+Requirement already satisfied: typing-extensions>=4.10.0 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from torch) (4.15.0)
+Collecting setuptools<82 (from torch)
+  Downloading setuptools-81.0.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting sympy>=1.13.3 (from torch)
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx>=2.5.1 (from torch)
+  Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting jinja2 (from torch)
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Requirement already satisfied: fsspec>=0.8.5 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from torch) (2026.3.0)
+Collecting cuda-toolkit==13.0.2 (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading cuda_toolkit-13.0.2-py2.py3-none-any.whl.metadata (9.4 kB)
+Collecting cuda-bindings<14,>=13.0.3 (from torch)
+  Downloading cuda_bindings-13.2.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+Collecting nvidia-cudnn-cu13==9.19.0.56 (from torch)
+  Downloading nvidia_cudnn_cu13-9.19.0.56-py3-none-manylinux_2_27_x86_64.whl.metadata (1.9 kB)
+Collecting nvidia-cusparselt-cu13==0.8.0 (from torch)
+  Downloading nvidia_cusparselt_cu13-0.8.0-py3-none-manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting nvidia-nccl-cu13==2.28.9 (from torch)
+  Downloading nvidia_nccl_cu13-2.28.9-py3-none-manylinux_2_18_x86_64.whl.metadata (2.0 kB)
+Collecting nvidia-nvshmem-cu13==3.4.5 (from torch)
+  Downloading nvidia_nvshmem_cu13-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+Collecting triton==3.6.0 (from torch)
+  Downloading triton-3.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cublas==13.1.0.3.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_cublas-13.1.0.3-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-runtime==13.0.96.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_cuda_runtime-13.0.96-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cufft==12.0.0.61.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_cufft-12.0.0.61-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cufile==1.15.1.6.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_cufile-1.15.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-cupti==13.0.85.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_cuda_cupti-13.0.85-py3-none-manylinux_2_25_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-curand==10.4.0.35.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_curand-10.4.0.35-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusolver==12.0.4.66.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_cusolver-12.0.4.66-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusparse==12.6.3.3.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_cusparse-12.6.3.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvjitlink==13.0.88.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_nvjitlink-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-nvrtc==13.0.88.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_cuda_nvrtc-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-nvtx==13.0.85.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch)
+  Downloading nvidia_nvtx-13.0.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata (1.8 kB)
+Collecting cuda-pathfinder~=1.1 (from cuda-bindings<14,>=13.0.3->torch)
+  Downloading cuda_pathfinder-1.5.2-py3-none-any.whl.metadata (1.9 kB)
+Requirement already satisfied: numpy in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from torchvision) (2.4.4)
+Requirement already satisfied: packaging>=20.0 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from accelerate) (26.0)
+Collecting psutil (from accelerate)
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Requirement already satisfied: pyyaml in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from accelerate) (6.0.3)
+Requirement already satisfied: huggingface_hub>=0.21.0 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from accelerate) (0.36.2)
+Requirement already satisfied: safetensors>=0.4.3 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from accelerate) (0.7.0)
+Requirement already satisfied: requests in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from molmo_utils) (2.33.1)
+Collecting av (from molmo_utils)
+  Downloading av-17.0.0-cp311-abi3-manylinux_2_28_x86_64.whl.metadata (4.6 kB)
+Requirement already satisfied: hf-xet<2.0.0,>=1.1.3 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from huggingface_hub>=0.21.0->accelerate) (1.4.3)
+Requirement already satisfied: tqdm>=4.42.1 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from huggingface_hub>=0.21.0->accelerate) (4.67.3)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch)
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->torch)
+  Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Requirement already satisfied: charset_normalizer<4,>=2 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from requests->molmo_utils) (3.4.7)
+Requirement already satisfied: idna<4,>=2.5 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from requests->molmo_utils) (3.11)
+Requirement already satisfied: urllib3<3,>=1.26 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from requests->molmo_utils) (2.6.3)
+Requirement already satisfied: certifi>=2023.5.7 in /network/scratch/y/yuyan.chen/transformers4571/lib/python3.11/site-packages (from requests->molmo_utils) (2026.2.25)
+Downloading torch-2.11.0-cp311-cp311-manylinux_2_28_x86_64.whl (530.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 530.6/530.6 MB 72.7 MB/s  0:00:06
+Downloading cuda_toolkit-13.0.2-py2.py3-none-any.whl (2.4 kB)
+Downloading nvidia_cudnn_cu13-9.19.0.56-py3-none-manylinux_2_27_x86_64.whl (366.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 366.1/366.1 MB 82.8 MB/s  0:00:04
+Downloading nvidia_cusparselt_cu13-0.8.0-py3-none-manylinux2014_x86_64.whl (169.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 169.9/169.9 MB 91.3 MB/s  0:00:01
+Downloading nvidia_nccl_cu13-2.28.9-py3-none-manylinux_2_18_x86_64.whl (196.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.5/196.5 MB 85.9 MB/s  0:00:02
+Downloading nvidia_nvshmem_cu13-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (60.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.4/60.4 MB 68.6 MB/s  0:00:00
+Downloading triton-3.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (188.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 188.2/188.2 MB 60.8 MB/s  0:00:03
+Downloading cuda_bindings-13.2.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 76.6 MB/s  0:00:00
+Downloading cuda_pathfinder-1.5.2-py3-none-any.whl (49 kB)
+Downloading nvidia_cublas-13.1.0.3-py3-none-manylinux_2_27_x86_64.whl (423.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 423.1/423.1 MB 84.3 MB/s  0:00:04
+Downloading nvidia_cuda_cupti-13.0.85-py3-none-manylinux_2_25_x86_64.whl (10.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.7/10.7 MB 81.6 MB/s  0:00:00
+Downloading nvidia_cuda_nvrtc-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (90.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.2/90.2 MB 85.7 MB/s  0:00:01
+Downloading nvidia_cuda_runtime-13.0.96-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 55.5 MB/s  0:00:00
+Downloading nvidia_cufft-12.0.0.61-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (214.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.1/214.1 MB 89.4 MB/s  0:00:02
+Downloading nvidia_cufile-1.15.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 34.9 MB/s  0:00:00
+Downloading nvidia_curand-10.4.0.35-py3-none-manylinux_2_27_x86_64.whl (59.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.5/59.5 MB 89.7 MB/s  0:00:00
+Downloading nvidia_cusolver-12.0.4.66-py3-none-manylinux_2_27_x86_64.whl (200.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.9/200.9 MB 82.8 MB/s  0:00:02
+Downloading nvidia_cusparse-12.6.3.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (145.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 145.9/145.9 MB 89.0 MB/s  0:00:01
+Downloading nvidia_nvjitlink-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (40.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.7/40.7 MB 13.9 MB/s  0:00:02
+Downloading nvidia_nvtx-13.0.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (148 kB)
+Downloading setuptools-81.0.0-py3-none-any.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 27.3 MB/s  0:00:00
+Downloading pillow-12.2.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 77.3 MB/s  0:00:00
+Downloading einops-0.8.2-py3-none-any.whl (65 kB)
+Downloading torchvision-0.26.0-cp311-cp311-manylinux_2_28_x86_64.whl (7.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.5/7.5 MB 76.8 MB/s  0:00:00
+Downloading accelerate-1.13.0-py3-none-any.whl (383 kB)
+Downloading decord2-3.3.0-cp311-cp311-manylinux_2_28_x86_64.whl (27.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 27.4/27.4 MB 87.0 MB/s  0:00:00
+Downloading molmo_utils-0.0.1-py3-none-any.whl (16 kB)
+Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 47.0 MB/s  0:00:00
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Downloading av-17.0.0-cp311-abi3-manylinux_2_28_x86_64.whl (36.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.4/36.4 MB 53.0 MB/s  0:00:00
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Installing collected packages: nvidia-cusparselt-cu13, mpmath, cuda-toolkit, triton, sympy, setuptools, psutil, pillow, nvidia-nvtx, nvidia-nvshmem-cu13, nvidia-nvjitlink, nvidia-nccl-cu13, nvidia-curand, nvidia-cufile, nvidia-cuda-runtime, nvidia-cuda-nvrtc, nvidia-cuda-cupti, nvidia-cublas, networkx, MarkupSafe, einops, decord2, cuda-pathfinder, av, nvidia-cusparse, nvidia-cufft, nvidia-cudnn-cu13, jinja2, cuda-bindings, nvidia-cusolver, torch, torchvision, molmo_utils, accelerate
+  Attempting uninstall: setuptools
+    Found existing installation: setuptools 82.0.1
+    Uninstalling setuptools-82.0.1:
+      Successfully uninstalled setuptools-82.0.1
+
+Successfully installed MarkupSafe-3.0.3 accelerate-1.13.0 av-17.0.0 cuda-bindings-13.2.0 cuda-pathfinder-1.5.2 cuda-toolkit-13.0.2 decord2-3.3.0 einops-0.8.2 jinja2-3.1.6 molmo_utils-0.0.1 mpmath-1.3.0 networkx-3.6.1 nvidia-cublas-13.1.0.3 nvidia-cuda-cupti-13.0.85 nvidia-cuda-nvrtc-13.0.88 nvidia-cuda-runtime-13.0.96 nvidia-cudnn-cu13-9.19.0.56 nvidia-cufft-12.0.0.61 nvidia-cufile-1.15.1.6 nvidia-curand-10.4.0.35 nvidia-cusolver-12.0.4.66 nvidia-cusparse-12.6.3.3 nvidia-cusparselt-cu13-0.8.0 nvidia-nccl-cu13-2.28.9 nvidia-nvjitlink-13.0.88 nvidia-nvshmem-cu13-3.4.5 nvidia-nvtx-13.0.85 pillow-12.2.0 psutil-7.2.2 setuptools-81.0.0 sympy-1.14.0 torch-2.11.0 torchvision-0.26.0 triton-3.6.0
+Traceback (most recent call last):
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/scripts/eval_rerank_with_llm.py", line 7, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+
+======== GPU REPORT ========
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Wed Apr  8 22:30:16 2026
+Driver Version                            : 580.95.05
+CUDA Version                              : 13.0
+
+Attached GPUs                             : 1
+GPU 00000000:4A:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes                   : None
+
+Wed Apr  8 22:30:16 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000000:4A:00.0 Off |                    0 |
+| N/A   26C    P8             33W /  325W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+

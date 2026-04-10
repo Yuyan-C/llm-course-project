@@ -23,7 +23,7 @@ init_prompt: |
 
   Step 2: Open-Vocabulary Object Detection (OVD) Decision
   Decide whether open-vocabulary object detection (e.g., Grounding DINO) would improve filtering. If yes:
-  - Generate a set of detection prompts (object names, attributes, or phrases).
+  - Generate a set of detection prompts (object names, attributes, or phrases). The prompts should be derived from the original or rewritten text prompt and should be designed to capture key visual elements relevant to the user's query. Make sure the prompts use generic language that is likely to be recognized by the OVD model, and avoid domain-specific jargons. If the original prompt contains species names, consider using a name for the higher taxonomic group (e.g., "bird" instead of "sparrow") or descriptive attributes (e.g., "small brown bird") as OVD prompts to increase the chances of detection. If the prompt is already visually descriptive and likely to be well-handled by the OVD model, you may choose to use the original prompt directly as the detection prompt.
   - Run Grounding DINO on all images using these prompts.
   - Obtain bounding boxes, confidence scores, and labels.
   - Use detection outputs to filter out irrelevant images and/or provide region proposals for downstream processing.
@@ -43,6 +43,11 @@ init_prompt: |
   - Prompt rewriting
   - OVD filtering
   - Species classification
+
+  Step 5: Relevance Decision (LLM Judge)
+  The final image relevance decision will be made by a strict LLM judge that only
+  sees the Grounding DINO detections and BioCLIP top predictions. Ensure your plan
+  runs the needed tools so those outputs are available for the judge.
 
   Your output MUST contain exactly two sections in this order:
 

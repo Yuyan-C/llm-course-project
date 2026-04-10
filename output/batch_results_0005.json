@@ -1,0 +1,2590 @@
+{
+  "query": "A tamandua anteater pup clinging to its mother's back",
+  "model_response": "```json\n{\n  \"Step 1\": {\"function\": \"run_grounding_dino\", \"arguments\": {\"image_path\": \"image_path\", \"text_labels\": [\"tamandua anteater pup\", \"cling\", \"mother's back\"]}},\n  \"Step 2\": {\"function\": \"run_bioclip\", \"arguments\": {\"image_path\": \"image_path\"}}\n}\n```\n\n### Plan Summary:\n- **Step 1:** Use Grounding DINO to detect instances of \"tamandua anteater pup,\" \"cling,\" and \"mother's back\" in the input image. This will help identify the relevant visual elements for filtering.\n- **Step 2:** Run BioCLIP classification on the image to determine the species of the tamandua anteater pup and filter out images that do not match the target species.\n\n### Execution Plan:\n{\n  \"Step 1\": {\"function\": \"run_grounding_dino\", \"arguments\": {\"image_path\": \"image_path\", \"text_labels\": [\"tamandua anteater pup\", \"cling\", \"mother's back\"]}},\n  \"Step 2\": {\"function\": \"run_bioclip\", \"arguments\": {\"image_path\": \"image_path\"}}\n}<|im_end|>",
+  "plan_calls": [
+    {
+      "name": "run_grounding_dino",
+      "arguments": {
+        "image_path": "image_path",
+        "text_labels": [
+          "tamandua anteater pup",
+          "cling",
+          "mother's back"
+        ]
+      }
+    },
+    {
+      "name": "run_bioclip",
+      "arguments": {
+        "image_path": "image_path"
+      }
+    }
+  ],
+  "num_images": 20,
+  "results": [
+    {
+      "image_index": 0,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/00b31977-5b67-4c69-8d80-fb31ff432699.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/00b31977-5b67-4c69-8d80-fb31ff432699.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.35305464267730713
+            ],
+            "boxes": [
+              [
+                160.11019897460938,
+                117.5003433227539,
+                369.54571533203125,
+                217.3031005859375
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/00b31977-5b67-4c69-8d80-fb31ff432699.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/00b31977-5b67-4c69-8d80-fb31ff432699.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.6050769686698914
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/00b31977-5b67-4c69-8d80-fb31ff432699.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.035348109900951385
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/00b31977-5b67-4c69-8d80-fb31ff432699.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mephitidae",
+              "genus": "Mydaus",
+              "species_epithet": "javanensis",
+              "species": "Mydaus javanensis",
+              "common_name": "Sunda stink badger",
+              "score": 0.03272484615445137
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/00b31977-5b67-4c69-8d80-fb31ff432699.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Cercopithecidae",
+              "genus": "Colobus",
+              "species_epithet": "vellerosus",
+              "species": "Colobus vellerosus",
+              "common_name": "Ursine colobus",
+              "score": 0.030405787751078606
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/00b31977-5b67-4c69-8d80-fb31ff432699.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Cercopithecidae",
+              "genus": "Allochrocebus",
+              "species_epithet": "lhoesti",
+              "species": "Allochrocebus lhoesti",
+              "common_name": "L'hoest's monkey",
+              "score": 0.0190739668905735
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 1,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/01d21ce6-14e5-466d-ad4f-64dab9296009.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/01d21ce6-14e5-466d-ad4f-64dab9296009.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.6354926228523254,
+              0.37846899032592773
+            ],
+            "boxes": [
+              [
+                178.15464782714844,
+                133.52659606933594,
+                344.20513916015625,
+                219.86697387695312
+              ],
+              [
+                218.048583984375,
+                134.03994750976562,
+                328.0943298339844,
+                185.25100708007812
+              ]
+            ],
+            "text_labels": [
+              "",
+              ""
+            ],
+            "labels": [
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/01d21ce6-14e5-466d-ad4f-64dab9296009.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/01d21ce6-14e5-466d-ad4f-64dab9296009.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.7984511852264404
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/01d21ce6-14e5-466d-ad4f-64dab9296009.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.15784212946891785
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/01d21ce6-14e5-466d-ad4f-64dab9296009.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mephitidae",
+              "genus": "Mydaus",
+              "species_epithet": "javanensis",
+              "species": "Mydaus javanensis",
+              "common_name": "Sunda stink badger",
+              "score": 0.02301684021949768
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/01d21ce6-14e5-466d-ad4f-64dab9296009.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mustelidae",
+              "genus": "Arctonyx",
+              "species_epithet": "albogularis",
+              "species": "Arctonyx albogularis",
+              "common_name": "Northern hog-badger",
+              "score": 0.0068675982765853405
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/01d21ce6-14e5-466d-ad4f-64dab9296009.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mephitidae",
+              "genus": "Conepatus",
+              "species_epithet": "semistriatus",
+              "species": "Conepatus semistriatus",
+              "common_name": "Striped hog-nosed skunk",
+              "score": 0.0011067928280681372
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 2,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/0286174f-0fc9-4cf5-a307-3187c7f2dfdd.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/0286174f-0fc9-4cf5-a307-3187c7f2dfdd.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.6399415135383606
+            ],
+            "boxes": [
+              [
+                197.86349487304688,
+                17.265132904052734,
+                429.1197509765625,
+                373.2568054199219
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/0286174f-0fc9-4cf5-a307-3187c7f2dfdd.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/0286174f-0fc9-4cf5-a307-3187c7f2dfdd.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.6493982076644897
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/0286174f-0fc9-4cf5-a307-3187c7f2dfdd.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.26484835147857666
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/0286174f-0fc9-4cf5-a307-3187c7f2dfdd.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Myrmecophaga",
+              "species_epithet": "tridactyla",
+              "species": "Myrmecophaga tridactyla",
+              "common_name": "Giant anteater",
+              "score": 0.02056707814335823
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/0286174f-0fc9-4cf5-a307-3187c7f2dfdd.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.01974358595907688
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/0286174f-0fc9-4cf5-a307-3187c7f2dfdd.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Pitheciidae",
+              "genus": "Pithecia",
+              "species_epithet": "hirsuta",
+              "species": "Pithecia hirsuta",
+              "common_name": "Hairy saki",
+              "score": 0.0028799038846045732
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 3,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03733f17-ba88-4abe-9774-16b6bf3a9a13.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03733f17-ba88-4abe-9774-16b6bf3a9a13.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.5571548938751221,
+              0.35188058018684387
+            ],
+            "boxes": [
+              [
+                266.97686767578125,
+                110.11851501464844,
+                485.16485595703125,
+                227.85191345214844
+              ],
+              [
+                282.9491271972656,
+                111.981689453125,
+                444.00653076171875,
+                220.2575225830078
+              ]
+            ],
+            "text_labels": [
+              "",
+              ""
+            ],
+            "labels": [
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03733f17-ba88-4abe-9774-16b6bf3a9a13.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03733f17-ba88-4abe-9774-16b6bf3a9a13.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.3456753194332123
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03733f17-ba88-4abe-9774-16b6bf3a9a13.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.23674120008945465
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03733f17-ba88-4abe-9774-16b6bf3a9a13.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mustelidae",
+              "genus": "Mellivora",
+              "species_epithet": "capensis",
+              "species": "Mellivora capensis",
+              "common_name": "Honey Badger",
+              "score": 0.1496141254901886
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03733f17-ba88-4abe-9774-16b6bf3a9a13.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mephitidae",
+              "genus": "Conepatus",
+              "species_epithet": "leuconotus",
+              "species": "Conepatus leuconotus",
+              "common_name": "Eastern hog-nosed skunk",
+              "score": 0.09924262017011642
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03733f17-ba88-4abe-9774-16b6bf3a9a13.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mephitidae",
+              "genus": "Conepatus",
+              "species_epithet": "semistriatus",
+              "species": "Conepatus semistriatus",
+              "common_name": "Striped hog-nosed skunk",
+              "score": 0.06280296295881271
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 4,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03f0dabd-e016-4299-ace8-66c3fce7f62a.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03f0dabd-e016-4299-ace8-66c3fce7f62a.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.6800638437271118
+            ],
+            "boxes": [
+              [
+                209.44007873535156,
+                120.78654479980469,
+                280.33831787109375,
+                243.22569274902344
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03f0dabd-e016-4299-ace8-66c3fce7f62a.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03f0dabd-e016-4299-ace8-66c3fce7f62a.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.8461974859237671
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03f0dabd-e016-4299-ace8-66c3fce7f62a.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.05338995158672333
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03f0dabd-e016-4299-ace8-66c3fce7f62a.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "",
+              "order": "Gymnotiformes",
+              "family": "Apteronotidae",
+              "genus": "Orthosternarchus",
+              "species_epithet": "tamandua",
+              "species": "Orthosternarchus tamandua",
+              "common_name": "",
+              "score": 0.007719123270362616
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03f0dabd-e016-4299-ace8-66c3fce7f62a.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Cercopithecidae",
+              "genus": "Cercopithecus",
+              "species_epithet": "wolfi",
+              "species": "Cercopithecus wolfi",
+              "common_name": "Wolf's monkey",
+              "score": 0.006158401258289814
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03f0dabd-e016-4299-ace8-66c3fce7f62a.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Cyclopedidae",
+              "genus": "Cyclopes",
+              "species_epithet": "dorsalis",
+              "species": "Cyclopes dorsalis",
+              "common_name": "Central american silky anteater",
+              "score": 0.004006125498563051
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 5,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/103192c8-9155-45ee-b77e-4efffe91f751.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/103192c8-9155-45ee-b77e-4efffe91f751.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.5552757978439331
+            ],
+            "boxes": [
+              [
+                82.71177673339844,
+                23.57895278930664,
+                332.2686462402344,
+                304.9337158203125
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/103192c8-9155-45ee-b77e-4efffe91f751.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/103192c8-9155-45ee-b77e-4efffe91f751.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.5557512044906616
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/103192c8-9155-45ee-b77e-4efffe91f751.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.1575721800327301
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/103192c8-9155-45ee-b77e-4efffe91f751.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Viverridae",
+              "genus": "Hemigalus",
+              "species_epithet": "derbyanus",
+              "species": "Hemigalus derbyanus",
+              "common_name": "Banded palm civet",
+              "score": 0.016746291890740395
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/103192c8-9155-45ee-b77e-4efffe91f751.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Procyonidae",
+              "genus": "Bassariscus",
+              "species_epithet": "sumichrasti",
+              "species": "Bassariscus sumichrasti",
+              "common_name": "Cacomistle",
+              "score": 0.015846243128180504
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/103192c8-9155-45ee-b77e-4efffe91f751.jpg",
+              "kingdom": "Metazoa",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "",
+              "genus": "Theria",
+              "species_epithet": "Paradoxurus hermaphroditus (Pallas, 1777)",
+              "species": "Theria Paradoxurus hermaphroditus (Pallas, 1777)",
+              "common_name": "",
+              "score": 0.00936055090278387
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 6,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/107cc387-fed0-4d3a-b788-fbc6a80d09d0.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/107cc387-fed0-4d3a-b788-fbc6a80d09d0.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.6671505570411682,
+              0.31698867678642273
+            ],
+            "boxes": [
+              [
+                71.22846984863281,
+                17.42477035522461,
+                248.11988830566406,
+                349.82354736328125
+              ],
+              [
+                72.01447296142578,
+                18.027496337890625,
+                248.4661865234375,
+                349.9127502441406
+              ]
+            ],
+            "text_labels": [
+              "",
+              ""
+            ],
+            "labels": [
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/107cc387-fed0-4d3a-b788-fbc6a80d09d0.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/107cc387-fed0-4d3a-b788-fbc6a80d09d0.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.77622389793396
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/107cc387-fed0-4d3a-b788-fbc6a80d09d0.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.18998253345489502
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/107cc387-fed0-4d3a-b788-fbc6a80d09d0.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Cyclopedidae",
+              "genus": "Cyclopes",
+              "species_epithet": "dorsalis",
+              "species": "Cyclopes dorsalis",
+              "common_name": "Central american silky anteater",
+              "score": 0.004607574548572302
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/107cc387-fed0-4d3a-b788-fbc6a80d09d0.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Indriidae",
+              "genus": "Propithecus",
+              "species_epithet": "coquereli",
+              "species": "Propithecus coquereli",
+              "common_name": "Coquerel's sifaka",
+              "score": 0.004387698136270046
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/107cc387-fed0-4d3a-b788-fbc6a80d09d0.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.0030055346433073282
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 7,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/10851fb6-4dca-42fe-a724-659b95775fb4.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/10851fb6-4dca-42fe-a724-659b95775fb4.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.577415406703949,
+              0.3097490966320038
+            ],
+            "boxes": [
+              [
+                66.14451599121094,
+                167.1092987060547,
+                326.9694519042969,
+                476.0520935058594
+              ],
+              [
+                135.32774353027344,
+                226.665283203125,
+                322.3200378417969,
+                468.3831481933594
+              ]
+            ],
+            "text_labels": [
+              "",
+              ""
+            ],
+            "labels": [
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/10851fb6-4dca-42fe-a724-659b95775fb4.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/10851fb6-4dca-42fe-a724-659b95775fb4.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.5578877329826355
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/10851fb6-4dca-42fe-a724-659b95775fb4.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.23283205926418304
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/10851fb6-4dca-42fe-a724-659b95775fb4.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.1777072697877884
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/10851fb6-4dca-42fe-a724-659b95775fb4.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Ursidae",
+              "genus": "Ailuropoda",
+              "species_epithet": "Aeluropus fovealis",
+              "species": "Ailuropoda Aeluropus fovealis",
+              "common_name": "",
+              "score": 0.0038947693537920713
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/10851fb6-4dca-42fe-a724-659b95775fb4.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Myrmecophaga",
+              "species_epithet": "tridactyla",
+              "species": "Myrmecophaga tridactyla",
+              "common_name": "Giant anteater",
+              "score": 0.002624677959829569
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 8,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/17b1276a-a096-4031-97dc-9e6d729054ee.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/17b1276a-a096-4031-97dc-9e6d729054ee.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.6603338718414307
+            ],
+            "boxes": [
+              [
+                121.33084869384766,
+                131.67454528808594,
+                364.17449951171875,
+                298.7115478515625
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/17b1276a-a096-4031-97dc-9e6d729054ee.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/17b1276a-a096-4031-97dc-9e6d729054ee.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.8311184048652649
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/17b1276a-a096-4031-97dc-9e6d729054ee.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.037687748670578
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/17b1276a-a096-4031-97dc-9e6d729054ee.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Cebidae",
+              "genus": "Cebus",
+              "species_epithet": "capucinus",
+              "species": "Cebus capucinus",
+              "common_name": "White-headed Capuchin",
+              "score": 0.022162415087223053
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/17b1276a-a096-4031-97dc-9e6d729054ee.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Cebidae",
+              "genus": "Cebus",
+              "species_epithet": "versicolor",
+              "species": "Cebus versicolor",
+              "common_name": "Varied capuchin",
+              "score": 0.010124114342033863
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/17b1276a-a096-4031-97dc-9e6d729054ee.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Cebidae",
+              "genus": "Cebus",
+              "species_epithet": "imitator",
+              "species": "Cebus imitator",
+              "common_name": "Panamanian white-faced capuchin",
+              "score": 0.005541930440813303
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 9,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/18820f63-5ef0-4119-acd1-f9de1905017f.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/18820f63-5ef0-4119-acd1-f9de1905017f.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.650208592414856,
+              0.3377060294151306
+            ],
+            "boxes": [
+              [
+                112.18286895751953,
+                65.9310531616211,
+                356.6271057128906,
+                367.6347961425781
+              ],
+              [
+                257.5722961425781,
+                213.8147430419922,
+                355.6966247558594,
+                338.2755126953125
+              ]
+            ],
+            "text_labels": [
+              "",
+              ""
+            ],
+            "labels": [
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/18820f63-5ef0-4119-acd1-f9de1905017f.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/18820f63-5ef0-4119-acd1-f9de1905017f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.5773741006851196
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/18820f63-5ef0-4119-acd1-f9de1905017f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.27915939688682556
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/18820f63-5ef0-4119-acd1-f9de1905017f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.04734748974442482
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/18820f63-5ef0-4119-acd1-f9de1905017f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Diprotodontia",
+              "family": "Macropodidae",
+              "genus": "Dendrolagus",
+              "species_epithet": "scottae",
+              "species": "Dendrolagus scottae",
+              "common_name": "Tenkile",
+              "score": 0.01610536314547062
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/18820f63-5ef0-4119-acd1-f9de1905017f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Myrmecophaga",
+              "species_epithet": "tridactyla",
+              "species": "Myrmecophaga tridactyla",
+              "common_name": "Giant anteater",
+              "score": 0.00798734463751316
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 10,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a2d8651-9183-4362-b404-2ecd1cb2c94f.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a2d8651-9183-4362-b404-2ecd1cb2c94f.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.45884260535240173,
+              0.34035181999206543
+            ],
+            "boxes": [
+              [
+                88.27778625488281,
+                42.54956817626953,
+                411.94512939453125,
+                375.5517578125
+              ],
+              [
+                92.76202392578125,
+                49.399375915527344,
+                406.25238037109375,
+                354.09326171875
+              ]
+            ],
+            "text_labels": [
+              "",
+              ""
+            ],
+            "labels": [
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a2d8651-9183-4362-b404-2ecd1cb2c94f.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a2d8651-9183-4362-b404-2ecd1cb2c94f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.3095319867134094
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a2d8651-9183-4362-b404-2ecd1cb2c94f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.2151176631450653
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a2d8651-9183-4362-b404-2ecd1cb2c94f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Pitheciidae",
+              "genus": "Callicebus",
+              "species_epithet": "coimbrai",
+              "species": "Callicebus coimbrai",
+              "common_name": "Coimbra-filho\u2019s titi",
+              "score": 0.10706447809934616
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a2d8651-9183-4362-b404-2ecd1cb2c94f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Diprotodontia",
+              "family": "Phalangeridae",
+              "genus": "Spilocuscus",
+              "species_epithet": "kraemeri",
+              "species": "Spilocuscus kraemeri",
+              "common_name": "Admiralty island cuscus",
+              "score": 0.04405396804213524
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a2d8651-9183-4362-b404-2ecd1cb2c94f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Diprotodontia",
+              "family": "Phalangeridae",
+              "genus": "Spilocuscus",
+              "species_epithet": "rufoniger",
+              "species": "Spilocuscus rufoniger",
+              "common_name": "Black-spotted cuscus",
+              "score": 0.03429147228598595
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 11,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a401484-f882-499b-a343-aa691b3d6e0a.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a401484-f882-499b-a343-aa691b3d6e0a.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.36330896615982056
+            ],
+            "boxes": [
+              [
+                67.744384765625,
+                175.340087890625,
+                273.8805847167969,
+                263.71893310546875
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a401484-f882-499b-a343-aa691b3d6e0a.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a401484-f882-499b-a343-aa691b3d6e0a.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.6328263282775879
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a401484-f882-499b-a343-aa691b3d6e0a.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.18283995985984802
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a401484-f882-499b-a343-aa691b3d6e0a.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Cercopithecidae",
+              "genus": "Rhinopithecus",
+              "species_epithet": "avunculus",
+              "species": "Rhinopithecus avunculus",
+              "common_name": "Tonkin snub-nosed monkey",
+              "score": 0.019224638119339943
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a401484-f882-499b-a343-aa691b3d6e0a.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Cercopithecidae",
+              "genus": "Rhinopithecus",
+              "species_epithet": "bieti",
+              "species": "Rhinopithecus bieti",
+              "common_name": "Black snub-nosed monkey",
+              "score": 0.015481410548090935
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a401484-f882-499b-a343-aa691b3d6e0a.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Indriidae",
+              "genus": "Propithecus",
+              "species_epithet": "coquereli",
+              "species": "Propithecus coquereli",
+              "common_name": "Coquerel's sifaka",
+              "score": 0.014149535447359085
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 12,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b02eb99-fb6f-4dba-895b-d611d5cd4c38.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b02eb99-fb6f-4dba-895b-d611d5cd4c38.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.40619367361068726
+            ],
+            "boxes": [
+              [
+                126.18405151367188,
+                116.05921173095703,
+                236.95361328125,
+                478.6912536621094
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b02eb99-fb6f-4dba-895b-d611d5cd4c38.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b02eb99-fb6f-4dba-895b-d611d5cd4c38.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.8900331854820251
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b02eb99-fb6f-4dba-895b-d611d5cd4c38.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.09700839966535568
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b02eb99-fb6f-4dba-895b-d611d5cd4c38.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.0036871519405394793
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b02eb99-fb6f-4dba-895b-d611d5cd4c38.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Myrmecophaga",
+              "species_epithet": "tridactyla",
+              "species": "Myrmecophaga tridactyla",
+              "common_name": "Giant anteater",
+              "score": 0.0007974329637363553
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b02eb99-fb6f-4dba-895b-d611d5cd4c38.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Rodentia",
+              "family": "Sciuridae",
+              "genus": "Ratufa",
+              "species_epithet": "affinis",
+              "species": "Ratufa affinis",
+              "common_name": "Pale giant squirrel",
+              "score": 0.00042827363358810544
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 13,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b926ffd-18eb-4223-8754-22a46009146f.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b926ffd-18eb-4223-8754-22a46009146f.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.4912551939487457,
+              0.3029906153678894
+            ],
+            "boxes": [
+              [
+                186.94924926757812,
+                101.51532745361328,
+                343.7432556152344,
+                254.10630798339844
+              ],
+              [
+                162.00839233398438,
+                83.04542541503906,
+                365.77105712890625,
+                273.9474182128906
+              ]
+            ],
+            "text_labels": [
+              "",
+              ""
+            ],
+            "labels": [
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b926ffd-18eb-4223-8754-22a46009146f.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b926ffd-18eb-4223-8754-22a46009146f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.7479006052017212
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b926ffd-18eb-4223-8754-22a46009146f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.23624403774738312
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b926ffd-18eb-4223-8754-22a46009146f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.004028403665870428
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b926ffd-18eb-4223-8754-22a46009146f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Myrmecophaga",
+              "species_epithet": "tridactyla",
+              "species": "Myrmecophaga tridactyla",
+              "common_name": "Giant anteater",
+              "score": 0.004012790508568287
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b926ffd-18eb-4223-8754-22a46009146f.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mephitidae",
+              "genus": "Mydaus",
+              "species_epithet": "javanensis",
+              "species": "Mydaus javanensis",
+              "common_name": "Sunda stink badger",
+              "score": 0.0008506130543537438
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 14,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1ef4d7d2-b072-40cc-a78e-5187b2d23884.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1ef4d7d2-b072-40cc-a78e-5187b2d23884.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.5434779524803162,
+              0.3301372230052948
+            ],
+            "boxes": [
+              [
+                146.5597686767578,
+                87.40396118164062,
+                302.9794006347656,
+                357.0204162597656
+              ],
+              [
+                150.44456481933594,
+                88.42402648925781,
+                300.92431640625,
+                268.24273681640625
+              ]
+            ],
+            "text_labels": [
+              "",
+              ""
+            ],
+            "labels": [
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1ef4d7d2-b072-40cc-a78e-5187b2d23884.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1ef4d7d2-b072-40cc-a78e-5187b2d23884.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.5684995055198669
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1ef4d7d2-b072-40cc-a78e-5187b2d23884.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.41292572021484375
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1ef4d7d2-b072-40cc-a78e-5187b2d23884.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.0037190739531069994
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1ef4d7d2-b072-40cc-a78e-5187b2d23884.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Diprotodontia",
+              "family": "Macropodidae",
+              "genus": "Dendrolagus",
+              "species_epithet": "mayri",
+              "species": "Dendrolagus mayri",
+              "common_name": "Wondiwoi tree-kangaroo",
+              "score": 0.0012949134688824415
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1ef4d7d2-b072-40cc-a78e-5187b2d23884.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Diprotodontia",
+              "family": "Macropodidae",
+              "genus": "Dendrolagus",
+              "species_epithet": "notatus",
+              "species": "Dendrolagus notatus",
+              "common_name": "",
+              "score": 0.000983218546025455
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 15,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/214ec0ac-c11f-466f-bb37-b3093f0cd41c.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/214ec0ac-c11f-466f-bb37-b3093f0cd41c.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.6106136441230774
+            ],
+            "boxes": [
+              [
+                129.28121948242188,
+                88.10285949707031,
+                380.75244140625,
+                251.9561309814453
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/214ec0ac-c11f-466f-bb37-b3093f0cd41c.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/214ec0ac-c11f-466f-bb37-b3093f0cd41c.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.5382726788520813
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/214ec0ac-c11f-466f-bb37-b3093f0cd41c.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.09112243354320526
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/214ec0ac-c11f-466f-bb37-b3093f0cd41c.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.08893555402755737
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/214ec0ac-c11f-466f-bb37-b3093f0cd41c.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Myrmecophaga",
+              "species_epithet": "tridactyla",
+              "species": "Myrmecophaga tridactyla",
+              "common_name": "Giant anteater",
+              "score": 0.05460131913423538
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/214ec0ac-c11f-466f-bb37-b3093f0cd41c.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Primates",
+              "family": "Cercopithecidae",
+              "genus": "Rhinopithecus",
+              "species_epithet": "bieti",
+              "species": "Rhinopithecus bieti",
+              "common_name": "Black snub-nosed monkey",
+              "score": 0.012324556708335876
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 16,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2484b10a-dbd4-4126-93eb-4a4fad0231d7.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2484b10a-dbd4-4126-93eb-4a4fad0231d7.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.4223026931285858,
+              0.36948153376579285
+            ],
+            "boxes": [
+              [
+                105.67156982421875,
+                36.536170959472656,
+                466.99505615234375,
+                332.9559631347656
+              ],
+              [
+                111.33277130126953,
+                93.70015716552734,
+                339.7082214355469,
+                330.3111877441406
+              ]
+            ],
+            "text_labels": [
+              "",
+              ""
+            ],
+            "labels": [
+              "",
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2484b10a-dbd4-4126-93eb-4a4fad0231d7.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2484b10a-dbd4-4126-93eb-4a4fad0231d7.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.777882993221283
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2484b10a-dbd4-4126-93eb-4a4fad0231d7.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.11117646843194962
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2484b10a-dbd4-4126-93eb-4a4fad0231d7.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Myrmecophaga",
+              "species_epithet": "tridactyla",
+              "species": "Myrmecophaga tridactyla",
+              "common_name": "Giant anteater",
+              "score": 0.020108496770262718
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2484b10a-dbd4-4126-93eb-4a4fad0231d7.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.017919832840561867
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2484b10a-dbd4-4126-93eb-4a4fad0231d7.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mephitidae",
+              "genus": "Conepatus",
+              "species_epithet": "semistriatus",
+              "species": "Conepatus semistriatus",
+              "common_name": "Striped hog-nosed skunk",
+              "score": 0.005341163836419582
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 17,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2aa53e73-a63f-4a66-80ba-f8bc2adc2a92.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2aa53e73-a63f-4a66-80ba-f8bc2adc2a92.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.5714447498321533
+            ],
+            "boxes": [
+              [
+                114.05810546875,
+                102.33576965332031,
+                497.18878173828125,
+                278.5959167480469
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2aa53e73-a63f-4a66-80ba-f8bc2adc2a92.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2aa53e73-a63f-4a66-80ba-f8bc2adc2a92.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.8220883011817932
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2aa53e73-a63f-4a66-80ba-f8bc2adc2a92.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.167726069688797
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2aa53e73-a63f-4a66-80ba-f8bc2adc2a92.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mephitidae",
+              "genus": "Mydaus",
+              "species_epithet": "javanensis",
+              "species": "Mydaus javanensis",
+              "common_name": "Sunda stink badger",
+              "score": 0.0043554604053497314
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2aa53e73-a63f-4a66-80ba-f8bc2adc2a92.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.0014509045286104083
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2aa53e73-a63f-4a66-80ba-f8bc2adc2a92.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Myrmecophaga",
+              "species_epithet": "tridactyla",
+              "species": "Myrmecophaga tridactyla",
+              "common_name": "Giant anteater",
+              "score": 0.0006304386770352721
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 18,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2c636773-ad16-4d68-a74d-013e8be18c7d.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2c636773-ad16-4d68-a74d-013e8be18c7d.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.5933760404586792
+            ],
+            "boxes": [
+              [
+                96.42609405517578,
+                99.13399505615234,
+                302.4505920410156,
+                413.880859375
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2c636773-ad16-4d68-a74d-013e8be18c7d.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2c636773-ad16-4d68-a74d-013e8be18c7d.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.6325908899307251
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2c636773-ad16-4d68-a74d-013e8be18c7d.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.34964320063591003
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2c636773-ad16-4d68-a74d-013e8be18c7d.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mephitidae",
+              "genus": "Conepatus",
+              "species_epithet": "semistriatus",
+              "species": "Conepatus semistriatus",
+              "common_name": "Striped hog-nosed skunk",
+              "score": 0.003889374202117324
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2c636773-ad16-4d68-a74d-013e8be18c7d.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Myrmecophaga",
+              "species_epithet": "tridactyla",
+              "species": "Myrmecophaga tridactyla",
+              "common_name": "Giant anteater",
+              "score": 0.0035487802233546972
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2c636773-ad16-4d68-a74d-013e8be18c7d.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.0031642832327634096
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "image_index": 19,
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2d0f72c1-bc7d-4412-a3b2-02234b3ef539.jpg",
+      "steps": [
+        {
+          "step_index": 1,
+          "function": "run_grounding_dino",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2d0f72c1-bc7d-4412-a3b2-02234b3ef539.jpg",
+            "text_labels": [
+              "tamandua anteater pup",
+              "cling",
+              "mother's back"
+            ]
+          },
+          "result": {
+            "scores": [
+              0.5294987559318542
+            ],
+            "boxes": [
+              [
+                97.56262969970703,
+                49.57857894897461,
+                386.4481506347656,
+                206.54971313476562
+              ]
+            ],
+            "text_labels": [
+              ""
+            ],
+            "labels": [
+              ""
+            ]
+          }
+        },
+        {
+          "step_index": 2,
+          "function": "run_bioclip",
+          "arguments": {
+            "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2d0f72c1-bc7d-4412-a3b2-02234b3ef539.jpg"
+          },
+          "result": [
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2d0f72c1-bc7d-4412-a3b2-02234b3ef539.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "mexicana",
+              "species": "Tamandua mexicana",
+              "common_name": "Northern tamandua",
+              "score": 0.4236297607421875
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2d0f72c1-bc7d-4412-a3b2-02234b3ef539.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Tamandua",
+              "species_epithet": "tetradactyla",
+              "species": "Tamandua tetradactyla",
+              "common_name": "Southern tamandua",
+              "score": 0.3570179045200348
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2d0f72c1-bc7d-4412-a3b2-02234b3ef539.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Pilosa",
+              "family": "Myrmecophagidae",
+              "genus": "Protamandua",
+              "species_epithet": "rothi",
+              "species": "Protamandua rothi",
+              "common_name": "",
+              "score": 0.08136289566755295
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2d0f72c1-bc7d-4412-a3b2-02234b3ef539.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Viverridae",
+              "genus": "Macrogalidia",
+              "species_epithet": "musschenbroekii",
+              "species": "Macrogalidia musschenbroekii",
+              "common_name": "Sulawesi palm civet",
+              "score": 0.014613631181418896
+            },
+            {
+              "file_name": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2d0f72c1-bc7d-4412-a3b2-02234b3ef539.jpg",
+              "kingdom": "Animalia",
+              "phylum": "Chordata",
+              "class": "Mammalia",
+              "order": "Carnivora",
+              "family": "Mephitidae",
+              "genus": "Mydaus",
+              "species_epithet": "javanensis",
+              "species": "Mydaus javanensis",
+              "common_name": "Sunda stink badger",
+              "score": 0.012793583795428276
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "relevant_images": [
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b02eb99-fb6f-4dba-895b-d611d5cd4c38.jpg",
+      "dino_score": 0.40619367361068726,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.8900331854820251,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9782188286685002,
+      "model_logits": {
+        "yes": 17.75,
+        "no": 13.9453125
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03f0dabd-e016-4299-ace8-66c3fce7f62a.jpg",
+      "dino_score": 0.6800638437271118,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.8461974859237671,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9830850867332735,
+      "model_logits": {
+        "yes": 17.5625,
+        "no": 13.5
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/17b1276a-a096-4031-97dc-9e6d729054ee.jpg",
+      "dino_score": 0.6603338718414307,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.8311184048652649,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9690910414827888,
+      "model_logits": {
+        "yes": 17.234375,
+        "no": 13.7890625
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2aa53e73-a63f-4a66-80ba-f8bc2adc2a92.jpg",
+      "dino_score": 0.5714447498321533,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.8220883011817932,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9804313244446877,
+      "model_logits": {
+        "yes": 17.59375,
+        "no": 13.6796875
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/01d21ce6-14e5-466d-ad4f-64dab9296009.jpg",
+      "dino_score": 0.6354926228523254,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.7984511852264404,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9640516782107567,
+      "model_logits": {
+        "yes": 17.796875,
+        "no": 14.5078125
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2484b10a-dbd4-4126-93eb-4a4fad0231d7.jpg",
+      "dino_score": 0.4223026931285858,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.777882993221283,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9469902279841447,
+      "model_logits": {
+        "yes": 17.625,
+        "no": 14.7421875
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/107cc387-fed0-4d3a-b788-fbc6a80d09d0.jpg",
+      "dino_score": 0.6671505570411682,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.77622389793396,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9653811611608242,
+      "model_logits": {
+        "yes": 17.75,
+        "no": 14.421875
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1b926ffd-18eb-4223-8754-22a46009146f.jpg",
+      "dino_score": 0.4912551939487457,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.7479006052017212,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9700134939339985,
+      "model_logits": {
+        "yes": 17.828125,
+        "no": 14.3515625
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/0286174f-0fc9-4cf5-a307-3187c7f2dfdd.jpg",
+      "dino_score": 0.6399415135383606,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.6493982076644897,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9632305339244013,
+      "model_logits": {
+        "yes": 17.28125,
+        "no": 14.015625
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a401484-f882-499b-a343-aa691b3d6e0a.jpg",
+      "dino_score": 0.36330896615982056,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.6328263282775879,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.939470609797461,
+      "model_logits": {
+        "yes": 17.265625,
+        "no": 14.5234375
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2c636773-ad16-4d68-a74d-013e8be18c7d.jpg",
+      "dino_score": 0.5933760404586792,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.6325908899307251,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9496693674025231,
+      "model_logits": {
+        "yes": 17.109375,
+        "no": 14.171875
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/00b31977-5b67-4c69-8d80-fb31ff432699.jpg",
+      "dino_score": 0.35305464267730713,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.6050769686698914,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9207896758909756,
+      "model_logits": {
+        "yes": 17.203125,
+        "no": 14.75
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/18820f63-5ef0-4119-acd1-f9de1905017f.jpg",
+      "dino_score": 0.650208592414856,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.5773741006851196,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9314625069680098,
+      "model_logits": {
+        "yes": 17.40625,
+        "no": 14.796875
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1ef4d7d2-b072-40cc-a78e-5187b2d23884.jpg",
+      "dino_score": 0.5434779524803162,
+      "bioclip_match": "Tamandua tetradactyla",
+      "bioclip_score": 0.5684995055198669,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9492946352021694,
+      "model_logits": {
+        "yes": 17.359375,
+        "no": 14.4296875
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/10851fb6-4dca-42fe-a724-659b95775fb4.jpg",
+      "dino_score": 0.577415406703949,
+      "bioclip_match": "Tamandua tetradactyla",
+      "bioclip_score": 0.5578877329826355,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.9690910414827889,
+      "model_logits": {
+        "yes": 17.546875,
+        "no": 14.1015625
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/103192c8-9155-45ee-b77e-4efffe91f751.jpg",
+      "dino_score": 0.5552757978439331,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.5557512044906616,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.8933094060543488,
+      "model_logits": {
+        "yes": 16.859375,
+        "no": 14.734375
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/214ec0ac-c11f-466f-bb37-b3093f0cd41c.jpg",
+      "dino_score": 0.6106136441230774,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.5382726788520813,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.8791467675095294,
+      "model_logits": {
+        "yes": 16.609375,
+        "no": 14.625
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/2d0f72c1-bc7d-4412-a3b2-02234b3ef539.jpg",
+      "dino_score": 0.5294987559318542,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.4236297607421875,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.7994423202552037,
+      "model_logits": {
+        "yes": 16.40625,
+        "no": 15.0234375
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/03733f17-ba88-4abe-9774-16b6bf3a9a13.jpg",
+      "dino_score": 0.5571548938751221,
+      "bioclip_match": "Tamandua mexicana",
+      "bioclip_score": 0.3456753194332123,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.7759445507683054,
+      "model_logits": {
+        "yes": 16.65625,
+        "no": 15.4140625
+      }
+    },
+    {
+      "image_path": "/network/scratch/y/yuyan.chen/inquire/train/04775_Animalia_Chordata_Mammalia_Pilosa_Myrmecophagidae_Tamandua_mexicana/1a2d8651-9183-4362-b404-2ecd1cb2c94f.jpg",
+      "dino_score": 0.45884260535240173,
+      "bioclip_match": "Tamandua tetradactyla",
+      "bioclip_score": 0.3095319867134094,
+      "model_relevant": true,
+      "model_reason": null,
+      "model_score": 0.7185943925708562,
+      "model_logits": {
+        "yes": 16.609375,
+        "no": 15.671875
+      }
+    }
+  ],
+  "relevance_score_note": "The logits of the \"Yes\" and \"No\" tokens are then used to compute the score: s = sy/(sy + sn), where sy = exp(logitYes) and sn = exp(logitNo)."
+}

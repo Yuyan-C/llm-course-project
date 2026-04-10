@@ -11,10 +11,13 @@ from PIL import Image
 
 from src.tools.object_detection.grounding_dino import run_grounding_dino
 from src.tools.classification.bioclip_cls import run_bioclip
+from src.tools.search.web_search import run_web_search, run_web_image_search
 
 FUNCTION_MAP: Dict[str, Callable] = {
     "run_grounding_dino": run_grounding_dino,
     "run_bioclip": run_bioclip,
+    "run_web_search": run_web_search,
+    "run_web_image_search": run_web_image_search,
 }
 
 TOOLS = [get_json_schema(func) for func in FUNCTION_MAP.values()]
@@ -34,7 +37,7 @@ parser.add_argument(
         choices=LOGGING_LEVELS.keys(),
         help=f"Set the logging level. Choices: {list(LOGGING_LEVELS.keys())}. Default: WARNING."
     )
-args = parser.parse_args()
+args, _ = parser.parse_known_args()
 
 logger = logging.getLogger(__name__)
 level = LOGGING_LEVELS.get(args.log.upper(), logging.WARNING)
@@ -313,6 +316,7 @@ def execute_execution_plan_batch(
     function_map: Dict[str, Callable] | None = None,
     deduplicate_steps: bool = True,
     batch_size: int | None = None,
+    batch_sizes: Dict[str, int] | None = None,
 ) -> List[Dict[str, Any]]:
     """
     Execute a model-provided execution plan across a batch of image paths.
@@ -350,7 +354,10 @@ def execute_execution_plan_batch(
         func_name = step.get("name")
         step_args = step.get("arguments", {})
 
-        chunk_size = batch_size or max_len
+        if batch_sizes and func_name in batch_sizes:
+            chunk_size = batch_sizes[func_name]
+        else:
+            chunk_size = batch_size or max_len
         for start in range(0, max_len, chunk_size):
             end = min(start + chunk_size, max_len)
             image_paths_batch = image_paths[start:end] if image_paths else None
@@ -372,7 +379,17 @@ def execute_execution_plan_batch(
             step_result = execute_tool_call(function_map, func_name, resolved_args)
             step_result = _strip_non_serializable(step_result)
 
-            per_image_results = step_result if isinstance(step_result, list) else [step_result] * (end - start)
+            per_image_results = None
+            if func_name == "run_bioclip" and isinstance(step_result, list):
+                grouped: Dict[str, List[Dict[str, Any]]] = {}
+                for item in step_result:
+                    if isinstance(item, dict) and "file_name" in item:
+                        grouped.setdefault(item["file_name"], []).append(item)
+                if grouped and image_paths_batch is not None:
+                    per_image_results = [grouped.get(path, []) for path in image_paths_batch]
+
+            if per_image_results is None:
+                per_image_results = step_result if isinstance(step_result, list) else [step_result] * (end - start)
 
             for offset, image_idx in enumerate(range(start, end)):
                 arguments_snapshot = _strip_non_serializable(
@@ -400,11 +417,6 @@ def pipeline(model: Any, tokenizer: Any, user_query: str, config=None) -> str:
     """
     Main pipeline to process user query, generate model response, parse tool calls, execute tools, and update conversation history.
     """
-    # messages = [
-    #     {"role": "system", "content": "You are a helpful assistant. Use the provided tools to answer the user's question."},
-    #     {"role": "user", "content": user_query}
-    # ]
-
     messages = [
         {"role": "system", "content": config.init_prompt},
         {"role": "user", "content": user_query}

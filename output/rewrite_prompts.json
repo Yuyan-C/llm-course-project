@@ -1,0 +1,642 @@
+[
+  {
+    "original": "A By-the-Wind Sailor washed up on a beach",
+    "rewritten": "A sea creature with a sail-like structure washed up on a beach."
+  },
+  {
+    "original": "A Eurasian Red Squirrel gathering material for its nest",
+    "rewritten": "A squirrel gathering materials for its nest."
+  },
+  {
+    "original": "A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs",
+    "rewritten": "A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs."
+  },
+  {
+    "original": "A close-up of an ant carrying a leaf",
+    "rewritten": "A close-up of an ant carrying a leaf"
+  },
+  {
+    "original": "A coyote resting on human-build structures",
+    "rewritten": "A coyote resting on human-made structures"
+  },
+  {
+    "original": "A female pheasant",
+    "rewritten": "A female pheasant with a red breast and a white tail"
+  },
+  {
+    "original": "A male and female cardinal sharing food",
+    "rewritten": "A pair of cardinals sharing food"
+  },
+  {
+    "original": "A mongoose standing upright alert",
+    "rewritten": "A mongoose standing upright and alert"
+  },
+  {
+    "original": "A peacock male displaying its feathers",
+    "rewritten": "A peacock with colorful feathers"
+  },
+  {
+    "original": "Adult female black widow spider not in a web",
+    "rewritten": "A large, shiny black spider with a red hourglass marking, not in a web."
+  },
+  {
+    "original": "Alligator lizards mating",
+    "rewritten": "Alligator lizards mating"
+  },
+  {
+    "original": "Black Skimmer with a leg band",
+    "rewritten": "A bird with a black body and long, thin beak, possibly with a band on one of its legs."
+  },
+  {
+    "original": "Blackening Waxcap mushroom turned fully black",
+    "rewritten": "A mushroom that was originally white or pale has turned completely black."
+  },
+  {
+    "original": "Butterflyfish feeding on brain coral",
+    "rewritten": "A butterflyfish eating a brain coral"
+  },
+  {
+    "original": "Cart-Rut Shell snail egg mass",
+    "rewritten": "A cluster of small, round, white eggs on a shell"
+  },
+  {
+    "original": "Channeled Applesnail covered by green algae",
+    "rewritten": "A snail covered in green algae, with a shell that looks like an apple"
+  },
+  {
+    "original": "Cheetah with radio collar",
+    "rewritten": "A cheetah with a radio collar"
+  },
+  {
+    "original": "Chinese Mystery Snail covered by green algae",
+    "rewritten": "A snail covered with green algae."
+  },
+  {
+    "original": "Cooper's Hawk in adult plumage",
+    "rewritten": "A bird with long, broad wings, a long tail, and a blue-gray back and white belly, perched on a tree branch."
+  },
+  {
+    "original": "Dead hog-nosed skunk",
+    "rewritten": "A skunk with a hunched back and a distinctive white stripe down its back."
+  },
+  {
+    "original": "Dolphins performing acrobatics",
+    "rewritten": "Dolphins doing flips and jumps in the water"
+  },
+  {
+    "original": "Eastern Red Bat in flight",
+    "rewritten": "A bat in flight with red fur, flying in a dark forest."
+  },
+  {
+    "original": "Elk bugling during the rut",
+    "rewritten": "Elk bugling during the rut"
+  },
+  {
+    "original": "Emergence of large colony of mexican free-tailed bats",
+    "rewritten": "A large group of Mexican free-tailed bats"
+  },
+  {
+    "original": "Exactly five penguins",
+    "rewritten": "Show five penguins."
+  },
+  {
+    "original": "Exactly three zebras standing together in a field",
+    "rewritten": "Three zebras standing together in a field."
+  },
+  {
+    "original": "Fishing net on a reef",
+    "rewritten": "A fishing net on a coral reef."
+  },
+  {
+    "original": "Fly Agaric in yellow form",
+    "rewritten": "A mushroom with a yellow cap and white gills."
+  },
+  {
+    "original": "Fur seal mother with pup",
+    "rewritten": "A fur seal mother and her pup"
+  },
+  {
+    "original": "Gazelle being vigilant/looking around",
+    "rewritten": "A gazelle standing alert, looking around its surroundings."
+  },
+  {
+    "original": "Green Shore Crab",
+    "rewritten": "A crab that lives near the ocean's edge, with a greenish color and a hard shell."
+  },
+  {
+    "original": "Haliaeetus eagles in aerial cartwheeling flight with locked talons",
+    "rewritten": "A bird with a large, broad wingspan and a distinctive white head and tail is performing a cartwheeling flight with its talons locked. The bird is soaring through the sky, maintaining a steady and graceful motion."
+  },
+  {
+    "original": "Hamerkop collecting nesting material",
+    "rewritten": "A Hamerkop (a type of bird) is collecting nesting material."
+  },
+  {
+    "original": "House finch with yellow pigmentation",
+    "rewritten": "A small bird with a yellowish color, similar to a house finch."
+  },
+  {
+    "original": "H\u00fcbner's Wasp Moth mating",
+    "rewritten": "A moth and a wasp mating, with a focus on their physical appearance and behavior."
+  },
+  {
+    "original": "Inflated pufferfish",
+    "rewritten": "A large, round fish with a puffy appearance, often found in shallow waters."
+  },
+  {
+    "original": "Leafhopper Assassin Bug predating lady beetle",
+    "rewritten": "A bug that preys on lady beetles, with a leaf-like appearance."
+  },
+  {
+    "original": "Lilac Bonnet with edges turnt up revealing its gills",
+    "rewritten": "A lilac hat with turned-up edges, showing its gills."
+  },
+  {
+    "original": "Luna Moth missing long twisted tails on the hindwings",
+    "rewritten": "Luna Moth with short, rounded hindwings"
+  },
+  {
+    "original": "Male Blue-black Grassquit in patchy blue-black and brown plumage",
+    "rewritten": "A male Blue-black Grassquit with blue-black and brown patches in its plumage."
+  },
+  {
+    "original": "Male Xanthagrion erythroneurum",
+    "rewritten": "A male Xanthagrion erythroneurum"
+  },
+  {
+    "original": "Male chorus frog with inflated vocal sacs",
+    "rewritten": "A male frog with a large, red vocal sac that it uses to sing."
+  },
+  {
+    "original": "Male crimsonband wrasse",
+    "rewritten": "A male wrasse with red bands on its body."
+  },
+  {
+    "original": "Maple tree with signs of tapping",
+    "rewritten": "A maple tree with signs of tapping."
+  },
+  {
+    "original": "Melanistic jaguar",
+    "rewritten": "A black jaguar"
+  },
+  {
+    "original": "Melanistic leopard",
+    "rewritten": "A black leopard"
+  },
+  {
+    "original": "Mexican grass-carrying wasp visiting a purple flower",
+    "rewritten": "A wasp carrying grass visiting a purple flower"
+  },
+  {
+    "original": "Milkweed Assassin Bug predating a bee or wasp",
+    "rewritten": "A Milkweed Assassin Bug attacking a bee or wasp"
+  },
+  {
+    "original": "Moorish Gecko with regenerated tail",
+    "rewritten": "A lizard with a long, slender body and a regenerated tail, typically green or brown in color, often found in warm climates such as deserts or tropical regions."
+  },
+  {
+    "original": "Mushrooms growing in a fairy ring formation",
+    "rewritten": "Mushrooms growing in a circular pattern"
+  },
+  {
+    "original": "North Island robin or South Island robin with leg bands",
+    "rewritten": "A robin with leg bands on the North Island or South Island."
+  },
+  {
+    "original": "Northern Mockingbird carrying out its food",
+    "rewritten": "A Northern Mockingbird holding food"
+  },
+  {
+    "original": "Nursery Web Spider carrying egg sac",
+    "rewritten": "A Nursery Web Spider holding an egg sac"
+  },
+  {
+    "original": "Octopus out of the water",
+    "rewritten": "An octopus in the water"
+  },
+  {
+    "original": "Red-capped Plover performing broken wing distraction",
+    "rewritten": "A bird performing a broken wing distraction, with a distinctive red cap on its head."
+  },
+  {
+    "original": "Redwood tree with fire scars",
+    "rewritten": "A tree with visible fire scars, likely a redwood."
+  },
+  {
+    "original": "Rhino with ear notches",
+    "rewritten": "A rhinoceros with notches on its ears."
+  },
+  {
+    "original": "Sage Thrasher vocalizing",
+    "rewritten": "A bird with a brown body, long tail, and a distinctive song, often found in open woodlands and gardens."
+  },
+  {
+    "original": "Scarlet Waxy Cap with visible gills",
+    "rewritten": "A mushroom with a bright red cap and visible gills."
+  },
+  {
+    "original": "Scorpion with young on its back",
+    "rewritten": "A scorpion with young on its back"
+  },
+  {
+    "original": "Sea turtle with algae on its shell",
+    "rewritten": "A sea turtle with green algae growing on its shell."
+  },
+  {
+    "original": "Sharks with remoras attached",
+    "rewritten": "Sharks with remoras attached to their bodies"
+  },
+  {
+    "original": "Splendid fairywren without blue body coloration",
+    "rewritten": "A fairywren without blue body coloration"
+  },
+  {
+    "original": "Surgeonfish grazing on algae",
+    "rewritten": "A surgeonfish (also known as a tang) eating algae from a coral reef."
+  },
+  {
+    "original": "Swallowtail butterfly caterpillar camouflaged as bird droppings",
+    "rewritten": "A caterpillar that looks like bird droppings"
+  },
+  {
+    "original": "Tagged swan",
+    "rewritten": "A bird with a white body and black head, found near water."
+  },
+  {
+    "original": "Tropical Orb Weaver with multiple white spots in the abdominal dorsum",
+    "rewritten": "A spider with a white spot pattern on its abdomen in a tropical environment."
+  },
+  {
+    "original": "Two giraffes",
+    "rewritten": "A giraffe and another giraffe"
+  },
+  {
+    "original": "Water Frogs in amplexus position",
+    "rewritten": "Frogs in a mating position"
+  },
+  {
+    "original": "Wolf spider with limb loss",
+    "rewritten": "A spider with a missing limb, showing its body and legs."
+  },
+  {
+    "original": "Yellow-faced Honeyeater in birdbath",
+    "rewritten": "A bird in a birdbath with a yellow face and black markings."
+  },
+  {
+    "original": "Zebra and wildebeest grazing together",
+    "rewritten": "A scene of zebras and wildebeests grazing together in a grassy field."
+  },
+  {
+    "original": "a bag-shelter moth's silken bag nest on a tree",
+    "rewritten": "A bag-like structure made of silk on a tree."
+  },
+  {
+    "original": "a beaver dam across a stream",
+    "rewritten": "A dam made by a beaver in a stream."
+  },
+  {
+    "original": "a bighorn sheep with a tracking collar around its neck",
+    "rewritten": "A large sheep with a metal collar around its neck."
+  },
+  {
+    "original": "a gall produced by an Acorn Plum Gall Wasp",
+    "rewritten": "a gall on an Acorn Plum tree"
+  },
+  {
+    "original": "a herd of more than 10 impalas",
+    "rewritten": "a group of more than 10 impalas"
+  },
+  {
+    "original": "a hermit crab using plastic waste as a shell",
+    "rewritten": "A hermit crab using a plastic bottle as a shell"
+  },
+  {
+    "original": "a lion with a collar around its neck",
+    "rewritten": "A lion with a collar around its neck."
+  },
+  {
+    "original": "a microscopy slide showing the cellular structure of a plant",
+    "rewritten": "A slide with plant cells, showing their structure."
+  },
+  {
+    "original": "a mud dauber wasp in the process of forming its nest out of mud",
+    "rewritten": "A wasp building a nest from mud"
+  },
+  {
+    "original": "a nest with eggs displaying brood parasitism by a cowbird",
+    "rewritten": "A nest with eggs showing brood parasitism by a cowbird."
+  },
+  {
+    "original": "a possum on a power line",
+    "rewritten": "A possum on a power line."
+  },
+  {
+    "original": "a sandhill crane couple with their chicks",
+    "rewritten": "A sandhill crane couple with their chicks."
+  },
+  {
+    "original": "adult male Misumena vatia",
+    "rewritten": "A spider with a striped abdomen and long legs, found in gardens and homes."
+  },
+  {
+    "original": "albino american robin",
+    "rewritten": "a bird with white feathers and red-orange beak and feet, perched on a branch in a forest."
+  },
+  {
+    "original": "an image showing a humpback whale fluke with clearly identifiable markings",
+    "rewritten": "An image of a humpback whale showing its fluke with clearly visible markings."
+  },
+  {
+    "original": "an oak gall produced by a spongy oak apple gall wasp",
+    "rewritten": "An oak gall produced by a spongy oak apple gall wasp."
+  },
+  {
+    "original": "an oxpecker on a zebra",
+    "rewritten": "A bird perched on a large black and white striped animal."
+  },
+  {
+    "original": "antelopes head-butting",
+    "rewritten": "A scene of antelopes engaging in head-butting behavior."
+  },
+  {
+    "original": "bananaquit pollinating flower",
+    "rewritten": "A bird pollinating a flower, with a yellow body and a small beak."
+  },
+  {
+    "original": "beached orca",
+    "rewritten": "A large marine mammal lying on the beach, with a distinctive dorsal fin."
+  },
+  {
+    "original": "bird caught in a net",
+    "rewritten": "A bird trapped in a fishing net"
+  },
+  {
+    "original": "bird dead in front of a window",
+    "rewritten": "A bird is lying on the ground near a window."
+  },
+  {
+    "original": "black-winged kite carrying prey in its talons",
+    "rewritten": "A kite with black wings carrying something in its talons."
+  },
+  {
+    "original": "blue jay eating whole peanuts",
+    "rewritten": "A blue jay is eating whole peanuts."
+  },
+  {
+    "original": "breeding adult Black-bellied Plover",
+    "rewritten": "A large, medium-sized shorebird with a white back, black belly, and a distinctive black breast band, found near water bodies."
+  },
+  {
+    "original": "bridal veil stinkhorn mushroom",
+    "rewritten": "A mushroom with a smelly veil, possibly a stinkhorn."
+  },
+  {
+    "original": "brown bear near vehicle",
+    "rewritten": "A brown bear near a vehicle"
+  },
+  {
+    "original": "bullhead shark egg case",
+    "rewritten": "Find an image of a bullhead shark egg case."
+  },
+  {
+    "original": "camera trap photo of a bobcat captured in the nightime",
+    "rewritten": "A photo of a bobcat taken at night."
+  },
+  {
+    "original": "camera trap photo of a springbok drinking water",
+    "rewritten": "A photo of a springbok drinking water."
+  },
+  {
+    "original": "camera trap photo of a stag red deer",
+    "rewritten": "A photo of a stag deer with antlers and a reddish coat."
+  },
+  {
+    "original": "camera trap photo of chital with its head down",
+    "rewritten": "A deer with its head down in a camera trap photo."
+  },
+  {
+    "original": "canada geese flying in v-formation",
+    "rewritten": "geese flying in a V-formation in Canada"
+  },
+  {
+    "original": "caterpillar of Common Buckeye butterfly",
+    "rewritten": "A caterpillar with orange and black stripes, found in gardens and fields."
+  },
+  {
+    "original": "caterpillar of Gulf Fritillary butterfly",
+    "rewritten": "A colorful, orange and black caterpillar with long, spiky hairs, found in the Gulf Coast region."
+  },
+  {
+    "original": "caterpillar of polyphemus moth",
+    "rewritten": "A caterpillar that looks like a large, green, fuzzy creature with large eyespots on its back, found in forests."
+  },
+  {
+    "original": "cheetah with cubs",
+    "rewritten": "A cheetah with cubs, preferably in a savanna or grassland habitat."
+  },
+  {
+    "original": "close-up of sugar maple leaf",
+    "rewritten": "A close-up of a maple leaf."
+  },
+  {
+    "original": "close-up of sweet cherry tree bark",
+    "rewritten": "A close-up of a cherry tree bark."
+  },
+  {
+    "original": "common murre beached carcass",
+    "rewritten": "A beached bird carcass with a black and white body and a long, thin neck."
+  },
+  {
+    "original": "couple of black-bellied whistling ducks with their youngs sharing parenting duties",
+    "rewritten": "A group of black-bellied whistling ducks with their youngs sharing parenting duties."
+  },
+  {
+    "original": "cross orbweaver",
+    "rewritten": "A spider with an orb-shaped web, often found in gardens and fields."
+  },
+  {
+    "original": "dark-colored Dusky Leaf-monkey with orange-colored young",
+    "rewritten": "A dark-colored Dusky Leaf-monkey with orange-colored young"
+  },
+  {
+    "original": "dorsal side of mourning cloak butterfly",
+    "rewritten": "A butterfly with a dark, velvety appearance on its upper side, often found in forests."
+  },
+  {
+    "original": "eastern gray squirrel displaying melanistic pelage",
+    "rewritten": "A gray squirrel with black fur"
+  },
+  {
+    "original": "elephant covered in mud or dirt",
+    "rewritten": "An elephant covered in mud or dirt"
+  },
+  {
+    "original": "elephant near a fence",
+    "rewritten": "An elephant near a fence"
+  },
+  {
+    "original": "elk with hair loss",
+    "rewritten": "A deer with thinning hair"
+  },
+  {
+    "original": "female beautiful demoiselle",
+    "rewritten": "A female demoiselle with a beautiful appearance."
+  },
+  {
+    "original": "feral cat with prey",
+    "rewritten": "A cat hunting a mouse"
+  },
+  {
+    "original": "fire pink with dark-colored anthers",
+    "rewritten": "A flower with pink petals and dark-colored stamens."
+  },
+  {
+    "original": "fire salamander with a barred color pattern",
+    "rewritten": "A salamander with a barred color pattern."
+  },
+  {
+    "original": "flamingo standing on one leg",
+    "rewritten": "A flamingo standing on one leg."
+  },
+  {
+    "original": "fruit bat eating fruit upside down",
+    "rewritten": "A fruit bat is eating fruit while upside down."
+  },
+  {
+    "original": "giant resin bee feeding on sunflower",
+    "rewritten": "A large bee feeding on a sunflower."
+  },
+  {
+    "original": "great golden digger wasp carrying an orthopteron",
+    "rewritten": "A great golden digger wasp carrying an orthopteron"
+  },
+  {
+    "original": "grebe with babies on its back",
+    "rewritten": "A grebe with its babies on its back"
+  },
+  {
+    "original": "hognose snake playing dead",
+    "rewritten": "A snake lying still on the ground, with its body curled up."
+  },
+  {
+    "original": "human handling a bat with bare hands",
+    "rewritten": "A person holding a bat with bare hands."
+  },
+  {
+    "original": "hyenas eating a kill",
+    "rewritten": "A group of hyenas consuming a large carcass."
+  },
+  {
+    "original": "jungle babblers allopreening",
+    "rewritten": "A bird preening itself in a jungle environment."
+  },
+  {
+    "original": "kahili ginger plant with open fruit capsules showing seeds",
+    "rewritten": "A kahili ginger plant with open fruit capsules showing seeds."
+  },
+  {
+    "original": "killdeer feigning injury",
+    "rewritten": "A killdeer pretending to be injured"
+  },
+  {
+    "original": "laysan albatross mostly in dark mottled brown plumage",
+    "rewritten": "Laysan albatross with dark mottled brown plumage"
+  },
+  {
+    "original": "lorikeet pollinating flower",
+    "rewritten": "A bird pollinating a flower, with a bright orange beak and colorful feathers."
+  },
+  {
+    "original": "male Red-winged Blackbird vocalizing",
+    "rewritten": "A male bird with a red shoulder patch and black wings is singing."
+  },
+  {
+    "original": "male ruby-throated hummingbird in flight",
+    "rewritten": "A hummingbird with a red throat in flight."
+  },
+  {
+    "original": "male smooth newt with developed crest",
+    "rewritten": "A male newt with a developed crest."
+  },
+  {
+    "original": "male velvet ant",
+    "rewritten": "A male velvet ant"
+  },
+  {
+    "original": "measuring the body dimensions of a bee",
+    "rewritten": "describe a bee with a black and yellow striped body, about 1/4 inch long, and wings that are transparent and covered in tiny hairs."
+  },
+  {
+    "original": "monkey slug caterpillar",
+    "rewritten": "Find images of a monkey, a slug, and a caterpillar."
+  },
+  {
+    "original": "moose with hair loss",
+    "rewritten": "A moose with thinning hair"
+  },
+  {
+    "original": "mountain goat climbing rocky outcrops with its young",
+    "rewritten": "A mountain goat climbing rocky outcrops with its young."
+  },
+  {
+    "original": "pair of great crested grebes potentially performing the weed dance",
+    "rewritten": "great crested grebes performing the weed dance"
+  },
+  {
+    "original": "parrotfish feeding",
+    "rewritten": "A fish eating colorful food near coral reefs."
+  },
+  {
+    "original": "photo with two or more adult male lions",
+    "rewritten": "image of two or more adult male lions"
+  },
+  {
+    "original": "picture showing more than fifty Mediterranean Acrobat Ants",
+    "rewritten": "image of a colony of more than fifty Mediterranean Acrobat Ants"
+  },
+  {
+    "original": "picture showing more than fifty Velvety Tree Ants",
+    "rewritten": "image of a colony of more than fifty Velvety Tree Ants"
+  },
+  {
+    "original": "potter wasp nest",
+    "rewritten": "A nest made by a potter wasp, which is a type of wasp that builds nests from mud."
+  },
+  {
+    "original": "puffins carrying food",
+    "rewritten": "birds carrying food"
+  },
+  {
+    "original": "red-tailed hawk perched on a utility pole",
+    "rewritten": "hawk perched on a utility pole"
+  },
+  {
+    "original": "sick cassava plant",
+    "rewritten": "A plant with yellowing leaves and brown spots."
+  },
+  {
+    "original": "sloth hugging a human-made structure",
+    "rewritten": "A sloth is hugging a human-made structure."
+  },
+  {
+    "original": "southern aligator lizard with cut tail",
+    "rewritten": "A lizard with a cut tail, found in the southern region."
+  },
+  {
+    "original": "ventral side of mourning cloak butterfly",
+    "rewritten": "A butterfly with a dark, velvety underside and a colorful upper side, often found in forests."
+  },
+  {
+    "original": "vervet monkey with visible bright blue scrotal areas",
+    "rewritten": "A monkey with a bright blue scrotum visible."
+  },
+  {
+    "original": "water snake feeding on fish",
+    "rewritten": "A snake eating fish in water"
+  },
+  {
+    "original": "white-tailed deer flagging its tail",
+    "rewritten": "A deer with its tail flagging."
+  }
+]

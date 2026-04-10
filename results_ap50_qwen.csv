@@ -1,0 +1,5 @@
+model,prompt_type,ap50_mean,n
+Qwen/Qwen3-VL-4B-Instruct,Appearance,29.6022,52
+Qwen/Qwen3-VL-4B-Instruct,Behavior,36.7395,59
+Qwen/Qwen3-VL-4B-Instruct,Context,39.0048,43
+Qwen/Qwen3-VL-4B-Instruct,Species,25.3326,6

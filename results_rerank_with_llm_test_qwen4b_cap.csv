@@ -1,0 +1,161 @@
+,model,query,pr,ap,ndcg,mrr
+0,Qwen/Qwen3-VL-4B-Instruct,A By-the-Wind Sailor washed up on a beach,2.0,2.0618556701030926,25.90024916925747,0.16666666666666666
+1,Qwen/Qwen3-VL-4B-Instruct,A Eurasian Red Squirrel gathering material for its nest,8.0,23.94047619047619,62.953413854423914,1.0
+2,Qwen/Qwen3-VL-4B-Instruct,A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs,8.0,29.892857142857142,69.0478279754912,0.5
+3,Qwen/Qwen3-VL-4B-Instruct,A close-up of an ant carrying a leaf,48.0,88.6141304347826,97.23142885523897,1.0
+4,Qwen/Qwen3-VL-4B-Instruct,A coyote resting on human-build structures,6.0,14.698412698412696,52.173653109624105,0.3333333333333333
+5,Qwen/Qwen3-VL-4B-Instruct,A female pheasant,41.0,67.21311475409836,88.12354789575872,0.5
+6,Qwen/Qwen3-VL-4B-Instruct,A male and female cardinal sharing food,1.0,1.0,17.581758876603352,0.01639344262295082
+7,Qwen/Qwen3-VL-4B-Instruct,A mongoose standing upright alert,26.0,36.61971830985916,72.12724039637465,1.0
+8,Qwen/Qwen3-VL-4B-Instruct,A peacock male displaying its feathers,33.0,62.264150943396224,85.65456569611108,1.0
+9,Qwen/Qwen3-VL-4B-Instruct,Adult female black widow spider not in a web,3.0,10.714285714285714,44.024731257866165,0.05555555555555555
+10,Qwen/Qwen3-VL-4B-Instruct,Alligator lizards mating,20.0,63.33333333333333,89.63519159549504,1.0
+11,Qwen/Qwen3-VL-4B-Instruct,Black Skimmer with a leg band,3.0,27.666666666666668,64.00987425825268,1.0
+12,Qwen/Qwen3-VL-4B-Instruct,Blackening Waxcap mushroom turned fully black,22.0,25.287356321839084,64.04775213740878,1.0
+13,Qwen/Qwen3-VL-4B-Instruct,Butterflyfish feeding on brain coral,30.0,42.87830687830688,82.24283415651914,1.0
+14,Qwen/Qwen3-VL-4B-Instruct,Cart-Rut Shell snail egg mass,6.0,7.4074074074074066,40.401899295563844,0.1
+15,Qwen/Qwen3-VL-4B-Instruct,Channeled Applesnail covered by green algae,9.0,10.126036484245441,46.035996680350614,0.05
+16,Qwen/Qwen3-VL-4B-Instruct,Cheetah with radio collar,13.0,33.61538461538461,75.86941690418843,1.0
+17,Qwen/Qwen3-VL-4B-Instruct,Chinese Mystery Snail covered by green algae,37.0,41.23659221098765,76.12828310513284,1.0
+18,Qwen/Qwen3-VL-4B-Instruct,Cooper's Hawk in adult plumage,41.0,41.83673469387755,76.56865897282049,0.2
+19,Qwen/Qwen3-VL-4B-Instruct,Dead hog-nosed skunk,30.0,30.0,68.56459855123529,0.5
+20,Qwen/Qwen3-VL-4B-Instruct,Dolphins performing acrobatics,47.0,69.95764290616727,89.69916943698463,1.0
+21,Qwen/Qwen3-VL-4B-Instruct,Eastern Red Bat in flight,28.999999999999996,45.3890473309711,77.3998085595409,1.0
+22,Qwen/Qwen3-VL-4B-Instruct,Elk bugling during the rut,6.0,35.72222222222223,69.63164025599528,0.25
+23,Qwen/Qwen3-VL-4B-Instruct,Emergence of large colony of mexican free-tailed bats,45.0,66.24987266043667,88.73057976169446,0.3333333333333333
+24,Qwen/Qwen3-VL-4B-Instruct,Exactly five penguins,11.0,46.00599400599401,77.29228002584543,0.5
+25,Qwen/Qwen3-VL-4B-Instruct,Exactly three zebras standing together in a field,40.0,57.5263194252556,85.7311469505875,1.0
+26,Qwen/Qwen3-VL-4B-Instruct,Fishing net on a reef,24.0,57.51709401709402,83.2704154725538,1.0
+27,Qwen/Qwen3-VL-4B-Instruct,Fly Agaric in yellow form,33.0,33.6734693877551,71.23048868178267,1.0
+28,Qwen/Qwen3-VL-4B-Instruct,Fur seal mother with pup,28.999999999999996,31.554253703256645,69.87334384818786,1.0
+29,Qwen/Qwen3-VL-4B-Instruct,Gazelle being vigilant/looking around,27.0,29.778203490847172,68.04524545164607,0.09090909090909091
+30,Qwen/Qwen3-VL-4B-Instruct,Green Shore Crab,33.0,34.375,71.65033118850211,1.0
+31,Qwen/Qwen3-VL-4B-Instruct,Haliaeetus eagles in aerial cartwheeling flight with locked talons,1.0,33.33333333333333,71.03099178571523,0.5
+32,Qwen/Qwen3-VL-4B-Instruct,Hamerkop collecting nesting material,8.0,28.47058823529412,65.47396369314615,0.5
+33,Qwen/Qwen3-VL-4B-Instruct,House finch with yellow pigmentation,6.0,17.02564102564103,53.622031115253456,1.0
+34,Qwen/Qwen3-VL-4B-Instruct,Hübner's Wasp Moth mating,25.0,27.48275862068966,66.19031118092451,0.5
+35,Qwen/Qwen3-VL-4B-Instruct,Inflated pufferfish,47.0,65.65400978441474,88.44224435896287,1.0
+36,Qwen/Qwen3-VL-4B-Instruct,Leafhopper Assassin Bug predating lady beetle,3.0,3.896103896103896,31.8000155067574,0.03333333333333333
+37,Qwen/Qwen3-VL-4B-Instruct,Lilac Bonnet with edges turnt up revealing its gills,9.0,10.344827586206897,46.100011236810865,0.5
+38,Qwen/Qwen3-VL-4B-Instruct,Luna Moth missing long twisted tails on the hindwings,2.0,2.5,27.3880651190174,0.125
+39,Qwen/Qwen3-VL-4B-Instruct,Male Blue-black Grassquit in patchy blue-black and brown plumage,11.0,11.0,47.76055376763678,0.2
+40,Qwen/Qwen3-VL-4B-Instruct,Male Xanthagrion erythroneurum,16.0,16.0,54.86714937557961,0.08333333333333333
+41,Qwen/Qwen3-VL-4B-Instruct,Male chorus frog with inflated vocal sacs,22.0,29.36363636363636,70.96839726910585,1.0
+42,Qwen/Qwen3-VL-4B-Instruct,Male crimsonband wrasse,10.0,10.98901098901099,47.34358816186705,0.045454545454545456
+43,Qwen/Qwen3-VL-4B-Instruct,Maple tree with signs of tapping,1.0,2.857142857142857,28.985051322158068,0.037037037037037035
+44,Qwen/Qwen3-VL-4B-Instruct,Melanistic jaguar,1.0,10.0,45.435593380883454,0.3333333333333333
+45,Qwen/Qwen3-VL-4B-Instruct,Melanistic leopard,5.0,41.66666666666667,71.96895385057898,0.5
+46,Qwen/Qwen3-VL-4B-Instruct,Mexican grass-carrying wasp visiting a purple flower,4.0,4.214285714285714,33.23715526524854,0.0625
+47,Qwen/Qwen3-VL-4B-Instruct,Milkweed Assassin Bug predating a bee or wasp,2.0,3.278688524590164,29.721893720492055,0.047619047619047616
+48,Qwen/Qwen3-VL-4B-Instruct,Moorish Gecko with regenerated tail,2.0,2.631578947368421,27.807126069762784,0.024390243902439025
+49,Qwen/Qwen3-VL-4B-Instruct,Mushrooms growing in a fairy ring formation,8.0,21.565217391304344,59.32072449591789,1.0
+50,Qwen/Qwen3-VL-4B-Instruct,North Island robin or South Island robin with leg bands,18.0,81.77777777777779,96.09535638159682,1.0
+51,Qwen/Qwen3-VL-4B-Instruct,Northern Mockingbird carrying out its food,7.000000000000001,12.727272727272727,48.16168283885368,0.5
+52,Qwen/Qwen3-VL-4B-Instruct,Nursery Web Spider carrying egg sac,30.0,37.9746835443038,73.40562504484478,0.3333333333333333
+53,Qwen/Qwen3-VL-4B-Instruct,Octopus out of the water,44.0,60.43699868579502,85.79375338278109,1.0
+54,Qwen/Qwen3-VL-4B-Instruct,Red-capped Plover performing broken wing distraction,2.0,58.33333333333333,80.65735963827292,0.5
+55,Qwen/Qwen3-VL-4B-Instruct,Redwood tree with fire scars,32.0,41.02564102564102,75.32076342499788,0.5
+56,Qwen/Qwen3-VL-4B-Instruct,Rhino with ear notches,43.0,48.562941187104,80.11282534959324,0.5
+57,Qwen/Qwen3-VL-4B-Instruct,Sage Thrasher vocalizing,12.0,26.208333333333332,63.10551159870781,1.0
+58,Qwen/Qwen3-VL-4B-Instruct,Scarlet Waxy Cap with visible gills,44.0,87.10565668024546,96.82397096645909,1.0
+59,Qwen/Qwen3-VL-4B-Instruct,Scorpion with young on its back,28.000000000000004,62.55598455598456,86.51492484588505,0.5
+60,Qwen/Qwen3-VL-4B-Instruct,Sea turtle with algae on its shell,25.0,28.735632183908045,66.997970745512,1.0
+61,Qwen/Qwen3-VL-4B-Instruct,Sharks with remoras attached,8.0,15.11111111111111,54.570198654849065,0.14285714285714285
+62,Qwen/Qwen3-VL-4B-Instruct,Splendid fairywren without blue body coloration,38.0,39.50877192982457,78.39153927386883,1.0
+63,Qwen/Qwen3-VL-4B-Instruct,Surgeonfish grazing on algae,11.0,19.606060606060602,63.002866577740335,1.0
+64,Qwen/Qwen3-VL-4B-Instruct,Swallowtail butterfly caterpillar camouflaged as bird droppings,49.0,80.43531822103252,95.93751780122004,1.0
+65,Qwen/Qwen3-VL-4B-Instruct,Tagged swan,30.0,89.78571428571429,97.6997174407994,1.0
+66,Qwen/Qwen3-VL-4B-Instruct,Tropical Orb Weaver with multiple white spots in the abdominal dorsum,2.0,2.1052631578947367,26.054787441684407,0.038461538461538464
+67,Qwen/Qwen3-VL-4B-Instruct,Two giraffes,28.999999999999996,61.076628352490424,85.1798330924332,1.0
+68,Qwen/Qwen3-VL-4B-Instruct,Water Frogs in amplexus position,6.0,8.716049382716047,42.89635915837863,0.1
+69,Qwen/Qwen3-VL-4B-Instruct,Wolf spider with limb loss,5.0,6.2988772744870305,37.92181956704875,0.14285714285714285
+70,Qwen/Qwen3-VL-4B-Instruct,Yellow-faced Honeyeater in birdbath,17.0,21.078431372549023,59.83207230235848,0.09090909090909091
+71,Qwen/Qwen3-VL-4B-Instruct,Zebra and wildebeest grazing together,31.0,62.11606023280846,90.69933502136125,1.0
+72,Qwen/Qwen3-VL-4B-Instruct,a bag-shelter moth's silken bag nest on a tree,2.0,2.1739130434782608,26.295736360922483,0.08333333333333333
+73,Qwen/Qwen3-VL-4B-Instruct,a beaver dam across a stream,31.0,54.95355981852605,83.53699801165277,0.3333333333333333
+74,Qwen/Qwen3-VL-4B-Instruct,a bighorn sheep with a tracking collar around its neck,11.0,75.63636363636364,92.34913648898325,0.5
+75,Qwen/Qwen3-VL-4B-Instruct,a gall produced by an Acorn Plum Gall Wasp,1.0,1.0,20.93867087428094,0.06666666666666667
+76,Qwen/Qwen3-VL-4B-Instruct,a herd of more than 10 impalas,32.0,63.52403846153847,89.83629855158367,0.5
+77,Qwen/Qwen3-VL-4B-Instruct,a hermit crab using plastic waste as a shell,3.0,12.11111111111111,47.95468679188139,0.125
+78,Qwen/Qwen3-VL-4B-Instruct,a lion with a collar around its neck,4.0,27.0,64.9459153805624,1.0
+79,Qwen/Qwen3-VL-4B-Instruct,a microscopy slide showing the cellular structure of a plant,23.0,46.9494884910486,82.60578018689378,1.0
+80,Qwen/Qwen3-VL-4B-Instruct,a mud dauber wasp in the process of forming its nest out of mud,8.0,13.842105263157894,50.98229023148735,0.08333333333333333
+81,Qwen/Qwen3-VL-4B-Instruct,a nest with eggs displaying brood parasitism by a cowbird,7.000000000000001,7.000000000000001,40.288815462151305,0.25
+82,Qwen/Qwen3-VL-4B-Instruct,a possum on a power line,38.0,63.82423038728897,87.18421890573606,1.0
+83,Qwen/Qwen3-VL-4B-Instruct,a sandhill crane couple with their chicks,9.0,31.571428571428573,68.9765074851907,1.0
+84,Qwen/Qwen3-VL-4B-Instruct,adult male Misumena vatia,2.0,4.761904761904762,33.462568037883585,0.034482758620689655
+85,Qwen/Qwen3-VL-4B-Instruct,albino american robin,1.0,1.0,19.142775586079257,0.012345679012345678
+86,Qwen/Qwen3-VL-4B-Instruct,an image showing a humpback whale fluke with clearly identifiable markings,32.0,66.7263630089717,91.36997439658542,1.0
+87,Qwen/Qwen3-VL-4B-Instruct,an oak gall produced by a spongy oak apple gall wasp,40.0,40.0,75.51567634247792,1.0
+88,Qwen/Qwen3-VL-4B-Instruct,an oxpecker on a zebra,28.000000000000004,65.11627906976744,86.59382100610688,0.5
+89,Qwen/Qwen3-VL-4B-Instruct,antelopes head-butting,21.0,40.384615384615394,73.64636712191366,0.5
+90,Qwen/Qwen3-VL-4B-Instruct,bananaquit pollinating flower,11.0,20.76403743315508,59.57685076520946,0.14285714285714285
+91,Qwen/Qwen3-VL-4B-Instruct,beached orca,2.0,5.0,34.002177795720854,0.07142857142857142
+92,Qwen/Qwen3-VL-4B-Instruct,bird caught in a net,50.0,64.5597439544808,87.492456161891,0.5
+93,Qwen/Qwen3-VL-4B-Instruct,bird dead in front of a window,21.0,33.51731601731601,70.93647449720905,0.5
+94,Qwen/Qwen3-VL-4B-Instruct,black-winged kite carrying prey in its talons,6.0,5.37037037037037,35.529707328388525,0.5
+95,Qwen/Qwen3-VL-4B-Instruct,blue jay eating whole peanuts,4.0,12.903225806451612,47.15579967895426,0.5
+96,Qwen/Qwen3-VL-4B-Instruct,breeding adult Black-bellied Plover,39.0,42.06365140236109,76.61558273989819,1.0
+97,Qwen/Qwen3-VL-4B-Instruct,bridal veil stinkhorn mushroom,47.0,47.0,79.58153705080015,0.3333333333333333
+98,Qwen/Qwen3-VL-4B-Instruct,brown bear near vehicle,12.0,41.37931034482759,72.79921953308462,1.0
+99,Qwen/Qwen3-VL-4B-Instruct,bullhead shark egg case,11.0,13.494172494172496,50.84884163411747,1.0
+100,Qwen/Qwen3-VL-4B-Instruct,camera trap photo of a bobcat captured in the nightime,25.0,37.3134328358209,72.40468241540873,1.0
+101,Qwen/Qwen3-VL-4B-Instruct,camera trap photo of a springbok drinking water,6.0,30.09523809523809,67.13312994576248,1.0
+102,Qwen/Qwen3-VL-4B-Instruct,camera trap photo of a stag red deer,10.0,20.0,56.77369543189036,0.09090909090909091
+103,Qwen/Qwen3-VL-4B-Instruct,camera trap photo of chital with its head down,17.0,32.372549019607845,68.4085225649975,0.25
+104,Qwen/Qwen3-VL-4B-Instruct,canada geese flying in v-formation,5.0,5.263157894736842,36.0302842504506,0.25
+105,Qwen/Qwen3-VL-4B-Instruct,caterpillar of Common Buckeye butterfly,12.0,12.0,49.337690295054074,0.3333333333333333
+106,Qwen/Qwen3-VL-4B-Instruct,caterpillar of Gulf Fritillary butterfly,28.000000000000004,28.000000000000004,66.95831532693347,0.1
+107,Qwen/Qwen3-VL-4B-Instruct,caterpillar of polyphemus moth,20.0,20.0,59.48259281717942,0.5
+108,Qwen/Qwen3-VL-4B-Instruct,cheetah with cubs,19.0,45.45864661654135,77.16889745328221,1.0
+109,Qwen/Qwen3-VL-4B-Instruct,close-up of sugar maple leaf,39.0,39.0,74.88808562908937,0.25
+110,Qwen/Qwen3-VL-4B-Instruct,close-up of sweet cherry tree bark,15.0,15.306122448979592,53.89327259080194,0.14285714285714285
+111,Qwen/Qwen3-VL-4B-Instruct,common murre beached carcass,43.0,42.99999999999999,77.32458800058187,0.3333333333333333
+112,Qwen/Qwen3-VL-4B-Instruct,couple of black-bellied whistling ducks with their youngs sharing parenting duties,17.0,34.05882352941176,76.35755149926152,0.5
+113,Qwen/Qwen3-VL-4B-Instruct,cross orbweaver,9.0,9.0,44.29387259689002,0.5
+114,Qwen/Qwen3-VL-4B-Instruct,dark-colored Dusky Leaf-monkey with orange-colored young,17.0,88.66013071895425,95.77410207397496,0.5
+115,Qwen/Qwen3-VL-4B-Instruct,dorsal side of mourning cloak butterfly,28.999999999999996,29.16091954022989,67.87780565185841,0.125
+116,Qwen/Qwen3-VL-4B-Instruct,eastern gray squirrel displaying melanistic pelage,19.0,22.315789473684212,61.24758525745795,1.0
+117,Qwen/Qwen3-VL-4B-Instruct,elephant covered in mud or dirt,48.0,64.45408973595394,87.49264193246805,1.0
+118,Qwen/Qwen3-VL-4B-Instruct,elephant near a fence,25.0,64.89886480908153,86.74578665334147,0.5
+119,Qwen/Qwen3-VL-4B-Instruct,elk with hair loss,49.0,60.73406063924889,86.33016633887942,1.0
+120,Qwen/Qwen3-VL-4B-Instruct,female beautiful demoiselle,34.0,34.0,71.53958142174504,0.5
+121,Qwen/Qwen3-VL-4B-Instruct,feral cat with prey,14.000000000000002,56.00000000000001,81.15320445834769,0.5
+122,Qwen/Qwen3-VL-4B-Instruct,fire pink with dark-colored anthers,8.0,8.88888888888889,43.66707062470033,0.08333333333333333
+123,Qwen/Qwen3-VL-4B-Instruct,fire salamander with a barred color pattern,13.0,13.978494623655912,51.89116525555529,1.0
+124,Qwen/Qwen3-VL-4B-Instruct,flamingo standing on one leg,44.0,47.82608695652174,79.78190125664779,1.0
+125,Qwen/Qwen3-VL-4B-Instruct,fruit bat eating fruit upside down,7.000000000000001,29.472527472527478,66.32557665284784,0.5
+126,Qwen/Qwen3-VL-4B-Instruct,giant resin bee feeding on sunflower,1.0,1.3888888888888888,23.044923577653424,0.07142857142857142
+127,Qwen/Qwen3-VL-4B-Instruct,great golden digger wasp carrying an orthopteron,3.0,14.285714285714285,48.701157618209336,0.3333333333333333
+128,Qwen/Qwen3-VL-4B-Instruct,grebe with babies on its back,19.0,28.728531855955673,69.76612304446056,0.3333333333333333
+129,Qwen/Qwen3-VL-4B-Instruct,hognose snake playing dead,6.0,8.555555555555555,43.78584729622468,0.07142857142857142
+130,Qwen/Qwen3-VL-4B-Instruct,human handling a bat with bare hands,15.0,88.11111111111113,96.3596042388087,1.0
+131,Qwen/Qwen3-VL-4B-Instruct,hyenas eating a kill,14.000000000000002,51.29761904761905,79.49569520914767,1.0
+132,Qwen/Qwen3-VL-4B-Instruct,jungle babblers allopreening,7.000000000000001,24.137931034482758,59.44733740101955,0.25
+133,Qwen/Qwen3-VL-4B-Instruct,kahili ginger plant with open fruit capsules showing seeds,6.0,9.407407407407407,44.66584175953267,0.2
+134,Qwen/Qwen3-VL-4B-Instruct,killdeer feigning injury,8.0,32.57142857142857,71.40501241582228,1.0
+135,Qwen/Qwen3-VL-4B-Instruct,laysan albatross mostly in dark mottled brown plumage,5.0,6.390243902439025,38.91363828183755,0.06666666666666667
+136,Qwen/Qwen3-VL-4B-Instruct,lorikeet pollinating flower,50.0,52.083333333333336,82.12014634240136,1.0
+137,Qwen/Qwen3-VL-4B-Instruct,male Red-winged Blackbird vocalizing,30.0,58.028985507246375,84.13138165786657,1.0
+138,Qwen/Qwen3-VL-4B-Instruct,male ruby-throated hummingbird in flight,18.0,25.0,63.02913888851649,0.09090909090909091
+139,Qwen/Qwen3-VL-4B-Instruct,male smooth newt with developed crest,11.0,24.916962494212072,63.43388077128317,0.2
+140,Qwen/Qwen3-VL-4B-Instruct,male velvet ant,5.0,5.154639175257731,35.8165785007653,0.5
+141,Qwen/Qwen3-VL-4B-Instruct,measuring the body dimensions of a bee,23.0,52.325556733828215,80.63970860168948,0.25
+142,Qwen/Qwen3-VL-4B-Instruct,monkey slug caterpillar,1.0,1.098901098901099,15.347618747127179,0.01098901098901099
+143,Qwen/Qwen3-VL-4B-Instruct,moose with hair loss,34.0,41.825630252100844,76.66792795678784,0.5
+144,Qwen/Qwen3-VL-4B-Instruct,mountain goat climbing rocky outcrops with its young,13.0,18.080739665645325,56.45782275305682,0.125
+145,Qwen/Qwen3-VL-4B-Instruct,pair of great crested grebes potentially performing the weed dance,11.0,20.754716981132077,57.76245469152143,0.25
+146,Qwen/Qwen3-VL-4B-Instruct,parrotfish feeding,19.0,31.548872180451127,70.42906842188097,0.16666666666666666
+147,Qwen/Qwen3-VL-4B-Instruct,photo with two or more adult male lions,14.000000000000002,46.19480519480519,81.01293592357644,1.0
+148,Qwen/Qwen3-VL-4B-Instruct,picture showing more than fifty Mediterranean Acrobat Ants,3.0,9.09090909090909,41.6223887969878,0.05263157894736842
+149,Qwen/Qwen3-VL-4B-Instruct,picture showing more than fifty Velvety Tree Ants,5.0,5.580645161290322,37.259976821700306,0.16666666666666666
+150,Qwen/Qwen3-VL-4B-Instruct,potter wasp nest,3.0,3.1578947368421053,29.911963069456082,0.045454545454545456
+151,Qwen/Qwen3-VL-4B-Instruct,puffins carrying food,8.0,33.23684210526316,67.8644055238411,1.0
+152,Qwen/Qwen3-VL-4B-Instruct,red-tailed hawk perched on a utility pole,16.0,19.047619047619047,57.69133378677446,1.0
+153,Qwen/Qwen3-VL-4B-Instruct,sick cassava plant,46.0,67.5629272627837,89.74767450448502,0.5
+154,Qwen/Qwen3-VL-4B-Instruct,sloth hugging a human-made structure,28.999999999999996,77.5559038662487,93.00223639825967,1.0
+155,Qwen/Qwen3-VL-4B-Instruct,southern aligator lizard with cut tail,4.0,6.113636363636363,37.72085244669216,0.09090909090909091
+156,Qwen/Qwen3-VL-4B-Instruct,ventral side of mourning cloak butterfly,39.0,43.91976624812446,77.8362119570281,1.0
+157,Qwen/Qwen3-VL-4B-Instruct,vervet monkey with visible bright blue scrotal areas,25.0,72.22222222222221,93.5930114190356,1.0
+158,Qwen/Qwen3-VL-4B-Instruct,water snake feeding on fish,8.0,18.6046511627907,54.7953414586645,1.0
+159,Qwen/Qwen3-VL-4B-Instruct,white-tailed deer flagging its tail,5.0,22.333333333333332,58.903857707826376,1.0

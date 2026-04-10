@@ -1,0 +1,17 @@
+model,prompt_type,ap50_mean,n
+biocap,Appearance,30.4514,52
+biocap,Behavior,33.3159,59
+biocap,Context,31.3951,43
+biocap,Species,27.8358,6
+bioclip,Appearance,27.7114,52
+bioclip,Behavior,24.0349,59
+bioclip,Context,27.8461,43
+bioclip,Species,35.6190,6
+siglip-so400m-14-384,Appearance,39.1710,52
+siglip-so400m-14-384,Behavior,47.3094,59
+siglip-so400m-14-384,Context,42.0422,43
+siglip-so400m-14-384,Species,37.0532,6
+vit-b-32,Appearance,26.1975,52
+vit-b-32,Behavior,30.7891,59
+vit-b-32,Context,31.9091,43
+vit-b-32,Species,36.2941,6

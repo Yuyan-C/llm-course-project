@@ -1,0 +1,264 @@
+No cache found at cache/Qwen--Qwen3-VL-4B-Thinking--cache.npy. Initialized empty.
+  0%|          | 0/160 [00:00<?, ?it/s]Prediction not cached, loading model...
+Loading model: Qwen/Qwen3-VL-4B-Thinking
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s][A
+Fetching 2 files:  50%|█████     | 1/2 [01:07<01:07, 67.71s/it][AFetching 2 files: 100%|██████████| 2/2 [01:07<00:00, 33.85s/it]
+
+Loading weights:   0%|          | 0/713 [00:00<?, ?it/s][A
+Loading weights:   0%|          | 1/713 [00:01<16:20,  1.38s/it][A
+Loading weights:   1%|          | 4/713 [00:01<03:40,  3.22it/s][A
+Loading weights:   1%|▏         | 9/713 [00:01<01:27,  8.04it/s][A
+Loading weights:   2%|▏         | 14/713 [00:01<00:55, 12.56it/s][A
+Loading weights:   2%|▏         | 17/713 [00:02<00:49, 13.96it/s][A
+Loading weights:   4%|▎         | 25/713 [00:02<00:33, 20.66it/s][A
+Loading weights:   4%|▍         | 31/713 [00:02<00:28, 23.85it/s][A
+Loading weights:   5%|▌         | 36/713 [00:02<00:25, 26.94it/s][A
+Loading weights:   6%|▌         | 40/713 [00:02<00:28, 23.95it/s][A
+Loading weights:   6%|▌         | 44/713 [00:02<00:25, 26.32it/s][A
+Loading weights:   7%|▋         | 48/713 [00:03<00:30, 22.15it/s][A
+Loading weights:   7%|▋         | 52/713 [00:03<00:27, 24.30it/s][A
+Loading weights:   8%|▊         | 57/713 [00:03<00:23, 28.02it/s][A
+Loading weights:   9%|▊         | 61/713 [00:03<00:24, 27.02it/s][A
+Loading weights:   9%|▉         | 65/713 [00:03<00:21, 29.54it/s][A
+Loading weights:  10%|▉         | 70/713 [00:03<00:21, 30.15it/s][A
+Loading weights:  11%|█         | 75/713 [00:03<00:19, 33.08it/s][A
+Loading weights:  11%|█         | 80/713 [00:04<00:19, 32.76it/s][A
+Loading weights:  12%|█▏        | 84/713 [00:04<00:21, 28.85it/s][A
+Loading weights:  13%|█▎        | 91/713 [00:04<00:19, 32.03it/s][A
+Loading weights:  13%|█▎        | 95/713 [00:04<00:19, 30.91it/s][A
+Loading weights:  14%|█▍        | 101/713 [00:04<00:18, 32.69it/s][A
+Loading weights:  15%|█▍        | 105/713 [00:04<00:19, 30.67it/s][A
+Loading weights:  16%|█▌        | 111/713 [00:05<00:16, 36.88it/s][A
+Loading weights:  16%|█▌        | 115/713 [00:05<00:20, 29.06it/s][A
+Loading weights:  17%|█▋        | 124/713 [00:05<00:16, 36.04it/s][A
+Loading weights:  18%|█▊        | 128/713 [00:05<00:18, 31.30it/s][A
+Loading weights:  19%|█▉        | 135/713 [00:05<00:16, 34.58it/s][A
+Loading weights:  19%|█▉        | 139/713 [00:05<00:18, 31.75it/s][A
+Loading weights:  20%|██        | 146/713 [00:06<00:15, 35.66it/s][A
+Loading weights:  21%|██        | 150/713 [00:06<00:17, 32.44it/s][A
+Loading weights:  22%|██▏       | 156/713 [00:06<00:16, 33.07it/s][A
+Loading weights:  22%|██▏       | 160/713 [00:06<00:19, 28.76it/s][A
+Loading weights:  23%|██▎       | 167/713 [00:06<00:16, 33.45it/s][A
+Loading weights:  24%|██▍       | 171/713 [00:06<00:19, 28.26it/s][A
+Loading weights:  25%|██▌       | 179/713 [00:07<00:16, 32.24it/s][A
+Loading weights:  26%|██▌       | 183/713 [00:07<00:19, 27.44it/s][A
+Loading weights:  26%|██▋       | 188/713 [00:07<00:16, 31.46it/s][A
+Loading weights:  27%|██▋       | 192/713 [00:07<00:22, 23.48it/s][A
+Loading weights:  28%|██▊       | 201/713 [00:07<00:16, 30.47it/s][A
+Loading weights:  29%|██▉       | 205/713 [00:08<00:17, 28.59it/s][A
+Loading weights:  29%|██▉       | 210/713 [00:08<00:15, 32.04it/s][A
+Loading weights:  30%|███       | 214/713 [00:08<00:20, 24.42it/s][A
+Loading weights:  31%|███       | 219/713 [00:08<00:17, 28.67it/s][A
+Loading weights:  31%|███▏      | 224/713 [00:08<00:16, 28.82it/s][A
+Loading weights:  32%|███▏      | 229/713 [00:08<00:15, 31.13it/s][A
+Loading weights:  33%|███▎      | 234/713 [00:09<00:13, 34.24it/s][A
+Loading weights:  33%|███▎      | 238/713 [00:09<00:23, 19.91it/s][A
+Loading weights:  34%|███▍      | 245/713 [00:09<00:17, 27.00it/s][A
+Loading weights:  35%|███▍      | 249/713 [00:09<00:16, 28.13it/s][A
+Loading weights:  36%|███▌      | 257/713 [00:09<00:12, 36.13it/s][A
+Loading weights:  37%|███▋      | 267/713 [00:10<00:09, 47.18it/s][A
+Loading weights:  38%|███▊      | 273/713 [00:10<00:08, 49.13it/s][A
+Loading weights:  39%|███▉      | 279/713 [00:10<00:08, 50.67it/s][A
+Loading weights:  41%|████      | 289/713 [00:10<00:07, 59.18it/s][A
+Loading weights:  42%|████▏     | 296/713 [00:10<00:06, 61.15it/s][A
+Loading weights:  42%|████▏     | 303/713 [00:10<00:07, 56.65it/s][A
+Loading weights:  44%|████▍     | 312/713 [00:10<00:06, 61.57it/s][A
+Loading weights:  45%|████▌     | 322/713 [00:10<00:05, 67.23it/s][A
+Loading weights:  46%|████▌     | 329/713 [00:10<00:05, 67.49it/s][A
+Loading weights:  47%|████▋     | 336/713 [00:11<00:06, 62.08it/s][A
+Loading weights:  48%|████▊     | 345/713 [00:11<00:05, 66.06it/s][A
+Loading weights:  50%|████▉     | 355/713 [00:11<00:04, 71.83it/s][A
+Loading weights:  51%|█████     | 363/713 [00:11<00:04, 72.19it/s][A
+Loading weights:  52%|█████▏    | 371/713 [00:11<00:04, 70.39it/s][A
+Loading weights:  53%|█████▎    | 379/713 [00:11<00:05, 64.55it/s][A
+Loading weights:  55%|█████▍    | 389/713 [00:11<00:04, 71.37it/s][A
+Loading weights:  58%|█████▊    | 411/713 [00:11<00:02, 108.85it/s][A
+Loading weights:  67%|██████▋   | 478/713 [00:12<00:00, 257.37it/s][A
+Loading weights:  77%|███████▋  | 548/713 [00:12<00:00, 374.90it/s][A
+Loading weights:  86%|████████▌ | 610/713 [00:12<00:00, 442.74it/s][A
+Loading weights:  95%|█████████▌| 680/713 [00:12<00:00, 508.94it/s][ALoading weights: 100%|██████████| 713/713 [00:12<00:00, 57.03it/s] 
+  0%|          | 0/160 [01:42<?, ?it/s]
+    'Yes' token: 9454
+    'No' token:  2753
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+[warn] got bad output tokens
+Traceback (most recent call last):
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/scripts/use_caption.py", line 64, in <module>
+    pr, recall, ap, ndcg, mrr = compute_retrieval_metrics(y_true, y_pred, count_pos=sum(y_true))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/src/inquire/metrics.py", line 84, in compute_retrieval_metrics
+    ap = ap_at_k(y_true, y_pred, count_pos, k)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/src/inquire/metrics.py", line 49, in ap_at_k
+    unnormalized_ap = sklearn.metrics.average_precision_score(y_true[:k], y_pred[:k]) if sum(y_true[:k]) > 0 else 0
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py", line 270, in average_precision_score
+    return _average_binary_score(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/metrics/_base.py", line 69, in _average_binary_score
+    return binary_metric(y_true, y_score, sample_weight=sample_weight)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py", line 231, in _binary_uninterpolated_average_precision
+    precision, recall, _ = precision_recall_curve(
+                           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py", line 1100, in precision_recall_curve
+    _, fps, _, tps, thresholds = confusion_matrix_at_thresholds(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/utils/_param_validation.py", line 191, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/metrics/_ranking.py", line 934, in confusion_matrix_at_thresholds
+    assert_all_finite(y_score)
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 223, in assert_all_finite
+    _assert_all_finite(
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 133, in _assert_all_finite
+    _assert_all_finite_element_wise(
+  File "/home/mila/y/yuyan.chen/projects/llm-course-project/.venv/lib/python3.12/site-packages/sklearn/utils/validation.py", line 182, in _assert_all_finite_element_wise
+    raise ValueError(msg_err)
+ValueError: Input contains NaN.
+
+======== GPU REPORT ========
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Thu Apr  9 11:44:30 2026
+Driver Version                            : 580.95.05
+CUDA Version                              : 13.0
+
+Attached GPUs                             : 1
+GPU 00000000:4A:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 1421710
+            GPU Utilization               : 9 %
+            Memory Utilization            : 7 %
+            Max memory usage              : 9138 MiB
+            Time                          : 104840 ms
+            Is Running                    : 0
+
+Thu Apr  9 11:44:30 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000000:4A:00.0 Off |                    0 |
+| N/A   37C    P0            102W /  325W |       0MiB /  46068MiB |     12%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
