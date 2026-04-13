@@ -16,7 +16,7 @@ source .venv/bin/activate
 
 mkdir -p output/web_images/compare
 
-MODELS=(vit-b-32 bioclip biocap siglip-so400m-14-384 dinov3-b16)
+MODELS=(vit-b-32 bioclip biocap siglip-vit-b-16 siglip-so400m-14-384 dinov3-b16)
 RAW_WEB_DIR=/network/scratch/y/yuyan.chen/inquire/web_images_raw_top20
 RAW_METADATA=${RAW_WEB_DIR}/image_search_metadata_test.json
 TOP8_FILTERED_METADATA=/network/scratch/y/yuyan.chen/inquire/web_images_top8_min2_metadata_only/image_search_metadata_test.json
@@ -36,7 +36,7 @@ python scripts/use_image_search.py \
 .venv/bin/python - <<'PY'
 import time
 from src.inquire.utils import load_clip
-import timm
+from transformers import AutoImageProcessor, AutoModel
 from transformers import T5Tokenizer, T5TokenizerFast
 
 for cls in (T5Tokenizer, T5TokenizerFast):
@@ -58,7 +58,9 @@ def retry(fn, name, retries=6, sleep_s=10):
             time.sleep(sleep_s)
 
 retry(lambda: load_clip("open_clip:ViT-SO400M-14-SigLIP-384/webli", device="cuda", use_jit=False), "siglip")
-retry(lambda: timm.create_model("vit_base_patch16_dinov3", pretrained=True, num_classes=0, global_pool="avg"), "dinov3")
+retry(lambda: load_clip("open_clip:ViT-B-16-SigLIP-256/webli", device="cuda", use_jit=False), "siglip-b16")
+retry(lambda: AutoImageProcessor.from_pretrained("facebook/dinov3-vitb16-pretrain-lvd1689m"), "dinov3-processor")
+retry(lambda: AutoModel.from_pretrained("facebook/dinov3-vitb16-pretrain-lvd1689m"), "dinov3")
 PY
 
 python scripts/eval_rerank_image_similarity.py \
@@ -91,9 +93,9 @@ python scripts/eval_rerank_image_similarity.py \
   --model-load-retry-sleep 10 \
   --save-results-path output/web_images/compare/results_top8_filtered_topk_all_models_test.csv
 
-python scripts/summarize_baseline_vs_top8.py \
+python scripts/summarize_baseline_vs_filtered.py \
   --baseline-results output/web_images/compare/results_baseline_top3_all_models_test.csv \
-  --top8-results output/web_images/compare/results_top8_filtered_topk_all_models_test.csv \
+  --comparison-results output/web_images/compare/results_top8_filtered_topk_all_models_test.csv \
   --queries-csv /network/scratch/y/yuyan.chen/inquire/inquire/inquire_queries_test.csv \
-  --summary-out output/web_images/compare/results_all_models_baseline_vs_top8_summary.csv \
-  --supercategory-out output/web_images/compare/results_all_models_baseline_vs_top8_by_supercategory.csv
+  --summary-out output/web_images/compare/results_all_models_baseline_vs_filtered_summary.csv \
+  --supercategory-out output/web_images/compare/results_all_models_baseline_vs_filtered_by_supercategory.csv

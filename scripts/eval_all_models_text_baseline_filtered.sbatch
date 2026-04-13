@@ -16,15 +16,15 @@ source .venv/bin/activate
 
 mkdir -p output/web_images/compare
 
-MODELS=(vit-b-32 bioclip biocap siglip-so400m-14-384 dinov3-b16)
+MODELS=(vit-b-32 bioclip biocap siglip-vit-b-16 siglip-so400m-14-384 dinov3-b16)
 RAW_WEB_DIR=/network/scratch/y/yuyan.chen/inquire/web_images_raw_top20
 RAW_METADATA=${RAW_WEB_DIR}/image_search_metadata_test.json
-TOP8_FILTERED_METADATA=/network/scratch/y/yuyan.chen/inquire/web_images_top8_min2_metadata_only_text/image_search_metadata_test.json
+FILTERED_METADATA=/network/scratch/y/yuyan.chen/inquire/web_images_filtered_min2_metadata_only_text/image_search_metadata_test.json
 CAPTION_CACHE=output/web_images/compare/caption_cache_test.json
 CAPTION_VLM_MODEL=Qwen/Qwen3-VL-4B-Instruct
 
 mkdir -p "${RAW_WEB_DIR}"
-mkdir -p "$(dirname "${TOP8_FILTERED_METADATA}")"
+mkdir -p "$(dirname "${FILTERED_METADATA}")"
 
 python scripts/use_image_search.py \
   --split test \
@@ -63,6 +63,7 @@ retry(lambda: ModelWrapper("Qwen/Qwen3-VL-4B-Instruct", "cuda"), "caption-vlm")
 retry(lambda: load_clip("hf_clip:openai/clip-vit-base-patch32", device="cuda", use_jit=False), "vit-b-32")
 retry(lambda: load_clip("bioclip", device="cuda", use_jit=False), "bioclip")
 retry(lambda: load_clip("biocap", device="cuda", use_jit=False), "biocap")
+retry(lambda: load_clip("open_clip:ViT-B-16-SigLIP-256/webli", device="cuda", use_jit=False), "siglip-b16")
 retry(lambda: load_clip("open_clip:ViT-SO400M-14-SigLIP-384/webli", device="cuda", use_jit=False), "siglip")
 PY
 
@@ -74,11 +75,10 @@ python scripts/eval_rerank_text_similarity.py \
   --caption-cache-path "${CAPTION_CACHE}" \
   --max-web-images-per-query 3 \
   --min-web-images-per-query 0 \
-  --aggregation mean \
   --batch-size 64 \
   --model-load-retries 6 \
   --model-load-retry-sleep 10 \
-  --save-results-path output/web_images/compare/results_text_baseline_top3_all_models_test.csv
+  --save-results-path output/web_images/compare/results_text_baseline_all_models_test.csv
 
 python scripts/eval_rerank_text_similarity.py \
   --split test \
@@ -90,17 +90,15 @@ python scripts/eval_rerank_text_similarity.py \
   --min-web-images-per-query 2 \
   --apply-web-image-filters \
   --metadata-relevance-threshold 0.25 \
-  --filtered-metadata-out "${TOP8_FILTERED_METADATA}" \
-  --aggregation topk_mean \
-  --top-k-sims 3 \
+  --filtered-metadata-out "${FILTERED_METADATA}" \
   --batch-size 64 \
   --model-load-retries 6 \
   --model-load-retry-sleep 10 \
-  --save-results-path output/web_images/compare/results_text_top8_filtered_topk_all_models_test.csv
+  --save-results-path output/web_images/compare/results_text_filtered_all_models_test.csv
 
-python scripts/summarize_baseline_vs_top8.py \
-  --baseline-results output/web_images/compare/results_text_baseline_top3_all_models_test.csv \
-  --top8-results output/web_images/compare/results_text_top8_filtered_topk_all_models_test.csv \
+python scripts/summarize_baseline_vs_filtered.py \
+  --baseline-results output/web_images/compare/results_text_baseline_all_models_test.csv \
+  --comparison-results output/web_images/compare/results_text_filtered_all_models_test.csv \
   --queries-csv /network/scratch/y/yuyan.chen/inquire/inquire/inquire_queries_test.csv \
-  --summary-out output/web_images/compare/results_text_all_models_baseline_vs_top8_summary.csv \
-  --supercategory-out output/web_images/compare/results_text_all_models_baseline_vs_top8_by_supercategory.csv
+  --summary-out output/web_images/compare/results_text_all_models_baseline_vs_filtered_summary.csv \
+  --supercategory-out output/web_images/compare/results_text_all_models_baseline_vs_filtered_by_supercategory.csv

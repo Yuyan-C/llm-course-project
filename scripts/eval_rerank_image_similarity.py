@@ -120,7 +120,33 @@ class TimmImageEncoder(torch.nn.Module):
         return out
 
 
+class HFVisionModelEncoder(torch.nn.Module):
+    def __init__(self, model: torch.nn.Module) -> None:
+        super().__init__()
+        self.model = model
+
+    def encode_image(self, image: torch.Tensor):
+        return self.model(pixel_values=image)
+
+
+class HFImageProcessorTransform:
+    def __init__(self, processor) -> None:
+        self.processor = processor
+
+    def __call__(self, image: Image.Image) -> torch.Tensor:
+        return self.processor(images=image, return_tensors="pt").pixel_values[0]
+
+
 def load_image_encoder(model_name: str, device: str) -> tuple[torch.nn.Module, object]:
+    if model_name.startswith("hf_vision:"):
+        from transformers import AutoImageProcessor, AutoModel
+
+        hf_name = model_name.split(":", 1)[1]
+        processor = AutoImageProcessor.from_pretrained(hf_name)
+        model = AutoModel.from_pretrained(hf_name).to(device).eval()
+        preprocess = HFImageProcessorTransform(processor)
+        return HFVisionModelEncoder(model), preprocess
+
     if model_name.startswith("timm:"):
         import timm
         from timm.data import create_transform, resolve_model_data_config
@@ -265,7 +291,8 @@ def main() -> None:
         "vit-b-32": "hf_clip:openai/clip-vit-base-patch32",
         "bioclip": "bioclip",
         "biocap": "biocap",
-        "dinov3-b16": "timm:vit_base_patch16_dinov3",
+        "siglip-vit-b-16": "open_clip:ViT-B-16-SigLIP-256/webli",
+        "dinov3-b16": "hf_vision:facebook/dinov3-vitb16-pretrain-lvd1689m",
         "siglip-so400m-14-384": "open_clip:ViT-SO400M-14-SigLIP-384/webli",
     }
 

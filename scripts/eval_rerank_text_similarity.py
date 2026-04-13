@@ -72,19 +72,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--model-load-retries", type=int, default=3)
     parser.add_argument("--model-load-retry-sleep", type=float, default=5.0)
     parser.add_argument(
-        "--aggregation",
-        type=str,
-        default="mean",
-        choices=["mean", "topk_mean"],
-        help="How to aggregate similarity across web exemplars for each candidate image.",
-    )
-    parser.add_argument(
-        "--top-k-sims",
-        type=int,
-        default=3,
-        help="When using top-k aggregation, keep the top-k exemplar similarities per candidate.",
-    )
-    parser.add_argument(
         "--apply-web-image-filters",
         action="store_true",
         help="Apply metadata-based quality filters to downloaded web images before reranking.",
@@ -198,20 +185,10 @@ def _descriptor_from_fields(
     return _fallback_descriptor_from_path(path)
 
 
-def aggregate_similarity_scores(
-    sim_matrix: torch.Tensor,
-    *,
-    mode: str,
-    top_k: int,
-) -> torch.Tensor:
+def aggregate_similarity_scores(sim_matrix: torch.Tensor) -> torch.Tensor:
     if sim_matrix.numel() == 0:
         return torch.empty((sim_matrix.shape[0],), dtype=sim_matrix.dtype, device=sim_matrix.device)
-
-    if mode == "mean":
-        return sim_matrix.mean(dim=1)
-
-    k = sim_matrix.shape[1] if top_k <= 0 else min(top_k, sim_matrix.shape[1])
-    return sim_matrix.topk(k, dim=1).values.mean(dim=1)
+    return sim_matrix.mean(dim=1)
 
 
 def _to_pil_image(image_obj: Any) -> Image.Image:
@@ -559,6 +536,7 @@ def main() -> None:
         "vit-b-32": "hf_clip:openai/clip-vit-base-patch32",
         "bioclip": "bioclip",
         "biocap": "biocap",
+        "siglip-vit-b-16": "open_clip:ViT-B-16-SigLIP-256/webli",
         "dinov3-b16": "timm:vit_base_patch16_dinov3",
         "siglip-so400m-14-384": "open_clip:ViT-SO400M-14-SigLIP-384/webli",
     }
@@ -646,11 +624,7 @@ def main() -> None:
             )
 
             sim_matrix = candidate_embs.float() @ web_embs.float().T
-            y_pred = aggregate_similarity_scores(
-                sim_matrix,
-                mode=args.aggregation,
-                top_k=args.top_k_sims,
-            ).numpy()
+            y_pred = aggregate_similarity_scores(sim_matrix).numpy()
             y_true = np.asarray([all_relevant[idx] for idx in query_indices])
 
             pr, rec, ap, ndcg, mrr = compute_retrieval_metrics(y_true, y_pred, count_pos=sum(y_true))
