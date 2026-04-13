@@ -1,12 +1,11 @@
 #!/bin/bash
 #SBATCH --job-name=inquire_all_cmp
-#SBATCH --partition=long
+#SBATCH --partition=main
 #SBATCH --gres=gpu:l40s:1
 #SBATCH --cpus-per-task=4
 #SBATCH --ntasks-per-node=1
 #SBATCH --mem=48G
 #SBATCH --time=10:00:00
-#SBATCH --exclude=cn-c[026,038]
 #SBATCH --output=slurm-%j.out
 
 set -euo pipefail

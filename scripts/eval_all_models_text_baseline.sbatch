@@ -1,12 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=inquire_text_cmp
-#SBATCH --partition=long
+#SBATCH --job-name=inquire_text_prompt
+#SBATCH --partition=main
 #SBATCH --gres=gpu:l40s:1
 #SBATCH --cpus-per-task=4
 #SBATCH --ntasks-per-node=1
-#SBATCH --mem=64G
+#SBATCH --mem=48G
 #SBATCH --time=18:00:00
-#SBATCH --exclude=cn-c[026,038]
 #SBATCH --output=slurm-%j.out
 
 set -euo pipefail
@@ -17,22 +16,11 @@ source .venv/bin/activate
 mkdir -p output/web_images/compare
 
 MODELS=(vit-b-32 bioclip biocap siglip-vit-b-16 siglip-so400m-14-384 dinov3-b16)
-RAW_WEB_DIR=/network/scratch/y/yuyan.chen/inquire/web_images_raw_top20
-RAW_METADATA=${RAW_WEB_DIR}/image_search_metadata_test.json
-FILTERED_METADATA=/network/scratch/y/yuyan.chen/inquire/web_images_filtered_min2_metadata_only_text/image_search_metadata_test.json
 CAPTION_CACHE=output/web_images/compare/caption_cache_test.json
 CAPTION_VLM_MODEL=Qwen/Qwen3-VL-4B-Instruct
-
-mkdir -p "${RAW_WEB_DIR}"
-mkdir -p "$(dirname "${FILTERED_METADATA}")"
-
-python scripts/use_image_search.py \
-  --split test \
-  --output "${RAW_WEB_DIR}" \
-  --max-results 20 \
-  --keep-k 20 \
-  --min-keep 0 \
-  --disable-quality-filter
+TEXT_RESULTS=output/web_images/compare/results_text_prompt_similarity_all_models_test.csv
+TEXT_SUMMARY=output/web_images/compare/results_text_prompt_similarity_all_models_summary.csv
+TEXT_SUPERCAT=output/web_images/compare/results_text_prompt_similarity_all_models_by_supercategory.csv
 
 # Prime cache for network-sensitive models before full evaluation.
 .venv/bin/python - <<'PY'
@@ -69,36 +57,16 @@ PY
 
 python scripts/eval_rerank_text_similarity.py \
   --split test \
-  --metadata "${RAW_METADATA}" \
   --models "${MODELS[@]}" \
   --caption-vlm-model "${CAPTION_VLM_MODEL}" \
   --caption-cache-path "${CAPTION_CACHE}" \
-  --max-web-images-per-query 3 \
-  --min-web-images-per-query 0 \
   --batch-size 64 \
   --model-load-retries 6 \
   --model-load-retry-sleep 10 \
-  --save-results-path output/web_images/compare/results_text_baseline_all_models_test.csv
+  --save-results-path "${TEXT_RESULTS}"
 
-python scripts/eval_rerank_text_similarity.py \
-  --split test \
-  --metadata "${RAW_METADATA}" \
-  --models "${MODELS[@]}" \
-  --caption-vlm-model "${CAPTION_VLM_MODEL}" \
-  --caption-cache-path "${CAPTION_CACHE}" \
-  --max-web-images-per-query 8 \
-  --min-web-images-per-query 2 \
-  --apply-web-image-filters \
-  --metadata-relevance-threshold 0.25 \
-  --filtered-metadata-out "${FILTERED_METADATA}" \
-  --batch-size 64 \
-  --model-load-retries 6 \
-  --model-load-retry-sleep 10 \
-  --save-results-path output/web_images/compare/results_text_filtered_all_models_test.csv
-
-python scripts/summarize_baseline_vs_filtered.py \
-  --baseline-results output/web_images/compare/results_text_baseline_all_models_test.csv \
-  --comparison-results output/web_images/compare/results_text_filtered_all_models_test.csv \
+python scripts/summarize_single_results.py \
+  --results "${TEXT_RESULTS}" \
   --queries-csv /network/scratch/y/yuyan.chen/inquire/inquire/inquire_queries_test.csv \
-  --summary-out output/web_images/compare/results_text_all_models_baseline_vs_filtered_summary.csv \
-  --supercategory-out output/web_images/compare/results_text_all_models_baseline_vs_filtered_by_supercategory.csv
+  --summary-out "${TEXT_SUMMARY}" \
+  --supercategory-out "${TEXT_SUPERCAT}"

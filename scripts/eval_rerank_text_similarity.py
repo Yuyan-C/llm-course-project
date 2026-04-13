@@ -1,4 +1,4 @@
-"""Evaluate reranking in text space using repo VLM captions and web metadata text."""
+"""Evaluate text-space reranking using test-image captions and query text."""
 
 from __future__ import annotations
 
@@ -6,10 +6,8 @@ import argparse
 from contextlib import nullcontext
 import json
 from pathlib import Path
-import re
 import time
 from typing import Any
-from urllib.parse import urlparse
 
 from datasets import load_dataset
 from tqdm import tqdm
@@ -21,7 +19,6 @@ from PIL import Image
 from src.inquire.lmm_utils_new import ModelWrapper
 from src.inquire.metrics import MetricAverage, compute_retrieval_metrics
 from src.inquire.utils import load_clip
-from src.inquire.web_image_quality import WebImageQualityConfig, filter_record_images
 
 
 def patch_transformers_tokenizer_compat() -> None:
@@ -44,19 +41,15 @@ def patch_transformers_tokenizer_compat() -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run text-to-text reranking with VLM captions.")
+    parser = argparse.ArgumentParser(
+        description="Run query-text to caption-text reranking on INQUIRE-Rerank.",
+    )
     parser.add_argument(
         "--split",
         type=str,
         default="test",
         choices=["val", "test"],
-        help="Dataset split to evaluate on. Options: 'val', 'test'. Default is 'test'.",
-    )
-    parser.add_argument(
-        "--metadata",
-        type=str,
-        default="/network/scratch/y/yuyan.chen/inquire/web_images/image_search_metadata_test.json",
-        help="Path to downloaded image metadata JSON.",
+        help="Dataset split to evaluate on.",
     )
     parser.add_argument("--save-results-path", type=str, default=None)
     parser.add_argument(
@@ -66,26 +59,9 @@ def parse_args() -> argparse.Namespace:
         help="Subset of retrieval model keys to evaluate (e.g. siglip-so400m-14-384).",
     )
     parser.add_argument("--max-queries", type=int, default=None)
-    parser.add_argument("--max-web-images-per-query", type=int, default=8)
-    parser.add_argument("--min-web-images-per-query", type=int, default=2)
     parser.add_argument("--batch-size", type=int, default=256)
     parser.add_argument("--model-load-retries", type=int, default=3)
     parser.add_argument("--model-load-retry-sleep", type=float, default=5.0)
-    parser.add_argument(
-        "--apply-web-image-filters",
-        action="store_true",
-        help="Apply metadata-based quality filters to downloaded web images before reranking.",
-    )
-    parser.add_argument(
-        "--filtered-metadata-out",
-        type=str,
-        default=None,
-        help="Optional output path for metadata after filtering decisions.",
-    )
-    parser.add_argument("--min-short-side", type=int, default=224)
-    parser.add_argument("--max-aspect-ratio", type=float, default=2.8)
-    parser.add_argument("--stock-thumbnail-short-side", type=int, default=600)
-    parser.add_argument("--metadata-relevance-threshold", type=float, default=0.25)
 
     parser.add_argument(
         "--caption-vlm-model",
@@ -117,78 +93,6 @@ def parse_args() -> argparse.Namespace:
         help="Ignore existing caption cache and regenerate captions.",
     )
     return parser.parse_args()
-
-
-def normalize_metadata(records_obj: object) -> list[dict]:
-    if isinstance(records_obj, list):
-        return [item for item in records_obj if isinstance(item, dict)]
-    if isinstance(records_obj, dict):
-        return [records_obj]
-    raise ValueError(f"Expected metadata JSON to be a list or dict, got {type(records_obj).__name__}")
-
-
-def _normalize_whitespace(text: str) -> str:
-    return re.sub(r"\s+", " ", text).strip()
-
-
-def _clean_url_text(url: str) -> str:
-    parsed = urlparse(url)
-    host = parsed.netloc.replace("www.", "")
-    path = re.sub(r"[^a-zA-Z0-9]+", " ", parsed.path)
-    return _normalize_whitespace(f"{host} {path}")
-
-
-def _search_item_by_url(record: dict[str, Any]) -> dict[str, dict[str, Any]]:
-    out: dict[str, dict[str, Any]] = {}
-    tool_result = record.get("tool_result")
-    if not isinstance(tool_result, dict):
-        return out
-    items = tool_result.get("results", [])
-    if not isinstance(items, list):
-        return out
-    for item in items:
-        if not isinstance(item, dict):
-            continue
-        url = item.get("image") or item.get("url")
-        if not isinstance(url, str) or not url:
-            continue
-        out[url] = item
-    return out
-
-
-def _fallback_descriptor_from_path(path_str: str) -> str:
-    stem = Path(path_str).stem
-    return _normalize_whitespace(re.sub(r"[_-]+", " ", stem))
-
-
-def _descriptor_from_fields(
-    *,
-    path: str,
-    title: str | None,
-    source: str | None,
-    url: str | None,
-    thumbnail: str | None,
-) -> str:
-    parts: list[str] = []
-    if title:
-        parts.append(title)
-    if source:
-        parts.append(source)
-    if url:
-        parts.append(_clean_url_text(url))
-    if thumbnail:
-        parts.append(_clean_url_text(thumbnail))
-
-    text = _normalize_whitespace(" ".join(parts))
-    if text:
-        return text
-    return _fallback_descriptor_from_path(path)
-
-
-def aggregate_similarity_scores(sim_matrix: torch.Tensor) -> torch.Tensor:
-    if sim_matrix.numel() == 0:
-        return torch.empty((sim_matrix.shape[0],), dtype=sim_matrix.dtype, device=sim_matrix.device)
-    return sim_matrix.mean(dim=1)
 
 
 def _to_pil_image(image_obj: Any) -> Image.Image:
@@ -301,7 +205,7 @@ def generate_missing_captions(
                 temperature=caption_temperature,
                 max_new_tokens=caption_max_new_tokens,
             )
-            caption_cache[key] = _normalize_whitespace(caption) if caption else "unlabeled image"
+            caption_cache[key] = " ".join(str(caption).split()) if caption else "unlabeled image"
         except Exception as exc:
             caption_cache[key] = f"unlabeled image ({exc.__class__.__name__})"
 
@@ -357,90 +261,6 @@ def ensure_text_embeddings(
     return torch.stack([emb_cache[key] for key in keys])
 
 
-def build_query_to_web_entries(
-    metadata_records: list[dict],
-    *,
-    quality_config: WebImageQualityConfig,
-    max_web_images_per_query: int | None,
-    min_web_images_per_query: int | None,
-    apply_filters: bool,
-) -> tuple[dict[str, list[dict[str, str]]], list[dict], int, int]:
-    query_to_entries: dict[str, list[dict[str, str]]] = {}
-    filtered_records: list[dict] = []
-    total_candidates = 0
-    total_kept = 0
-
-    for record in metadata_records:
-        query_text = record.get("query")
-        if not isinstance(query_text, str) or not query_text:
-            continue
-
-        original_paths = [p for p in record.get("image_paths", []) if isinstance(p, str)]
-        image_urls = [u for u in record.get("image_urls", []) if isinstance(u, str)]
-        total_candidates += len(original_paths)
-        out_record = dict(record)
-        entries: list[dict[str, str]] = []
-
-        if apply_filters:
-            kept_paths, accepted, rejected = filter_record_images(
-                record,
-                quality_config,
-                max_keep=max_web_images_per_query,
-                min_keep=min_web_images_per_query,
-            )
-            for item in accepted:
-                path = str(item.get("path", ""))
-                if not path:
-                    continue
-                text = _descriptor_from_fields(
-                    path=path,
-                    title=str(item.get("title", "")),
-                    source=str(item.get("source", "")),
-                    url=str(item.get("url", "")),
-                    thumbnail=str(item.get("thumbnail", "")),
-                )
-                entries.append({"path": path, "text": text})
-
-            out_record["image_paths_raw"] = original_paths
-            out_record["image_paths"] = kept_paths
-            out_record["image_quality_accepted"] = accepted
-            out_record["image_quality_rejected"] = rejected
-        else:
-            if max_web_images_per_query is not None and max_web_images_per_query >= 0:
-                final_paths = original_paths[:max_web_images_per_query]
-            else:
-                final_paths = original_paths
-
-            by_url = _search_item_by_url(record)
-            for idx, path in enumerate(final_paths):
-                url = image_urls[idx] if idx < len(image_urls) else ""
-                item = by_url.get(url, {})
-                text = _descriptor_from_fields(
-                    path=path,
-                    title=str(item.get("title", "")) if isinstance(item, dict) else "",
-                    source=str(item.get("source", "")) if isinstance(item, dict) else "",
-                    url=url,
-                    thumbnail=str(item.get("thumbnail", "")) if isinstance(item, dict) else "",
-                )
-                entries.append({"path": path, "text": text})
-            out_record["image_paths"] = final_paths
-
-        dedup_entries: list[dict[str, str]] = []
-        seen_paths: set[str] = set()
-        for entry in entries:
-            path = entry.get("path", "")
-            if not path or path in seen_paths:
-                continue
-            seen_paths.add(path)
-            dedup_entries.append(entry)
-
-        total_kept += len(dedup_entries)
-        query_to_entries.setdefault(query_text, []).extend(dedup_entries)
-        filtered_records.append(out_record)
-
-    return query_to_entries, filtered_records, total_candidates, total_kept
-
-
 def main() -> None:
     args = parse_args()
     patch_transformers_tokenizer_compat()
@@ -462,37 +282,6 @@ def main() -> None:
     if args.max_queries is not None:
         unique_queries = unique_queries[: args.max_queries]
 
-    with Path(args.metadata).open("r", encoding="utf-8") as f:
-        metadata_raw = json.load(f)
-    metadata_records = normalize_metadata(metadata_raw)
-
-    quality_config = WebImageQualityConfig(
-        min_short_side=args.min_short_side,
-        max_aspect_ratio=args.max_aspect_ratio,
-        stock_thumbnail_short_side=args.stock_thumbnail_short_side,
-        metadata_relevance_threshold=args.metadata_relevance_threshold,
-        drop_stock_thumbnails=True,
-    )
-
-    query_to_web_entries, filtered_records, total_candidates, total_kept = build_query_to_web_entries(
-        metadata_records,
-        quality_config=quality_config,
-        max_web_images_per_query=args.max_web_images_per_query,
-        min_web_images_per_query=args.min_web_images_per_query,
-        apply_filters=args.apply_web_image_filters,
-    )
-    print(
-        f"Web image candidates: {total_candidates}, kept: {total_kept}, "
-        f"queries with web exemplars: {sum(1 for q in query_to_web_entries if query_to_web_entries[q])}"
-    )
-
-    if args.filtered_metadata_out:
-        out_path = Path(args.filtered_metadata_out)
-        out_path.parent.mkdir(parents=True, exist_ok=True)
-        with out_path.open("w", encoding="utf-8") as f:
-            json.dump(filtered_records, f, indent=2, ensure_ascii=True)
-        print(f"Saved filtered metadata to {out_path}")
-
     query_to_indices: dict[str, list[int]] = {}
     image_id_to_index: dict[Any, int] = {}
     for idx, (query, image_id) in enumerate(zip(all_queries, all_image_ids)):
@@ -500,10 +289,11 @@ def main() -> None:
         if image_id not in image_id_to_index:
             image_id_to_index[image_id] = idx
 
-    required_image_ids: list[Any] = []
-    for query in unique_queries:
-        if query_to_web_entries.get(query):
-            required_image_ids.extend([all_image_ids[idx] for idx in query_to_indices.get(query, [])])
+    required_image_ids = [
+        all_image_ids[idx]
+        for query in unique_queries
+        for idx in query_to_indices.get(query, [])
+    ]
 
     caption_cache = {} if args.force_regenerate_captions else load_caption_cache(caption_cache_path)
     print(f"Caption cache entries loaded: {len(caption_cache)} from {caption_cache_path}")
@@ -591,12 +381,16 @@ def main() -> None:
             if not query_indices:
                 continue
 
-            web_entries = query_to_web_entries.get(query, [])
-            if not web_entries:
-                continue
-            web_entries = [entry for entry in web_entries if Path(entry.get("path", "")).exists()]
-            if not web_entries:
-                continue
+            query_key = f"query::{query}"
+            query_emb = ensure_text_embeddings(
+                keys=[query_key],
+                key_to_text={query_key: query},
+                emb_cache=text_emb_cache,
+                model=model,
+                tokenizer=tokenizer,
+                device=device,
+                batch_size=max(1, args.batch_size),
+            )[0]
 
             image_ids = [all_image_ids[idx] for idx in query_indices]
             candidate_keys = [_caption_key(image_id, args.caption_vlm_model) for image_id in image_ids]
@@ -608,23 +402,10 @@ def main() -> None:
                 model=model,
                 tokenizer=tokenizer,
                 device=device,
-                batch_size=args.batch_size,
+                batch_size=max(1, args.batch_size),
             )
 
-            web_keys = [f"web:{entry['path']}" for entry in web_entries]
-            key_to_web_text = {f"web:{entry['path']}": entry.get("text", "unlabeled web image") for entry in web_entries}
-            web_embs = ensure_text_embeddings(
-                keys=web_keys,
-                key_to_text=key_to_web_text,
-                emb_cache=text_emb_cache,
-                model=model,
-                tokenizer=tokenizer,
-                device=device,
-                batch_size=args.batch_size,
-            )
-
-            sim_matrix = candidate_embs.float() @ web_embs.float().T
-            y_pred = aggregate_similarity_scores(sim_matrix).numpy()
+            y_pred = (candidate_embs.float() @ query_emb.float()).numpy()
             y_true = np.asarray([all_relevant[idx] for idx in query_indices])
 
             pr, rec, ap, ndcg, mrr = compute_retrieval_metrics(y_true, y_pred, count_pos=sum(y_true))
@@ -633,7 +414,7 @@ def main() -> None:
             evaluated_queries += 1
 
         if metrics_avg.avg is None:
-            print(f"{title:30s}\tno valid queries after filtering")
+            print(f"{title:30s}\tno valid queries")
         else:
             ap, ndcg, mrr = metrics_avg.avg
             print(f"{title:30s}\t{ap:.1f}\t{ndcg:.1f}\t{mrr:.2f}\tqueries={evaluated_queries}")
@@ -651,12 +432,14 @@ def main() -> None:
     results_df = pd.DataFrame.from_dict(results)
     pd.options.display.float_format = " {:,.2f}".format
     if len(results_df) == 0:
-        print("No evaluation rows were produced. Check metadata/filter settings.")
+        print("No evaluation rows were produced.")
     else:
         print(results_df.groupby("model").agg({"ap": "mean", "ndcg": "mean", "mrr": "mean"}).sort_values("ap"))
 
-    results_df.to_csv(save_results_path)
-    print("All done! Saved results to", save_results_path)
+    output_path = Path(save_results_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    results_df.to_csv(output_path, index=False)
+    print("All done! Saved results to", output_path)
 
 
 if __name__ == "__main__":

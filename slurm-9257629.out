@@ -1,0 +1,16 @@
+step=patch_tokenizers
+step=load_cache path=output/web_images/compare/caption_cache_test.json
+cache_size=15585
+step=load_dataset split=test
+dataset_size=16000
+query_candidates=100
+step=import_load_clip
+/home/mila/e/echchabo/projects/llm-course-project/.venv/lib/python3.12/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+step=load_clip model=biocap device=cpu
+step=encode_text
+step=rank
+{"query": "A Eurasian Red Squirrel gathering material for its nest", "model": "biocap", "n_candidates": 100, "device": "cpu"}
+{"rank": 1, "score": 0.7323893904685974, "inat24_image_id": 3198051, "inat24_file_name": "train/04849_Animalia_Chordata_Mammalia_Rodentia_Sciuridae_Sciurus_vulgaris/802f2130-2a38-487d-afe7-28da23f6487e.jpg", "relevant": 0, "caption": "user Describe this image in one concise factual sentence. Focus on species, appearance, behavior, and context. assistant A Eurasian red squirrel (Sciurus vulgaris) with a bushy tail is perched among bare winter branches, actively foraging or surveying its surroundings in a leafless tree."}
+{"rank": 2, "score": 0.7208014130592346, "inat24_image_id": 1821913, "inat24_file_name": "train/04852_Animalia_Chordata_Mammalia_Rodentia_Sciuridae_Tamiasciurus_douglasii/76f52bde-0a70-4608-b1d8-3d83af4a0e36.jpg", "relevant": 0, "caption": "user Describe this image in one concise factual sentence. Focus on species, appearance, behavior, and context. assistant A dark-furred squirrel, likely a gray squirrel (Sciurus carolinensis), is perched on a tree trunk, actively chewing on a bundle of dried grass or twigs, possibly gathering materials for a nest."}
+{"rank": 3, "score": 0.7022312879562378, "inat24_image_id": 2686145, "inat24_file_name": "train/04849_Animalia_Chordata_Mammalia_Rodentia_Sciuridae_Sciurus_vulgaris/b5f7df55-7900-4324-b14a-25ece26dcce4.jpg", "relevant": 1, "caption": "user Describe this image in one concise factual sentence. Focus on species, appearance, behavior, and context. assistant A red squirrel (Sciurus vulgaris) clings to a tree trunk while carrying a large, fluffy nest material in its mouth, likely gathering supplies for a nest."}
