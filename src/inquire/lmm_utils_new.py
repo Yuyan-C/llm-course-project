@@ -167,7 +167,18 @@ class ModelWrapper:
         score = (prob_yes) / (prob_yes + prob_no)
         return score.item()
     
-    def generate(self, image_name, prompt, raw_image=None, data_folder=None, temperature=0.5, output_scores=True, **generation_args):
+    def generate(
+        self,
+        image_name,
+        prompt,
+        raw_image=None,
+        data_folder=None,
+        temperature=0.5,
+        output_scores=True,
+        max_new_tokens=5,
+        return_inputs=False,
+        **generation_args,
+    ):
         if raw_image is None and data_folder is None:
             assert raw_image is not None, 'You must provide either the data_folder the load the image from, or the raw_image to use'
         
@@ -219,23 +230,65 @@ class ModelWrapper:
             inputs = {key: value.to(self.model.device) for key, value in inputs.items()}
         else:
             inputs = self.processor(images=raw_image, text=prompt, return_tensors="pt").to("cuda")
-        out = self.model.generate(**inputs, 
-                                  do_sample=True if temperature > 0 else False,
-                                  temperature=temperature,
-                                  max_new_tokens=5,
-                                  use_cache=True,
-                                  return_dict_in_generate=output_scores,
-                                  output_scores=output_scores,
-                                  renormalize_logits=True,
-                                  pad_token_id=pad_token_id,
-                                  **generation_args)
-        
+        out = self.model.generate(
+            **inputs,
+            do_sample=True if temperature > 0 else False,
+            temperature=temperature,
+            max_new_tokens=max_new_tokens,
+            use_cache=True,
+            return_dict_in_generate=output_scores,
+            output_scores=output_scores,
+            renormalize_logits=True,
+            pad_token_id=pad_token_id,
+            **generation_args,
+        )
+
+        if return_inputs:
+            return out, inputs
         return out
     
     def score_image(self, image_name, prompt, data_folder=None, raw_image=None, **generation_args):
         out = self.generate(image_name, prompt, raw_image=raw_image, data_folder=data_folder, **generation_args)
         logits = out.scores[0][0]
         return self.scores_to_pred(logits)
+
+    def caption_image(
+        self,
+        image_name,
+        prompt,
+        data_folder=None,
+        raw_image=None,
+        temperature=0.0,
+        max_new_tokens=32,
+        **generation_args,
+    ):
+        out, inputs = self.generate(
+            image_name=image_name,
+            prompt=prompt,
+            raw_image=raw_image,
+            data_folder=data_folder,
+            temperature=temperature,
+            output_scores=False,
+            max_new_tokens=max_new_tokens,
+            return_inputs=True,
+            **generation_args,
+        )
+
+        token_ids = out
+        if hasattr(out, "sequences"):
+            token_ids = out.sequences
+
+        input_len = 0
+        if isinstance(inputs, dict):
+            input_ids = inputs.get("input_ids")
+            if input_ids is not None and hasattr(input_ids, "shape"):
+                input_len = int(input_ids.shape[-1])
+
+        if input_len > 0 and hasattr(token_ids, "shape") and token_ids.shape[-1] > input_len:
+            token_ids = token_ids[:, input_len:]
+
+        text = self.processor.batch_decode(token_ids, skip_special_tokens=True)[0]
+        return text.strip()
     
     def score_images(self, images, prompt, data_folder, **generation_args):
         scores = []
