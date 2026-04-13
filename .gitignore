@@ -168,3 +168,5 @@ data/*
 scripts/config.sh
 **/*.nc
 **/*.tif
+output/web_images/*
+

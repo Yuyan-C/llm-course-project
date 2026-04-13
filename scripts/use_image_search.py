@@ -2,88 +2,17 @@ import argparse
 import json
 import re
 from pathlib import Path
-from types import SimpleNamespace
 from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
-import torch
-import yaml
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-from src.tools.utils import pipeline
 from src.tools.search.web_search import run_web_image_search
+from src.inquire.web_image_quality import (
+    WebImageQualityConfig,
+    filter_record_images,
+)
 
 from datasets import load_dataset
 import numpy as np
-
-
-SEARCH_INIT_PROMPT = """
-You are a tool-calling assistant that finds images for a query.
-
-Use the tool `run_web_image_search` to fetch image results. Pick the 3 most
-relevant image URLs for the query.
-
-Output format (JSON only, no extra text):
-{"image_urls": ["...", "...", "..."]}
-""".strip()
-
-
-def to_namespace(obj):
-    if isinstance(obj, dict):
-        return SimpleNamespace(**{k: to_namespace(v) for k, v in obj.items()})
-    if isinstance(obj, list):
-        return [to_namespace(v) for v in obj]
-    return obj
-
-
-def load_config(config_path="config.yml"):
-    with open(config_path, "r") as f:
-        config = yaml.safe_load(f)
-    return to_namespace(config)
-
-
-def load_model(model_name: str):
-    tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, trust_remote_code=True)
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        device_map="auto",
-        dtype=torch.float16,
-        trust_remote_code=True,
-    )
-    model.eval()
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token_id
-    return model, tokenizer
-
-
-def build_search_config(base_config):
-    return SimpleNamespace(
-        init_prompt=SEARCH_INIT_PROMPT,
-        max_tool_calls=base_config.max_tool_calls,
-        chat_template=base_config.chat_template,
-        generate=base_config.generate,
-    )
-
-
-def extract_image_urls(text: str) -> list[str]:
-    start = text.find("{")
-    if start != -1:
-        depth = 0
-        for idx in range(start, len(text)):
-            if text[idx] == "{":
-                depth += 1
-            elif text[idx] == "}":
-                depth -= 1
-                if depth == 0:
-                    try:
-                        payload = json.loads(text[start:idx + 1])
-                        urls = payload.get("image_urls")
-                        if isinstance(urls, list):
-                            return [str(url).strip() for url in urls if str(url).strip()]
-                    except json.JSONDecodeError:
-                        break
-    urls = re.findall(r"https?://\S+", text)
-    return urls
 
 
 def download_image(url: str, output_dir: Path, filename: str) -> Path | None:
@@ -107,8 +36,18 @@ def infer_extension(url: str) -> str:
     return "jpg"
 
 
-def fetch_images_for_query(query: str, model, tokenizer, search_config, output_dir: Path) -> dict:
-    tool_result = run_web_image_search(query, max_results=3, region="us", safesearch="on", backend="v2")
+def fetch_images_for_query(
+    query: str,
+    output_dir: Path,
+    max_results: int,
+) -> dict:
+    tool_result = run_web_image_search(
+        query,
+        max_results=max_results,
+        region="us",
+        safesearch="on",
+        backend="v2",
+    )
     urls = [item.get("image") for item in tool_result.get("results", []) if item.get("image")]
 
     image_paths = []
@@ -129,33 +68,68 @@ def fetch_images_for_query(query: str, model, tokenizer, search_config, output_d
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Download 3 web images per query using tool-calling.")
-   #  parser.add_argument("--query", type=str, required=True, help="Query to search for images")
-    parser.add_argument("--config", type=str, default="configs/eval.yml")
+    parser = argparse.ArgumentParser(description="Download and quality-filter web images for INQUIRE queries.")
+    parser.add_argument("--split", type=str, default="test", choices=["val", "test"])
     parser.add_argument("--output", type=str, default="output/web_images")
+    parser.add_argument("--max-queries", type=int, default=None)
+    parser.add_argument("--max-results", type=int, default=20)
+    parser.add_argument("--keep-k", type=int, default=8)
+    parser.add_argument("--min-keep", type=int, default=2)
+    parser.add_argument("--disable-quality-filter", action="store_true")
+    parser.add_argument("--min-short-side", type=int, default=224)
+    parser.add_argument("--max-aspect-ratio", type=float, default=2.8)
+    parser.add_argument("--stock-thumbnail-short-side", type=int, default=600)
+    parser.add_argument("--metadata-relevance-threshold", type=float, default=0.25)
     args = parser.parse_args()
-
-    base_config = load_config(args.config)
-    search_config = build_search_config(base_config)
-    model, tokenizer = load_model(base_config.model.name)
 
     output_dir = Path(args.output)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    split = "test"
-    dataset = load_dataset("evendrow/INQUIRE-Rerank", split=("validation" if split == "val" else "test"))
+    dataset = load_dataset("evendrow/INQUIRE-Rerank", split=("validation" if args.split == "val" else "test"))
     queries = np.unique(dataset["query"]).tolist()
+    if args.max_queries is not None:
+        queries = queries[: args.max_queries]
+
+    quality_config = WebImageQualityConfig(
+        min_short_side=args.min_short_side,
+        max_aspect_ratio=args.max_aspect_ratio,
+        stock_thumbnail_short_side=args.stock_thumbnail_short_side,
+        metadata_relevance_threshold=args.metadata_relevance_threshold,
+        drop_stock_thumbnails=True,
+    )
 
     all_metadata = []
-    for i, query_text in enumerate(queries):
-        payload = fetch_images_for_query(query_text, model, tokenizer, search_config, output_dir)
-        all_metadata.append(payload)
-        print(f"Downloaded {len(payload['image_paths'])} images to {output_dir}")
+    for i, query_text in enumerate(queries, start=1):
+        payload = fetch_images_for_query(
+            query_text,
+            output_dir=output_dir,
+            max_results=args.max_results,
+        )
 
-    metadata_path = output_dir / "image_search_metadata_test.json"
+        if args.disable_quality_filter:
+            keep_target = max(args.keep_k, args.min_keep)
+            payload["image_paths"] = payload["image_paths"][: keep_target]
+        else:
+            kept_paths, accepted, rejected = filter_record_images(
+                payload,
+                quality_config,
+                max_keep=args.keep_k,
+                min_keep=args.min_keep,
+            )
+            payload["image_paths_raw"] = payload["image_paths"]
+            payload["image_paths"] = kept_paths
+            payload["image_quality_accepted"] = accepted
+            payload["image_quality_rejected"] = rejected
+
+        all_metadata.append(payload)
+        print(
+            f"[{i}/{len(queries)}] kept={len(payload['image_paths'])} "
+            f"downloaded={len(payload.get('image_paths_raw', payload['image_paths']))} "
+            f"query={query_text}"
+        )
+
+    metadata_path = output_dir / f"image_search_metadata_{args.split}.json"
     with metadata_path.open("w", encoding="utf-8") as f:
         json.dump(all_metadata, f, indent=2, ensure_ascii=True)
 
     print(f"Saved metadata to {metadata_path}")
-
-      

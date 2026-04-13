@@ -1,0 +1,801 @@
+,model,query,ap,ndcg,mrr
+0,vit-b-32,A By-the-Wind Sailor washed up on a beach,100.0,100.0,1.0
+1,vit-b-32,A Eurasian Red Squirrel gathering material for its nest,12.874893034987455,42.297023180329354,0.1111111111111111
+2,vit-b-32,A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs,34.9537037037037,69.0966993714886,1.0
+3,vit-b-32,A close-up of an ant carrying a leaf,64.46874948485643,89.77891073757365,1.0
+4,vit-b-32,A coyote resting on human-build structures,17.66567274576428,47.15447273446835,0.25
+5,vit-b-32,A female pheasant,71.07752304038893,87.6414560660663,0.5
+6,vit-b-32,A male and female cardinal sharing food,50.0,63.09297535714573,0.5
+7,vit-b-32,A mongoose standing upright alert,33.659135280518925,72.11543757908888,1.0
+8,vit-b-32,A peacock male displaying its feathers,73.30303555559672,92.56255964373257,1.0
+9,vit-b-32,Adult female black widow spider not in a web,3.124842319840958,24.122965749108648,0.029411764705882353
+10,vit-b-32,Alligator lizards mating,41.94235299957315,78.33427753064109,1.0
+11,vit-b-32,Black Skimmer with a leg band,3.279974106441023,24.59389015423022,0.04
+12,vit-b-32,Blackening Waxcap mushroom turned fully black,39.45970192663815,77.39254469192733,1.0
+13,vit-b-32,Butterflyfish feeding on brain coral,31.873814390542787,64.25187036888633,0.16666666666666666
+14,vit-b-32,Cart-Rut Shell snail egg mass,34.091227002661235,67.3775691843657,1.0
+15,vit-b-32,Channeled Applesnail covered by green algae,8.04982837105315,37.29808698436053,0.05263157894736842
+16,vit-b-32,Cheetah with radio collar,14.133242803625587,47.253209838620855,0.1
+17,vit-b-32,Chinese Mystery Snail covered by green algae,40.92795198230396,73.03756310313368,0.3333333333333333
+18,vit-b-32,Cooper's Hawk in adult plumage,40.021760210941935,72.21505154218075,0.3333333333333333
+19,vit-b-32,Dead hog-nosed skunk,29.526051202480343,63.62959296158359,0.2
+20,vit-b-32,Dolphins performing acrobatics,77.46475197649858,94.69277397939689,1.0
+21,vit-b-32,Eastern Red Bat in flight,37.22669504185892,71.194370787871,0.5
+22,vit-b-32,Elk bugling during the rut,40.335648148148145,65.76635824919312,0.5
+23,vit-b-32,Emergence of large colony of mexican free-tailed bats,73.25374850525517,93.54689568622311,1.0
+24,vit-b-32,Exactly five penguins,27.018186458036887,63.92568714052429,1.0
+25,vit-b-32,Exactly three zebras standing together in a field,50.82034480276679,83.55879272906044,1.0
+26,vit-b-32,Fishing net on a reef,28.31267530749253,60.59517649624052,0.1111111111111111
+27,vit-b-32,Fly Agaric in yellow form,42.53396010518021,78.19613707074204,1.0
+28,vit-b-32,Fur seal mother with pup,42.419555700090434,78.65534969624865,1.0
+29,vit-b-32,Gazelle being vigilant/looking around,21.311558234067878,56.83195683871519,0.14285714285714285
+30,vit-b-32,Green Shore Crab,42.66478347253294,75.9328653803823,0.5
+31,vit-b-32,Haliaeetus eagles in aerial cartwheeling flight with locked talons,1.0416666666666665,15.151715240963881,0.010416666666666666
+32,vit-b-32,Hamerkop collecting nesting material,8.863004415042154,37.868190802769156,0.07142857142857142
+33,vit-b-32,House finch with yellow pigmentation,17.445497336801687,46.92947838593607,0.25
+34,vit-b-32,Hübner's Wasp Moth mating,45.69929945870999,81.57083342729267,1.0
+35,vit-b-32,Inflated pufferfish,43.73406828860584,74.76046800933001,0.5
+36,vit-b-32,Leafhopper Assassin Bug predating lady beetle,18.878609974500385,44.631848215699705,0.5
+37,vit-b-32,Lilac Bonnet with edges turnt up revealing its gills,9.137894082843436,40.069321994537404,0.125
+38,vit-b-32,Luna Moth missing long twisted tails on the hindwings,2.441077441077441,20.71337201540834,0.018518518518518517
+39,vit-b-32,Male Blue-black Grassquit in patchy blue-black and brown plumage,15.242423793671056,45.626934714082104,0.06666666666666667
+40,vit-b-32,Male Xanthagrion erythroneurum,21.014286431186694,53.06709079746169,0.1
+41,vit-b-32,Male chorus frog with inflated vocal sacs,45.15059847056747,79.10008820328378,1.0
+42,vit-b-32,Male crimsonband wrasse,16.500614829914046,46.793004439442726,0.1111111111111111
+43,vit-b-32,Maple tree with signs of tapping,1.3513513513513513,16.054408543402232,0.013513513513513514
+44,vit-b-32,Melanistic jaguar,6.666666666666667,25.0,0.06666666666666667
+45,vit-b-32,Melanistic leopard,75.92857142857143,90.43980816456212,1.0
+46,vit-b-32,Mexican grass-carrying wasp visiting a purple flower,19.471153846153847,48.318530554518865,0.5
+47,vit-b-32,Milkweed Assassin Bug predating a bee or wasp,3.203607024205031,22.09494739182235,0.023255813953488372
+48,vit-b-32,Moorish Gecko with regenerated tail,4.3557168784029034,24.609878418597894,0.05263157894736842
+49,vit-b-32,Mushrooms growing in a fairy ring formation,55.736693861693865,82.87910492177437,1.0
+50,vit-b-32,North Island robin or South Island robin with leg bands,17.211014390914272,52.31172647019844,0.25
+51,vit-b-32,Northern Mockingbird carrying out its food,42.65314513100954,74.16339271651997,1.0
+52,vit-b-32,Nursery Web Spider carrying egg sac,46.14624820710843,81.05265596132945,1.0
+53,vit-b-32,Octopus out of the water,53.02684419102292,83.4351977591149,1.0
+54,vit-b-32,Red-capped Plover performing broken wing distraction,3.3482142857142856,22.802605560539142,0.03571428571428571
+55,vit-b-32,Redwood tree with fire scars,69.63966110296833,90.9681367218522,1.0
+56,vit-b-32,Rhino with ear notches,55.91531987988614,83.96722827994667,1.0
+57,vit-b-32,Sage Thrasher vocalizing,27.104902364077795,59.82694819818064,0.3333333333333333
+58,vit-b-32,Scarlet Waxy Cap with visible gills,38.96918870237498,70.93986535051546,0.25
+59,vit-b-32,Scorpion with young on its back,38.571226792368236,69.32108347823151,0.25
+60,vit-b-32,Sea turtle with algae on its shell,36.32912019665307,73.33999203788166,1.0
+61,vit-b-32,Sharks with remoras attached,9.8058350860075,38.795839807753566,0.06666666666666667
+62,vit-b-32,Splendid fairywren without blue body coloration,33.16918072682134,64.72734206210139,0.09090909090909091
+63,vit-b-32,Surgeonfish grazing on algae,19.478344133884445,51.6416584457125,0.2
+64,vit-b-32,Swallowtail butterfly caterpillar camouflaged as bird droppings,88.35832297171306,97.46658536257513,1.0
+65,vit-b-32,Tagged swan,40.189810647261965,76.55333163164536,1.0
+66,vit-b-32,Tropical Orb Weaver with multiple white spots in the abdominal dorsum,4.706533776301218,24.980418331264406,0.047619047619047616
+67,vit-b-32,Two giraffes,45.396184642966844,81.6930632533104,1.0
+68,vit-b-32,Water Frogs in amplexus position,10.49587846640806,39.89268437193129,0.2
+69,vit-b-32,Wolf spider with limb loss,8.45066045066045,34.97837589775782,0.09090909090909091
+70,vit-b-32,Yellow-faced Honeyeater in birdbath,46.222074702861654,80.39755044116008,1.0
+71,vit-b-32,Zebra and wildebeest grazing together,44.17063787291834,74.25063333658142,0.3333333333333333
+72,vit-b-32,a bag-shelter moth's silken bag nest on a tree,83.33333333333333,91.97207891481877,1.0
+73,vit-b-32,a beaver dam across a stream,40.854630385759826,69.97297089264548,0.2
+74,vit-b-32,a bighorn sheep with a tracking collar around its neck,10.547276912499898,41.28602904828959,0.043478260869565216
+75,vit-b-32,a gall produced by an Acorn Plum Gall Wasp,100.0,100.0,1.0
+76,vit-b-32,a herd of more than 10 impalas,49.23744396499127,83.16205559915217,1.0
+77,vit-b-32,a hermit crab using plastic waste as a shell,29.58333333333333,54.65431791243307,0.5
+78,vit-b-32,a lion with a collar around its neck,6.502141475545731,31.85829472624013,0.14285714285714285
+79,vit-b-32,a microscopy slide showing the cellular structure of a plant,54.08297129018674,83.94624036381445,1.0
+80,vit-b-32,a mud dauber wasp in the process of forming its nest out of mud,11.160185255488205,40.72563109350757,0.1
+81,vit-b-32,a nest with eggs displaying brood parasitism by a cowbird,9.41977074417147,38.49596702156465,0.16666666666666666
+82,vit-b-32,a possum on a power line,32.65218450111379,63.808121325694685,0.06666666666666667
+83,vit-b-32,a sandhill crane couple with their chicks,11.275357054777196,42.87424448254833,0.2
+84,vit-b-32,adult male Misumena vatia,3.0423280423280423,22.32074446502434,0.037037037037037035
+85,vit-b-32,albino american robin,1.4285714285714286,16.260831227163308,0.014285714285714285
+86,vit-b-32,an image showing a humpback whale fluke with clearly identifiable markings,44.371389779082484,78.64942984025213,1.0
+87,vit-b-32,an oak gall produced by a spongy oak apple gall wasp,45.852117460062225,76.27064787377861,0.5
+88,vit-b-32,an oxpecker on a zebra,55.430391146847754,86.56349337609595,1.0
+89,vit-b-32,antelopes head-butting,42.21643320222152,76.5578228407718,1.0
+90,vit-b-32,bananaquit pollinating flower,15.68957887714228,50.925889513664046,0.5
+91,vit-b-32,beached orca,100.0,100.0,1.0
+92,vit-b-32,bird caught in a net,74.06821786063375,93.28868518406186,1.0
+93,vit-b-32,bird dead in front of a window,29.00275671300383,65.65755679219892,0.5
+94,vit-b-32,black-winged kite carrying prey in its talons,46.349994194821775,76.33024140306246,1.0
+95,vit-b-32,blue jay eating whole peanuts,35.42884990253411,65.38091808211888,1.0
+96,vit-b-32,breeding adult Black-bellied Plover,40.9393691328239,71.94879370546347,0.25
+97,vit-b-32,bridal veil stinkhorn mushroom,95.82689765099855,99.15260510087283,1.0
+98,vit-b-32,brown bear near vehicle,9.374919971758244,40.58259811755169,0.05555555555555555
+99,vit-b-32,bullhead shark egg case,42.3901464892177,75.35630764782594,1.0
+100,vit-b-32,camera trap photo of a bobcat captured in the nightime,61.25610210622756,88.25249218688974,1.0
+101,vit-b-32,camera trap photo of a springbok drinking water,34.1215217531007,58.64037081124497,0.3333333333333333
+102,vit-b-32,camera trap photo of a stag red deer,13.337742874874268,43.66070928711831,0.08333333333333333
+103,vit-b-32,camera trap photo of chital with its head down,29.850407032840558,61.90056169340853,0.3333333333333333
+104,vit-b-32,canada geese flying in v-formation,5.519193720323846,31.554621030281844,0.1111111111111111
+105,vit-b-32,caterpillar of Common Buckeye butterfly,24.250133437836226,59.360895666821214,0.5
+106,vit-b-32,caterpillar of Gulf Fritillary butterfly,38.18399656709139,73.43234061786549,0.5
+107,vit-b-32,caterpillar of polyphemus moth,32.896763749234466,70.9458685622083,1.0
+108,vit-b-32,cheetah with cubs,32.88321695561603,70.42864367546655,1.0
+109,vit-b-32,close-up of sugar maple leaf,49.88022564449538,77.33454023664315,0.5
+110,vit-b-32,close-up of sweet cherry tree bark,24.159916198694376,64.1169433619296,1.0
+111,vit-b-32,common murre beached carcass,46.130136639688644,74.768735698999,0.25
+112,vit-b-32,couple of black-bellied whistling ducks with their youngs sharing parenting duties,32.448307230296834,71.74516256378313,1.0
+113,vit-b-32,cross orbweaver,7.283638741400445,36.55559129338853,0.047619047619047616
+114,vit-b-32,dark-colored Dusky Leaf-monkey with orange-colored young,19.345564996366633,52.24954688774353,0.09090909090909091
+115,vit-b-32,dorsal side of mourning cloak butterfly,57.13653724210913,86.67595323126845,1.0
+116,vit-b-32,eastern gray squirrel displaying melanistic pelage,58.951524356449234,87.22953267847706,1.0
+117,vit-b-32,elephant covered in mud or dirt,53.75149944409971,77.81427477073372,0.25
+118,vit-b-32,elephant near a fence,34.27831589622631,72.02506875111689,1.0
+119,vit-b-32,elk with hair loss,41.21877792287765,73.46488233086976,0.3333333333333333
+120,vit-b-32,female beautiful demoiselle,32.18620442956254,71.78280646677206,1.0
+121,vit-b-32,feral cat with prey,19.39555650062655,52.396260065815284,0.2
+122,vit-b-32,fire pink with dark-colored anthers,11.780240952661632,41.660295552820465,0.1111111111111111
+123,vit-b-32,fire salamander with a barred color pattern,21.441204606879147,53.29592185021603,0.14285714285714285
+124,vit-b-32,flamingo standing on one leg,39.86971797748549,70.38272053634613,0.16666666666666666
+125,vit-b-32,fruit bat eating fruit upside down,9.208425798323303,38.27431333033398,0.14285714285714285
+126,vit-b-32,giant resin bee feeding on sunflower,4.545454545454546,22.106472945750344,0.045454545454545456
+127,vit-b-32,great golden digger wasp carrying an orthopteron,18.040621266427717,43.89675031750265,0.3333333333333333
+128,vit-b-32,grebe with babies on its back,27.348265531308368,64.24527845901387,0.5
+129,vit-b-32,hognose snake playing dead,25.43695279774608,59.99798814718918,1.0
+130,vit-b-32,human handling a bat with bare hands,15.544713867930298,48.295530069999515,0.07142857142857142
+131,vit-b-32,hyenas eating a kill,19.480679620071065,54.90991646069363,0.3333333333333333
+132,vit-b-32,jungle babblers allopreening,47.796964939822075,78.04831922484296,1.0
+133,vit-b-32,kahili ginger plant with open fruit capsules showing seeds,41.37362637362638,72.75747298530284,1.0
+134,vit-b-32,killdeer feigning injury,16.007672882672882,47.367117412776906,0.25
+135,vit-b-32,laysan albatross mostly in dark mottled brown plumage,7.895792932557638,34.45875883557041,0.08333333333333333
+136,vit-b-32,lorikeet pollinating flower,62.39992276354781,88.61130506776128,1.0
+137,vit-b-32,male Red-winged Blackbird vocalizing,59.868205762301166,86.37502141188205,1.0
+138,vit-b-32,male ruby-throated hummingbird in flight,22.12236119297223,58.57456967778163,0.3333333333333333
+139,vit-b-32,male smooth newt with developed crest,28.409065724421644,65.70786758125368,1.0
+140,vit-b-32,male velvet ant,4.7671376242804815,29.763799841722903,0.047619047619047616
+141,vit-b-32,measuring the body dimensions of a bee,34.34245174831704,73.10239362126725,1.0
+142,vit-b-32,monkey slug caterpillar,1.4925373134328357,16.42720499620509,0.014925373134328358
+143,vit-b-32,moose with hair loss,43.5262873624912,78.76925564857517,1.0
+144,vit-b-32,mountain goat climbing rocky outcrops with its young,15.07815789589002,49.29708902696518,0.25
+145,vit-b-32,pair of great crested grebes potentially performing the weed dance,71.89313113902256,91.16651880451658,1.0
+146,vit-b-32,parrotfish feeding,27.033190950859478,63.27961999778546,0.5
+147,vit-b-32,photo with two or more adult male lions,11.728183921872255,44.25218900516457,0.07142857142857142
+148,vit-b-32,picture showing more than fifty Mediterranean Acrobat Ants,7.408114761055937,30.322172289945325,0.058823529411764705
+149,vit-b-32,picture showing more than fifty Velvety Tree Ants,5.761538131134163,31.337491734482686,0.05555555555555555
+150,vit-b-32,potter wasp nest,44.89247311827957,71.11754267102403,1.0
+151,vit-b-32,puffins carrying food,24.546942974073982,56.641527482570396,0.5
+152,vit-b-32,red-tailed hawk perched on a utility pole,30.19423174971743,67.34866095573607,1.0
+153,vit-b-32,sick cassava plant,43.34005738239512,72.95380175289445,0.25
+154,vit-b-32,sloth hugging a human-made structure,24.95288219646848,59.832537019571795,0.14285714285714285
+155,vit-b-32,southern aligator lizard with cut tail,3.8547923535384525,26.412525432156315,0.021739130434782608
+156,vit-b-32,ventral side of mourning cloak butterfly,37.737583641829374,76.46813205275853,1.0
+157,vit-b-32,vervet monkey with visible bright blue scrotal areas,28.40766150221453,63.22857189039587,0.3333333333333333
+158,vit-b-32,water snake feeding on fish,8.868008076351458,38.57367498126998,0.1
+159,vit-b-32,white-tailed deer flagging its tail,10.288501230451693,38.464535549234135,0.2
+160,bioclip,A By-the-Wind Sailor washed up on a beach,100.0,100.0,1.0
+161,bioclip,A Eurasian Red Squirrel gathering material for its nest,32.21468074409251,67.61537534266783,1.0
+162,bioclip,A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs,16.8895791642471,47.48110094012788,0.2
+163,bioclip,A close-up of an ant carrying a leaf,82.54944430061006,95.73541718586421,1.0
+164,bioclip,A coyote resting on human-build structures,30.10681784675593,63.07420021517678,1.0
+165,bioclip,A female pheasant,69.18198011898649,86.80551978949723,0.5
+166,bioclip,A male and female cardinal sharing food,33.33333333333333,50.0,0.3333333333333333
+167,bioclip,A mongoose standing upright alert,24.87014996447353,59.31421867728238,0.125
+168,bioclip,A peacock male displaying its feathers,46.887898376610025,82.22824343654642,1.0
+169,bioclip,Adult female black widow spider not in a web,2.7765473114310324,23.017573775215286,0.016666666666666666
+170,bioclip,Alligator lizards mating,48.77090833617188,76.70107716721206,0.5
+171,bioclip,Black Skimmer with a leg band,7.295788939624556,30.336696178727614,0.06666666666666667
+172,bioclip,Blackening Waxcap mushroom turned fully black,43.47225908116324,78.73083327948028,1.0
+173,bioclip,Butterflyfish feeding on brain coral,25.710921030345208,62.57307979668356,0.3333333333333333
+174,bioclip,Cart-Rut Shell snail egg mass,12.868929227888065,43.4516976803116,0.3333333333333333
+175,bioclip,Channeled Applesnail covered by green algae,6.980371282577407,35.056481164824,0.02127659574468085
+176,bioclip,Cheetah with radio collar,11.019690390670066,44.802430503972026,0.25
+177,bioclip,Chinese Mystery Snail covered by green algae,57.976031836512895,86.63270169825293,1.0
+178,bioclip,Cooper's Hawk in adult plumage,38.52834865735839,71.17177251210177,0.25
+179,bioclip,Dead hog-nosed skunk,33.83531747073697,70.77497793643447,1.0
+180,bioclip,Dolphins performing acrobatics,66.51044073256939,88.36923531097868,1.0
+181,bioclip,Eastern Red Bat in flight,52.273107868023835,85.39210989865053,1.0
+182,bioclip,Elk bugling during the rut,21.808929374718847,50.152073058559345,0.25
+183,bioclip,Emergence of large colony of mexican free-tailed bats,69.65700345732165,92.05650218560733,1.0
+184,bioclip,Exactly five penguins,26.118297879952713,60.88543022289549,0.5
+185,bioclip,Exactly three zebras standing together in a field,44.484675297416416,78.75797972037455,1.0
+186,bioclip,Fishing net on a reef,27.545191508487278,61.566896704039856,0.16666666666666666
+187,bioclip,Fly Agaric in yellow form,69.7223447997081,91.82684737398625,1.0
+188,bioclip,Fur seal mother with pup,33.28198064838996,67.98710023704415,0.3333333333333333
+189,bioclip,Gazelle being vigilant/looking around,25.253392664443464,62.768495860621876,0.3333333333333333
+190,bioclip,Green Shore Crab,69.32660215439341,90.45783768108319,1.0
+191,bioclip,Haliaeetus eagles in aerial cartwheeling flight with locked talons,1.2987012987012987,15.90988078692952,0.012987012987012988
+192,bioclip,Hamerkop collecting nesting material,8.701596209619316,38.19931183838481,0.07692307692307693
+193,bioclip,House finch with yellow pigmentation,23.864079390395176,54.56401403244037,0.5
+194,bioclip,Hübner's Wasp Moth mating,77.3026149680533,94.23575481167397,1.0
+195,bioclip,Inflated pufferfish,48.320034280383425,76.64056595779488,0.3333333333333333
+196,bioclip,Leafhopper Assassin Bug predating lady beetle,19.166666666666668,41.0509945747774,0.125
+197,bioclip,Lilac Bonnet with edges turnt up revealing its gills,10.177687728641523,41.53288298874651,0.14285714285714285
+198,bioclip,Luna Moth missing long twisted tails on the hindwings,4.199134199134199,24.30756181518788,0.047619047619047616
+199,bioclip,Male Blue-black Grassquit in patchy blue-black and brown plumage,10.084662887259276,41.69187596874534,0.1
+200,bioclip,Male Xanthagrion erythroneurum,88.89852629712686,97.19124481596293,1.0
+201,bioclip,Male chorus frog with inflated vocal sacs,44.29652471278138,80.54323502427683,1.0
+202,bioclip,Male crimsonband wrasse,11.226425270330314,41.816331840899316,0.0625
+203,bioclip,Maple tree with signs of tapping,50.0,63.09297535714573,0.5
+204,bioclip,Melanistic jaguar,1.0416666666666665,15.151715240963881,0.010416666666666666
+205,bioclip,Melanistic leopard,32.6672932330827,64.99469907178465,1.0
+206,bioclip,Mexican grass-carrying wasp visiting a purple flower,68.33333333333333,86.70436848381937,1.0
+207,bioclip,Milkweed Assassin Bug predating a bee or wasp,3.282051282051282,22.33040744400355,0.02564102564102564
+208,bioclip,Moorish Gecko with regenerated tail,52.85714285714286,73.1746049150107,1.0
+209,bioclip,Mushrooms growing in a fairy ring formation,37.07029608928343,64.85653539058485,0.5
+210,bioclip,North Island robin or South Island robin with leg bands,22.162067149430204,62.14377957857478,1.0
+211,bioclip,Northern Mockingbird carrying out its food,40.682752353209835,72.53372933762437,1.0
+212,bioclip,Nursery Web Spider carrying egg sac,69.47211360314202,91.32868174479854,1.0
+213,bioclip,Octopus out of the water,63.42942642499858,89.63920445887699,1.0
+214,bioclip,Red-capped Plover performing broken wing distraction,1.6308243727598568,18.776207633740256,0.011111111111111112
+215,bioclip,Redwood tree with fire scars,67.06665233413129,90.62664688885953,1.0
+216,bioclip,Rhino with ear notches,44.556326534603194,71.24313641245554,0.1
+217,bioclip,Sage Thrasher vocalizing,20.94285254339602,52.1115417368773,0.2
+218,bioclip,Scarlet Waxy Cap with visible gills,54.456186548398335,80.268000254782,0.5
+219,bioclip,Scorpion with young on its back,41.77611684120867,74.76123569874167,0.5
+220,bioclip,Sea turtle with algae on its shell,25.314464856340795,58.66327251690221,0.125
+221,bioclip,Sharks with remoras attached,17.10454521720969,47.37967050738937,0.16666666666666666
+222,bioclip,Splendid fairywren without blue body coloration,26.734107564959974,59.4713997043286,0.03571428571428571
+223,bioclip,Surgeonfish grazing on algae,26.09237680184318,60.20766362859635,0.5
+224,bioclip,Swallowtail butterfly caterpillar camouflaged as bird droppings,98.65680252902969,99.75402721280575,1.0
+225,bioclip,Tagged swan,44.34660637561627,80.05303967797175,1.0
+226,bioclip,Tropical Orb Weaver with multiple white spots in the abdominal dorsum,26.041666666666668,47.97551238903277,0.5
+227,bioclip,Two giraffes,43.35933634067889,77.51355607790798,1.0
+228,bioclip,Water Frogs in amplexus position,18.057349116671148,47.16652563542146,0.25
+229,bioclip,Wolf spider with limb loss,8.266879319510899,34.452917849166894,0.06666666666666667
+230,bioclip,Yellow-faced Honeyeater in birdbath,59.02587068442446,80.11200630995815,0.5
+231,bioclip,Zebra and wildebeest grazing together,48.82940833539771,81.86688535919058,1.0
+232,bioclip,a bag-shelter moth's silken bag nest on a tree,56.25,76.31539858737962,1.0
+233,bioclip,a beaver dam across a stream,55.82102845188065,83.2827929985288,1.0
+234,bioclip,a bighorn sheep with a tracking collar around its neck,13.217066988340909,45.77419540160846,0.125
+235,bioclip,a gall produced by an Acorn Plum Gall Wasp,100.0,100.0,1.0
+236,bioclip,a herd of more than 10 impalas,46.22685325322688,76.85226692046044,0.5
+237,bioclip,a hermit crab using plastic waste as a shell,36.88679245283019,63.84151105076602,1.0
+238,bioclip,a lion with a collar around its neck,3.3121843434343434,25.558935730305738,0.020833333333333332
+239,bioclip,a microscopy slide showing the cellular structure of a plant,40.28028627785404,77.49362860132031,1.0
+240,bioclip,a mud dauber wasp in the process of forming its nest out of mud,26.665323655812788,55.57178908450895,0.3333333333333333
+241,bioclip,a nest with eggs displaying brood parasitism by a cowbird,13.19190534482285,40.56811516228201,0.08333333333333333
+242,bioclip,a possum on a power line,41.882498932171885,70.51072266489004,0.2
+243,bioclip,a sandhill crane couple with their chicks,9.67854541888333,38.51756761467718,0.041666666666666664
+244,bioclip,adult male Misumena vatia,1.9444444444444444,19.760200233862843,0.016666666666666666
+245,bioclip,albino american robin,100.0,100.0,1.0
+246,bioclip,an image showing a humpback whale fluke with clearly identifiable markings,46.99005072287556,80.13746641645615,1.0
+247,bioclip,an oak gall produced by a spongy oak apple gall wasp,72.02855035089233,92.74425787303467,1.0
+248,bioclip,an oxpecker on a zebra,77.7768190022322,94.34929714928222,1.0
+249,bioclip,antelopes head-butting,33.043984615513786,64.11447088912254,0.2
+250,bioclip,bananaquit pollinating flower,8.472265122975715,38.71175075850991,0.03571428571428571
+251,bioclip,beached orca,11.785714285714285,34.231664888440854,0.2
+252,bioclip,bird caught in a net,51.429638526995255,80.17901121790804,0.5
+253,bioclip,bird dead in front of a window,18.512733184038844,54.29826194989611,0.16666666666666666
+254,bioclip,black-winged kite carrying prey in its talons,27.150675150675145,57.3520517150805,0.5
+255,bioclip,blue jay eating whole peanuts,30.4788961038961,61.082558642227845,1.0
+256,bioclip,breeding adult Black-bellied Plover,63.507831309707626,90.08469564823037,1.0
+257,bioclip,bridal veil stinkhorn mushroom,97.93641979160166,99.59211198602097,1.0
+258,bioclip,brown bear near vehicle,8.080429382908568,38.25842954632091,0.024390243902439025
+259,bioclip,bullhead shark egg case,49.81105223177104,80.87375879904457,1.0
+260,bioclip,camera trap photo of a bobcat captured in the nightime,73.1642874835582,92.82760421206994,1.0
+261,bioclip,camera trap photo of a springbok drinking water,63.45238095238095,85.7665842488939,1.0
+262,bioclip,camera trap photo of a stag red deer,25.614226352646263,62.70747248606459,1.0
+263,bioclip,camera trap photo of chital with its head down,31.05677952597371,59.30600379067448,0.125
+264,bioclip,canada geese flying in v-formation,8.532973117690727,36.21399885376819,0.16666666666666666
+265,bioclip,caterpillar of Common Buckeye butterfly,46.46450188554464,77.04883835936339,1.0
+266,bioclip,caterpillar of Gulf Fritillary butterfly,68.87790144231107,91.6844010064724,1.0
+267,bioclip,caterpillar of polyphemus moth,69.29081296832445,91.21926603255493,1.0
+268,bioclip,cheetah with cubs,23.013122426165626,60.195340400050036,0.5
+269,bioclip,close-up of sugar maple leaf,63.39318282583567,87.23436437809137,1.0
+270,bioclip,close-up of sweet cherry tree bark,29.830604538384858,64.68766597169147,0.5
+271,bioclip,common murre beached carcass,64.1744000594668,88.00174933130886,1.0
+272,bioclip,couple of black-bellied whistling ducks with their youngs sharing parenting duties,28.186009896772905,67.08529191241728,1.0
+273,bioclip,cross orbweaver,29.105288488019653,64.84281901587414,1.0
+274,bioclip,dark-colored Dusky Leaf-monkey with orange-colored young,49.85874182483991,82.69547790036603,1.0
+275,bioclip,dorsal side of mourning cloak butterfly,79.63389144880662,94.70793455290074,1.0
+276,bioclip,eastern gray squirrel displaying melanistic pelage,54.84442743932561,84.83950591492973,1.0
+277,bioclip,elephant covered in mud or dirt,47.6594726793222,79.02382428021198,1.0
+278,bioclip,elephant near a fence,29.655591570497048,67.64779770536309,1.0
+279,bioclip,elk with hair loss,48.85501702254324,77.33913275716108,0.5
+280,bioclip,female beautiful demoiselle,48.84023221469359,83.18284381589862,1.0
+281,bioclip,feral cat with prey,18.417268984330743,49.37784660145482,0.1
+282,bioclip,fire pink with dark-colored anthers,7.846586822354351,35.60728187747072,0.037037037037037035
+283,bioclip,fire salamander with a barred color pattern,73.5303095597213,91.63614075577894,1.0
+284,bioclip,flamingo standing on one leg,39.818774180431674,71.16661034887365,0.5
+285,bioclip,fruit bat eating fruit upside down,8.632706400860965,37.236160324961375,0.07692307692307693
+286,bioclip,giant resin bee feeding on sunflower,2.1739130434782608,18.00313266566924,0.021739130434782608
+287,bioclip,great golden digger wasp carrying an orthopteron,7.5,30.596536051125028,0.06666666666666667
+288,bioclip,grebe with babies on its back,52.02496977537949,83.93876386920233,1.0
+289,bioclip,hognose snake playing dead,14.030633890313155,45.57287776505352,0.5
+290,bioclip,human handling a bat with bare hands,13.376156799591415,46.53219521022406,0.09090909090909091
+291,bioclip,hyenas eating a kill,14.183191593442263,46.99405288630543,0.08333333333333333
+292,bioclip,jungle babblers allopreening,14.943568858042541,44.18288162876609,0.16666666666666666
+293,bioclip,kahili ginger plant with open fruit capsules showing seeds,59.065934065934066,83.24627887198093,1.0
+294,bioclip,killdeer feigning injury,7.713181474704589,36.464337750044734,0.047619047619047616
+295,bioclip,laysan albatross mostly in dark mottled brown plumage,5.148273335786828,30.368903904510614,0.05555555555555555
+296,bioclip,lorikeet pollinating flower,53.20665190629551,79.0151143437751,0.3333333333333333
+297,bioclip,male Red-winged Blackbird vocalizing,53.351496943033595,84.68853985625155,1.0
+298,bioclip,male ruby-throated hummingbird in flight,17.802751894039904,52.091452058612276,0.1111111111111111
+299,bioclip,male smooth newt with developed crest,56.294521581175715,84.4426706494121,1.0
+300,bioclip,male velvet ant,8.712172877747625,35.451632504586556,0.09090909090909091
+301,bioclip,measuring the body dimensions of a bee,28.875247082163252,65.62538597947749,0.5
+302,bioclip,monkey slug caterpillar,50.0,63.09297535714573,0.5
+303,bioclip,moose with hair loss,36.462588790175005,68.48170460413614,0.16666666666666666
+304,bioclip,mountain goat climbing rocky outcrops with its young,11.822704081722613,44.20784997324692,0.125
+305,bioclip,pair of great crested grebes potentially performing the weed dance,22.65530087149644,54.07097682906505,0.25
+306,bioclip,parrotfish feeding,24.405995309799884,59.40002516757147,0.25
+307,bioclip,photo with two or more adult male lions,17.093932335478517,53.38385483225942,0.5
+308,bioclip,picture showing more than fifty Mediterranean Acrobat Ants,24.444444444444443,50.81250746716588,0.5
+309,bioclip,picture showing more than fifty Velvety Tree Ants,15.272727272727272,43.13677356014017,0.2
+310,bioclip,potter wasp nest,39.225806451612904,66.29716682051988,1.0
+311,bioclip,puffins carrying food,16.74882228971673,46.74899108962465,0.16666666666666666
+312,bioclip,red-tailed hawk perched on a utility pole,45.51608193066173,77.88610895850691,1.0
+313,bioclip,sick cassava plant,45.790193336631084,72.76687995323717,0.16666666666666666
+314,bioclip,sloth hugging a human-made structure,25.582293347377483,59.53255388605866,0.14285714285714285
+315,bioclip,southern aligator lizard with cut tail,6.353902713213623,30.355381907070246,0.043478260869565216
+316,bioclip,ventral side of mourning cloak butterfly,31.936447168281912,62.7211537748064,0.058823529411764705
+317,bioclip,vervet monkey with visible bright blue scrotal areas,35.13180219136671,69.63735720196686,0.5
+318,bioclip,water snake feeding on fish,6.637543708660385,34.46993654907444,0.02857142857142857
+319,bioclip,white-tailed deer flagging its tail,33.14491086831512,64.84892656869742,1.0
+320,biocap,A By-the-Wind Sailor washed up on a beach,100.0,100.0,1.0
+321,biocap,A Eurasian Red Squirrel gathering material for its nest,13.286850137129042,42.368400597488865,0.08333333333333333
+322,biocap,A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs,14.914369835379365,46.75327633244188,0.3333333333333333
+323,biocap,A close-up of an ant carrying a leaf,77.16874279299284,94.28594859832916,1.0
+324,biocap,A coyote resting on human-build structures,28.748473748473746,62.57159092716815,1.0
+325,biocap,A female pheasant,66.87860165671175,87.4716674921195,1.0
+326,biocap,A male and female cardinal sharing food,33.33333333333333,50.0,0.3333333333333333
+327,biocap,A mongoose standing upright alert,41.78041505756313,79.82015561919339,1.0
+328,biocap,A peacock male displaying its feathers,79.36724326992346,94.8743261719663,1.0
+329,biocap,Adult female black widow spider not in a web,2.455050237969329,22.443071487904316,0.01639344262295082
+330,biocap,Alligator lizards mating,44.0493224794971,77.52204482524759,1.0
+331,biocap,Black Skimmer with a leg band,2.657236380640636,22.96659888542451,0.019230769230769232
+332,biocap,Blackening Waxcap mushroom turned fully black,52.20680983861726,83.91898599910778,1.0
+333,biocap,Butterflyfish feeding on brain coral,29.104640245396407,63.790868404224796,0.2
+334,biocap,Cart-Rut Shell snail egg mass,12.850292686687586,43.87515072603017,0.5
+335,biocap,Channeled Applesnail covered by green algae,7.323389881952602,36.44489032236275,0.06666666666666667
+336,biocap,Cheetah with radio collar,10.709706064456041,42.828373595136235,0.058823529411764705
+337,biocap,Chinese Mystery Snail covered by green algae,57.729468328193924,82.14964231715062,0.5
+338,biocap,Cooper's Hawk in adult plumage,39.325929250042854,74.99526471385555,1.0
+339,biocap,Dead hog-nosed skunk,30.88194573687749,63.096514959483294,0.14285714285714285
+340,biocap,Dolphins performing acrobatics,76.18079642952132,94.19090856604345,1.0
+341,biocap,Eastern Red Bat in flight,58.21547572538564,86.80307656875434,1.0
+342,biocap,Elk bugling during the rut,56.01900972590628,81.91427714252946,1.0
+343,biocap,Emergence of large colony of mexican free-tailed bats,79.32376372427774,94.97825538341985,1.0
+344,biocap,Exactly five penguins,19.20130450170815,54.0639021499383,0.5
+345,biocap,Exactly three zebras standing together in a field,43.52367365232993,77.66164241378576,1.0
+346,biocap,Fishing net on a reef,19.578029870605032,54.2082381902018,0.125
+347,biocap,Fly Agaric in yellow form,75.61101572822557,93.81399008370863,1.0
+348,biocap,Fur seal mother with pup,42.488992365206585,77.51012238262292,1.0
+349,biocap,Gazelle being vigilant/looking around,22.61484304748494,56.79946640044861,0.1
+350,biocap,Green Shore Crab,56.786283775692795,87.19829261589187,1.0
+351,biocap,Haliaeetus eagles in aerial cartwheeling flight with locked talons,1.7857142857142856,17.14416005739139,0.017857142857142856
+352,biocap,Hamerkop collecting nesting material,9.025741991118238,38.71353648896605,0.08333333333333333
+353,biocap,House finch with yellow pigmentation,14.558108558108557,42.98217447151997,0.16666666666666666
+354,biocap,Hübner's Wasp Moth mating,78.4002262871799,94.55243470303817,1.0
+355,biocap,Inflated pufferfish,64.21817813092254,90.43498519386449,1.0
+356,biocap,Leafhopper Assassin Bug predating lady beetle,28.327228327228326,51.43214442116874,0.3333333333333333
+357,biocap,Lilac Bonnet with edges turnt up revealing its gills,6.681633989930121,35.100937722233176,0.03125
+358,biocap,Luna Moth missing long twisted tails on the hindwings,4.015151515151516,23.496661498301442,0.030303030303030304
+359,biocap,Male Blue-black Grassquit in patchy blue-black and brown plumage,8.941488171522245,39.06987346276337,0.03225806451612903
+360,biocap,Male Xanthagrion erythroneurum,75.1426137537786,92.73312727349044,1.0
+361,biocap,Male chorus frog with inflated vocal sacs,48.557707609440556,82.75786797603003,1.0
+362,biocap,Male crimsonband wrasse,7.1627859989636224,36.98261546631053,0.047619047619047616
+363,biocap,Maple tree with signs of tapping,3.225806451612903,19.99999999999993,0.03225806451612903
+364,biocap,Melanistic jaguar,1.5873015873015872,16.666666666666607,0.015873015873015872
+365,biocap,Melanistic leopard,52.86217008797654,79.39941559157869,1.0
+366,biocap,Mexican grass-carrying wasp visiting a purple flower,100.0,99.99999999999997,1.0
+367,biocap,Milkweed Assassin Bug predating a bee or wasp,3.525264394829612,22.72217661563611,0.02702702702702703
+368,biocap,Moorish Gecko with regenerated tail,11.437908496732026,33.161603744597805,0.1111111111111111
+369,biocap,Mushrooms growing in a fairy ring formation,50.49771693444903,79.6824709004471,1.0
+370,biocap,North Island robin or South Island robin with leg bands,17.086612719964585,53.60859615769852,0.25
+371,biocap,Northern Mockingbird carrying out its food,34.114680431815984,67.35767687326096,1.0
+372,biocap,Nursery Web Spider carrying egg sac,64.53796123885297,89.13308298247227,1.0
+373,biocap,Octopus out of the water,62.97026541886925,83.78674014626039,0.5
+374,biocap,Red-capped Plover performing broken wing distraction,1.8055555555555554,19.327463555226096,0.013888888888888888
+375,biocap,Redwood tree with fire scars,83.57578190345794,96.18425934998795,1.0
+376,biocap,Rhino with ear notches,47.99478907811419,82.40603570121525,1.0
+377,biocap,Sage Thrasher vocalizing,19.241043943032736,51.19713158312818,0.2
+378,biocap,Scarlet Waxy Cap with visible gills,43.78518513423854,72.77105689947034,0.25
+379,biocap,Scorpion with young on its back,35.8218611839575,73.41985426744044,1.0
+380,biocap,Sea turtle with algae on its shell,30.40819637795288,62.74887706813635,0.125
+381,biocap,Sharks with remoras attached,20.0336103954525,51.68493894788364,0.3333333333333333
+382,biocap,Splendid fairywren without blue body coloration,25.366685533135545,58.204303742658624,0.024390243902439025
+383,biocap,Surgeonfish grazing on algae,26.141760572515828,59.25445776619615,0.5
+384,biocap,Swallowtail butterfly caterpillar camouflaged as bird droppings,96.14432451552786,99.27205679244237,1.0
+385,biocap,Tagged swan,56.8371979680903,86.80871129848573,1.0
+386,biocap,Tropical Orb Weaver with multiple white spots in the abdominal dorsum,2.8714859437751006,21.968259156446386,0.03333333333333333
+387,biocap,Two giraffes,48.646684223354804,78.4895548515686,0.5
+388,biocap,Water Frogs in amplexus position,11.804011453134262,39.718708928478264,0.1
+389,biocap,Wolf spider with limb loss,16.120839733742958,42.090570846051996,0.1111111111111111
+390,biocap,Yellow-faced Honeyeater in birdbath,69.6300642396468,89.9111982404062,1.0
+391,biocap,Zebra and wildebeest grazing together,59.32075642305657,87.75901722024791,1.0
+392,biocap,a bag-shelter moth's silken bag nest on a tree,100.0,100.0,1.0
+393,biocap,a beaver dam across a stream,59.8319131336162,85.96090959578069,1.0
+394,biocap,a bighorn sheep with a tracking collar around its neck,10.704657343112196,42.616619409889644,0.09090909090909091
+395,biocap,a gall produced by an Acorn Plum Gall Wasp,100.0,100.0,1.0
+396,biocap,a herd of more than 10 impalas,49.463933352836506,82.4646569256003,1.0
+397,biocap,a hermit crab using plastic waste as a shell,12.53968253968254,35.377347689223484,0.08333333333333333
+398,biocap,a lion with a collar around its neck,5.335580335580336,29.890125380668643,0.07692307692307693
+399,biocap,a microscopy slide showing the cellular structure of a plant,39.91380665096966,78.1013020733924,1.0
+400,biocap,a mud dauber wasp in the process of forming its nest out of mud,22.589932712215322,50.01101950989039,0.14285714285714285
+401,biocap,a nest with eggs displaying brood parasitism by a cowbird,9.653339823999984,36.757748364373064,0.06666666666666667
+402,biocap,a possum on a power line,44.55725430697014,73.28315239735728,0.25
+403,biocap,a sandhill crane couple with their chicks,14.481120929703625,43.94821038266854,0.09090909090909091
+404,biocap,adult male Misumena vatia,4.2727272727272725,24.363781639046238,0.045454545454545456
+405,biocap,albino american robin,100.0,100.0,1.0
+406,biocap,an image showing a humpback whale fluke with clearly identifiable markings,35.307370047266886,68.97080053716662,0.3333333333333333
+407,biocap,an oak gall produced by a spongy oak apple gall wasp,61.16174695165451,87.05509567657217,1.0
+408,biocap,an oxpecker on a zebra,80.03963739037428,95.071151119652,1.0
+409,biocap,antelopes head-butting,46.22022770172269,78.4427602813831,1.0
+410,biocap,bananaquit pollinating flower,8.534626272895903,38.51769945388785,0.038461538461538464
+411,biocap,beached orca,100.0,100.0,1.0
+412,biocap,bird caught in a net,68.46469830924167,90.65657588077805,1.0
+413,biocap,bird dead in front of a window,19.234619051663195,52.990877322062644,0.07142857142857142
+414,biocap,black-winged kite carrying prey in its talons,34.71066009249704,67.78336903744922,1.0
+415,biocap,blue jay eating whole peanuts,24.258255933952526,49.112715688987954,0.25
+416,biocap,breeding adult Black-bellied Plover,62.99335635582649,88.73062882703385,1.0
+417,biocap,bridal veil stinkhorn mushroom,98.01529740619509,99.62633501779575,1.0
+418,biocap,brown bear near vehicle,9.04352507059931,39.853753514982635,0.03571428571428571
+419,biocap,bullhead shark egg case,59.04991087344028,85.71452166415415,1.0
+420,biocap,camera trap photo of a bobcat captured in the nightime,74.6576647621496,93.25368377445614,1.0
+421,biocap,camera trap photo of a springbok drinking water,37.05701218859114,58.88402223778455,0.25
+422,biocap,camera trap photo of a stag red deer,13.931886714676983,44.363088987070235,0.09090909090909091
+423,biocap,camera trap photo of chital with its head down,29.855422350374155,57.40654266469517,0.08333333333333333
+424,biocap,canada geese flying in v-formation,4.61955077086656,29.4779899117325,0.045454545454545456
+425,biocap,caterpillar of Common Buckeye butterfly,44.51161211463986,77.4335743486643,1.0
+426,biocap,caterpillar of Gulf Fritillary butterfly,56.79076295113554,84.6373470277912,1.0
+427,biocap,caterpillar of polyphemus moth,85.47674165346614,96.37039849401188,1.0
+428,biocap,cheetah with cubs,27.48241330072495,60.44070962350718,0.2
+429,biocap,close-up of sugar maple leaf,69.89753113987544,91.76324109171817,1.0
+430,biocap,close-up of sweet cherry tree bark,20.302168708822478,53.722767759510695,0.16666666666666666
+431,biocap,common murre beached carcass,64.63356200697268,84.94814805776637,0.5
+432,biocap,couple of black-bellied whistling ducks with their youngs sharing parenting duties,35.34505652454907,72.54096559028504,1.0
+433,biocap,cross orbweaver,17.870356336564193,50.268886442816495,0.3333333333333333
+434,biocap,dark-colored Dusky Leaf-monkey with orange-colored young,65.15972011869285,88.98326932644122,1.0
+435,biocap,dorsal side of mourning cloak butterfly,89.44605442636993,97.58477842993267,1.0
+436,biocap,eastern gray squirrel displaying melanistic pelage,46.283100890346404,75.1708229942169,0.5
+437,biocap,elephant covered in mud or dirt,55.86015145850563,84.36970086295527,1.0
+438,biocap,elephant near a fence,33.23495275312066,66.02018234923499,0.25
+439,biocap,elk with hair loss,57.36558286204642,86.12943446825821,1.0
+440,biocap,female beautiful demoiselle,52.21619274887812,85.02914246514452,1.0
+441,biocap,feral cat with prey,14.215935614088687,46.59004240059741,0.09090909090909091
+442,biocap,fire pink with dark-colored anthers,7.054075364462534,35.01681624153822,0.03225806451612903
+443,biocap,fire salamander with a barred color pattern,72.0104785770827,91.52172917060014,1.0
+444,biocap,flamingo standing on one leg,41.081431803899825,74.47763275749804,1.0
+445,biocap,fruit bat eating fruit upside down,12.509951343110066,41.920585626663794,0.125
+446,biocap,giant resin bee feeding on sunflower,7.6923076923076925,26.26495350371938,0.07692307692307693
+447,biocap,great golden digger wasp carrying an orthopteron,11.189931350114417,34.65845508165468,0.1
+448,biocap,grebe with babies on its back,51.972377384557824,83.98482655155358,1.0
+449,biocap,hognose snake playing dead,31.890897456406975,65.4567689305133,1.0
+450,biocap,human handling a bat with bare hands,11.461278558098321,44.009520671039425,0.05263157894736842
+451,biocap,hyenas eating a kill,17.40903863066985,51.95705559032914,0.3333333333333333
+452,biocap,jungle babblers allopreening,41.20908740854832,73.6950159232156,1.0
+453,biocap,kahili ginger plant with open fruit capsules showing seeds,44.94825708061001,73.46741184620554,1.0
+454,biocap,killdeer feigning injury,6.705324890567913,34.87867888815724,0.043478260869565216
+455,biocap,laysan albatross mostly in dark mottled brown plumage,7.09117537762039,32.81576470517404,0.05555555555555555
+456,biocap,lorikeet pollinating flower,58.87407542122778,86.35682646189575,1.0
+457,biocap,male Red-winged Blackbird vocalizing,67.87919376531673,91.244588937132,1.0
+458,biocap,male ruby-throated hummingbird in flight,20.09975947760911,55.085317217580574,0.25
+459,biocap,male smooth newt with developed crest,51.43050225106762,82.00722484649229,1.0
+460,biocap,male velvet ant,20.043796782927217,45.36503736796434,0.16666666666666666
+461,biocap,measuring the body dimensions of a bee,35.10361196373149,74.53724471338829,1.0
+462,biocap,monkey slug caterpillar,1.8181818181818181,17.219543379409785,0.01818181818181818
+463,biocap,moose with hair loss,51.50622661992112,83.94239867975469,1.0
+464,biocap,mountain goat climbing rocky outcrops with its young,15.99065941836779,50.517477655914846,0.25
+465,biocap,pair of great crested grebes potentially performing the weed dance,54.09841263131195,80.35354518779556,1.0
+466,biocap,parrotfish feeding,24.942391496412693,61.096708544714865,0.5
+467,biocap,photo with two or more adult male lions,16.653646521315558,52.77871942566005,0.5
+468,biocap,picture showing more than fifty Mediterranean Acrobat Ants,44.047619047619044,70.38025103459343,1.0
+469,biocap,picture showing more than fifty Velvety Tree Ants,17.567025332542574,48.04882069624366,0.5
+470,biocap,potter wasp nest,22.328548644338117,48.861058925137165,0.5
+471,biocap,puffins carrying food,44.22304473408797,76.53167113948577,1.0
+472,biocap,red-tailed hawk perched on a utility pole,40.15356327516656,75.56630742054976,1.0
+473,biocap,sick cassava plant,42.108266953681365,72.72177697066093,0.5
+474,biocap,sloth hugging a human-made structure,30.346809744463666,65.64198931115484,0.3333333333333333
+475,biocap,southern aligator lizard with cut tail,7.541149004563638,32.75574508055032,0.09090909090909091
+476,biocap,ventral side of mourning cloak butterfly,32.003774374286984,62.499404159346504,0.041666666666666664
+477,biocap,vervet monkey with visible bright blue scrotal areas,44.23210628222625,79.64980282741911,1.0
+478,biocap,water snake feeding on fish,6.375946975549511,33.83360498597144,0.02857142857142857
+479,biocap,white-tailed deer flagging its tail,19.61646136618141,49.97575385535939,0.5
+480,siglip-so400m-14-384,A By-the-Wind Sailor washed up on a beach,100.0,100.0,1.0
+481,siglip-so400m-14-384,A Eurasian Red Squirrel gathering material for its nest,32.02618184955141,61.733908429432546,0.5
+482,siglip-so400m-14-384,A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs,6.409660480590941,34.01158261120887,0.030303030303030304
+483,siglip-so400m-14-384,A close-up of an ant carrying a leaf,62.65593400965446,87.56637107706969,1.0
+484,siglip-so400m-14-384,A coyote resting on human-build structures,34.94167869167868,59.822675431961045,0.3333333333333333
+485,siglip-so400m-14-384,A female pheasant,78.59257889316483,92.75823398326344,1.0
+486,siglip-so400m-14-384,A male and female cardinal sharing food,50.0,63.09297535714573,0.5
+487,siglip-so400m-14-384,A mongoose standing upright alert,31.024487614932806,63.480552669723004,0.14285714285714285
+488,siglip-so400m-14-384,A peacock male displaying its feathers,63.41048462149362,89.43347132988599,1.0
+489,siglip-so400m-14-384,Adult female black widow spider not in a web,2.4555933484504915,22.647845601569593,0.020833333333333332
+490,siglip-so400m-14-384,Alligator lizards mating,59.08460959803467,86.87405806136277,1.0
+491,siglip-so400m-14-384,Black Skimmer with a leg band,3.289948163173315,24.256541384827738,0.025
+492,siglip-so400m-14-384,Blackening Waxcap mushroom turned fully black,42.56906838937681,73.75787124439574,0.5
+493,siglip-so400m-14-384,Butterflyfish feeding on brain coral,36.858574927916166,73.03365491893409,1.0
+494,siglip-so400m-14-384,Cart-Rut Shell snail egg mass,15.425078224684373,42.012645230710724,0.08333333333333333
+495,siglip-so400m-14-384,Channeled Applesnail covered by green algae,19.240698567251194,56.54310023060645,1.0
+496,siglip-so400m-14-384,Cheetah with radio collar,40.64250135786812,76.51069758991329,1.0
+497,siglip-so400m-14-384,Chinese Mystery Snail covered by green algae,63.92062458735865,88.41057050826359,1.0
+498,siglip-so400m-14-384,Cooper's Hawk in adult plumage,43.91928973643629,78.04886931069794,1.0
+499,siglip-so400m-14-384,Dead hog-nosed skunk,27.40695768029054,60.883553000419944,0.09090909090909091
+500,siglip-so400m-14-384,Dolphins performing acrobatics,74.88355539770042,93.69588199003644,1.0
+501,siglip-so400m-14-384,Eastern Red Bat in flight,63.5216393292334,89.69772723026534,1.0
+502,siglip-so400m-14-384,Elk bugling during the rut,67.66381766381767,87.62179710414607,1.0
+503,siglip-so400m-14-384,Emergence of large colony of mexican free-tailed bats,75.13490550141687,94.06597278533722,1.0
+504,siglip-so400m-14-384,Exactly five penguins,14.750754298194469,45.81563568359127,0.14285714285714285
+505,siglip-so400m-14-384,Exactly three zebras standing together in a field,43.664771720740816,78.49056780053935,1.0
+506,siglip-so400m-14-384,Fishing net on a reef,57.480066477226856,86.32931311290379,1.0
+507,siglip-so400m-14-384,Fly Agaric in yellow form,48.02908825090445,79.8721472475529,1.0
+508,siglip-so400m-14-384,Fur seal mother with pup,42.349278152326505,78.69777597051595,1.0
+509,siglip-so400m-14-384,Gazelle being vigilant/looking around,22.624976131374243,58.16086912937516,0.14285714285714285
+510,siglip-so400m-14-384,Green Shore Crab,46.35504485954113,77.88021963739509,0.5
+511,siglip-so400m-14-384,Haliaeetus eagles in aerial cartwheeling flight with locked talons,4.166666666666666,21.53382790366969,0.041666666666666664
+512,siglip-so400m-14-384,Hamerkop collecting nesting material,12.488104484751647,44.261080918202005,0.25
+513,siglip-so400m-14-384,House finch with yellow pigmentation,8.891846232309065,36.99104461571632,0.125
+514,siglip-so400m-14-384,Hübner's Wasp Moth mating,65.22791997858043,89.07425938595746,1.0
+515,siglip-so400m-14-384,Inflated pufferfish,42.30005773136878,72.85713729455192,0.3333333333333333
+516,siglip-so400m-14-384,Leafhopper Assassin Bug predating lady beetle,6.905839258780436,30.217862883577666,0.07692307692307693
+517,siglip-so400m-14-384,Lilac Bonnet with edges turnt up revealing its gills,12.293190123842814,43.645584262425025,0.16666666666666666
+518,siglip-so400m-14-384,Luna Moth missing long twisted tails on the hindwings,5.298913043478261,25.528024995826375,0.043478260869565216
+519,siglip-so400m-14-384,Male Blue-black Grassquit in patchy blue-black and brown plumage,12.037478837276815,42.49183958013037,0.047619047619047616
+520,siglip-so400m-14-384,Male Xanthagrion erythroneurum,30.846495013548182,69.71445408190289,1.0
+521,siglip-so400m-14-384,Male chorus frog with inflated vocal sacs,50.0630517998472,81.6794154381939,1.0
+522,siglip-so400m-14-384,Male crimsonband wrasse,17.523603323301433,49.126207877942214,0.2
+523,siglip-so400m-14-384,Maple tree with signs of tapping,50.0,63.09297535714573,0.5
+524,siglip-so400m-14-384,Melanistic jaguar,25.0,43.06765580733929,0.25
+525,siglip-so400m-14-384,Melanistic leopard,96.66666666666666,98.96062251871524,1.0
+526,siglip-so400m-14-384,Mexican grass-carrying wasp visiting a purple flower,23.161764705882355,49.73922969498108,0.3333333333333333
+527,siglip-so400m-14-384,Milkweed Assassin Bug predating a bee or wasp,3.480629539951574,23.001643034454577,0.03571428571428571
+528,siglip-so400m-14-384,Moorish Gecko with regenerated tail,8.928571428571427,30.950133370359858,0.14285714285714285
+529,siglip-so400m-14-384,Mushrooms growing in a fairy ring formation,69.63271103896103,89.52648172191807,1.0
+530,siglip-so400m-14-384,North Island robin or South Island robin with leg bands,14.89978986467699,48.98615323794565,0.07142857142857142
+531,siglip-so400m-14-384,Northern Mockingbird carrying out its food,48.8384584603072,78.47541716386888,1.0
+532,siglip-so400m-14-384,Nursery Web Spider carrying egg sac,68.74170062826866,90.50391214319296,1.0
+533,siglip-so400m-14-384,Octopus out of the water,61.19912488725024,87.05127864310624,1.0
+534,siglip-so400m-14-384,Red-capped Plover performing broken wing distraction,8.116883116883116,29.248516266425355,0.07142857142857142
+535,siglip-so400m-14-384,Redwood tree with fire scars,79.373638269912,94.30940953460858,1.0
+536,siglip-so400m-14-384,Rhino with ear notches,53.08386831406394,80.58579698605914,0.5
+537,siglip-so400m-14-384,Sage Thrasher vocalizing,29.80398576865968,66.99374870119671,1.0
+538,siglip-so400m-14-384,Scarlet Waxy Cap with visible gills,34.940267344018885,65.47846714865136,0.07142857142857142
+539,siglip-so400m-14-384,Scorpion with young on its back,75.68178602480374,93.52122494027445,1.0
+540,siglip-so400m-14-384,Sea turtle with algae on its shell,34.19797693881026,66.7552505421383,0.25
+541,siglip-so400m-14-384,Sharks with remoras attached,25.89253922332258,56.066885430289695,0.3333333333333333
+542,siglip-so400m-14-384,Splendid fairywren without blue body coloration,30.137307305730133,62.390223633791756,0.05555555555555555
+543,siglip-so400m-14-384,Surgeonfish grazing on algae,35.954774424256264,63.82136431692032,0.3333333333333333
+544,siglip-so400m-14-384,Swallowtail butterfly caterpillar camouflaged as bird droppings,94.95708693292451,99.02388480344284,1.0
+545,siglip-so400m-14-384,Tagged swan,51.331776665836536,78.4355462400177,0.5
+546,siglip-so400m-14-384,Tropical Orb Weaver with multiple white spots in the abdominal dorsum,3.1339031339031336,22.12673564658064,0.02564102564102564
+547,siglip-so400m-14-384,Two giraffes,53.88072181053389,84.44605735421095,1.0
+548,siglip-so400m-14-384,Water Frogs in amplexus position,22.62240632930288,53.67636847158672,0.5
+549,siglip-so400m-14-384,Wolf spider with limb loss,10.405160533497652,38.278612728113245,0.16666666666666666
+550,siglip-so400m-14-384,Yellow-faced Honeyeater in birdbath,61.89027388374894,88.03552049071641,1.0
+551,siglip-so400m-14-384,Zebra and wildebeest grazing together,69.79223546157213,91.99117606994893,1.0
+552,siglip-so400m-14-384,a bag-shelter moth's silken bag nest on a tree,100.0,100.0,1.0
+553,siglip-so400m-14-384,a beaver dam across a stream,73.48277734317728,87.40168631339643,0.5
+554,siglip-so400m-14-384,a bighorn sheep with a tracking collar around its neck,46.86078568643683,79.50667436587294,1.0
+555,siglip-so400m-14-384,a gall produced by an Acorn Plum Gall Wasp,100.0,100.0,1.0
+556,siglip-so400m-14-384,a herd of more than 10 impalas,46.30617247340722,81.18755636394337,1.0
+557,siglip-so400m-14-384,a hermit crab using plastic waste as a shell,28.333333333333332,50.096882054358936,0.25
+558,siglip-so400m-14-384,a lion with a collar around its neck,3.420770482105886,25.839411236905185,0.021739130434782608
+559,siglip-so400m-14-384,a microscopy slide showing the cellular structure of a plant,64.44995372075527,89.56108075666197,1.0
+560,siglip-so400m-14-384,a mud dauber wasp in the process of forming its nest out of mud,11.632185133949985,40.60545293729204,0.06666666666666667
+561,siglip-so400m-14-384,a nest with eggs displaying brood parasitism by a cowbird,11.13520199234485,37.82363849554068,0.047619047619047616
+562,siglip-so400m-14-384,a possum on a power line,45.962338892547386,73.2364938361629,0.25
+563,siglip-so400m-14-384,a sandhill crane couple with their chicks,12.030996748637929,42.97715972009853,0.14285714285714285
+564,siglip-so400m-14-384,adult male Misumena vatia,3.5628019323671496,22.80846528482655,0.027777777777777776
+565,siglip-so400m-14-384,albino american robin,4.545454545454546,22.106472945750344,0.045454545454545456
+566,siglip-so400m-14-384,an image showing a humpback whale fluke with clearly identifiable markings,39.31785227407056,69.63412140860025,0.2
+567,siglip-so400m-14-384,an oak gall produced by a spongy oak apple gall wasp,55.900312396498094,85.88969421009848,1.0
+568,siglip-so400m-14-384,an oxpecker on a zebra,80.20234164145842,95.16591661435818,1.0
+569,siglip-so400m-14-384,antelopes head-butting,67.13118133451677,88.23326885186992,1.0
+570,siglip-so400m-14-384,bananaquit pollinating flower,10.453514927780907,41.79256615442036,0.07692307692307693
+571,siglip-so400m-14-384,beached orca,61.111111111111114,79.77228895450264,1.0
+572,siglip-so400m-14-384,bird caught in a net,90.99448376400805,97.92095463678463,1.0
+573,siglip-so400m-14-384,bird dead in front of a window,24.944592485651885,60.62652568768089,0.3333333333333333
+574,siglip-so400m-14-384,black-winged kite carrying prey in its talons,51.49470899470899,79.4441827428398,1.0
+575,siglip-so400m-14-384,blue jay eating whole peanuts,33.53386809269162,58.787033200733404,0.5
+576,siglip-so400m-14-384,breeding adult Black-bellied Plover,56.83424475549565,83.0947432111245,0.5
+577,siglip-so400m-14-384,bridal veil stinkhorn mushroom,98.71540466446025,99.76692137303036,1.0
+578,siglip-so400m-14-384,brown bear near vehicle,10.182941125231244,41.39777452041511,0.06666666666666667
+579,siglip-so400m-14-384,bullhead shark egg case,63.51888816899969,87.7695436004285,1.0
+580,siglip-so400m-14-384,camera trap photo of a bobcat captured in the nightime,85.71444174222542,96.56445864865184,1.0
+581,siglip-so400m-14-384,camera trap photo of a springbok drinking water,37.264911014911014,57.32669086197394,0.2
+582,siglip-so400m-14-384,camera trap photo of a stag red deer,14.484171752554106,43.85347157568494,0.058823529411764705
+583,siglip-so400m-14-384,camera trap photo of chital with its head down,28.249979977015098,58.566478902445574,0.2
+584,siglip-so400m-14-384,canada geese flying in v-formation,7.664560758637413,34.1128872194494,0.07692307692307693
+585,siglip-so400m-14-384,caterpillar of Common Buckeye butterfly,32.563491001583984,69.72580416453161,1.0
+586,siglip-so400m-14-384,caterpillar of Gulf Fritillary butterfly,33.98033151244119,65.76467371100735,0.14285714285714285
+587,siglip-so400m-14-384,caterpillar of polyphemus moth,57.733609932951424,86.5382197357865,1.0
+588,siglip-so400m-14-384,cheetah with cubs,33.580505181561335,65.95112217175092,0.3333333333333333
+589,siglip-so400m-14-384,close-up of sugar maple leaf,51.374622991651584,80.34811334352415,1.0
+590,siglip-so400m-14-384,close-up of sweet cherry tree bark,26.6693431225147,59.4856919076658,0.25
+591,siglip-so400m-14-384,common murre beached carcass,60.76392441482608,81.71074188926093,0.5
+592,siglip-so400m-14-384,couple of black-bellied whistling ducks with their youngs sharing parenting duties,46.352278185676084,80.7609990590315,1.0
+593,siglip-so400m-14-384,cross orbweaver,7.713886577349277,37.20212626828383,0.05
+594,siglip-so400m-14-384,dark-colored Dusky Leaf-monkey with orange-colored young,39.17893891060097,75.15680231494541,1.0
+595,siglip-so400m-14-384,dorsal side of mourning cloak butterfly,62.31678697221923,89.20189020972389,1.0
+596,siglip-so400m-14-384,eastern gray squirrel displaying melanistic pelage,60.903066805434094,87.91070590202845,1.0
+597,siglip-so400m-14-384,elephant covered in mud or dirt,65.14287671603563,88.27468226198627,1.0
+598,siglip-so400m-14-384,elephant near a fence,40.542667228985366,78.15057366486221,1.0
+599,siglip-so400m-14-384,elk with hair loss,41.197610830685626,70.70491177554759,0.1111111111111111
+600,siglip-so400m-14-384,female beautiful demoiselle,31.40570755258654,64.55198043813462,0.1111111111111111
+601,siglip-so400m-14-384,feral cat with prey,22.513294511424377,61.70607281068706,1.0
+602,siglip-so400m-14-384,fire pink with dark-colored anthers,12.847427254351013,42.67064055435322,0.14285714285714285
+603,siglip-so400m-14-384,fire salamander with a barred color pattern,42.529188355681505,77.48446045239658,1.0
+604,siglip-so400m-14-384,flamingo standing on one leg,41.31993024988167,73.2151019864354,0.3333333333333333
+605,siglip-so400m-14-384,fruit bat eating fruit upside down,7.955741737254342,36.49159923699261,0.09090909090909091
+606,siglip-so400m-14-384,giant resin bee feeding on sunflower,12.5,31.546487678572888,0.125
+607,siglip-so400m-14-384,great golden digger wasp carrying an orthopteron,9.053853754940711,32.62834448868684,0.09090909090909091
+608,siglip-so400m-14-384,grebe with babies on its back,54.390241726902346,83.24917126703151,1.0
+609,siglip-so400m-14-384,hognose snake playing dead,53.54264230846509,79.98733611546368,1.0
+610,siglip-so400m-14-384,human handling a bat with bare hands,10.421946649945912,42.336777680161205,0.034482758620689655
+611,siglip-so400m-14-384,hyenas eating a kill,53.41490380514394,83.83509918759856,1.0
+612,siglip-so400m-14-384,jungle babblers allopreening,40.521541950113374,71.95371368152016,1.0
+613,siglip-so400m-14-384,kahili ginger plant with open fruit capsules showing seeds,46.25992063492064,75.18652005234439,1.0
+614,siglip-so400m-14-384,killdeer feigning injury,7.650093968311782,35.86497357907138,0.04
+615,siglip-so400m-14-384,laysan albatross mostly in dark mottled brown plumage,12.004447123434465,39.55603410342384,0.14285714285714285
+616,siglip-so400m-14-384,lorikeet pollinating flower,56.15762711825894,85.46948859891869,1.0
+617,siglip-so400m-14-384,male Red-winged Blackbird vocalizing,64.29249756163915,87.79343078487328,1.0
+618,siglip-so400m-14-384,male ruby-throated hummingbird in flight,18.908509258854384,56.560406687463484,0.5
+619,siglip-so400m-14-384,male smooth newt with developed crest,31.049007785191552,68.79484389250021,1.0
+620,siglip-so400m-14-384,male velvet ant,18.43623564305867,48.4963256287298,0.5
+621,siglip-so400m-14-384,measuring the body dimensions of a bee,40.52700190944678,76.3665396985028,1.0
+622,siglip-so400m-14-384,monkey slug caterpillar,1.4285714285714286,16.260831227163308,0.014285714285714285
+623,siglip-so400m-14-384,moose with hair loss,35.55471378144585,68.3026809302797,0.2
+624,siglip-so400m-14-384,mountain goat climbing rocky outcrops with its young,12.927523455501454,45.184050852733534,0.07692307692307693
+625,siglip-so400m-14-384,pair of great crested grebes potentially performing the weed dance,68.79980944095777,89.11702600177435,1.0
+626,siglip-so400m-14-384,parrotfish feeding,25.641508827419045,57.968026295140604,0.16666666666666666
+627,siglip-so400m-14-384,photo with two or more adult male lions,14.621151223156135,47.18451699663248,0.1111111111111111
+628,siglip-so400m-14-384,picture showing more than fifty Mediterranean Acrobat Ants,13.980800653594772,39.48852412368719,0.3333333333333333
+629,siglip-so400m-14-384,picture showing more than fifty Velvety Tree Ants,7.913770440086229,33.74115977360907,0.05263157894736842
+630,siglip-so400m-14-384,potter wasp nest,3.638703013627885,24.46423815337749,0.02127659574468085
+631,siglip-so400m-14-384,puffins carrying food,30.44838198736968,58.449798541723816,0.3333333333333333
+632,siglip-so400m-14-384,red-tailed hawk perched on a utility pole,41.9009952613693,71.54554986761535,0.5
+633,siglip-so400m-14-384,sick cassava plant,42.02518608654845,73.1758033622589,0.3333333333333333
+634,siglip-so400m-14-384,sloth hugging a human-made structure,21.868364329588406,55.90652202958965,0.0625
+635,siglip-so400m-14-384,southern aligator lizard with cut tail,4.175671808946708,27.39308225000425,0.034482758620689655
+636,siglip-so400m-14-384,ventral side of mourning cloak butterfly,30.9719053944742,63.87100067311705,0.1111111111111111
+637,siglip-so400m-14-384,vervet monkey with visible bright blue scrotal areas,56.81464059533419,86.38178817535551,1.0
+638,siglip-so400m-14-384,water snake feeding on fish,13.508906851876324,42.1550813155474,0.07142857142857142
+639,siglip-so400m-14-384,white-tailed deer flagging its tail,32.45532245532245,65.01614534660318,1.0
+640,dinov3-b16,A By-the-Wind Sailor washed up on a beach,66.66666666666666,83.15546295836228,1.0
+641,dinov3-b16,A Eurasian Red Squirrel gathering material for its nest,13.263484656932498,42.884410422345006,0.125
+642,dinov3-b16,A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs,37.92400083941481,71.30825937103025,1.0
+643,dinov3-b16,A close-up of an ant carrying a leaf,71.20072251728834,92.61055425233756,1.0
+644,dinov3-b16,A coyote resting on human-build structures,23.551108968177438,54.29206498096575,0.5
+645,dinov3-b16,A female pheasant,77.08306067195282,94.0157369485655,1.0
+646,dinov3-b16,A male and female cardinal sharing food,100.0,100.0,1.0
+647,dinov3-b16,A mongoose standing upright alert,31.08595892267899,70.69451558336841,1.0
+648,dinov3-b16,A peacock male displaying its feathers,89.27335388989522,97.52915183703293,1.0
+649,dinov3-b16,Adult female black widow spider not in a web,2.1403508771929824,21.662987785064463,0.013157894736842105
+650,dinov3-b16,Alligator lizards mating,44.60493412104423,77.64207303158311,1.0
+651,dinov3-b16,Black Skimmer with a leg band,3.6736487556159685,25.21704452166355,0.038461538461538464
+652,dinov3-b16,Blackening Waxcap mushroom turned fully black,38.3627256475626,69.93751122389831,0.3333333333333333
+653,dinov3-b16,Butterflyfish feeding on brain coral,49.27827301935548,78.14167224311846,0.5
+654,dinov3-b16,Cart-Rut Shell snail egg mass,11.25916138675162,37.98303810015508,0.06666666666666667
+655,dinov3-b16,Channeled Applesnail covered by green algae,11.642482642779987,41.16200428371363,0.058823529411764705
+656,dinov3-b16,Cheetah with radio collar,11.639231685625811,44.46380998351568,0.09090909090909091
+657,dinov3-b16,Chinese Mystery Snail covered by green algae,57.753632225436725,86.38915780273298,1.0
+658,dinov3-b16,Cooper's Hawk in adult plumage,46.50252909183287,77.80440819207887,0.5
+659,dinov3-b16,Dead hog-nosed skunk,25.87382037515346,59.187581125125355,0.08333333333333333
+660,dinov3-b16,Dolphins performing acrobatics,79.12838791121686,94.33368578580482,1.0
+661,dinov3-b16,Eastern Red Bat in flight,30.18817192206218,64.26302522747602,0.16666666666666666
+662,dinov3-b16,Elk bugling during the rut,20.67948717948718,51.878472428972145,0.5
+663,dinov3-b16,Emergence of large colony of mexican free-tailed bats,83.48616055721301,96.36556902495045,1.0
+664,dinov3-b16,Exactly five penguins,21.54296806845447,54.19787383114787,0.3333333333333333
+665,dinov3-b16,Exactly three zebras standing together in a field,41.80171339806173,74.26744971126169,0.3333333333333333
+666,dinov3-b16,Fishing net on a reef,33.9367664718123,72.90669993808217,1.0
+667,dinov3-b16,Fly Agaric in yellow form,44.131561591814204,80.07574852952256,1.0
+668,dinov3-b16,Fur seal mother with pup,45.37675132294558,74.161352661449,0.3333333333333333
+669,dinov3-b16,Gazelle being vigilant/looking around,21.03144027783978,56.02227751715514,0.16666666666666666
+670,dinov3-b16,Green Shore Crab,50.80710212899605,83.55567140075976,1.0
+671,dinov3-b16,Haliaeetus eagles in aerial cartwheeling flight with locked talons,1.3888888888888888,16.155546744299798,0.013888888888888888
+672,dinov3-b16,Hamerkop collecting nesting material,14.12179619098125,44.67464698576589,0.14285714285714285
+673,dinov3-b16,House finch with yellow pigmentation,10.300298042529917,39.91817616858644,0.25
+674,dinov3-b16,Hübner's Wasp Moth mating,40.259553039603595,73.35556678692085,0.5
+675,dinov3-b16,Inflated pufferfish,50.88161934986368,80.23810468569869,1.0
+676,dinov3-b16,Leafhopper Assassin Bug predating lady beetle,7.234753550543024,30.36268416752796,0.07142857142857142
+677,dinov3-b16,Lilac Bonnet with edges turnt up revealing its gills,9.12891801177826,38.68639808319976,0.058823529411764705
+678,dinov3-b16,Luna Moth missing long twisted tails on the hindwings,7.07070707070707,28.56535368037419,0.1111111111111111
+679,dinov3-b16,Male Blue-black Grassquit in patchy blue-black and brown plumage,9.485656606432814,39.870621800924596,0.045454545454545456
+680,dinov3-b16,Male Xanthagrion erythroneurum,27.851698894339304,66.09456839162988,1.0
+681,dinov3-b16,Male chorus frog with inflated vocal sacs,38.47782696981383,71.94396672432552,0.5
+682,dinov3-b16,Male crimsonband wrasse,15.600617569937722,47.86801494312489,0.2
+683,dinov3-b16,Maple tree with signs of tapping,2.3255813953488373,18.316925091363423,0.023255813953488372
+684,dinov3-b16,Melanistic jaguar,4.761904761904762,22.42438242175755,0.047619047619047616
+685,dinov3-b16,Melanistic leopard,79.58333333333334,92.6513603429565,1.0
+686,dinov3-b16,Mexican grass-carrying wasp visiting a purple flower,13.194444444444445,39.46816670849354,0.16666666666666666
+687,dinov3-b16,Milkweed Assassin Bug predating a bee or wasp,2.5014132278123236,20.720720466588133,0.017241379310344827
+688,dinov3-b16,Moorish Gecko with regenerated tail,3.356605800214822,22.464743122756058,0.02631578947368421
+689,dinov3-b16,Mushrooms growing in a fairy ring formation,47.808209602564446,78.398869862174,1.0
+690,dinov3-b16,North Island robin or South Island robin with leg bands,24.42262755124592,59.36962342468025,0.25
+691,dinov3-b16,Northern Mockingbird carrying out its food,34.22672565529708,60.26538554010447,0.3333333333333333
+692,dinov3-b16,Nursery Web Spider carrying egg sac,41.67035535236911,74.19320677556837,0.5
+693,dinov3-b16,Octopus out of the water,60.33373752569125,84.57041582095846,1.0
+694,dinov3-b16,Red-capped Plover performing broken wing distraction,2.3504273504273505,20.61026213759094,0.019230769230769232
+695,dinov3-b16,Redwood tree with fire scars,68.36325382373174,91.41809091285869,1.0
+696,dinov3-b16,Rhino with ear notches,53.56073351894142,81.51503831034573,0.5
+697,dinov3-b16,Sage Thrasher vocalizing,33.75306154427786,71.49928591648097,1.0
+698,dinov3-b16,Scarlet Waxy Cap with visible gills,38.22170959055654,71.04186112049467,0.3333333333333333
+699,dinov3-b16,Scorpion with young on its back,37.38717359246862,74.57449298071379,1.0
+700,dinov3-b16,Sea turtle with algae on its shell,30.236876134581642,62.30938324532179,0.14285714285714285
+701,dinov3-b16,Sharks with remoras attached,17.991321329169626,48.21475637056739,0.25
+702,dinov3-b16,Splendid fairywren without blue body coloration,50.28880834112039,81.64612052211554,1.0
+703,dinov3-b16,Surgeonfish grazing on algae,24.180031909657334,53.63204602535584,0.14285714285714285
+704,dinov3-b16,Swallowtail butterfly caterpillar camouflaged as bird droppings,91.15309114853454,98.21630610563575,1.0
+705,dinov3-b16,Tagged swan,45.81771243564452,80.21159036123923,1.0
+706,dinov3-b16,Tropical Orb Weaver with multiple white spots in the abdominal dorsum,7.361111111111112,28.764375783094625,0.125
+707,dinov3-b16,Two giraffes,42.559655989201126,79.09487910704433,1.0
+708,dinov3-b16,Water Frogs in amplexus position,8.521621546831632,37.588069586831345,0.25
+709,dinov3-b16,Wolf spider with limb loss,8.076010101010102,34.81333896184697,0.1
+710,dinov3-b16,Yellow-faced Honeyeater in birdbath,49.829140130075494,82.10223694944489,1.0
+711,dinov3-b16,Zebra and wildebeest grazing together,62.99767947849892,87.5393413675395,1.0
+712,dinov3-b16,a bag-shelter moth's silken bag nest on a tree,70.0,85.03449055347548,1.0
+713,dinov3-b16,a beaver dam across a stream,64.6406939454389,89.64476709366518,1.0
+714,dinov3-b16,a bighorn sheep with a tracking collar around its neck,14.626128395353035,47.40456046414085,0.2
+715,dinov3-b16,a gall produced by an Acorn Plum Gall Wasp,33.33333333333333,50.0,0.3333333333333333
+716,dinov3-b16,a herd of more than 10 impalas,56.28492533317348,86.98509627229366,1.0
+717,dinov3-b16,a hermit crab using plastic waste as a shell,15.595238095238095,38.54762927866731,0.125
+718,dinov3-b16,a lion with a collar around its neck,4.791614971050455,28.458445699879753,0.04
+719,dinov3-b16,a microscopy slide showing the cellular structure of a plant,52.37863785487965,84.24598726370954,1.0
+720,dinov3-b16,a mud dauber wasp in the process of forming its nest out of mud,5.243754057178919,31.873176678430788,0.015151515151515152
+721,dinov3-b16,a nest with eggs displaying brood parasitism by a cowbird,21.4210011789607,49.64065592780153,0.25
+722,dinov3-b16,a possum on a power line,34.515146559789365,66.06993540261249,0.14285714285714285
+723,dinov3-b16,a sandhill crane couple with their chicks,12.786677430177784,42.095013475924695,0.06666666666666667
+724,dinov3-b16,adult male Misumena vatia,2.5383141762452106,21.262172817864236,0.027777777777777776
+725,dinov3-b16,albino american robin,1.36986301369863,16.104477175644405,0.0136986301369863
+726,dinov3-b16,an image showing a humpback whale fluke with clearly identifiable markings,43.125721752148884,77.76185529761027,1.0
+727,dinov3-b16,an oak gall produced by a spongy oak apple gall wasp,36.36851296324096,69.93697634949596,0.25
+728,dinov3-b16,an oxpecker on a zebra,67.41064826664845,90.7992706257663,1.0
+729,dinov3-b16,antelopes head-butting,34.23649192809321,71.52160709541843,1.0
+730,dinov3-b16,bananaquit pollinating flower,8.625569319945486,38.99749199564318,0.03571428571428571
+731,dinov3-b16,beached orca,66.66666666666666,83.15546295836228,1.0
+732,dinov3-b16,bird caught in a net,82.71344751734989,96.25648618398586,1.0
+733,dinov3-b16,bird dead in front of a window,30.15693789888504,64.98946513527089,0.5
+734,dinov3-b16,black-winged kite carrying prey in its talons,34.43833943833943,67.26574155473682,1.0
+735,dinov3-b16,blue jay eating whole peanuts,38.47402597402597,67.87130697374654,1.0
+736,dinov3-b16,breeding adult Black-bellied Plover,37.01084855582465,72.13351852914731,0.5
+737,dinov3-b16,bridal veil stinkhorn mushroom,96.18596694526038,99.27281561702588,1.0
+738,dinov3-b16,brown bear near vehicle,11.257860324516166,44.19199657365411,0.16666666666666666
+739,dinov3-b16,bullhead shark egg case,66.52192922316762,88.83275483380314,1.0
+740,dinov3-b16,camera trap photo of a bobcat captured in the nightime,47.74122795007955,77.43408734873029,0.5
+741,dinov3-b16,camera trap photo of a springbok drinking water,42.628205128205124,66.68433371078764,0.5
+742,dinov3-b16,camera trap photo of a stag red deer,15.835279514054218,46.31687482234307,0.1111111111111111
+743,dinov3-b16,camera trap photo of chital with its head down,36.138037383203525,63.66503441397941,0.16666666666666666
+744,dinov3-b16,canada geese flying in v-formation,16.405669599217987,46.71860297975338,0.5
+745,dinov3-b16,caterpillar of Common Buckeye butterfly,35.925304242570924,73.1822947044721,1.0
+746,dinov3-b16,caterpillar of Gulf Fritillary butterfly,37.02895523057851,71.64093196530222,0.5
+747,dinov3-b16,caterpillar of polyphemus moth,30.820686275596355,70.18729917510875,1.0
+748,dinov3-b16,cheetah with cubs,31.737107877669068,66.93137598268852,0.5
+749,dinov3-b16,close-up of sugar maple leaf,60.99333997266043,81.98254656571753,0.3333333333333333
+750,dinov3-b16,close-up of sweet cherry tree bark,19.44878347731128,52.51725028536356,0.125
+751,dinov3-b16,common murre beached carcass,46.61125010666337,74.13531027056834,0.2
+752,dinov3-b16,couple of black-bellied whistling ducks with their youngs sharing parenting duties,35.211376864298195,68.51585590510304,0.5
+753,dinov3-b16,cross orbweaver,6.9562989927812415,35.79465552258444,0.05
+754,dinov3-b16,dark-colored Dusky Leaf-monkey with orange-colored young,26.826248418474147,63.50829763699847,0.5
+755,dinov3-b16,dorsal side of mourning cloak butterfly,67.21808204280815,91.16831540574752,1.0
+756,dinov3-b16,eastern gray squirrel displaying melanistic pelage,33.33932147025166,67.71466709315992,0.5
+757,dinov3-b16,elephant covered in mud or dirt,56.10626495388584,78.36454426000506,0.2
+758,dinov3-b16,elephant near a fence,48.22104193865939,82.80811510786666,1.0
+759,dinov3-b16,elk with hair loss,42.230651650563246,73.22753304036107,0.3333333333333333
+760,dinov3-b16,female beautiful demoiselle,24.863439908424382,59.60078476976557,0.1
+761,dinov3-b16,feral cat with prey,23.07409897128759,56.18011272912241,0.3333333333333333
+762,dinov3-b16,fire pink with dark-colored anthers,11.719213276892496,40.9184641211879,0.07142857142857142
+763,dinov3-b16,fire salamander with a barred color pattern,18.996943189448913,52.123991232524766,0.25
+764,dinov3-b16,flamingo standing on one leg,40.66087161546134,73.24812736251882,0.5
+765,dinov3-b16,fruit bat eating fruit upside down,6.79330131700632,35.023740380010516,0.1
+766,dinov3-b16,giant resin bee feeding on sunflower,1.3513513513513513,16.054408543402232,0.013513513513513514
+767,dinov3-b16,great golden digger wasp carrying an orthopteron,40.35409035409036,67.32055524920064,1.0
+768,dinov3-b16,grebe with babies on its back,49.196010516415754,82.11228596384024,1.0
+769,dinov3-b16,hognose snake playing dead,30.082760376878028,64.16073040288185,1.0
+770,dinov3-b16,human handling a bat with bare hands,10.400668243665704,43.47295955137556,0.1
+771,dinov3-b16,hyenas eating a kill,14.255039683701332,48.33505107291749,0.16666666666666666
+772,dinov3-b16,jungle babblers allopreening,25.964074748393756,61.57657938832565,1.0
+773,dinov3-b16,kahili ginger plant with open fruit capsules showing seeds,52.916666666666664,80.0244813062926,1.0
+774,dinov3-b16,killdeer feigning injury,7.8597838331880885,36.38251727008341,0.04
+775,dinov3-b16,laysan albatross mostly in dark mottled brown plumage,15.490306441525952,43.7833481461275,0.25
+776,dinov3-b16,lorikeet pollinating flower,70.709910009512,91.8277950279588,1.0
+777,dinov3-b16,male Red-winged Blackbird vocalizing,51.354085551627506,84.24375445841781,1.0
+778,dinov3-b16,male ruby-throated hummingbird in flight,14.82650774819308,48.78206647026146,0.07142857142857142
+779,dinov3-b16,male smooth newt with developed crest,24.014415924061154,59.03880997286449,0.5
+780,dinov3-b16,male velvet ant,7.675110741971207,34.81971707717032,0.14285714285714285
+781,dinov3-b16,measuring the body dimensions of a bee,39.51063450967116,72.96568571917227,0.5
+782,dinov3-b16,monkey slug caterpillar,1.9230769230769231,17.458343004804533,0.019230769230769232
+783,dinov3-b16,moose with hair loss,46.81220248306416,79.64457362831084,1.0
+784,dinov3-b16,mountain goat climbing rocky outcrops with its young,14.30843466217882,49.12814584575091,0.3333333333333333
+785,dinov3-b16,pair of great crested grebes potentially performing the weed dance,48.618952240233696,78.36462260881744,1.0
+786,dinov3-b16,parrotfish feeding,27.80485524610754,66.40714887467473,1.0
+787,dinov3-b16,photo with two or more adult male lions,11.61576117535891,43.89321921259614,0.06666666666666667
+788,dinov3-b16,picture showing more than fifty Mediterranean Acrobat Ants,3.728956228956229,25.21501918412401,0.03333333333333333
+789,dinov3-b16,picture showing more than fifty Velvety Tree Ants,6.659543944427665,32.31817743866598,0.0625
+790,dinov3-b16,potter wasp nest,9.851681370668713,33.194932391961196,0.09090909090909091
+791,dinov3-b16,puffins carrying food,21.13876160071812,50.70917627517589,0.2
+792,dinov3-b16,red-tailed hawk perched on a utility pole,27.830320278714883,60.43900726671445,0.25
+793,dinov3-b16,sick cassava plant,45.65661365715964,73.75125952085288,0.2
+794,dinov3-b16,sloth hugging a human-made structure,28.851582731115784,65.53157700105949,0.5
+795,dinov3-b16,southern aligator lizard with cut tail,4.050465714741181,26.742511665349568,0.024390243902439025
+796,dinov3-b16,ventral side of mourning cloak butterfly,29.58805512280096,62.69165484749125,0.07142857142857142
+797,dinov3-b16,vervet monkey with visible bright blue scrotal areas,25.10343720647613,58.769104076085846,0.125
+798,dinov3-b16,water snake feeding on fish,8.660676178568217,37.22452227696158,0.043478260869565216
+799,dinov3-b16,white-tailed deer flagging its tail,6.815929565929567,33.17639712681474,0.08333333333333333
