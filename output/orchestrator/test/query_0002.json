@@ -1,0 +1,15 @@
+{
+  "query": "A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs",
+  "effective_query": "A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs",
+  "count_pos": 8,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs",
+    "reason": "T2I is suitable for visual queries like this one, as it compares the query text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs\",\n  \"reason\": \"T2I is suitable for visual queries like this one, as it compares the query text with candidate image embeddings.\"\n}<|im_end|>"
+}

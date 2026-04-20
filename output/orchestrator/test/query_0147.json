@@ -1,0 +1,15 @@
+{
+  "query": "photo with two or more adult male lions",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "photo with two or more adult male lions",
+  "effective_query": "photo with two or more adult male lions",
+  "count_pos": 14,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "photo with two or more adult male lions",
+    "reason": "The query is best matched by comparing the text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"photo with two or more adult male lions\",\n  \"reason\": \"The query is best matched by comparing the text with candidate image embeddings.\"\n}<|im_end|>"
+}

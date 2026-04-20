@@ -1,0 +1,15 @@
+{
+  "query": "caterpillar of polyphemus moth",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "caterpillar of the polyphemus moth",
+  "effective_query": "caterpillar of the polyphemus moth",
+  "count_pos": 20,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "caterpillar of the polyphemus moth",
+    "reason": "T2I is suitable for this query as it involves a specific biological organism, and comparing the query text with candidate image embeddings can effectively retrieve images of the caterpillar."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"caterpillar of the polyphemus moth\",\n  \"reason\": \"T2I is suitable for this query as it involves a specific biological organism, and comparing the query text with candidate image embeddings can effectively retrieve images of the caterpillar.\"\n}<|im_end|>"
+}

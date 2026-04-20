@@ -1,0 +1,15 @@
+{
+  "query": "parrotfish feeding",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "parrotfish feeding",
+  "effective_query": "parrotfish feeding",
+  "count_pos": 19,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "parrotfish feeding",
+    "reason": "T2I is suitable for this query as it compares the query text with candidate image embeddings to find relevant images."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"parrotfish feeding\",\n  \"reason\": \"T2I is suitable for this query as it compares the query text with candidate image embeddings to find relevant images.\"\n}<|im_end|>"
+}

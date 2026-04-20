@@ -1,0 +1,15 @@
+{
+  "query": "a gall produced by an Acorn Plum Gall Wasp",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "a gall produced by an Acorn Plum Gall Wasp",
+  "effective_query": "a gall produced by an Acorn Plum Gall Wasp",
+  "count_pos": 1,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "a gall produced by an Acorn Plum Gall Wasp",
+    "reason": "The query is best matched with T2I as it involves a specific biological context and the query text can be directly compared to candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"a gall produced by an Acorn Plum Gall Wasp\",\n  \"reason\": \"The query is best matched with T2I as it involves a specific biological context and the query text can be directly compared to candidate image embeddings.\"\n}<|im_end|>"
+}

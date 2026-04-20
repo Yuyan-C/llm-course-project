@@ -1,0 +1,15 @@
+{
+  "query": "Mushrooms growing in a fairy ring formation",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Mushrooms growing in a fairy ring formation",
+  "effective_query": "Mushrooms growing in a fairy ring formation",
+  "count_pos": 8,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Mushrooms growing in a fairy ring formation",
+    "reason": "T2I is suitable for visual queries like this, as it compares the query text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Mushrooms growing in a fairy ring formation\",\n  \"reason\": \"T2I is suitable for visual queries like this, as it compares the query text with candidate image embeddings.\"\n}<|im_end|>"
+}

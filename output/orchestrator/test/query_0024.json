@@ -1,0 +1,15 @@
+{
+  "query": "Exactly five penguins",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Exactly five penguins",
+  "effective_query": "Exactly five penguins",
+  "count_pos": 11,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Exactly five penguins",
+    "reason": "The query is best matched with image embeddings for retrieval."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Exactly five penguins\",\n  \"reason\": \"The query is best matched with image embeddings for retrieval.\"\n}<|im_end|>"
+}

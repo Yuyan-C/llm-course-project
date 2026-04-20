@@ -1,0 +1,19 @@
+{
+  "query": "Butterflyfish feeding on brain coral",
+  "planner_mode": "t2t",
+  "retrieval_mode": "t2t",
+  "rewritten_query": "Butterflyfish feeding on brain coral",
+  "effective_query": "Butterflyfish feeding on brain coral",
+  "count_pos": 30,
+  "mode_notes": {
+    "t2t_fields": [
+      "species"
+    ]
+  },
+  "planner_payload": {
+    "retrieval_mode": "T2T",
+    "rewritten_query": "Butterflyfish feeding on brain coral",
+    "reason": "The query is best suited for T2T mode as it involves a specific biological behavior/context, and we don't need to generate an LLM caption."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2T\",\n  \"rewritten_query\": \"Butterflyfish feeding on brain coral\",\n  \"reason\": \"The query is best suited for T2T mode as it involves a specific biological behavior/context, and we don't need to generate an LLM caption.\"\n}<|im_end|>"
+}

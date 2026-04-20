@@ -1,0 +1,15 @@
+{
+  "query": "Eastern Red Bat in flight",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Eastern Red Bat in flight",
+  "effective_query": "Eastern Red Bat in flight",
+  "count_pos": 29,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Eastern Red Bat in flight",
+    "reason": "The query is best matched with candidate images using text-to-image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Eastern Red Bat in flight\",\n  \"reason\": \"The query is best matched with candidate images using text-to-image embeddings.\"\n}<|im_end|>"
+}

@@ -1,0 +1,15 @@
+{
+  "query": "beached orca",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "beached orca",
+  "effective_query": "beached orca",
+  "count_pos": 2,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "beached orca",
+    "reason": "The query is best matched with candidate images using text-to-image retrieval (T2I) to find images of beached orcas."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"beached orca\",\n  \"reason\": \"The query is best matched with candidate images using text-to-image retrieval (T2I) to find images of beached orcas.\"\n}<|im_end|>"
+}

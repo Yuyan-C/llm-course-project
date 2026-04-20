@@ -1,0 +1,15 @@
+{
+  "query": "A By-the-Wind Sailor washed up on a beach",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "A By-the-Wind Sailor washed up on a beach",
+  "effective_query": "A By-the-Wind Sailor washed up on a beach",
+  "count_pos": 2,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "A By-the-Wind Sailor washed up on a beach",
+    "reason": "The query is best matched with T2I as it involves a specific marine organism and its location, which can be effectively retrieved using image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"A By-the-Wind Sailor washed up on a beach\",\n  \"reason\": \"The query is best matched with T2I as it involves a specific marine organism and its location, which can be effectively retrieved using image embeddings.\"\n}<|im_end|>"
+}

@@ -1,0 +1,15 @@
+{
+  "query": "albino american robin",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "albino american robin",
+  "effective_query": "albino american robin",
+  "count_pos": 1,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "albino american robin",
+    "reason": "T2I is suitable for this query as it compares the query text with candidate image embeddings to find visual matches."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"albino american robin\",\n  \"reason\": \"T2I is suitable for this query as it compares the query text with candidate image embeddings to find visual matches.\"\n}<|im_end|>"
+}

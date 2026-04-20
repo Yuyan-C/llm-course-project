@@ -1,0 +1,19 @@
+{
+  "query": "measuring the body dimensions of a bee",
+  "planner_mode": "t2t",
+  "retrieval_mode": "t2t",
+  "rewritten_query": "What are the body dimensions of a bee?",
+  "effective_query": "What are the body dimensions of a bee?",
+  "count_pos": 23,
+  "mode_notes": {
+    "t2t_fields": [
+      "species"
+    ]
+  },
+  "planner_payload": {
+    "retrieval_mode": "T2T",
+    "rewritten_query": "What are the body dimensions of a bee?",
+    "reason": "The query is best answered by comparing the text query with the text fields in a dataset, as it is a factual question about bee dimensions."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2T\",\n  \"rewritten_query\": \"What are the body dimensions of a bee?\",\n  \"reason\": \"The query is best answered by comparing the text query with the text fields in a dataset, as it is a factual question about bee dimensions.\"\n}<|im_end|>"
+}

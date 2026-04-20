@@ -1,0 +1,15 @@
+{
+  "query": "a nest with eggs displaying brood parasitism by a cowbird",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "a nest with eggs showing brood parasitism by a cowbird",
+  "effective_query": "a nest with eggs showing brood parasitism by a cowbird",
+  "count_pos": 7,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "a nest with eggs showing brood parasitism by a cowbird",
+    "reason": "T2I is suitable for visual queries like this, as it compares the query text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"a nest with eggs showing brood parasitism by a cowbird\",\n  \"reason\": \"T2I is suitable for visual queries like this, as it compares the query text with candidate image embeddings.\"\n}<|im_end|>"
+}

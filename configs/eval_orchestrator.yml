@@ -1,0 +1,83 @@
+max_tool_calls: 2
+
+chat_template:
+  enable_thinking: false
+
+model:
+  name: "HuggingFaceTB/SmolLM3-3B"
+
+generate:
+  max_new_tokens: 256
+  decode:
+    temperature: 0
+    do_sample: false
+    top_p: 1
+
+init_prompt: |
+  You are a retrieval orchestrator.
+
+  Given a user query, choose exactly one retrieval strategy from:
+  - T2I
+  - I2I
+  - T2T
+  - T2T_AUGMENTED
+
+  Definitions:
+  - T2I: compare query text with candidate image embeddings.
+  - I2I: compare web exemplar image embeddings with candidate image embeddings.
+  - T2T: compare query text with candidate dataset text fields (no LLM caption generation).
+  - T2T_AUGMENTED: compare query text with LLM-generated captions augmented with metadata.
+
+  Return ONLY valid JSON (no markdown, no extra text) with this schema:
+  {
+    "retrieval_mode": "T2I | I2I | T2T | T2T_AUGMENTED",
+    "rewritten_query": "optional rewritten query or empty string",
+    "reason": "one short sentence"
+  }
+
+  Rules:
+  - Always pick one mode.
+  - Prefer T2T or T2T_AUGMENTED for fine-grained biological behavior/context queries.
+  - Prefer I2I when strong visual exemplar matching is likely useful.
+  - Keep rewritten_query faithful to the original meaning.
+
+image_dir: /network/scratch/y/yuyan.chen/inquire
+
+retrieval:
+  default_mode: t2t
+  use_rewritten_query: true
+  embedding_model: siglip-so400m-14-384
+
+  caption_model: Qwen/Qwen3-VL-4B-Instruct
+  caption_prompt: "Describe this image in one concise factual sentence. Focus on species, appearance, behavior, and context."
+  caption_max_new_tokens: 48
+  caption_temperature: 0.0
+  caption_load_retries: 3
+  caption_load_retry_sleep: 10.0
+  caption_cache_path: output/web_images/compare/caption_cache_test.json
+
+  i2i:
+    metadata: /network/scratch/y/yuyan.chen/inquire/web_images_raw_top20/image_search_metadata_test.json
+    max_web_images_per_query: 8
+    min_web_images_per_query: 2
+    apply_web_image_filters: false
+    aggregation: topk_mean
+    top_k: 3
+    missing_behavior: fallback_t2i
+    min_short_side: 224
+    max_aspect_ratio: 2.8
+    stock_thumbnail_short_side: 600
+    metadata_relevance_threshold: 0.25
+
+  t2t:
+    # Base candidate text fields for T2T mode (no LLM caption generation).
+    base_fields:
+      - species
+
+  t2t_augmented:
+    # Metadata appended to generated captions in T2T_AUGMENTED mode.
+    metadata_fields:
+      - species
+      - category
+      - supercategory
+      - iconic_group

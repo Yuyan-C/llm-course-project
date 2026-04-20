@@ -1,0 +1,15 @@
+{
+  "query": "A coyote resting on human-build structures",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "A coyote resting on human-built structures",
+  "effective_query": "A coyote resting on human-built structures",
+  "count_pos": 6,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "A coyote resting on human-built structures",
+    "reason": "The query is best suited for image retrieval using T2I as it directly relates to visual content."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"A coyote resting on human-built structures\",\n  \"reason\": \"The query is best suited for image retrieval using T2I as it directly relates to visual content.\"\n}<|im_end|>"
+}

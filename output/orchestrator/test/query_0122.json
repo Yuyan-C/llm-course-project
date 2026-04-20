@@ -1,0 +1,15 @@
+{
+  "query": "fire pink with dark-colored anthers",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Fire pink with dark-colored anthers",
+  "effective_query": "Fire pink with dark-colored anthers",
+  "count_pos": 8,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Fire pink with dark-colored anthers",
+    "reason": "The query is best matched with candidate images using text-to-image retrieval (T2I) to capture the color description accurately."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Fire pink with dark-colored anthers\",\n  \"reason\": \"The query is best matched with candidate images using text-to-image retrieval (T2I) to capture the color description accurately.\"\n}<|im_end|>"
+}

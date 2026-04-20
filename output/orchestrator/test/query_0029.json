@@ -1,0 +1,15 @@
+{
+  "query": "Gazelle being vigilant/looking around",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Gazelle being vigilant/looking around",
+  "effective_query": "Gazelle being vigilant/looking around",
+  "count_pos": 27,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Gazelle being vigilant/looking around",
+    "reason": "The query is best matched by comparing the text with candidate image embeddings to find images of gazelles exhibiting vigilance or looking around behavior."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Gazelle being vigilant/looking around\",\n  \"reason\": \"The query is best matched by comparing the text with candidate image embeddings to find images of gazelles exhibiting vigilance or looking around behavior.\"\n}<|im_end|>"
+}

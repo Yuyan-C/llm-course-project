@@ -1,0 +1,15 @@
+{
+  "query": "Tropical Orb Weaver with multiple white spots in the abdominal dorsum",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Tropical Orb Weaver with multiple white spots in the abdominal dorsum",
+  "effective_query": "Tropical Orb Weaver with multiple white spots in the abdominal dorsum",
+  "count_pos": 2,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Tropical Orb Weaver with multiple white spots in the abdominal dorsum",
+    "reason": "Query is best matched with image embeddings for visual identification."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Tropical Orb Weaver with multiple white spots in the abdominal dorsum\",\n  \"reason\": \"Query is best matched with image embeddings for visual identification.\"\n}<|im_end|>"
+}

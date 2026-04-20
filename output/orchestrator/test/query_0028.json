@@ -1,0 +1,15 @@
+{
+  "query": "Fur seal mother with pup",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Fur seal mother with pup",
+  "effective_query": "Fur seal mother with pup",
+  "count_pos": 29,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Fur seal mother with pup",
+    "reason": "The query is best matched with T2I as it directly relates to visual search and the retrieval mode compares the query text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Fur seal mother with pup\",\n  \"reason\": \"The query is best matched with T2I as it directly relates to visual search and the retrieval mode compares the query text with candidate image embeddings.\"\n}<|im_end|>"
+}

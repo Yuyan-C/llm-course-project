@@ -1,0 +1,19 @@
+{
+  "query": "potter wasp nest",
+  "planner_mode": "t2t",
+  "retrieval_mode": "t2t",
+  "rewritten_query": "potter wasp nest",
+  "effective_query": "potter wasp nest",
+  "count_pos": 3,
+  "mode_notes": {
+    "t2t_fields": [
+      "species"
+    ]
+  },
+  "planner_payload": {
+    "retrieval_mode": "T2T",
+    "rewritten_query": "potter wasp nest",
+    "reason": "The query is best answered by comparing the text query with candidate dataset text fields."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2T\",\n  \"rewritten_query\": \"potter wasp nest\",\n  \"reason\": \"The query is best answered by comparing the text query with candidate dataset text fields.\"\n}<|im_end|>"
+}

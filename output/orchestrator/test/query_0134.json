@@ -1,0 +1,15 @@
+{
+  "query": "killdeer feigning injury",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "killdeer feigning injury",
+  "effective_query": "killdeer feigning injury",
+  "count_pos": 8,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "killdeer feigning injury",
+    "reason": "The query is best matched with candidate images using T2I as it directly relates to visual identification of a killdeer in a feigning injury behavior."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"killdeer feigning injury\",\n  \"reason\": \"The query is best matched with candidate images using T2I as it directly relates to visual identification of a killdeer in a feigning injury behavior.\"\n}<|im_end|>"
+}

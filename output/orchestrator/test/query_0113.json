@@ -1,0 +1,15 @@
+{
+  "query": "cross orbweaver",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "cross orbweaver",
+  "effective_query": "cross orbweaver",
+  "count_pos": 9,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "cross orbweaver",
+    "reason": "Query is best matched with candidate images using text-to-image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"cross orbweaver\",\n  \"reason\": \"Query is best matched with candidate images using text-to-image embeddings.\"\n}<|im_end|>"
+}

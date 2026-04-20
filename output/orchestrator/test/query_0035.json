@@ -1,0 +1,22 @@
+{
+  "query": "Inflated pufferfish",
+  "planner_mode": "t2t_augmented",
+  "retrieval_mode": "t2t_augmented",
+  "rewritten_query": "Inflated pufferfish",
+  "effective_query": "Inflated pufferfish",
+  "count_pos": 47,
+  "mode_notes": {
+    "t2t_augmented_fields": [
+      "species",
+      "category",
+      "supercategory",
+      "iconic_group"
+    ]
+  },
+  "planner_payload": {
+    "retrieval_mode": "T2T_AUGMENTED",
+    "rewritten_query": "Inflated pufferfish",
+    "reason": "The query is likely to benefit from LLM-generated captions augmented with metadata to provide a detailed description of the pufferfish's inflated state."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2T_AUGMENTED\",\n  \"rewritten_query\": \"Inflated pufferfish\",\n  \"reason\": \"The query is likely to benefit from LLM-generated captions augmented with metadata to provide a detailed description of the pufferfish's inflated state.\"\n}<|im_end|>"
+}

@@ -1,0 +1,15 @@
+{
+  "query": "water snake feeding on fish",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "water snake feeding on fish",
+  "effective_query": "water snake feeding on fish",
+  "count_pos": 8,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "water snake feeding on fish",
+    "reason": "The query is straightforward and likely to be answered by comparing the query text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"water snake feeding on fish\",\n  \"reason\": \"The query is straightforward and likely to be answered by comparing the query text with candidate image embeddings.\"\n}<|im_end|>"
+}

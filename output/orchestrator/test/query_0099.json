@@ -1,0 +1,15 @@
+{
+  "query": "bullhead shark egg case",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "bullhead shark egg case",
+  "effective_query": "bullhead shark egg case",
+  "count_pos": 11,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "bullhead shark egg case",
+    "reason": "The query is best matched with T2I as it directly relates to visual search for an image of a bullhead shark egg case."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"bullhead shark egg case\",\n  \"reason\": \"The query is best matched with T2I as it directly relates to visual search for an image of a bullhead shark egg case.\"\n}<|im_end|>"
+}

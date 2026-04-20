@@ -1,0 +1,15 @@
+{
+  "query": "Water Frogs in amplexus position",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Water Frogs in amplexus position",
+  "effective_query": "Water Frogs in amplexus position",
+  "count_pos": 6,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Water Frogs in amplexus position",
+    "reason": "Query is best matched with image embeddings for retrieval."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Water Frogs in amplexus position\",\n  \"reason\": \"Query is best matched with image embeddings for retrieval.\"\n}<|im_end|>"
+}

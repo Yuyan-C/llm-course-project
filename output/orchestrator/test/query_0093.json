@@ -1,0 +1,15 @@
+{
+  "query": "bird dead in front of a window",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "bird dead in front of a window",
+  "effective_query": "bird dead in front of a window",
+  "count_pos": 21,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "bird dead in front of a window",
+    "reason": "The query is best suited for image retrieval as it seeks a visual match of a bird dead in front of a window."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"bird dead in front of a window\",\n  \"reason\": \"The query is best suited for image retrieval as it seeks a visual match of a bird dead in front of a window.\"\n}<|im_end|>"
+}

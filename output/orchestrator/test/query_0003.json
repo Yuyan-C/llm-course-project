@@ -1,0 +1,15 @@
+{
+  "query": "A close-up of an ant carrying a leaf",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "A close-up of an ant carrying a leaf",
+  "effective_query": "A close-up of an ant carrying a leaf",
+  "count_pos": 48,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "A close-up of an ant carrying a leaf",
+    "reason": "The query is best matched by comparing the text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"A close-up of an ant carrying a leaf\",\n  \"reason\": \"The query is best matched by comparing the text with candidate image embeddings.\"\n}<|im_end|>"
+}

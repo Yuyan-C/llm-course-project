@@ -1,0 +1,19 @@
+{
+  "query": "Dead hog-nosed skunk",
+  "planner_mode": "t2t",
+  "retrieval_mode": "t2t",
+  "rewritten_query": "Dead hog-nosed skunk",
+  "effective_query": "Dead hog-nosed skunk",
+  "count_pos": 30,
+  "mode_notes": {
+    "t2t_fields": [
+      "species"
+    ]
+  },
+  "planner_payload": {
+    "retrieval_mode": "T2T",
+    "rewritten_query": "Dead hog-nosed skunk",
+    "reason": "The query is best suited for T2T mode as it involves a specific biological context and does not require image or LLM-generated caption generation."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2T\",\n  \"rewritten_query\": \"Dead hog-nosed skunk\",\n  \"reason\": \"The query is best suited for T2T mode as it involves a specific biological context and does not require image or LLM-generated caption generation.\"\n}<|im_end|>"
+}

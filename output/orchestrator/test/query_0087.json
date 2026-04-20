@@ -1,0 +1,15 @@
+{
+  "query": "an oak gall produced by a spongy oak apple gall wasp",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "an oak gall produced by a spongy oak apple gall wasp",
+  "effective_query": "an oak gall produced by a spongy oak apple gall wasp",
+  "count_pos": 40,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "an oak gall produced by a spongy oak apple gall wasp",
+    "reason": "The query is best matched with T2I as it involves identifying an image of an oak gall produced by a specific wasp, which can be compared to candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"an oak gall produced by a spongy oak apple gall wasp\",\n  \"reason\": \"The query is best matched with T2I as it involves identifying an image of an oak gall produced by a specific wasp, which can be compared to candidate image embeddings.\"\n}<|im_end|>"
+}

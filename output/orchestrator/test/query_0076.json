@@ -1,0 +1,15 @@
+{
+  "query": "a herd of more than 10 impalas",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "a herd of more than 10 impalas",
+  "effective_query": "a herd of more than 10 impalas",
+  "count_pos": 32,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "a herd of more than 10 impalas",
+    "reason": "The query is a simple description of a group of animals, suitable for image retrieval."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"a herd of more than 10 impalas\",\n  \"reason\": \"The query is a simple description of a group of animals, suitable for image retrieval.\"\n}<|im_end|>"
+}

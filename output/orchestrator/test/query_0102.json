@@ -1,0 +1,15 @@
+{
+  "query": "camera trap photo of a stag red deer",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "camera trap photo of a stag red deer",
+  "effective_query": "camera trap photo of a stag red deer",
+  "count_pos": 10,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "camera trap photo of a stag red deer",
+    "reason": "T2I is suitable for visual queries like this, as it compares the query text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"camera trap photo of a stag red deer\",\n  \"reason\": \"T2I is suitable for visual queries like this, as it compares the query text with candidate image embeddings.\"\n}<|im_end|>"
+}

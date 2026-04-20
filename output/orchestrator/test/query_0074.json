@@ -1,0 +1,15 @@
+{
+  "query": "a bighorn sheep with a tracking collar around its neck",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "a bighorn sheep with a tracking collar around its neck",
+  "effective_query": "a bighorn sheep with a tracking collar around its neck",
+  "count_pos": 11,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "a bighorn sheep with a tracking collar around its neck",
+    "reason": "The query is a textual description of an image, so T2I is the most suitable retrieval mode."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"a bighorn sheep with a tracking collar around its neck\",\n  \"reason\": \"The query is a textual description of an image, so T2I is the most suitable retrieval mode.\"\n}<|im_end|>"
+}

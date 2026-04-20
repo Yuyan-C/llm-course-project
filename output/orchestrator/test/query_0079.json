@@ -1,0 +1,15 @@
+{
+  "query": "a microscopy slide showing the cellular structure of a plant",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "a microscopy slide showing the cellular structure of a plant",
+  "effective_query": "a microscopy slide showing the cellular structure of a plant",
+  "count_pos": 23,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "a microscopy slide showing the cellular structure of a plant",
+    "reason": "The query is focused on a specific biological context, so T2I is suitable for comparing the query text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"a microscopy slide showing the cellular structure of a plant\",\n  \"reason\": \"The query is focused on a specific biological context, so T2I is suitable for comparing the query text with candidate image embeddings.\"\n}<|im_end|>"
+}

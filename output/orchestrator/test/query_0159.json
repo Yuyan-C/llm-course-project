@@ -1,0 +1,15 @@
+{
+  "query": "white-tailed deer flagging its tail",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "white-tailed deer flagging its tail",
+  "effective_query": "white-tailed deer flagging its tail",
+  "count_pos": 5,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "white-tailed deer flagging its tail",
+    "reason": "The query is best matched with T2I as it involves a specific animal behavior, which can be effectively retrieved using image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"white-tailed deer flagging its tail\",\n  \"reason\": \"The query is best matched with T2I as it involves a specific animal behavior, which can be effectively retrieved using image embeddings.\"\n}<|im_end|>"
+}

@@ -1,0 +1,15 @@
+{
+  "query": "A female pheasant",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "A female pheasant",
+  "effective_query": "A female pheasant",
+  "count_pos": 41,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "A female pheasant",
+    "reason": "The query is a simple noun phrase, so T2I is the most appropriate retrieval strategy."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"A female pheasant\",\n  \"reason\": \"The query is a simple noun phrase, so T2I is the most appropriate retrieval strategy.\"\n}<|im_end|>"
+}

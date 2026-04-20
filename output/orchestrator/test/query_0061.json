@@ -1,0 +1,15 @@
+{
+  "query": "Sharks with remoras attached",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Sharks with remoras attached",
+  "effective_query": "Sharks with remoras attached",
+  "count_pos": 8,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Sharks with remoras attached",
+    "reason": "Query is best matched with image embeddings for direct visual recognition."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Sharks with remoras attached\",\n  \"reason\": \"Query is best matched with image embeddings for direct visual recognition.\"\n}<|im_end|>"
+}

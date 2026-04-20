@@ -1,0 +1,15 @@
+{
+  "query": "male velvet ant",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "male velvet ant",
+  "effective_query": "male velvet ant",
+  "count_pos": 5,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "male velvet ant",
+    "reason": "T2I is suitable for this query as it involves a specific biological term that can be matched with image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"male velvet ant\",\n  \"reason\": \"T2I is suitable for this query as it involves a specific biological term that can be matched with image embeddings.\"\n}<|im_end|>"
+}

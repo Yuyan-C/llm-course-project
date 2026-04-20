@@ -1,0 +1,19 @@
+{
+  "query": "hyenas eating a kill",
+  "planner_mode": "t2t",
+  "retrieval_mode": "t2t",
+  "rewritten_query": "hyenas eating a kill",
+  "effective_query": "hyenas eating a kill",
+  "count_pos": 14,
+  "mode_notes": {
+    "t2t_fields": [
+      "species"
+    ]
+  },
+  "planner_payload": {
+    "retrieval_mode": "T2T",
+    "rewritten_query": "hyenas eating a kill",
+    "reason": "The query is best suited for T2T mode as it directly compares the query text with candidate dataset text fields without requiring LLM caption generation."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2T\",\n  \"rewritten_query\": \"hyenas eating a kill\",\n  \"reason\": \"The query is best suited for T2T mode as it directly compares the query text with candidate dataset text fields without requiring LLM caption generation.\"\n}<|im_end|>"
+}

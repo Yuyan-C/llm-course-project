@@ -1,0 +1,15 @@
+{
+  "query": "dark-colored Dusky Leaf-monkey with orange-colored young",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Dark-colored Dusky Leaf-monkey with orange-colored young",
+  "effective_query": "Dark-colored Dusky Leaf-monkey with orange-colored young",
+  "count_pos": 17,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Dark-colored Dusky Leaf-monkey with orange-colored young",
+    "reason": "Query is best matched with image embeddings for visual identification."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Dark-colored Dusky Leaf-monkey with orange-colored young\",\n  \"reason\": \"Query is best matched with image embeddings for visual identification.\"\n}<|im_end|>"
+}

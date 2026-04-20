@@ -1,0 +1,15 @@
+{
+  "query": "House finch with yellow pigmentation",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "House finch with yellow pigmentation",
+  "effective_query": "House finch with yellow pigmentation",
+  "count_pos": 6,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "House finch with yellow pigmentation",
+    "reason": "Query is best matched with candidate images using text-to-image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"House finch with yellow pigmentation\",\n  \"reason\": \"Query is best matched with candidate images using text-to-image embeddings.\"\n}<|im_end|>"
+}

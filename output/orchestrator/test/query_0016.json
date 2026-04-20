@@ -1,0 +1,15 @@
+{
+  "query": "Cheetah with radio collar",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Cheetah with radio collar",
+  "effective_query": "Cheetah with radio collar",
+  "count_pos": 13,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Cheetah with radio collar",
+    "reason": "The query is a straightforward description, suitable for text-based retrieval."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Cheetah with radio collar\",\n  \"reason\": \"The query is a straightforward description, suitable for text-based retrieval.\"\n}<|im_end|>"
+}

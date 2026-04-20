@@ -1,0 +1,15 @@
+{
+  "query": "an image showing a humpback whale fluke with clearly identifiable markings",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "an image showing a humpback whale fluke with clearly identifiable markings",
+  "effective_query": "an image showing a humpback whale fluke with clearly identifiable markings",
+  "count_pos": 32,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "an image showing a humpback whale fluke with clearly identifiable markings",
+    "reason": "T2I is suitable for visual queries like this, as it compares the query text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"an image showing a humpback whale fluke with clearly identifiable markings\",\n  \"reason\": \"T2I is suitable for visual queries like this, as it compares the query text with candidate image embeddings.\"\n}<|im_end|>"
+}

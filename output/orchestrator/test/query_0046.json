@@ -1,0 +1,15 @@
+{
+  "query": "Mexican grass-carrying wasp visiting a purple flower",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "Mexican grass-carrying wasp visiting purple flower",
+  "effective_query": "Mexican grass-carrying wasp visiting purple flower",
+  "count_pos": 4,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "Mexican grass-carrying wasp visiting purple flower",
+    "reason": "Query is text-based and likely to match image embeddings for visual search."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"Mexican grass-carrying wasp visiting purple flower\",\n  \"reason\": \"Query is text-based and likely to match image embeddings for visual search.\"\n}<|im_end|>"
+}

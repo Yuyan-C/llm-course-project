@@ -1,0 +1,15 @@
+{
+  "query": "fruit bat eating fruit upside down",
+  "planner_mode": "t2i",
+  "retrieval_mode": "t2i",
+  "rewritten_query": "fruit bat eating fruit upside down",
+  "effective_query": "fruit bat eating fruit upside down",
+  "count_pos": 7,
+  "mode_notes": {},
+  "planner_payload": {
+    "retrieval_mode": "T2I",
+    "rewritten_query": "fruit bat eating fruit upside down",
+    "reason": "The query is best suited for retrieval by comparing the query text with candidate image embeddings."
+  },
+  "planner_raw": "{\n  \"retrieval_mode\": \"T2I\",\n  \"rewritten_query\": \"fruit bat eating fruit upside down\",\n  \"reason\": \"The query is best suited for retrieval by comparing the query text with candidate image embeddings.\"\n}<|im_end|>"
+}
