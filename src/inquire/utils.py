@@ -13,8 +13,55 @@ import torch
 from all_clip import load_clip as load_vanilla_clip
 
 
+def _patch_t5_batch_encode_plus() -> None:
+    try:
+        from transformers import T5Tokenizer, T5TokenizerFast  # type: ignore
+    except Exception:
+        return
+
+    for cls in (T5Tokenizer, T5TokenizerFast):
+        if cls is None:
+            continue
+        if hasattr(cls, "batch_encode_plus"):
+            continue
+
+        def _batch_encode_plus(self, *args, **kwargs):
+            return self(*args, **kwargs)
+
+        setattr(cls, "batch_encode_plus", _batch_encode_plus)
+
+
+def _patch_siglip_autotokenizer_fallback() -> None:
+    # Some timm SigLIP tokenizer repos have no config.json; AutoTokenizer can fail
+    # while T5Tokenizer.from_pretrained still works. Patch once globally.
+    try:
+        from transformers import AutoTokenizer, T5Tokenizer  # type: ignore
+    except Exception:
+        return
+
+    marker = "_inquire_siglip_fallback_patched"
+    if getattr(AutoTokenizer, marker, False):
+        return
+
+    original_from_pretrained = AutoTokenizer.from_pretrained
+
+    def _from_pretrained_with_siglip_fallback(pretrained_model_name_or_path, *args, **kwargs):
+        try:
+            return original_from_pretrained(pretrained_model_name_or_path, *args, **kwargs)
+        except OSError as exc:
+            model_id = str(pretrained_model_name_or_path)
+            if model_id in {"timm/ViT-B-16-SigLIP", "timm/ViT-B-16-SigLIP-256"}:
+                return T5Tokenizer.from_pretrained(pretrained_model_name_or_path, *args, **kwargs)
+            raise exc
+
+    AutoTokenizer.from_pretrained = _from_pretrained_with_siglip_fallback
+    setattr(AutoTokenizer, marker, True)
+
+
 def load_clip(clip_name, device, **args):
     """Wrapper around all_clip's load_clip which adds support for wildclip and bioclip"""
+    _patch_t5_batch_encode_plus()
+    _patch_siglip_autotokenizer_fallback()
     
     if clip_name.startswith("wildclip"):
         import clip

@@ -1,0 +1,7 @@
+model,usage_type,method,n_queries,query_share
+vit-b-32,chosen,t2i,154,0.9625
+vit-b-32,chosen,i2i,5,0.03125
+vit-b-32,chosen,t2t,1,0.00625
+vit-b-32,executed,t2i,154,0.9625
+vit-b-32,executed,i2i,5,0.03125
+vit-b-32,executed,t2t,1,0.00625

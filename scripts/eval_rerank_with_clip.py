@@ -1,59 +1,145 @@
-"""This script runs evals for CLIP models on INQUIRE-Rerank, the reranking task.
-The data is automatically loaded from HuggingFace Hub, so you don't need to download 
-anything yourself to run this evaluation."""
-import os
-import json
-import shutil
+"""Run text-to-image reranking on INQUIRE-Rerank with CLIP-like models."""
+
+from contextlib import nullcontext
 from datasets import load_dataset
 from tqdm import tqdm
 import pandas as pd
 import numpy as np
 import torch
-from collections import defaultdict 
 import argparse
+import time
 
 from src.inquire.utils import load_clip
 from src.inquire.metrics import MetricAverage, compute_retrieval_metrics
+from src.inquire.web_image_quality import extract_image_embedding_tensor
 
 
-# Command line argument parser
-parser = argparse.ArgumentParser(description='Run retrieval evaluation.')
-parser.add_argument('--split', type=str, default='test', choices=['val', 'test'],
-                    help="Dataset split to evaluate on. Options: 'val', 'test'. Default is 'test'.")
-args = parser.parse_args()
+def patch_transformers_tokenizer_compat() -> None:
+    # all_clip expects some transformers tokenizers to expose batch_encode_plus.
+    try:
+        from transformers import T5Tokenizer, T5TokenizerFast  # type: ignore
+    except Exception:
+        return
+
+    for cls in (T5Tokenizer, T5TokenizerFast):
+        if cls is None:
+            continue
+        if hasattr(cls, "batch_encode_plus"):
+            continue
+
+        def _batch_encode_plus(self, *args, **kwargs):
+            return self(*args, **kwargs)
+
+        setattr(cls, "batch_encode_plus", _batch_encode_plus)
+
+
+def _extract_text_embedding_tensor(model_output):
+    if torch.is_tensor(model_output):
+        return model_output
+
+    for attr in ("text_embeds", "pooler_output", "last_hidden_state"):
+        value = getattr(model_output, attr, None)
+        if torch.is_tensor(value):
+            if attr == "last_hidden_state" and value.ndim >= 3:
+                return value[:, 0, :]
+            return value
+
+    if isinstance(model_output, (tuple, list)) and len(model_output) > 0:
+        first = model_output[0]
+        if torch.is_tensor(first):
+            if first.ndim >= 3:
+                return first[:, 0, :]
+            return first
+
+    raise TypeError(f"Unsupported text embedding output type: {type(model_output).__name__}")
+
+
+def _tokenize_for_model(tokenizer, text: str, device: str):
+    tokens = tokenizer(text)
+    if hasattr(tokens, "to"):
+        return tokens.to(device)
+    if isinstance(tokens, dict):
+        return {k: (v.to(device) if hasattr(v, "to") else v) for k, v in tokens.items()}
+    raise TypeError(f"Unsupported tokenizer output type: {type(tokens).__name__}")
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Run T2I retrieval evaluation.")
+    parser.add_argument(
+        "--split",
+        type=str,
+        default="test",
+        choices=["val", "test"],
+        help="Dataset split to evaluate on.",
+    )
+    parser.add_argument(
+        "--models",
+        nargs="+",
+        default=None,
+        help="Subset of model keys to evaluate (e.g. vit-b-32 bioclip).",
+    )
+    parser.add_argument("--save-results-path", type=str, default=None)
+    parser.add_argument("--max-queries", type=int, default=None)
+    parser.add_argument("--batch-size", type=int, default=256)
+    parser.add_argument("--num-workers", type=int, default=4)
+    parser.add_argument("--model-load-retries", type=int, default=3)
+    parser.add_argument("--model-load-retry-sleep", type=float, default=5.0)
+    return parser.parse_args()
+
+
+args = parse_args()
+patch_transformers_tokenizer_compat()
 
 split = args.split
-save_results_path = f'results_rerank_with_clip_{split}.csv'
+save_results_path = args.save_results_path or f"results_rerank_with_clip_{split}.csv"
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Load INQUIRE-Rerank from HuggingFace
 dataset = load_dataset("evendrow/INQUIRE-Rerank", split=('validation' if split == 'val' else 'test'))
 queries = np.unique(dataset['query']).tolist()
+if args.max_queries is not None:
+    queries = queries[: args.max_queries]
 
-batch_size = 256
-num_workers = 4
+batch_size = args.batch_size
+num_workers = args.num_workers
 
-all_models = {
-    # 'vit-b-32': 'hf_clip:openai/clip-vit-base-patch32',
-    # 'wildclip-t1': 'wildclip_vitb16_t1',
-    # 'wildclip-t1t7-lwf': 'wildclip_vitb16_t1t7_lwf',
-   #  'bioclip': 'bioclip',
-    # 'rn50': 'open_clip:RN50/openai',
-    # 'rn50x16': 'open_clip:RN50x16/openai',
-    # 'vit-b-16': 'hf_clip:openai/clip-vit-base-patch16',
-    # 'vit-l-14': 'hf_clip:openai/clip-vit-large-patch14',
-    # 'vit-b-16-dfn': 'open_clip:ViT-B-16/dfn2b',
-    # 'vit-l-14-dfn': 'open_clip:ViT-L-14-quickgelu/dfn2b',
-    # 'vit-h-14-378': 'open_clip:ViT-H-14-378-quickgelu/dfn5b',
-    # 'siglip-vit-l-16-384': 'open_clip:ViT-L-16-SigLIP-384/webli',
-    'siglip-so400m-14-384': 'open_clip:ViT-SO400M-14-SigLIP-384/webli',
-    # 'biocap': 'biocap',
+all_models_available = {
+    "vit-b-32": "hf_clip:openai/clip-vit-base-patch32",
+    "bioclip": "bioclip",
+    "biocap": "biocap",
+    "siglip-vit-b-16": "open_clip:ViT-B-16-SigLIP-256/webli",
 }
+
+if args.models:
+    unknown = [name for name in args.models if name not in all_models_available]
+    if unknown:
+        raise ValueError(f"Unknown model key(s): {unknown}. Valid keys: {list(all_models_available.keys())}")
+    all_models = {name: all_models_available[name] for name in args.models}
+else:
+    all_models = all_models_available
 
 results = []
 for title, clip_name in all_models.items():
-    model, preprocess, tokenizer = load_clip(clip_name, use_jit=False, device=device)
+    model = preprocess = tokenizer = None
+    last_exc = None
+    for attempt in range(1, args.model_load_retries + 2):
+        try:
+            model, preprocess, tokenizer = load_clip(clip_name, use_jit=False, device=device)
+            break
+        except Exception as exc:  # noqa: PERF203
+            last_exc = exc
+            if attempt > args.model_load_retries:
+                break
+            print(
+                f"[{title}] load failed on attempt {attempt}/{args.model_load_retries + 1}: "
+                f"{exc.__class__.__name__}: {exc}. Retrying in {args.model_load_retry_sleep:.1f}s..."
+            )
+            time.sleep(args.model_load_retry_sleep)
+
+    if model is None or preprocess is None or tokenizer is None:
+        reason = f"{last_exc.__class__.__name__}: {last_exc}" if last_exc is not None else "unknown load error"
+        raise RuntimeError(f"[{title}] failed to load after retries: {reason}") from last_exc
 
     # Efficiently compute image embeddings in batches
     def collate_transform(examples):
@@ -65,7 +151,7 @@ for title, clip_name in all_models.items():
     image_emb_cache = {}
     for images, ids in tqdm(dataloader, total=len(dataset)//batch_size):
         with torch.no_grad(), torch.autocast(device):
-            image_embs = model.encode_image(images.to(device)).cpu()
+            image_embs = extract_image_embedding_tensor(model.encode_image(images.to(device))).float().cpu()
             image_embs /= image_embs.norm(dim=-1, keepdim=True)
         image_emb_cache.update(dict(zip(ids, image_embs)))
 
@@ -75,9 +161,14 @@ for title, clip_name in all_models.items():
     for query in queries:
         query_ds = dataset.select(np.argwhere(np.asarray(dataset['query']) == query).squeeze())
 
-        text = tokenizer(query).to(device)
-        with torch.no_grad(), torch.cuda.amp.autocast():
-            text_emb = model.encode_text(text).squeeze().cpu()
+        text = _tokenize_for_model(tokenizer, query, device)
+        amp_ctx = torch.autocast(device_type="cuda") if device == "cuda" else nullcontext()
+        with torch.no_grad(), amp_ctx:
+            if isinstance(text, dict):
+                text_out = model.encode_text(**text)
+            else:
+                text_out = model.encode_text(text)
+            text_emb = _extract_text_embedding_tensor(text_out).squeeze().float().cpu()
             text_emb /= text_emb.norm(dim=-1, keepdim=True)
 
         image_embs = torch.stack([image_emb_cache[image_id] for image_id in query_ds['inat24_image_id']])
@@ -93,7 +184,11 @@ for title, clip_name in all_models.items():
 
 results_df = pd.DataFrame.from_dict(results)
 pd.options.display.float_format = ' {:,.2f}'.format
-print(results_df.groupby('model').agg({'ap': 'mean', 'ndcg': 'mean', 'mrr': 'mean'}).sort_values('ap'))
+if len(results_df) > 0:
+    print(results_df.groupby('model').agg({'ap': 'mean', 'ndcg': 'mean', 'mrr': 'mean'}).sort_values('ap'))
+else:
+    print("No evaluation rows were produced.")
+    results_df = pd.DataFrame(columns=["model", "query", "ap", "ndcg", "mrr"])
 
-results_df.to_csv(save_results_path)
+results_df.to_csv(save_results_path, index=False)
 print("All done! Saved results to", save_results_path)

@@ -1,80 +1,42 @@
+method_orchestrator:
+  model_name: "HuggingFaceTB/SmolLM3-3B"
+  fallback_method: "t2i"
+  router_prompt: |
+    You are a retrieval method router.
 
-max_tool_calls: 5
+    Task:
+    - Choose exactly one method for this query: "i2i", "t2i", or "t2t".
+    - Use only query text semantics. Do not assume any runtime stats or exemplar availability.
 
-chat_template:
-  enable_thinking: false
+    Method definitions:
+    - i2i: compare candidate images against downloaded web exemplar images.
+    - t2i: compare query text embedding against candidate image embeddings.
+    - t2t: compare query text embedding against generated caption embeddings.
 
-model: 
-  name: "HuggingFaceTB/SmolLM3-3B"
+    Routing rubric:
+    - Choose i2i for explicit visual morphology and fine-grained appearance cues:
+      colors, patterns, markings, textures, shape/proportions, body-part traits,
+      pose/viewpoint, or "looks like"/"similar appearance" style wording.
+    - Choose t2t for behavior/context/compositional semantics:
+      actions, interactions, scene context, habitat/environment, temporal states,
+      relations between entities, or multi-clause natural-language descriptions.
+    - Choose t2i for concise object/species-centric naming queries:
+      short noun phrases, taxonomic labels, or simple class-level mentions with
+      little or no behavioral/contextual detail.
 
-generate: 
-  max_new_tokens: 512
-  decode: 
-    # deterministic output
-    temperature: 0 
-    do_sample: false
-    top_p: 1
+    Tie-breakers:
+    - If behavior/context and morphology are both present, prefer t2t when behavior/context is central.
+    - If appearance detail is dominant and specific, prefer i2i.
+    - If the query is short and underspecified, prefer t2i.
+    - Never choose a method outside {"i2i","t2i","t2t"}.
 
-init_prompt: |
-  You are an intelligent orchestrator for a multimodal image retrieval and filtering pipeline. Given a user-provided text prompt and a set of candidate images (N = 1000), your task is to plan and execute a sequence of operations to maximize retrieval quality.
+    Return JSON only with this schema (placeholders, not literal values):
+    {"method":"<i2i|t2i|t2t>","confidence":<0_to_1_float>,"reason":"<query-specific rationale>","signals":["<signal_a>","<signal_b>"]}
 
-  Step 1: Prompt Analysis & Rewriting
-  Analyze the input text prompt. Determine whether it contains ecological or domain-specific jargon that may hinder text-to-image retrieval. If such jargon exists, rewrite the prompt into a more visually descriptive and generalizable form. Preserve the original semantic meaning while emphasizing observable attributes such as color, shape, texture, habitat, and pose. If not, keep the original prompt. If the prompt requires species identification and contains common names, consider rewriting it to include scientific names or broader taxonomic groups to improve retrieval.
-
-  Step 2: Open-Vocabulary Object Detection (OVD) Decision
-  Decide whether open-vocabulary object detection (e.g., Grounding DINO) would improve filtering. If yes:
-  - Generate a set of detection prompts (object names, attributes, or phrases). The prompts should be derived from the original or rewritten text prompt and should be designed to capture key visual elements relevant to the user's query. Make sure the prompts use generic language that is likely to be recognized by the OVD model, and avoid domain-specific jargons. If the original prompt contains species names, consider using a name for the higher taxonomic group (e.g., "bird" instead of "sparrow") or descriptive attributes (e.g., "small brown bird") as OVD prompts to increase the chances of detection. If the prompt is already visually descriptive and likely to be well-handled by the OVD model, you may choose to use the original prompt directly as the detection prompt.
-  - Run Grounding DINO on all images using these prompts.
-  - Obtain bounding boxes, confidence scores, and labels.
-  - Use detection outputs to filter out irrelevant images and/or provide region proposals for downstream processing.
-
-  Step 3: Species Classification (Region-Level BioCLIP)
-  Decide whether species-level or fine-grained biological classification is necessary. If yes:
-  - If bounding boxes are available from Grounding DINO:
-    - Apply BioCLIP to each bounding box (region-level classification), not the whole image.
-    - Aggregate predictions across regions to determine image-level relevance.
-  - If no bounding boxes are available:
-    - Apply BioCLIP on the full image.
-  - Use the top-5 predictions from BioCLIP to determine whether the image is relevant to the prompt.
-  - Filter out images that do not match the target species or biological concept. Note that BioCLIP outputs scientific names and for some species, there are common names. The original prompt may contain either scientific names or common names and common names may not refer to a single species. You need to handle this ambiguity and make the best effort to match the prompt with BioCLIP predictions. 
-
-  Step 4: Pipeline Planning
-  Based on the prompt, dynamically decide which steps to execute:
-  - Prompt rewriting
-  - OVD filtering
-  - Species classification
-
-  Step 5: Relevance Decision (LLM Judge)
-  The final image relevance decision will be made by a strict LLM judge that only
-  sees the Grounding DINO detections and BioCLIP top predictions. Ensure your plan
-  runs the needed tools so those outputs are available for the judge.
-
-  Your output MUST contain exactly two sections in this order:
-
-  1) Plan Summary:
-     - A concise, human-readable summary of the chosen steps and why.
-     - Bulleted or numbered is fine.
-
-  2) Execution Plan:
-     - A single JSON object that is machine-parseable.
-     - No extra text after the JSON.
-
-  JSON schema:
-
-  {
-    "Step 1": {"function": "run_grounding_dino", "arguments": {"image_path": "image_path", "text_labels": ["..."]}},
-    "Step 2": {"function": "run_bioclip", "arguments": {"image_path": "image_path"}}
-  }
-
-  Rules:
-  - Always include both sections.
-  - The JSON must be valid and appear immediately after the line `Execution Plan:`.
-  - Use `image_path` as the placeholder string for images.
-  - If a step is unnecessary, omit it entirely.
-
-  Decide steps based on the user query:
-  - If OVD is needed, use run_grounding_dino with suitable text_labels.
-  - If species classification is needed, use run_bioclip.
-
-  
-image_dir: /network/scratch/y/yuyan.chen/inquire
+    Rules:
+    - Output exactly one JSON object and nothing else (no markdown, no prose outside JSON).
+    - "confidence" must be a numeric float between 0 and 1.
+    - "signals" must contain exactly two short, query-grounded signals.
+    - Do not copy placeholder tokens like <...>.
+    - Do not output generic text like "short rationale", "signal1", or "signal2".
+    - Make reason/signals specific to the given query.

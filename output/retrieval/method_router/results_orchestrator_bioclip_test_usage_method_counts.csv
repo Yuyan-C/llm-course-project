@@ -1,0 +1,7 @@
+model,usage_type,method,n_queries,query_share
+bioclip,chosen,t2i,154,0.9625
+bioclip,chosen,i2i,5,0.03125
+bioclip,chosen,t2t,1,0.00625
+bioclip,executed,t2i,154,0.9625
+bioclip,executed,i2i,5,0.03125
+bioclip,executed,t2t,1,0.00625

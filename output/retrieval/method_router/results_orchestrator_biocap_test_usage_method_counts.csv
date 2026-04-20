@@ -1,0 +1,7 @@
+model,usage_type,method,n_queries,query_share
+biocap,chosen,t2i,154,0.9625
+biocap,chosen,i2i,5,0.03125
+biocap,chosen,t2t,1,0.00625
+biocap,executed,t2i,154,0.9625
+biocap,executed,i2i,5,0.03125
+biocap,executed,t2t,1,0.00625

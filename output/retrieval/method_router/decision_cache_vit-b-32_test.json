@@ -1,0 +1,1759 @@
+{
+  "A By-the-Wind Sailor washed up on a beach": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query mentions a By-the-Wind Sailor, a specific species, and its location on a beach, suggesting a concise object-centric query. The absence of behavioral or contextual details aligns with the t2i method's focus on species-centric naming queries.",
+    "signals": [
+      "By-the-Wind Sailor",
+      "washed up"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query mentions a By-the-Wind Sailor, a specific species, and its location on a beach, suggesting a concise object-centric query. The absence of behavioral or contextual details aligns with the t2i method's focus on species-centric naming queries.\", \"signals\":[\"By-the-Wind Sailor\", \"washed up\"]}",
+    "invalid_decision": false
+  },
+  "A Eurasian Red Squirrel gathering material for its nest": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior ('gathering material for its nest') and is concise, suggesting a text-to-image method is suitable. The scientific name is present but not central to the query, and the behavior is more descriptive than the object itself.",
+    "signals": [
+      "gathering material for its nest",
+      "Eurasian Red Squirrel"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior ('gathering material for its nest') and is concise, suggesting a text-to-image method is suitable. The scientific name is present but not central to the query, and the behavior is more descriptive than the object itself.\",\"signals\":[\"gathering material for its nest\",\"Eurasian Red Squirrel\"]}",
+    "invalid_decision": false
+  },
+  "A close-up of a Star-nosed Mole's nose showing all appendages of its Eimer's organs": {
+    "method": "i2i",
+    "confidence": 0.95,
+    "reason": "The query explicitly describes a close-up of a Star-nosed Mole's nose, focusing on its Eimer's organs. This morphology detail aligns with i2i's strength in comparing images against web exemplars based on visual features like appendages and organs.",
+    "signals": [
+      "appendages of Eimer's organs",
+      "close-up of a Star-nosed Mole's nose"
+    ],
+    "raw": "{\"method\":\"i2i\",\"confidence\":0.95,\"reason\":\"The query explicitly describes a close-up of a Star-nosed Mole's nose, focusing on its Eimer's organs. This morphology detail aligns with i2i's strength in comparing images against web exemplars based on visual features like appendages and organs.\",\"signals\":[\"appendages of Eimer's organs\",\"close-up of a Star-nosed Mole's nose\"]}",
+    "invalid_decision": false
+  },
+  "A close-up of an ant carrying a leaf": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a close-up of an ant carrying a leaf, which is a specific object-centric task. The query does not include behavioral or contextual details, and it is concise enough to be handled by comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "ant",
+      "leaf"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a close-up of an ant carrying a leaf, which is a specific object-centric task. The query does not include behavioral or contextual details, and it is concise enough to be handled by comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"ant\",\"leaf\"]}",
+    "invalid_decision": false
+  },
+  "A coyote resting on human-build structures": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a coyote resting on human-built structures, which is a behavior/contextual detail. This suggests a comparison against image embeddings to find images of coyotes in such contexts.",
+    "signals": [
+      "coyote resting",
+      "human-built structures"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a coyote resting on human-built structures, which is a behavior/contextual detail. This suggests a comparison against image embeddings to find images of coyotes in such contexts.\",\"signals\":[\"coyote resting\",\"human-built structures\"]}",
+    "invalid_decision": false
+  },
+  "A female pheasant": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a female pheasant, a common bird species, using a concise noun phrase. This aligns with the t2i method, which is suited for short, species-centric naming queries with minimal contextual detail.",
+    "signals": [
+      "female pheasant is a known bird species",
+      "query uses a short, specific noun phrase"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a female pheasant, a common bird species, using a concise noun phrase. This aligns with the t2i method, which is suited for short, species-centric naming queries with minimal contextual detail.\",\"signals\":[\"female pheasant is a known bird species\",\"query uses a short, specific noun phrase\"]}",
+    "invalid_decision": false
+  },
+  "A male and female cardinal sharing food": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a cardinal sharing food, which is a behavior/contextual detail. This suggests a t2i method is suitable for comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "cardinal",
+      "sharing"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a cardinal sharing food, which is a behavior/contextual detail. This suggests a t2i method is suitable for comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"cardinal\",\"sharing\"]}",
+    "invalid_decision": false
+  },
+  "A mongoose standing upright alert": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a mongoose's posture and alertness, which are behavioral cues. The short noun phrase'mongoose' suggests a scientific name context, but the added behavioral details lean towards behavior/context semantics.",
+    "signals": [
+      "posture",
+      "alertness"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a mongoose's posture and alertness, which are behavioral cues. The short noun phrase'mongoose' suggests a scientific name context, but the added behavioral details lean towards behavior/context semantics.\",\"signals\":[\"posture\",\"alertness\"]}",
+    "invalid_decision": false
+  },
+  "A peacock male displaying its feathers": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a peacock male displaying its feathers, which is a behavior/contextual detail. This aligns with the t2i method, which is suited for behavior, context, or compositional semantics.",
+    "signals": [
+      "displaying its feathers",
+      "peacock male"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a peacock male displaying its feathers, which is a behavior/contextual detail. This aligns with the t2i method, which is suited for behavior, context, or compositional semantics.\",\"signals\":[\"displaying its feathers\",\"peacock male\"]}",
+    "invalid_decision": false
+  },
+  "Adult female black widow spider not in a web": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies an adult female black widow spider, which is a scientific name, and lacks behavioral context. The absence of behavioral words and the concise nature of the query suggest a focus on the object's appearance and identification rather than its behavior.",
+    "signals": [
+      "black widow spider",
+      "adult female"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies an adult female black widow spider, which is a scientific name, and lacks behavioral context. The absence of behavioral words and the concise nature of the query suggest a focus on the object's appearance and identification rather than its behavior.\",\"signals\":[\"black widow spider\",\"adult female\"]}",
+    "invalid_decision": false
+  },
+  "Alligator lizards mating": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on behavior (mating) and is concise, suggesting a text-to-image method.",
+    "signals": [
+      "mating",
+      "Alligator lizards"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on behavior (mating) and is concise, suggesting a text-to-image method.\",\"signals\":[\"mating\",\"Alligator lizards\"]}",
+    "invalid_decision": false
+  },
+  "Black Skimmer with a leg band": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a Black Skimmer with a leg band, which is a concise object-centric description. The mention of a leg band suggests a specific visual detail, but the overall query is short and focuses on the species rather than behavior or context.",
+    "signals": [
+      "Black Skimmer",
+      "leg band"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a Black Skimmer with a leg band, which is a concise object-centric description. The mention of a leg band suggests a specific visual detail, but the overall query is short and focuses on the species rather than behavior or context.\",\"signals\":[\"Black Skimmer\",\"leg band\"]}",
+    "invalid_decision": false
+  },
+  "Blackening Waxcap mushroom turned fully black": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a unique morphological transformation ('turned fully black') of a mushroom, which is more descriptive of appearance than behavior. The scientific name is mentioned, but the focus is on the transformation rather than the species' behavior or context.",
+    "signals": [
+      "turned fully black",
+      "Blackening Waxcap"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a unique morphological transformation ('turned fully black') of a mushroom, which is more descriptive of appearance than behavior. The scientific name is mentioned, but the focus is on the transformation rather than the species' behavior or context.\",\"signals\":[\"turned fully black\",\"Blackening Waxcap\"]}",
+    "invalid_decision": false
+  },
+  "Butterflyfish feeding on brain coral": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on behavior (feeding) and specific habitat (brain coral), which aligns with t2i's strength in contextual semantics.",
+    "signals": [
+      "has_behavior_words",
+      "looks_like_scientific_name"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on behavior (feeding) and specific habitat (brain coral), which aligns with t2i's strength in contextual semantics.\",\"signals\":[\"has_behavior_words\",\"looks_like_scientific_name\"]}",
+    "invalid_decision": false
+  },
+  "Cart-Rut Shell snail egg mass": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a scientific term, 'Cart-Rut Shell snail', which is concise and object-centric. It likely refers to a specific species or taxonomic group, making it suitable for a text-to-image retrieval method.",
+    "signals": [
+      "Cart-Rut Shell snail",
+      "egg mass"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a scientific term, 'Cart-Rut Shell snail', which is concise and object-centric. It likely refers to a specific species or taxonomic group, making it suitable for a text-to-image retrieval method.\",\"signals\":[\"Cart-Rut Shell snail\", \"egg mass\"]}",
+    "invalid_decision": false
+  },
+  "Channeled Applesnail covered by green algae": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a scientific name and a descriptive phrase, indicating a focus on object/species-centric naming with contextual details. The query is concise and likely targets a specific species with associated algae. This suggests a t2i method is appropriate for comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "covered by green algae",
+      "Channeled Applesnail"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a scientific name and a descriptive phrase, indicating a focus on object/species-centric naming with contextual details. The query is concise and likely targets a specific species with associated algae. This suggests a t2i method is appropriate for comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"covered by green algae\",\"Channeled Applesnail\"]}",
+    "invalid_decision": false
+  },
+  "Cheetah with radio collar": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query mentions a cheetah with a radio collar, which is a specific object-centric description. The term 'cheetah' is a scientific name, and the query does not include contextual or behavioral details.",
+    "signals": [
+      "cheetah",
+      "radio collar"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query mentions a cheetah with a radio collar, which is a specific object-centric description. The term 'cheetah' is a scientific name, and the query does not include contextual or behavioral details.\",\"signals\":[\"cheetah\",\"radio collar\"]}",
+    "invalid_decision": false
+  },
+  "Chinese Mystery Snail covered by green algae": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific species (Chinese Mystery Snail) with a descriptive detail (covered by green algae), which aligns with t2i's strength in concise object-centric naming queries with minimal contextual detail.",
+    "signals": [
+      "covered by green algae",
+      "Chinese Mystery Snail"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific species (Chinese Mystery Snail) with a descriptive detail (covered by green algae), which aligns with t2i's strength in concise object-centric naming queries with minimal contextual detail.\",\"signals\":[\"covered by green algae\",\"Chinese Mystery Snail\"]}",
+    "invalid_decision": false
+  },
+  "Cooper's Hawk in adult plumage": {
+    "method": "t2i",
+    "confidence": 0.95,
+    "reason": "Query specifies a bird species with scientific name 'Cooper's Hawk', which is concise and object-centric.",
+    "signals": [
+      "Cooper's Hawk",
+      "adult plumage"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.95,\"reason\":\"Query specifies a bird species with scientific name 'Cooper's Hawk', which is concise and object-centric.\",\"signals\":[\"Cooper's Hawk\",\"adult plumage\"]}",
+    "invalid_decision": false
+  },
+  "Dead hog-nosed skunk": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a common skunk species with scientific name 'Mephitis macroura', suggesting a concise object-centric request.",
+    "signals": [
+      "<species_name>",
+      "<scientific_name>"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a common skunk species with scientific name 'Mephitis macroura', suggesting a concise object-centric request.\",\"signals\":[\"<species_name>\",\"<scientific_name>\"]}",
+    "invalid_decision": false
+  },
+  "Dolphins performing acrobatics": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on behavior (performing acrobatics) and lacks specific object or species details, suggesting a text-to-image comparison is more suitable.",
+    "signals": [
+      "behavior_words_present",
+      "short_noun_phrase"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on behavior (performing acrobatics) and lacks specific object or species details, suggesting a text-to-image comparison is more suitable.\",\"signals\":[\"behavior_words_present\",\"short_noun_phrase\"]}",
+    "invalid_decision": false
+  },
+  "Eastern Red Bat in flight": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behaviorless, object-centric term with a scientific name hint, suggesting a text-to-image comparison is suitable.",
+    "signals": [
+      "Eastern Red Bat",
+      "in flight"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behaviorless, object-centric term with a scientific name hint, suggesting a text-to-image comparison is suitable.\",\"signals\":[\"Eastern Red Bat\",\"in flight\"]}",
+    "invalid_decision": false
+  },
+  "Elk bugling during the rut": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on behavior (bugling during the rut) and is concise, suggesting a text-to-image method is suitable. The query lacks detailed visual cues like scientific names, which are better suited for i2i. The behavior context aligns with t2i's strengths.",
+    "signals": [
+      "bugling",
+      "rut"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on behavior (bugling during the rut) and is concise, suggesting a text-to-image method is suitable. The query lacks detailed visual cues like scientific names, which are better suited for i2i. The behavior context aligns with t2i's strengths.\",\"signals\":[\"bugling\",\"rut\"]}",
+    "invalid_decision": false
+  },
+  "Emergence of large colony of mexican free-tailed bats": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on the emergence of a large colony of Mexican free-tailed bats, which is a scientific term and does not include behavioral or contextual details. This suggests a concise object-centric query, indicating the use of t2i.",
+    "signals": [
+      "Mexican free-tailed bats",
+      "emergence"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on the emergence of a large colony of Mexican free-tailed bats, which is a scientific term and does not include behavioral or contextual details. This suggests a concise object-centric query, indicating the use of t2i.\",\"signals\":[\"Mexican free-tailed bats\",\"emergence\"]}",
+    "invalid_decision": false
+  },
+  "Exactly five penguins": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a count ('exactly five') and mentions 'penguins', which is a common scientific name for a group of birds. This suggests a concise object-centric query, fitting the t2i method for comparing against image embeddings.",
+    "signals": [
+      "penguins",
+      "exactly five"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a count ('exactly five') and mentions 'penguins', which is a common scientific name for a group of birds. This suggests a concise object-centric query, fitting the t2i method for comparing against image embeddings.\",\"signals\":[\"penguins\",\"exactly five\"]}",
+    "invalid_decision": false
+  },
+  "Exactly three zebras standing together in a field": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific visual scene with three zebras, suggesting a need for image-based comparison.",
+    "signals": [
+      "three zebras",
+      "standing together in a field"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific visual scene with three zebras, suggesting a need for image-based comparison.\",\"signals\":[\"three zebras\",\"standing together in a field\"]}",
+    "invalid_decision": false
+  },
+  "Fishing net on a reef": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'Fishing net on a reef' is concise and object-centric, likely referring to a specific species or object with a scientific name. The query lacks behavioral or contextual details, suggesting a focus on visual morphology or taxonomy.",
+    "signals": [
+      "<Fishing net on a reef> is a short noun phrase likely referring to a specific object or species.",
+      "The query does not include action or context words, indicating a focus on visual appearance."
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'Fishing net on a reef' is concise and object-centric, likely referring to a specific species or object with a scientific name. The query lacks behavioral or contextual details, suggesting a focus on visual morphology or taxonomy.\", \"signals\":[\"<Fishing net on a reef> is a short noun phrase likely referring to a specific object or species.\", \"The query does not include action or context words, indicating a focus on visual appearance.\"]}",
+    "invalid_decision": false
+  },
+  "Fly Agaric in yellow form": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a scientific name and has no behavioral or contextual details, indicating a concise object-centric request.",
+    "signals": [
+      "Fly Agaric is a scientific name",
+      "The query lacks behavioral or contextual details"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a scientific name and has no behavioral or contextual details, indicating a concise object-centric request.\",\"signals\":[\"Fly Agaric is a scientific name\",\"The query lacks behavioral or contextual details\"]}",
+    "invalid_decision": false
+  },
+  "Fur seal mother with pup": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a mother and pup fur seal, which is a concise object-centric description. The scientific name is mentioned, indicating a focus on the species rather than behavior or context.",
+    "signals": [
+      "Fur seal mother",
+      "pup"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a mother and pup fur seal, which is a concise object-centric description. The scientific name is mentioned, indicating a focus on the species rather than behavior or context.\",\"signals\":[\"Fur seal mother\",\"pup\"]}",
+    "invalid_decision": false
+  },
+  "Gazelle being vigilant/looking around": {
+    "method": "t2t",
+    "confidence": 0.85,
+    "reason": "The query focuses on the behavior of a gazelle, specifically its vigilant state while looking around, which is a contextual and behavioral description.",
+    "signals": [
+      "vigilant",
+      "looking around"
+    ],
+    "raw": "{\"method\":\"t2t\",\"confidence\":0.85,\"reason\":\"The query focuses on the behavior of a gazelle, specifically its vigilant state while looking around, which is a contextual and behavioral description.\",\"signals\":[\"vigilant\",\"looking around\"]}",
+    "invalid_decision": false
+  },
+  "Green Shore Crab": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query is concise and object-centric, likely referring to a specific species. The term 'Green Shore Crab' suggests a taxonomic label, which is best matched using text-to-image embeddings.",
+    "signals": [
+      "Green Shore Crab is a species name",
+      "Taxonomic labels are best matched using text-to-image embeddings"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query is concise and object-centric, likely referring to a specific species. The term 'Green Shore Crab' suggests a taxonomic label, which is best matched using text-to-image embeddings.\",\"signals\":[\"Green Shore Crab is a species name\",\"Taxonomic labels are best matched using text-to-image embeddings\"]}",
+    "invalid_decision": false
+  },
+  "Haliaeetus eagles in aerial cartwheeling flight with locked talons": {
+    "method": "t2i",
+    "confidence": 0.95,
+    "reason": "Query focuses on behavior (aerial cartwheeling flight) and specific bird species (Haliaeetus eagles), which aligns with t2i's strength in contextual semantics.",
+    "signals": [
+      "aerial cartwheeling flight",
+      "Haliaeetus eagles"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.95,\"reason\":\"Query focuses on behavior (aerial cartwheeling flight) and specific bird species (Haliaeetus eagles), which aligns with t2i's strength in contextual semantics.\",\"signals\":[\"aerial cartwheeling flight\",\"Haliaeetus eagles\"]}",
+    "invalid_decision": false
+  },
+  "Hamerkop collecting nesting material": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior ('collecting') and contains a short noun phrase ('Hamerkop'), indicating a focus on action rather than appearance. The behavior is central to the query, suggesting a comparison against image embeddings that capture contextual semantics.",
+    "signals": [
+      "behavior_words_present",
+      "central_behavior"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior ('collecting') and contains a short noun phrase ('Hamerkop'), indicating a focus on action rather than appearance. The behavior is central to the query, suggesting a comparison against image embeddings that capture contextual semantics.\",\"signals\":[\"behavior_words_present\",\"central_behavior\"]}",
+    "invalid_decision": false
+  },
+  "House finch with yellow pigmentation": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a bird species with a unique coloration, aligning with concise object-centric naming.",
+    "signals": [
+      "House finch",
+      "yellow pigmentation"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a bird species with a unique coloration, aligning with concise object-centric naming.\",\"signals\":[\"House finch\",\"yellow pigmentation\"]}",
+    "invalid_decision": false
+  },
+  "H\u00fcbner's Wasp Moth mating": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query mentions 'H\u00fcbner's Wasp Moth mating,' which is a specific scientific name and behavior context. The query does not include detailed visual morphology or general appearance cues.",
+    "signals": [
+      "H\u00fcbner's Wasp Moth mating",
+      "mating"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query mentions 'H\\u00fcbner's Wasp Moth mating,' which is a specific scientific name and behavior context. The query does not include detailed visual morphology or general appearance cues.\",\"signals\":[\"H\\u00fcbner's Wasp Moth mating\",\"mating\"]}",
+    "invalid_decision": false
+  },
+  "Inflated pufferfish": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific scientific name, 'pufferfish', which is concise and likely to be matched by image embeddings. The term 'inflated' provides a morphological cue, but the primary focus is on the species name, suggesting a text-based comparison.",
+    "signals": [
+      "pufferfish",
+      "inflated"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific scientific name, 'pufferfish', which is concise and likely to be matched by image embeddings. The term 'inflated' provides a morphological cue, but the primary focus is on the species name, suggesting a text-based comparison.\",\"signals\":[\"pufferfish\",\"inflated\"]}",
+    "invalid_decision": false
+  },
+  "Leafhopper Assassin Bug predating lady beetle": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on behavior/context (predating lady beetle) and is concise with scientific naming (Leafhopper Assassin Bug).",
+    "signals": [
+      "predating lady beetle",
+      "Leafhopper Assassin Bug"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on behavior/context (predating lady beetle) and is concise with scientific naming (Leafhopper Assassin Bug).\",\"signals\":[\"predating lady beetle\",\"Leafhopper Assassin Bug\"]}",
+    "invalid_decision": false
+  },
+  "Lilac Bonnet with edges turnt up revealing its gills": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query mentions 'gills', which is a biological feature of aquatic animals, suggesting a focus on identifying a specific species or organism. The query also includes a descriptive phrase about the bonnet's edges, but the key term 'gills' points to a biological classification. This aligns with the t2i method, which is suited for concise object/species-centric naming queries.",
+    "signals": [
+      "gills",
+      "Lilac Bonnet"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query mentions 'gills', which is a biological feature of aquatic animals, suggesting a focus on identifying a specific species or organism. The query also includes a descriptive phrase about the bonnet's edges, but the key term 'gills' points to a biological classification. This aligns with the t2i method, which is suited for concise object/species-centric naming queries.\", \"signals\":[\"gills\",\"Lilac Bonnet\"]}",
+    "invalid_decision": false
+  },
+  "Luna Moth missing long twisted tails on the hindwings": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a scientific name and lacks behavioral or contextual details, suggesting a concise object-centric query. The absence of long twisted tails on the hindwings is a specific morphological detail that can be compared against image embeddings.",
+    "signals": [
+      "long twisted tails",
+      "missing long twisted tails"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a scientific name and lacks behavioral or contextual details, suggesting a concise object-centric query. The absence of long twisted tails on the hindwings is a specific morphological detail that can be compared against image embeddings.\",\"signals\":[\"long twisted tails\",\"missing long twisted tails\"]}",
+    "invalid_decision": false
+  },
+  "Male Blue-black Grassquit in patchy blue-black and brown plumage": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on specific plumage colors and lacks behavioral or contextual details, aligning with concise object-centric naming.",
+    "signals": [
+      "patchy blue-black and brown plumage",
+      "Male Blue-black Grassquit"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on specific plumage colors and lacks behavioral or contextual details, aligning with concise object-centric naming.\",\"signals\":[\"patchy blue-black and brown plumage\",\"Male Blue-black Grassquit\"]}",
+    "invalid_decision": false
+  },
+  "Male Xanthagrion erythroneurum": {
+    "method": "t2i",
+    "confidence": 0.95,
+    "reason": "Query is a concise scientific name with no behavioral or contextual details. It directly matches the structure of taxonomic labels, indicating a species-centric query.",
+    "signals": [
+      "<scientific_name>",
+      "<taxonomic_label>"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.95,\"reason\":\"Query is a concise scientific name with no behavioral or contextual details. It directly matches the structure of taxonomic labels, indicating a species-centric query.\",\"signals\":[\"<scientific_name>\",\"<taxonomic_label>\"]}",
+    "invalid_decision": false
+  },
+  "Male chorus frog with inflated vocal sacs": {
+    "method": "t2i",
+    "confidence": 0.95,
+    "reason": "Query specifies a male chorus frog with inflated vocal sacs, a concise object-centric term that aligns with the t2i method for species-specific queries.",
+    "signals": [
+      "<species_name>",
+      "<inflated_vocal_sacs>"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.95,\"reason\":\"Query specifies a male chorus frog with inflated vocal sacs, a concise object-centric term that aligns with the t2i method for species-specific queries.\",\"signals\":[\"<species_name>\",\"<inflated_vocal_sacs>\"]}",
+    "invalid_decision": false
+  },
+  "Male crimsonband wrasse": {
+    "method": "t2i",
+    "confidence": 0.95,
+    "reason": "Query specifies a species name, 'Male crimsonband wrasse', which is concise and taxonomically precise. This suggests a need for a species-centric comparison.",
+    "signals": [
+      "Male crimsonband wrasse is a wrasse species",
+      "Crimsonband wrasse is a known wrasse species"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.95,\"reason\":\"Query specifies a species name, 'Male crimsonband wrasse', which is concise and taxonomically precise. This suggests a need for a species-centric comparison.\",\"signals\":[\"Male crimsonband wrasse is a wrasse species\",\"Crimsonband wrasse is a known wrasse species\"]}",
+    "invalid_decision": false
+  },
+  "Maple tree with signs of tapping": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'Maple tree with signs of tapping' is concise and object-centric, focusing on a specific species (Maple tree) with a clear action (tapping signs). This aligns well with the t2i method, which excels at matching short, noun phrase queries against image embeddings.",
+    "signals": [
+      "Maple tree",
+      "signs of tapping"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'Maple tree with signs of tapping' is concise and object-centric, focusing on a specific species (Maple tree) with a clear action (tapping signs). This aligns well with the t2i method, which excels at matching short, noun phrase queries against image embeddings.\",\"signals\":[\"Maple tree\",\"signs of tapping\"]}",
+    "invalid_decision": false
+  },
+  "Melanistic jaguar": {
+    "method": "t2i",
+    "confidence": 0.95,
+    "reason": "Query is concise and uses scientific naming, indicating a specific species. The query lacks behavioral or contextual details, suggesting a focus on visual identification.",
+    "signals": [
+      "Melanistic jaguar is a scientific name for a specific species of jaguar.",
+      "The query does not mention behavior or context, focusing on visual identification."
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.95,\"reason\":\"Query is concise and uses scientific naming, indicating a specific species. The query lacks behavioral or contextual details, suggesting a focus on visual identification.\",\"signals\":[\"Melanistic jaguar is a scientific name for a specific species of jaguar.\",\"The query does not mention behavior or context, focusing on visual identification.\"]}",
+    "invalid_decision": false
+  },
+  "Melanistic leopard": {
+    "method": "t2i",
+    "confidence": 0.95,
+    "reason": "Query is concise and uses scientific naming, indicating a specific object (melanistic leopard) without behavioral context.",
+    "signals": [
+      "<scientific_name>",
+      "<specific_object>"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.95,\"reason\":\"Query is concise and uses scientific naming, indicating a specific object (melanistic leopard) without behavioral context.\",\"signals\":[\"<scientific_name>\",\"<specific_object>\"]}",
+    "invalid_decision": false
+  },
+  "Mexican grass-carrying wasp visiting a purple flower": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific insect visiting a flower, which is a behavioral/contextual scenario.",
+    "signals": [
+      "visiting a purple flower",
+      "Mexican grass-carrying wasp"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific insect visiting a flower, which is a behavioral/contextual scenario.\",\"signals\":[\"visiting a purple flower\",\"Mexican grass-carrying wasp\"]}",
+    "invalid_decision": false
+  },
+  "Milkweed Assassin Bug predating a bee or wasp": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on the predator-prey relationship between the Milkweed Assassin Bug and a bee or wasp, which is a behavioral/contextual context. The query does not mention specific visual features or appearance details, and it is not a concise object/species-centric naming query. Therefore, comparing the query text embedding against candidate image embeddings is the most appropriate method.",
+    "signals": [
+      "predating a bee or wasp",
+      "Milkweed Assassin Bug"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on the predator-prey relationship between the Milkweed Assassin Bug and a bee or wasp, which is a behavioral/contextual context. The query does not mention specific visual features or appearance details, and it is not a concise object/species-centric naming query. Therefore, comparing the query text embedding against candidate image embeddings is the most appropriate method.\",\"signals\":[\"predating a bee or wasp\",\"Milkweed Assassin Bug\"]}",
+    "invalid_decision": false
+  },
+  "Moorish Gecko with regenerated tail": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a scientific name ('Moorish Gecko') and focuses on a specific morphological feature ('regenerated tail'), which aligns with the t2i method's suitability for concise object-centric queries.",
+    "signals": [
+      "Moorish Gecko",
+      "regenerated tail"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a scientific name ('Moorish Gecko') and focuses on a specific morphological feature ('regenerated tail'), which aligns with the t2i method's suitability for concise object-centric queries.\",\"signals\":[\"Moorish Gecko\", \"regenerated tail\"]}",
+    "invalid_decision": false
+  },
+  "Mushrooms growing in a fairy ring formation": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a mushroom formation, which is a behavior or context, but the focus is on the mushroom itself, a scientific name, and the formation's appearance. The query is concise and object-centric, fitting 't2i' for concise object/species-centric naming queries.",
+    "signals": [
+      "looks like fairy ring",
+      "mushroom formation"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a mushroom formation, which is a behavior or context, but the focus is on the mushroom itself, a scientific name, and the formation's appearance. The query is concise and object-centric, fitting 't2i' for concise object/species-centric naming queries.\",\"signals\":[\"looks like fairy ring\",\"mushroom formation\"]}",
+    "invalid_decision": false
+  },
+  "North Island robin or South Island robin with leg bands": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a bird species with leg bands, which is a concise object-centric query. The scientific name is hinted at, but the focus is on the bird's appearance with leg bands, suggesting a visual comparison.",
+    "signals": [
+      "looks like North Island robin",
+      "with leg bands"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a bird species with leg bands, which is a concise object-centric query. The scientific name is hinted at, but the focus is on the bird's appearance with leg bands, suggesting a visual comparison.\",\"signals\":[\"looks like North Island robin\", \"with leg bands\"]}",
+    "invalid_decision": false
+  },
+  "Northern Mockingbird carrying out its food": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior ('carrying out its food') and is concise, suggesting a text-to-image method is suitable. The scientific name hint indicates a focus on species identification, which aligns with t2i's object-centric approach.",
+    "signals": [
+      "short noun phrase",
+      "behavioral detail"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior ('carrying out its food') and is concise, suggesting a text-to-image method is suitable. The scientific name hint indicates a focus on species identification, which aligns with t2i's object-centric approach.\",\"signals\":[\"short noun phrase\", \"behavioral detail\"]}",
+    "invalid_decision": false
+  },
+  "Nursery Web Spider carrying egg sac": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior (carrying an egg sac) and a scientific context (Nursery Web Spider), which aligns with the t2i method for behavior/context semantics.",
+    "signals": [
+      "carrying egg sac",
+      "Nursery Web Spider"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior (carrying an egg sac) and a scientific context (Nursery Web Spider), which aligns with the t2i method for behavior/context semantics.\",\"signals\":[\"carrying egg sac\",\"Nursery Web Spider\"]}",
+    "invalid_decision": false
+  },
+  "Octopus out of the water": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'Octopus out of the water' is concise and object-centric, mentioning a specific species ('Octopus') without detailed behavior or context. This aligns with the t2i method, which is suited for short noun phrases and taxonomic labels.",
+    "signals": [
+      "Octopus",
+      "out"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'Octopus out of the water' is concise and object-centric, mentioning a specific species ('Octopus') without detailed behavior or context. This aligns with the t2i method, which is suited for short noun phrases and taxonomic labels.\",\"signals\":[\"Octopus\",\"out\"]}",
+    "invalid_decision": false
+  },
+  "Red-capped Plover performing broken wing distraction": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior ('performing broken wing distraction') and includes a scientific name ('Red-capped Plover'), which is more suited for a text-to-image method. The behavior is central to the query, and the scientific name indicates a specific object of interest without requiring detailed visual morphology.",
+    "signals": [
+      "broken wing distraction",
+      "Red-capped Plover"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior ('performing broken wing distraction') and includes a scientific name ('Red-capped Plover'), which is more suited for a text-to-image method. The behavior is central to the query, and the scientific name indicates a specific object of interest without requiring detailed visual morphology.\",\"signals\":[\"broken wing distraction\",\"Red-capped Plover\"]}",
+    "invalid_decision": false
+  },
+  "Redwood tree with fire scars": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a redwood tree with fire scars, which is a concise object-centric description. The scientific name is mentioned, indicating a focus on the species rather than behavior or context.",
+    "signals": [
+      "Redwood tree",
+      "fire scars"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a redwood tree with fire scars, which is a concise object-centric description. The scientific name is mentioned, indicating a focus on the species rather than behavior or context.\",\"signals\":[\"Redwood tree\",\"fire scars\"]}",
+    "invalid_decision": false
+  },
+  "Rhino with ear notches": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a rhino with ear notches, a concise object-centric term likely referring to a specific species or taxonomic group. The query lacks behavioral or contextual details, suggesting a focus on visual morphology. However, the query is short and underspecified, favoring a method that can handle such queries effectively.",
+    "signals": [
+      "<query specifies a rhino with ear notches>",
+      "<likely referring to a specific species or taxonomic group>"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a rhino with ear notches, a concise object-centric term likely referring to a specific species or taxonomic group. The query lacks behavioral or contextual details, suggesting a focus on visual morphology. However, the query is short and underspecified, favoring a method that can handle such queries effectively.\",\"signals\":[\"<query specifies a rhino with ear notches>\",\"<likely referring to a specific species or taxonomic group>\"]}",
+    "invalid_decision": false
+  },
+  "Sage Thrasher vocalizing": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a vocalizing behavior of a Sage Thrasher, which is a specific action or trait, and the query is concise with a scientific name, suggesting a text-based comparison is appropriate.",
+    "signals": [
+      "vocalizing",
+      "Sage Thrasher"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a vocalizing behavior of a Sage Thrasher, which is a specific action or trait, and the query is concise with a scientific name, suggesting a text-based comparison is appropriate.\",\"signals\":[\"vocalizing\",\"Sage Thrasher\"]}",
+    "invalid_decision": false
+  },
+  "Scarlet Waxy Cap with visible gills": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a mushroom with a Scarlet Waxy Cap and visible gills, which aligns with the concise object-centric naming style typical of t2i queries.",
+    "signals": [
+      "Scarlet Waxy Cap",
+      "visible gills"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a mushroom with a Scarlet Waxy Cap and visible gills, which aligns with the concise object-centric naming style typical of t2i queries.\",\"signals\":[\"Scarlet Waxy Cap\",\"visible gills\"]}",
+    "invalid_decision": false
+  },
+  "Scorpion with young on its back": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a scorpion with young on its back, which is a concise object-centric description. This aligns with the t2i method, which is suited for short noun phrases and taxonomic labels with minimal contextual detail.",
+    "signals": [
+      "Scorpion",
+      "young"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a scorpion with young on its back, which is a concise object-centric description. This aligns with the t2i method, which is suited for short noun phrases and taxonomic labels with minimal contextual detail.\",\"signals\":[\"Scorpion\",\"young\"]}",
+    "invalid_decision": false
+  },
+  "Sea turtle with algae on its shell": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a sea turtle with algae on its shell, a concise object-centric description suitable for text-to-image retrieval.",
+    "signals": [
+      "<query>",
+      "<looks_like_scientific_name>"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a sea turtle with algae on its shell, a concise object-centric description suitable for text-to-image retrieval.\",\"signals\":[\"<query>\",\"<looks_like_scientific_name>\"]}",
+    "invalid_decision": false
+  },
+  "Sharks with remoras attached": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on sharks with remoras, a specific morphological arrangement, but lacks contextual behavior or multi-clause descriptions. The scientific name hint suggests a concise object-centric query, aligning with t2i's strengths.",
+    "signals": [
+      "Sharks",
+      "remoras"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on sharks with remoras, a specific morphological arrangement, but lacks contextual behavior or multi-clause descriptions. The scientific name hint suggests a concise object-centric query, aligning with t2i's strengths.\",\"signals\":[\"Sharks\",\"remoras\"]}",
+    "invalid_decision": false
+  },
+  "Splendid fairywren without blue body coloration": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a Splendid fairywren without blue body coloration, which is a concise object-centric description. This suggests a t2i method is appropriate for comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "Splendid fairywren",
+      "without blue body coloration"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a Splendid fairywren without blue body coloration, which is a concise object-centric description. This suggests a t2i method is appropriate for comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"Splendid fairywren\",\"without blue body coloration\"]}",
+    "invalid_decision": false
+  },
+  "Surgeonfish grazing on algae": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific behavior (grazing) and context (surgeonfish in an aquatic environment), which aligns with t2i's strength in behavioral and contextual semantics.",
+    "signals": [
+      "grazing",
+      "surgeonfish"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific behavior (grazing) and context (surgeonfish in an aquatic environment), which aligns with t2i's strength in behavioral and contextual semantics.\",\"signals\":[\"grazing\",\"surgeonfish\"]}",
+    "invalid_decision": false
+  },
+  "Swallowtail butterfly caterpillar camouflaged as bird droppings": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a caterpillar camouflaged as bird droppings, which is a specific appearance detail. However, the query also mentions behavior (camouflaged) and context (bird droppings), but the primary focus is on the visual appearance. The scientific name is present, but the query is concise and underspecified, making t2i a suitable choice. The signals are 'camouflaged' and 'bird droppings'.",
+    "signals": [],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a caterpillar camouflaged as bird droppings, which is a specific appearance detail. However, the query also mentions behavior (camouflaged) and context (bird droppings), but the primary focus is on the visual appearance. The scientific name is present, but the query is concise and underspecified, making t2i a suitable choice. The signals are 'camouflaged' and 'bird droppings'.\"}",
+    "invalid_decision": false
+  },
+  "Tagged swan": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'Tagged swan' is concise and likely refers to a specific species, which is a common use case for t2i. The query lacks behavioral or contextual details, and the scientific name hint suggests a focus on object identification rather than action or scene context.",
+    "signals": [
+      "Tagged swan is a species name",
+      "The query is short and underspecified"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'Tagged swan' is concise and likely refers to a specific species, which is a common use case for t2i. The query lacks behavioral or contextual details, and the scientific name hint suggests a focus on object identification rather than action or scene context.\",\"signals\":[\"Tagged swan is a species name\",\"The query is short and underspecified\"]}",
+    "invalid_decision": false
+  },
+  "Tropical Orb Weaver with multiple white spots in the abdominal dorsum": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a species with a unique appearance feature, suggesting a concise object-centric search.",
+    "signals": [
+      "Tropical Orb Weaver",
+      "white spots"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a species with a unique appearance feature, suggesting a concise object-centric search.\",\"signals\":[\"Tropical Orb Weaver\",\"white spots\"]}",
+    "invalid_decision": false
+  },
+  "Two giraffes": {
+    "method": "t2i",
+    "confidence": 0.95,
+    "reason": "Query is concise and object-centric, likely referring to a giraffe species. The scientific name signal indicates a focus on the species rather than behavior.",
+    "signals": [
+      "looks_like_scientific_name",
+      "short noun phrase"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.95,\"reason\":\"Query is concise and object-centric, likely referring to a giraffe species. The scientific name signal indicates a focus on the species rather than behavior.\",\"signals\":[\"looks_like_scientific_name\",\"short noun phrase\"]}",
+    "invalid_decision": false
+  },
+  "Water Frogs in amplexus position": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific behavior (amplexus position) and uses scientific naming, suggesting a need for detailed behavioral context.",
+    "signals": [
+      "Water Frogs in amplexus position",
+      "Water Frogs"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific behavior (amplexus position) and uses scientific naming, suggesting a need for detailed behavioral context.\",\"signals\":[\"Water Frogs in amplexus position\",\"Water Frogs\"]}",
+    "invalid_decision": false
+  },
+  "Wolf spider with limb loss": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific species (wolf spider) with a notable physical trait (limb loss), which is best addressed by comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "wolf spider",
+      "limb loss"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific species (wolf spider) with a notable physical trait (limb loss), which is best addressed by comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"wolf spider\",\"limb loss\"]}",
+    "invalid_decision": false
+  },
+  "Yellow-faced Honeyeater in birdbath": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific bird species with a birdbath context, suggesting a concise object-centric query.",
+    "signals": [
+      "Yellow-faced Honeyeater",
+      "birdbath"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific bird species with a birdbath context, suggesting a concise object-centric query.\",\"signals\":[\"Yellow-faced Honeyeater\",\"birdbath\"]}",
+    "invalid_decision": false
+  },
+  "Zebra and wildebeest grazing together": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on a specific scene with animals, which is more about behavior/context than visual morphology.",
+    "signals": [
+      "grazing together",
+      "Zebra and wildebeest"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on a specific scene with animals, which is more about behavior/context than visual morphology.\",\"signals\":[\"grazing together\",\"Zebra and wildebeest\"]}",
+    "invalid_decision": false
+  },
+  "a bag-shelter moth's silken bag nest on a tree": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on a moth's silken bag nest on a tree, which is a specific object-centric description. The query does not include detailed behavioral or contextual information, nor does it resemble a scientific name. The query is concise and object-specific, indicating a need for a text-to-image method.",
+    "signals": [
+      "moth's silken bag nest",
+      "tree"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on a moth's silken bag nest on a tree, which is a specific object-centric description. The query does not include detailed behavioral or contextual information, nor does it resemble a scientific name. The query is concise and object-specific, indicating a need for a text-to-image method.\",\"signals\":[\"moth's silken bag nest\",\"tree\"]}",
+    "invalid_decision": false
+  },
+  "a beaver dam across a stream": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on a beaver dam across a stream, which is a descriptive and specific visual concept. The query does not include behavioral or contextual details, nor does it resemble a scientific name. The query length and character count suggest a concise, object-centric description suitable for text-to-image retrieval.",
+    "signals": [
+      "beaver dam",
+      "stream"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on a beaver dam across a stream, which is a descriptive and specific visual concept. The query does not include behavioral or contextual details, nor does it resemble a scientific name. The query length and character count suggest a concise, object-centric description suitable for text-to-image retrieval.\",\"signals\":[\"beaver dam\",\"stream\"]}",
+    "invalid_decision": false
+  },
+  "a bighorn sheep with a tracking collar around its neck": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a bighorn sheep with a tracking collar, which is a concise object-centric description suitable for a text-to-image method.",
+    "signals": [
+      "bighorn sheep",
+      "tracking collar"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a bighorn sheep with a tracking collar, which is a concise object-centric description suitable for a text-to-image method.\",\"signals\":[\"bighorn sheep\",\"tracking collar\"]}",
+    "invalid_decision": false
+  },
+  "a gall produced by an Acorn Plum Gall Wasp": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a gall produced by a specific wasp, which is a concise object-centric description. The term 'Acorn Plum Gall Wasp' is a taxonomic label, indicating a scientific name. This suggests a need for a text-based retrieval method to find images with captions containing this specific name or related terms.",
+    "signals": [
+      "Acorn Plum Gall Wasp",
+      "Acorn Plum Gall"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a gall produced by a specific wasp, which is a concise object-centric description. The term 'Acorn Plum Gall Wasp' is a taxonomic label, indicating a scientific name. This suggests a need for a text-based retrieval method to find images with captions containing this specific name or related terms.\", \"signals\":[\"Acorn Plum Gall Wasp\",\"Acorn Plum Gall\"]}",
+    "invalid_decision": false
+  },
+  "a herd of more than 10 impalas": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a group of impalas, a taxonomic term, and mentions a number, suggesting a concise object-centric query.",
+    "signals": [
+      "impalas",
+      "herd"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a group of impalas, a taxonomic term, and mentions a number, suggesting a concise object-centric query.\",\"signals\":[\"impalas\",\"herd\"]}",
+    "invalid_decision": false
+  },
+  "a hermit crab using plastic waste as a shell": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a hermit crab using plastic waste as a shell, which is a specific object-centric description. This aligns with the t2i method, which is suited for concise object/species-centric naming queries with little to no behavioral/contextual detail.",
+    "signals": [
+      "hermit crab",
+      "plastic waste"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a hermit crab using plastic waste as a shell, which is a specific object-centric description. This aligns with the t2i method, which is suited for concise object/species-centric naming queries with little to no behavioral/contextual detail.\",\"signals\":[\"hermit crab\",\"plastic waste\"]}",
+    "invalid_decision": false
+  },
+  "a lion with a collar around its neck": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a lion with a collar, which is a concise object-centric description suitable for a text-to-image method.",
+    "signals": [
+      "lion",
+      "collar"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a lion with a collar, which is a concise object-centric description suitable for a text-to-image method.\",\"signals\":[\"lion\",\"collar\"]}",
+    "invalid_decision": false
+  },
+  "a microscopy slide showing the cellular structure of a plant": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on a microscopy slide showing plant cellular structure, which is a specific scientific context. The query does not include behavioral or contextual details, and it is concise enough to be matched against image embeddings.",
+    "signals": [
+      "<plant cellular structure>",
+      "<microscopy slide>"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on a microscopy slide showing plant cellular structure, which is a specific scientific context. The query does not include behavioral or contextual details, and it is concise enough to be matched against image embeddings.\",\"signals\":[\"<plant cellular structure>\",\"<microscopy slide>\"]}",
+    "invalid_decision": false
+  },
+  "a mud dauber wasp in the process of forming its nest out of mud": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a mud dauber wasp's behavior of forming a nest, which is a contextual and behavioral detail.",
+    "signals": [
+      "mud dauber wasp",
+      "forming its nest"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a mud dauber wasp's behavior of forming a nest, which is a contextual and behavioral detail.\",\"signals\":[\"mud dauber wasp\",\"forming its nest\"]}",
+    "invalid_decision": false
+  },
+  "a nest with eggs displaying brood parasitism by a cowbird": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavioral context of brood parasitism, which is central to the description. The query also mentions a scientific concept but does not provide detailed visual morphology. The query's focus on behavior and context aligns with the t2i method's strengths in comparing query text embeddings against candidate image embeddings.",
+    "signals": [
+      "brood parasitism",
+      "nest with eggs"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavioral context of brood parasitism, which is central to the description. The query also mentions a scientific concept but does not provide detailed visual morphology. The query's focus on behavior and context aligns with the t2i method's strengths in comparing query text embeddings against candidate image embeddings.\",\"signals\":[\"brood parasitism\",\"nest with eggs\"]}",
+    "invalid_decision": false
+  },
+  "a possum on a power line": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a possum on a power line, which is a visual morphology cue. The term 'possum' is a common name for a marsupial, and 'power line' indicates a specific context. This suggests a visual search for an image of a possum perched on a power line.",
+    "signals": [
+      "possum",
+      "power line"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a possum on a power line, which is a visual morphology cue. The term 'possum' is a common name for a marsupial, and 'power line' indicates a specific context. This suggests a visual search for an image of a possum perched on a power line.\",\"signals\":[\"possum\",\"power line\"]}",
+    "invalid_decision": false
+  },
+  "a sandhill crane couple with their chicks": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a scene with a sandhill crane and their chicks, which is a behavioral and contextual context. The query is concise and object-centric, fitting the t2i method for comparing against image embeddings.",
+    "signals": [
+      "looks like a scene with a sandhill crane and chicks",
+      "describes a family of sandhill cranes"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a scene with a sandhill crane and their chicks, which is a behavioral and contextual context. The query is concise and object-centric, fitting the t2i method for comparing against image embeddings.\",\"signals\":[\"looks like a scene with a sandhill crane and chicks\",\"describes a family of sandhill cranes\"]}",
+    "invalid_decision": false
+  },
+  "adult male Misumena vatia": {
+    "method": "t2i",
+    "confidence": 0.95,
+    "reason": "Query specifies a scientific name, Misumena vatia, which is concise and object-centric. This suggests a need for a detailed image of the species rather than general behavior or context.",
+    "signals": [
+      "Misumena vatia",
+      "adult male"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.95,\"reason\":\"Query specifies a scientific name, Misumena vatia, which is concise and object-centric. This suggests a need for a detailed image of the species rather than general behavior or context.\",\"signals\":[\"Misumena vatia\",\"adult male\"]}",
+    "invalid_decision": false
+  },
+  "albino american robin": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a specific species (American Robin) and a unique trait (albino), which aligns with concise object-centric naming queries. The scientific name is not explicitly mentioned, but the query is short and focuses on a specific species with a notable trait.",
+    "signals": [
+      "albino american robin",
+      "American Robin"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a specific species (American Robin) and a unique trait (albino), which aligns with concise object-centric naming queries. The scientific name is not explicitly mentioned, but the query is short and focuses on a specific species with a notable trait.\",\"signals\":[\"albino american robin\",\"American Robin\"]}",
+    "invalid_decision": false
+  },
+  "an image showing a humpback whale fluke with clearly identifiable markings": {
+    "method": "i2i",
+    "confidence": 0.95,
+    "reason": "The query specifies a humpback whale fluke with clearly identifiable markings, which are visual features that can be matched against web exemplar images.",
+    "signals": [
+      "fluke",
+      "clearly identifiable markings"
+    ],
+    "raw": "{\"method\":\"i2i\",\"confidence\":0.95,\"reason\":\"The query specifies a humpback whale fluke with clearly identifiable markings, which are visual features that can be matched against web exemplar images.\",\"signals\":[\"fluke\",\"clearly identifiable markings\"]}",
+    "invalid_decision": false
+  },
+  "an oak gall produced by a spongy oak apple gall wasp": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a scientific term'spongy oak apple gall wasp', indicating a concise object-centric query. The query also mentions 'oak gall', which is a specific biological term, suggesting a focus on identifying a particular species or organism. This aligns with the t2i method, which is suited for concise object/species-centric naming queries.",
+    "signals": [
+      "spongy oak apple gall wasp",
+      "oak gall"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a scientific term'spongy oak apple gall wasp', indicating a concise object-centric query. The query also mentions 'oak gall', which is a specific biological term, suggesting a focus on identifying a particular species or organism. This aligns with the t2i method, which is suited for concise object/species-centric naming queries.\", \"signals\":[\"spongy oak apple gall wasp\",\"oak gall\"]}",
+    "invalid_decision": false
+  },
+  "an oxpecker on a zebra": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'an oxpecker on a zebra' is concise and object-centric, focusing on a specific species (oxpecker) and its interaction with a zebra. This aligns with the t2i method, which is suited for queries with short noun phrases and taxonomic labels.",
+    "signals": [
+      "oxpecker",
+      "zebra"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'an oxpecker on a zebra' is concise and object-centric, focusing on a specific species (oxpecker) and its interaction with a zebra. This aligns with the t2i method, which is suited for queries with short noun phrases and taxonomic labels.\",\"signals\":[\"oxpecker\",\"zebra\"]}",
+    "invalid_decision": false
+  },
+  "antelopes head-butting": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'antelopes head-butting' contains behavioral context ('head-butting') and is concise, suggesting a t2i method is suitable for comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "head-butting",
+      "antelopes"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'antelopes head-butting' contains behavioral context ('head-butting') and is concise, suggesting a t2i method is suitable for comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"head-butting\",\"antelopes\"]}",
+    "invalid_decision": false
+  },
+  "bananaquit pollinating flower": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior (pollinating) and a context (flower), suggesting a textual description rather than a visual search. The query also includes a common bird species name, bananaquit, which is concise and likely to be found in textual descriptions.",
+    "signals": [
+      "bananaquit",
+      "pollinating"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior (pollinating) and a context (flower), suggesting a textual description rather than a visual search. The query also includes a common bird species name, bananaquit, which is concise and likely to be found in textual descriptions.\",\"signals\":[\"bananaquit\",\"pollinating\"]}",
+    "invalid_decision": false
+  },
+  "beached orca": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'beached orca' is concise and directly refers to a specific species, suggesting a taxonomic or species-centric query. The term 'orca' is a common name for the orca whale, and 'beached' indicates a specific context or state. This aligns with the t2i method, which is suited for concise object/species-centric naming queries with little to no behavioral/contextual detail.",
+    "signals": [
+      "orca is a known species",
+      "beached suggests a specific state"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'beached orca' is concise and directly refers to a specific species, suggesting a taxonomic or species-centric query. The term 'orca' is a common name for the orca whale, and 'beached' indicates a specific context or state. This aligns with the t2i method, which is suited for concise object/species-centric naming queries with little to no behavioral/contextual detail.\", \"signals\":[\"orca is a known species\", \"beached suggests a specific state\"]}",
+    "invalid_decision": false
+  },
+  "bird caught in a net": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'bird caught in a net' is concise and object-centric, likely referring to a specific bird species caught in a net. This aligns with the t2i method, which is suited for short noun phrases and taxonomic labels with minimal contextual detail.",
+    "signals": [
+      "<query> is a short noun phrase",
+      "<query> likely refers to a specific bird species>"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'bird caught in a net' is concise and object-centric, likely referring to a specific bird species caught in a net. This aligns with the t2i method, which is suited for short noun phrases and taxonomic labels with minimal contextual detail.\",\"signals\":[\"<query> is a short noun phrase\",\"<query> likely refers to a specific bird species>\"]}",
+    "invalid_decision": false
+  },
+  "bird dead in front of a window": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query mentions a 'bird' and a 'window', suggesting a visual context. The query is concise and object-centric, indicating a need for a text-to-image method to generate a plausible image of a bird near a window.",
+    "signals": [
+      "bird",
+      "window"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query mentions a 'bird' and a 'window', suggesting a visual context. The query is concise and object-centric, indicating a need for a text-to-image method to generate a plausible image of a bird near a window.\",\"signals\":[\"bird\",\"window\"]}",
+    "invalid_decision": false
+  },
+  "black-winged kite carrying prey in its talons": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific behavior (carrying prey) and a clear visual detail (black-winged kite), suggesting a text-based comparison is suitable.",
+    "signals": [
+      "carrying prey",
+      "black-winged kite"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific behavior (carrying prey) and a clear visual detail (black-winged kite), suggesting a text-based comparison is suitable.\",\"signals\":[\"carrying prey\",\"black-winged kite\"]}",
+    "invalid_decision": false
+  },
+  "blue jay eating whole peanuts": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a blue jay eating whole peanuts, which is a specific behavior and action. This suggests a need for a detailed understanding of the scene context and the actions involved, which is better suited for comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "blue jay eating whole peanuts",
+      "whole peanuts"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a blue jay eating whole peanuts, which is a specific behavior and action. This suggests a need for a detailed understanding of the scene context and the actions involved, which is better suited for comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"blue jay eating whole peanuts\",\"whole peanuts\"]}",
+    "invalid_decision": false
+  },
+  "breeding adult Black-bellied Plover": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a scientific name, indicating a concise object-centric request.",
+    "signals": [
+      "breeding adult Black-bellied Plover",
+      "Black-bellied Plover"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a scientific name, indicating a concise object-centric request.\",\"signals\":[\"breeding adult Black-bellied Plover\",\"Black-bellied Plover\"]}",
+    "invalid_decision": false
+  },
+  "bridal veil stinkhorn mushroom": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a unique object (bridal veil stinkhorn mushroom) with a clear, concise noun phrase, indicating a species-centric naming query.",
+    "signals": [
+      "bridal veil stinkhorn mushroom is a stinkhorn mushroom",
+      "bridal veil stinkhorn mushroom is a type of mushroom"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a unique object (bridal veil stinkhorn mushroom) with a clear, concise noun phrase, indicating a species-centric naming query.\",\"signals\":[\"bridal veil stinkhorn mushroom is a stinkhorn mushroom\",\"bridal veil stinkhorn mushroom is a type of mushroom\"]}",
+    "invalid_decision": false
+  },
+  "brown bear near vehicle": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a brown bear near a vehicle, which is a specific object and context, suggesting a text-based comparison.",
+    "signals": [
+      "brown bear",
+      "near vehicle"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a brown bear near a vehicle, which is a specific object and context, suggesting a text-based comparison.\",\"signals\":[\"brown bear\",\"near vehicle\"]}",
+    "invalid_decision": false
+  },
+  "bullhead shark egg case": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific biological structure (egg case) of a bullhead shark, which is a concise object-centric term. This suggests a t2i method is appropriate for comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "bullhead shark egg case",
+      "bullhead shark"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific biological structure (egg case) of a bullhead shark, which is a concise object-centric term. This suggests a t2i method is appropriate for comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"bullhead shark egg case\",\"bullhead shark\"]}",
+    "invalid_decision": false
+  },
+  "camera trap photo of a bobcat captured in the nightime": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query mentions a 'bobcat' and 'nightime', suggesting a specific animal and a time of day. These terms are concise and object-centric, fitting the t2i method for comparing query text embeddings against candidate image embeddings.",
+    "signals": [
+      "bobcat",
+      "nightime"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query mentions a 'bobcat' and 'nightime', suggesting a specific animal and a time of day. These terms are concise and object-centric, fitting the t2i method for comparing query text embeddings against candidate image embeddings.\",\"signals\":[\"bobcat\",\"nightime\"]}",
+    "invalid_decision": false
+  },
+  "camera trap photo of a springbok drinking water": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a camera trap photo of a springbok drinking water, which is a specific object-centric task. The query does not include contextual or behavioral details, and it does not look like a scientific name. The query is concise and focuses on the object's appearance and action, making it suitable for comparing against image embeddings.",
+    "signals": [
+      "camera trap photo",
+      "springbok drinking water"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a camera trap photo of a springbok drinking water, which is a specific object-centric task. The query does not include contextual or behavioral details, and it does not look like a scientific name. The query is concise and focuses on the object's appearance and action, making it suitable for comparing against image embeddings.\",\"signals\":[\"camera trap photo\",\"springbok drinking water\"]}",
+    "invalid_decision": false
+  },
+  "camera trap photo of a stag red deer": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a stag red deer, which is a scientific name for a species of deer. This suggests a concise object-centric query, indicating the use of t2i.",
+    "signals": [
+      "stag red deer",
+      "scientific name"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a stag red deer, which is a scientific name for a species of deer. This suggests a concise object-centric query, indicating the use of t2i.\",\"signals\":[\"stag red deer\",\"scientific name\"]}",
+    "invalid_decision": false
+  },
+  "camera trap photo of chital with its head down": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a camera trap photo of a chital with its head down, which is a concise object-centric description. The query does not include behavioral or contextual details, nor does it resemble a scientific name. The short and specific nature of the query suggests a text-to-image method is appropriate.",
+    "signals": [
+      "camera trap photo",
+      "chital"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a camera trap photo of a chital with its head down, which is a concise object-centric description. The query does not include behavioral or contextual details, nor does it resemble a scientific name. The short and specific nature of the query suggests a text-to-image method is appropriate.\",\"signals\":[\"camera trap photo\",\"chital\"]}",
+    "invalid_decision": false
+  },
+  "canada geese flying in v-formation": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior (flying in v-formation) and a common noun phrase (Canada geese), indicating a focus on behavior and appearance. The query is concise and likely to match image embeddings focused on visual morphology.",
+    "signals": [
+      "flying in v-formation",
+      "Canada geese"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior (flying in v-formation) and a common noun phrase (Canada geese), indicating a focus on behavior and appearance. The query is concise and likely to match image embeddings focused on visual morphology.\",\"signals\":[\"flying in v-formation\",\"Canada geese\"]}",
+    "invalid_decision": false
+  },
+  "caterpillar of Common Buckeye butterfly": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a caterpillar of the Common Buckeye butterfly, a concise object-centric term with scientific naming, suggesting a taxonomic focus. This aligns with the t2i method, which excels at matching short noun phrases and taxonomic labels with images.",
+    "signals": [
+      "Common Buckeye",
+      "butterfly caterpillar"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a caterpillar of the Common Buckeye butterfly, a concise object-centric term with scientific naming, suggesting a taxonomic focus. This aligns with the t2i method, which excels at matching short noun phrases and taxonomic labels with images.\",\"signals\":[\"Common Buckeye\",\"butterfly caterpillar\"]}",
+    "invalid_decision": false
+  },
+  "caterpillar of Gulf Fritillary butterfly": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific insect species, 'Gulf Fritillary butterfly', and its caterpillar, which is a concise object-centric query. The scientific name is mentioned, indicating a species-level query. This suggests a t2i method is appropriate for comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "Gulf Fritillary butterfly",
+      "caterpillar"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific insect species, 'Gulf Fritillary butterfly', and its caterpillar, which is a concise object-centric query. The scientific name is mentioned, indicating a species-level query. This suggests a t2i method is appropriate for comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"Gulf Fritillary butterfly\",\"caterpillar\"]}",
+    "invalid_decision": false
+  },
+  "caterpillar of polyphemus moth": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a caterpillar with scientific name Polyphemus moth, which is concise and object-centric.",
+    "signals": [
+      "Polyphemus moth",
+      "caterpillar"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a caterpillar with scientific name Polyphemus moth, which is concise and object-centric.\",\"signals\":[\"Polyphemus moth\",\"caterpillar\"]}",
+    "invalid_decision": false
+  },
+  "cheetah with cubs": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific animal with its young, suggesting a concise object-centric search.",
+    "signals": [
+      "cheetah",
+      "cubs"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific animal with its young, suggesting a concise object-centric search.\",\"signals\":[\"cheetah\",\"cubs\"]}",
+    "invalid_decision": false
+  },
+  "close-up of sugar maple leaf": {
+    "method": "i2i",
+    "confidence": 0.95,
+    "reason": "Query specifies a close-up of a sugar maple leaf, which is a visual morphology detail. The term'sugar maple leaf' is commonly associated with the scientific name Acer saccharum, but the query does not explicitly mention it. The query also does not contain behavior or context words. The high confidence is due to the clear visual description and the likelihood of available web exemplar images for this specific visual morphology.",
+    "signals": [
+      "close-up of sugar maple leaf",
+      "sugar maple leaf"
+    ],
+    "raw": "{\"method\":\"i2i\",\"confidence\":0.95,\"reason\":\"Query specifies a close-up of a sugar maple leaf, which is a visual morphology detail. The term'sugar maple leaf' is commonly associated with the scientific name Acer saccharum, but the query does not explicitly mention it. The query also does not contain behavior or context words. The high confidence is due to the clear visual description and the likelihood of available web exemplar images for this specific visual morphology.\",\"signals\":[\"close-up of sugar maple leaf\",\"sugar maple leaf\"]}",
+    "invalid_decision": false
+  },
+  "close-up of sweet cherry tree bark": {
+    "method": "i2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a close-up of sweet cherry tree bark, which is a visual description involving bark texture and appearance. This aligns with the i2i method, which is suited for visual morphology and fine-grained appearance cues like colors, patterns, and textures.",
+    "signals": [
+      "bark texture",
+      "sweet cherry tree bark"
+    ],
+    "raw": "{\"method\":\"i2i\",\"confidence\":0.85,\"reason\":\"The query specifies a close-up of sweet cherry tree bark, which is a visual description involving bark texture and appearance. This aligns with the i2i method, which is suited for visual morphology and fine-grained appearance cues like colors, patterns, and textures.\",\"signals\":[\"bark texture\",\"sweet cherry tree bark\"]}",
+    "invalid_decision": false
+  },
+  "common murre beached carcass": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific species (common murre) and a context (beached carcass), suggesting a concise object-centric query. The scientific name is not explicitly mentioned, and there are no behavioral words. This aligns with the t2i method for concise object/species-centric naming queries.",
+    "signals": [
+      "<common murre beached carcass> is a specific species context",
+      "query has a clear object of interest"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific species (common murre) and a context (beached carcass), suggesting a concise object-centric query. The scientific name is not explicitly mentioned, and there are no behavioral words. This aligns with the t2i method for concise object/species-centric naming queries.\", \"signals\":[\"<common murre beached carcass> is a specific species context\", \"query has a clear object of interest\"]}",
+    "invalid_decision": false
+  },
+  "couple of black-bellied whistling ducks with their youngs sharing parenting duties": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on the behavior of black-bellied whistling ducks sharing parenting duties, which is a contextual and behavioral description.",
+    "signals": [
+      "shares parenting duties",
+      "couple of black-bellied whistling ducks"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on the behavior of black-bellied whistling ducks sharing parenting duties, which is a contextual and behavioral description.\",\"signals\":[\"shares parenting duties\",\"couple of black-bellied whistling ducks\"]}",
+    "invalid_decision": false
+  },
+  "cross orbweaver": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query is concise and likely refers to a specific species, suggesting a text-to-image comparison is appropriate.",
+    "signals": [
+      "cross orbweaver is a species name",
+      "likely a scientific name"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query is concise and likely refers to a specific species, suggesting a text-to-image comparison is appropriate.\",\"signals\":[\"cross orbweaver is a species name\",\"likely a scientific name\"]}",
+    "invalid_decision": false
+  },
+  "dark-colored Dusky Leaf-monkey with orange-colored young": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on dark-colored Dusky Leaf-monkey and orange-colored young, which are specific object attributes. These attributes align with concise object-centric naming queries suitable for t2i.",
+    "signals": [
+      "dark-colored Dusky Leaf-monkey",
+      "orange-colored young"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on dark-colored Dusky Leaf-monkey and orange-colored young, which are specific object attributes. These attributes align with concise object-centric naming queries suitable for t2i.\",\"signals\":[\"dark-colored Dusky Leaf-monkey\",\"orange-colored young\"]}",
+    "invalid_decision": false
+  },
+  "dorsal side of mourning cloak butterfly": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a specific anatomical feature of the mourning cloak butterfly, which is best addressed by comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "dorsal side",
+      "mourning cloak butterfly"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a specific anatomical feature of the mourning cloak butterfly, which is best addressed by comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"dorsal side\",\"mourning cloak butterfly\"]}",
+    "invalid_decision": false
+  },
+  "eastern gray squirrel displaying melanistic pelage": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific species (eastern gray squirrel) with a unique trait (melanistic pelage), which is best addressed by comparing the text embedding against candidate image embeddings.",
+    "signals": [
+      "eastern gray squirrel",
+      "melanistic pelage"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific species (eastern gray squirrel) with a unique trait (melanistic pelage), which is best addressed by comparing the text embedding against candidate image embeddings.\",\"signals\":[\"eastern gray squirrel\",\"melanistic pelage\"]}",
+    "invalid_decision": false
+  },
+  "elephant covered in mud or dirt": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on a specific appearance detail ('covered in mud or dirt'), which is a concise object-centric description suitable for a text-to-image method.",
+    "signals": [
+      "covered in mud or dirt",
+      "elephant"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on a specific appearance detail ('covered in mud or dirt'), which is a concise object-centric description suitable for a text-to-image method.\",\"signals\":[\"covered in mud or dirt\",\"elephant\"]}",
+    "invalid_decision": false
+  },
+  "elephant near a fence": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query mentions 'elephant' and 'near a fence', which are specific object and context terms. These terms suggest a visual query, but the query is concise and lacks detailed behavioral or contextual descriptions.",
+    "signals": [
+      "elephant",
+      "near"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query mentions 'elephant' and 'near a fence', which are specific object and context terms. These terms suggest a visual query, but the query is concise and lacks detailed behavioral or contextual descriptions.\",\"signals\":[\"elephant\",\"near\"]}",
+    "invalid_decision": false
+  },
+  "elk with hair loss": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific animal with a notable trait, suggesting a concise object-centric query. The mention of 'hair loss' implies a specific species or characteristic, aligning with t2i's suitability for species-centric naming queries.",
+    "signals": [
+      "hair loss",
+      "elk"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific animal with a notable trait, suggesting a concise object-centric query. The mention of 'hair loss' implies a specific species or characteristic, aligning with t2i's suitability for species-centric naming queries.\",\"signals\":[\"hair loss\",\"elk\"]}",
+    "invalid_decision": false
+  },
+  "female beautiful demoiselle": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific species (demoiselle) and its appearance, suggesting a concise object-centric query. The term 'beautiful' implies a visual description, aligning with t2i's morphology focus. The query length and structure support t2i's suitability for species-specific queries with limited contextual detail.",
+    "signals": [
+      "beautiful",
+      "demoiselle"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific species (demoiselle) and its appearance, suggesting a concise object-centric query. The term 'beautiful' implies a visual description, aligning with t2i's morphology focus. The query length and structure support t2i's suitability for species-specific queries with limited contextual detail.\",\"signals\":[\"beautiful\",\"demoiselle\"]}",
+    "invalid_decision": false
+  },
+  "feral cat with prey": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'feral cat with prey' is concise and object-centric, focusing on a specific animal behavior (hunting) without detailed context or composition. The query stats indicate a short query with no scientific name or behavior words, suggesting a focus on the feral cat's appearance and action. This aligns well with comparing against image embeddings to identify images of feral cats in the act of hunting.",
+    "signals": [
+      "feral cat",
+      "prey"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'feral cat with prey' is concise and object-centric, focusing on a specific animal behavior (hunting) without detailed context or composition. The query stats indicate a short query with no scientific name or behavior words, suggesting a focus on the feral cat's appearance and action. This aligns well with comparing against image embeddings to identify images of feral cats in the act of hunting.\",\"signals\":[\"feral cat\",\"prey\"]}",
+    "invalid_decision": false
+  },
+  "fire pink with dark-colored anthers": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a flower's color and anther color, which are concise object-centric details suitable for a text-to-image method.",
+    "signals": [
+      "dark-colored anthers",
+      "fire pink"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a flower's color and anther color, which are concise object-centric details suitable for a text-to-image method.\",\"signals\":[\"dark-colored anthers\",\"fire pink\"]}",
+    "invalid_decision": false
+  },
+  "fire salamander with a barred color pattern": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on visual appearance with 'barred color pattern', a common feature in salamander species. Using text-to-image method allows for precise matching of this visual cue.",
+    "signals": [
+      "barred color pattern",
+      "salamander"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on visual appearance with 'barred color pattern', a common feature in salamander species. Using text-to-image method allows for precise matching of this visual cue.\",\"signals\":[\"barred color pattern\",\"salamander\"]}",
+    "invalid_decision": false
+  },
+  "flamingo standing on one leg": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a flamingo standing on one leg, which is a specific posture. This suggests a focus on morphology and appearance, aligning with the t2i method for concise object-centric queries.",
+    "signals": [
+      "flamingo",
+      "standing on one leg"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a flamingo standing on one leg, which is a specific posture. This suggests a focus on morphology and appearance, aligning with the t2i method for concise object-centric queries.\",\"signals\":[\"flamingo\",\"standing on one leg\"]}",
+    "invalid_decision": false
+  },
+  "fruit bat eating fruit upside down": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior (eating) and a context (upside down), which aligns with behavior/context semantics. The query also mentions 'fruit bat,' a specific object, suggesting a concise object-centric query. However, the presence of 'upside down' indicates a behavioral detail that is more naturally captured by t2i's focus on behavior/context semantics.",
+    "signals": [
+      "fruit bat",
+      "eating"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior (eating) and a context (upside down), which aligns with behavior/context semantics. The query also mentions 'fruit bat,' a specific object, suggesting a concise object-centric query. However, the presence of 'upside down' indicates a behavioral detail that is more naturally captured by t2i's focus on behavior/context semantics.\",\"signals\":[\"fruit bat\",\"eating\"]}",
+    "invalid_decision": false
+  },
+  "giant resin bee feeding on sunflower": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a giant resin bee feeding on a sunflower, which is a specific behavior and context. This suggests a need for a text-based comparison rather than visual search.",
+    "signals": [
+      "giant resin bee",
+      "feeding on sunflower"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a giant resin bee feeding on a sunflower, which is a specific behavior and context. This suggests a need for a text-based comparison rather than visual search.\",\"signals\":[\"giant resin bee\",\"feeding on sunflower\"]}",
+    "invalid_decision": false
+  },
+  "great golden digger wasp carrying an orthopteron": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific insect behavior (carrying an orthopteron), which aligns with behavior/context semantics.",
+    "signals": [
+      "carrying an orthopteron",
+      "great golden digger wasp"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific insect behavior (carrying an orthopteron), which aligns with behavior/context semantics.\",\"signals\":[\"carrying an orthopteron\",\"great golden digger wasp\"]}",
+    "invalid_decision": false
+  },
+  "grebe with babies on its back": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a grebe with babies on its back, a specific visual scene involving a bird and its offspring. This aligns with the t2i method, which is suited for concise object/species-centric naming queries with little to no behavioral/contextual detail.",
+    "signals": [
+      "grebe",
+      "babies"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a grebe with babies on its back, a specific visual scene involving a bird and its offspring. This aligns with the t2i method, which is suited for concise object/species-centric naming queries with little to no behavioral/contextual detail.\",\"signals\":[\"grebe\",\"babies\"]}",
+    "invalid_decision": false
+  },
+  "hognose snake playing dead": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on behavior ('playing dead') and is concise, suggesting a text-to-image method is suitable.",
+    "signals": [
+      "behavior_words_present",
+      "short_query"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on behavior ('playing dead') and is concise, suggesting a text-to-image method is suitable.\",\"signals\":[\"behavior_words_present\",\"short_query\"]}",
+    "invalid_decision": false
+  },
+  "human handling a bat with bare hands": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query describes a human action involving a bat, which is a behavioral context. The query is concise and focuses on the action rather than detailed appearance.",
+    "signals": [
+      "human action",
+      "bat handling"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query describes a human action involving a bat, which is a behavioral context. The query is concise and focuses on the action rather than detailed appearance.\",\"signals\":[\"human action\",\"bat handling\"]}",
+    "invalid_decision": false
+  },
+  "hyenas eating a kill": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'hyenas eating a kill' is concise and object-centric, focusing on the action of hyenas consuming a carcass. This aligns with the t2i method, which is suited for queries with short noun phrases and minimal contextual detail.",
+    "signals": [
+      "hyenas",
+      "kill"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'hyenas eating a kill' is concise and object-centric, focusing on the action of hyenas consuming a carcass. This aligns with the t2i method, which is suited for queries with short noun phrases and minimal contextual detail.\",\"signals\":[\"hyenas\",\"kill\"]}",
+    "invalid_decision": false
+  },
+  "jungle babblers allopreening": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior (allopreening) and involves a specific species (jungle babblers), but the focus is on the behavior rather than the visual appearance. The query is concise and uses a scientific term, suggesting a text-based comparison is appropriate.",
+    "signals": [
+      "allopreening",
+      "jungle babblers"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior (allopreening) and involves a specific species (jungle babblers), but the focus is on the behavior rather than the visual appearance. The query is concise and uses a scientific term, suggesting a text-based comparison is appropriate.\",\"signals\":[\"allopreening\",\"jungle babblers\"]}",
+    "invalid_decision": false
+  },
+  "kahili ginger plant with open fruit capsules showing seeds": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a plant with open fruit capsules showing seeds, which is a concise object-centric description suitable for a text-to-image method.",
+    "signals": [
+      "open fruit capsules",
+      "showing seeds"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a plant with open fruit capsules showing seeds, which is a concise object-centric description suitable for a text-to-image method.\",\"signals\":[\"open fruit capsules\",\"showing seeds\"]}",
+    "invalid_decision": false
+  },
+  "killdeer feigning injury": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'killdeer feigning injury' is a concise object/species-centric naming query with specific behavior ('feigning injury').",
+    "signals": [
+      "feigning injury",
+      "killdeer"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'killdeer feigning injury' is a concise object/species-centric naming query with specific behavior ('feigning injury').\",\"signals\":[\"feigning injury\",\"killdeer\"]}",
+    "invalid_decision": false
+  },
+  "laysan albatross mostly in dark mottled brown plumage": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on the physical appearance of the Laysan Albatross, specifically mentioning dark mottled brown plumage, which is a descriptive feature. This aligns with the t2i method, which is suited for concise object-centric queries with little to no behavioral context.",
+    "signals": [
+      "dark mottled brown plumage",
+      "Laysan Albatross"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on the physical appearance of the Laysan Albatross, specifically mentioning dark mottled brown plumage, which is a descriptive feature. This aligns with the t2i method, which is suited for concise object-centric queries with little to no behavioral context.\",\"signals\":[\"dark mottled brown plumage\",\"Laysan Albatross\"]}",
+    "invalid_decision": false
+  },
+  "lorikeet pollinating flower": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on a specific behavior (pollinating) and a visual element (lorikeet and flower), but the query text is concise and lacks detailed context or composition. The scientific name is not explicitly mentioned, and there are no clear behavioral keywords. Thus, comparing the query text embedding against candidate image embeddings (t2i) is the most appropriate method to retrieve images of lorikeets pollinating flowers.",
+    "signals": [
+      "lorikeet",
+      "pollinating"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on a specific behavior (pollinating) and a visual element (lorikeet and flower), but the query text is concise and lacks detailed context or composition. The scientific name is not explicitly mentioned, and there are no clear behavioral keywords. Thus, comparing the query text embedding against candidate image embeddings (t2i) is the most appropriate method to retrieve images of lorikeets pollinating flowers.\", \"signals\":[\"lorikeet\",\"pollinating\"]}",
+    "invalid_decision": false
+  },
+  "male Red-winged Blackbird vocalizing": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a male Red-winged Blackbird vocalizing, which is a behavior/contextual detail. This aligns with the t2i method, which is suited for behavior and contextual semantics.",
+    "signals": [
+      "vocalizing",
+      "male"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a male Red-winged Blackbird vocalizing, which is a behavior/contextual detail. This aligns with the t2i method, which is suited for behavior and contextual semantics.\",\"signals\":[\"vocalizing\",\"male\"]}",
+    "invalid_decision": false
+  },
+  "male ruby-throated hummingbird in flight": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific bird species with a clear visual identifier, suggesting a text-based comparison is sufficient.",
+    "signals": [
+      "ruby-throated hummingbird",
+      "in flight"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific bird species with a clear visual identifier, suggesting a text-based comparison is sufficient.\",\"signals\":[\"ruby-throated hummingbird\",\"in flight\"]}",
+    "invalid_decision": false
+  },
+  "male smooth newt with developed crest": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a specific species (newt) and morphological feature (developed crest), which aligns with t2i's strength in concise object-centric naming.",
+    "signals": [
+      "<species_newt>",
+      "<morphological_feature_crest>"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a specific species (newt) and morphological feature (developed crest), which aligns with t2i's strength in concise object-centric naming.\",\"signals\":[\"<species_newt>\",\"<morphological_feature_crest>\"]}",
+    "invalid_decision": false
+  },
+  "male velvet ant": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query is concise and object-centric, likely referring to a specific species. The term'male velvet ant' suggests a taxonomic label, which is best matched using text-to-image embeddings.",
+    "signals": [
+      "taxonomic label",
+      "specific species name"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query is concise and object-centric, likely referring to a specific species. The term'male velvet ant' suggests a taxonomic label, which is best matched using text-to-image embeddings.\",\"signals\":[\"taxonomic label\",\"specific species name\"]}",
+    "invalid_decision": false
+  },
+  "measuring the body dimensions of a bee": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on measuring body dimensions of a bee, which is a specific scientific task. The query does not include contextual or behavioral details, and it is concise enough to be addressed by comparing the query text embedding against candidate image embeddings.",
+    "signals": [
+      "body dimensions",
+      "bee"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on measuring body dimensions of a bee, which is a specific scientific task. The query does not include contextual or behavioral details, and it is concise enough to be addressed by comparing the query text embedding against candidate image embeddings.\",\"signals\":[\"body dimensions\",\"bee\"]}",
+    "invalid_decision": false
+  },
+  "monkey slug caterpillar": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query'monkey slug caterpillar' is a short noun phrase with no clear behavioral or contextual details, suggesting a scientific or common name identification task. The query lacks appearance-specific keywords, making i2i less suitable. The query stats indicate a low likelihood of scientific names, and no behavioral words are present. Therefore, comparing the query text embedding against candidate image embeddings (t2i) is the most appropriate method.",
+    "signals": [
+      "short noun phrase",
+      "no appearance keywords"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query'monkey slug caterpillar' is a short noun phrase with no clear behavioral or contextual details, suggesting a scientific or common name identification task. The query lacks appearance-specific keywords, making i2i less suitable. The query stats indicate a low likelihood of scientific names, and no behavioral words are present. Therefore, comparing the query text embedding against candidate image embeddings (t2i) is the most appropriate method.\",\"signals\":[\"short noun phrase\",\"no appearance keywords\"]}",
+    "invalid_decision": false
+  },
+  "moose with hair loss": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query'moose with hair loss' is concise and object-centric, focusing on a specific animal feature. It lacks behavioral or contextual details, making it suitable for a text-to-image method.",
+    "signals": [
+      "moose",
+      "hair loss"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query'moose with hair loss' is concise and object-centric, focusing on a specific animal feature. It lacks behavioral or contextual details, making it suitable for a text-to-image method.\",\"signals\":[\"moose\",\"hair loss\"]}",
+    "invalid_decision": false
+  },
+  "mountain goat climbing rocky outcrops with its young": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on the behavior of a mountain goat climbing rocky outcrops with its young, which is a contextual and behavioral description.",
+    "signals": [
+      "climbing rocky outcrops",
+      "with its young"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on the behavior of a mountain goat climbing rocky outcrops with its young, which is a contextual and behavioral description.\",\"signals\":[\"climbing rocky outcrops\",\"with its young\"]}",
+    "invalid_decision": false
+  },
+  "pair of great crested grebes potentially performing the weed dance": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior ('weed dance') and involves a specific species ('great crested grebes'), but the focus is on the behavior rather than the visual appearance. The query is concise and uses a scientific term, suggesting a t2i method is appropriate.",
+    "signals": [
+      "weed dance",
+      "great crested grebes"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior ('weed dance') and involves a specific species ('great crested grebes'), but the focus is on the behavior rather than the visual appearance. The query is concise and uses a scientific term, suggesting a t2i method is appropriate.\",\"signals\":[\"weed dance\",\"great crested grebes\"]}",
+    "invalid_decision": false
+  },
+  "parrotfish feeding": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'parrotfish feeding' is concise and object-centric, focusing on the feeding behavior of parrotfish. This aligns with the t2i method, which is suited for queries with behavioral or contextual semantics.",
+    "signals": [
+      "feeding",
+      "parrotfish"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'parrotfish feeding' is concise and object-centric, focusing on the feeding behavior of parrotfish. This aligns with the t2i method, which is suited for queries with behavioral or contextual semantics.\",\"signals\":[\"feeding\",\"parrotfish\"]}",
+    "invalid_decision": false
+  },
+  "photo with two or more adult male lions": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies 'two or more adult male lions', which is a concise object-centric description suitable for text-to-image retrieval.",
+    "signals": [
+      "two or more adult male lions",
+      "lion"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies 'two or more adult male lions', which is a concise object-centric description suitable for text-to-image retrieval.\",\"signals\":[\"two or more adult male lions\",\"lion\"]}",
+    "invalid_decision": false
+  },
+  "picture showing more than fifty Mediterranean Acrobat Ants": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on a specific insect species, the Mediterranean Acrobat Ant, and mentions a quantity of ants. This suggests a need for a concise object-centric description, aligning with the t2i method.",
+    "signals": [
+      "Mediterranean Acrobat Ants",
+      "more than fifty"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on a specific insect species, the Mediterranean Acrobat Ant, and mentions a quantity of ants. This suggests a need for a concise object-centric description, aligning with the t2i method.\",\"signals\":[\"Mediterranean Acrobat Ants\",\"more than fifty\"]}",
+    "invalid_decision": false
+  },
+  "picture showing more than fifty Velvety Tree Ants": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query focuses on a specific insect species, Velvety Tree Ants, and mentions a quantity, suggesting a concise object-centric query. The query does not include behavioral or contextual details, nor does it resemble a scientific name. The short token count and lack of appearance cues indicate a text-to-image method is appropriate.",
+    "signals": [
+      "Velvety Tree Ants",
+      "more than fifty"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query focuses on a specific insect species, Velvety Tree Ants, and mentions a quantity, suggesting a concise object-centric query. The query does not include behavioral or contextual details, nor does it resemble a scientific name. The short token count and lack of appearance cues indicate a text-to-image method is appropriate.\",\"signals\":[\"Velvety Tree Ants\",\"more than fifty\"]}",
+    "invalid_decision": false
+  },
+  "potter wasp nest": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'potter wasp nest' is concise and likely refers to a scientific or common name, suggesting a text-based search rather than visual morphology.",
+    "signals": [
+      "potter wasp nest is a short noun phrase",
+      "has behavior words like nest"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'potter wasp nest' is concise and likely refers to a scientific or common name, suggesting a text-based search rather than visual morphology.\",\"signals\":[\"potter wasp nest is a short noun phrase\",\"has behavior words like nest\"]}",
+    "invalid_decision": false
+  },
+  "puffins carrying food": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query 'puffins carrying food' is concise and object-centric, focusing on the action of carrying food by puffins. This aligns with the t2i method, which is suited for queries with scientific or common names and limited contextual detail.",
+    "signals": [
+      "puffins",
+      "carrying food"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query 'puffins carrying food' is concise and object-centric, focusing on the action of carrying food by puffins. This aligns with the t2i method, which is suited for queries with scientific or common names and limited contextual detail.\",\"signals\":[\"puffins\",\"carrying food\"]}",
+    "invalid_decision": false
+  },
+  "red-tailed hawk perched on a utility pole": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query specifies a red-tailed hawk perched on a utility pole, which is a specific object with contextual behavior. The scientific name is explicitly mentioned, but the primary focus is on the object and its behavior. This aligns with the t2i method for concise object-centric queries with behavioral context.",
+    "signals": [
+      "red-tailed hawk",
+      "perched"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query specifies a red-tailed hawk perched on a utility pole, which is a specific object with contextual behavior. The scientific name is explicitly mentioned, but the primary focus is on the object and its behavior. This aligns with the t2i method for concise object-centric queries with behavioral context.\",\"signals\":[\"red-tailed hawk\",\"perched\"]}",
+    "invalid_decision": false
+  },
+  "sick cassava plant": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "Query focuses on a plant's health condition, suggesting a need for object-centric information. The short, specific tokens'sick' and 'plant' align with t2i's strength in concise object/species-centric naming queries.",
+    "signals": [
+      "sick",
+      "plant"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"Query focuses on a plant's health condition, suggesting a need for object-centric information. The short, specific tokens'sick' and 'plant' align with t2i's strength in concise object/species-centric naming queries.\",\"signals\":[\"sick\",\"plant\"]}",
+    "invalid_decision": false
+  },
+  "sloth hugging a human-made structure": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a sloth hugging a human-made structure, which is a specific object-centric action. This aligns with the t2i method, which is suited for concise object/species-centric naming queries with behavioral details.",
+    "signals": [
+      "sloth hugging",
+      "human-made structure"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a sloth hugging a human-made structure, which is a specific object-centric action. This aligns with the t2i method, which is suited for concise object/species-centric naming queries with behavioral details.\",\"signals\":[\"sloth hugging\",\"human-made structure\"]}",
+    "invalid_decision": false
+  },
+  "southern aligator lizard with cut tail": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a southern alligator lizard with a cut tail, which is a concise object-centric description. This aligns with the t2i method, which is suited for short noun phrases and taxonomic labels with minimal contextual detail.",
+    "signals": [
+      "cut tail",
+      "southern alligator lizard"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a southern alligator lizard with a cut tail, which is a concise object-centric description. This aligns with the t2i method, which is suited for short noun phrases and taxonomic labels with minimal contextual detail.\",\"signals\":[\"cut tail\",\"southern alligator lizard\"]}",
+    "invalid_decision": false
+  },
+  "ventral side of mourning cloak butterfly": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a specific anatomical feature of a butterfly, which is a concise object-centric query. The term'mourning cloak butterfly' is a scientific name, but the focus is on the ventral side, a morphological detail. This suggests a need for a detailed visual comparison.",
+    "signals": [
+      "ventral side",
+      "mourning cloak butterfly"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a specific anatomical feature of a butterfly, which is a concise object-centric query. The term'mourning cloak butterfly' is a scientific name, but the focus is on the ventral side, a morphological detail. This suggests a need for a detailed visual comparison.\",\"signals\":[\"ventral side\",\"mourning cloak butterfly\"]}",
+    "invalid_decision": false
+  },
+  "vervet monkey with visible bright blue scrotal areas": {
+    "method": "i2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a unique visual feature (bright blue scrotal areas) that is best captured by comparing against web exemplar images.",
+    "signals": [
+      "bright blue scrotal areas",
+      "vervet monkey"
+    ],
+    "raw": "{\"method\":\"i2i\",\"confidence\":0.85,\"reason\":\"The query specifies a unique visual feature (bright blue scrotal areas) that is best captured by comparing against web exemplar images.\",\"signals\":[\"bright blue scrotal areas\",\"vervet monkey\"]}",
+    "invalid_decision": false
+  },
+  "water snake feeding on fish": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior (feeding) and includes a clear context (water snake), suggesting a textual description rather than a visual search. The query is concise and focuses on a specific action involving a known animal, indicating a textual retrieval task.",
+    "signals": [
+      "water snake",
+      "feeding"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior (feeding) and includes a clear context (water snake), suggesting a textual description rather than a visual search. The query is concise and focuses on a specific action involving a known animal, indicating a textual retrieval task.\",\"signals\":[\"water snake\",\"feeding\"]}",
+    "invalid_decision": false
+  },
+  "white-tailed deer flagging its tail": {
+    "method": "t2i",
+    "confidence": 0.85,
+    "reason": "The query specifies a behavior ('flagging its tail') and is concise, suggesting a text-to-image method is suitable. The query also contains a clear, specific noun phrase ('white-tailed deer').",
+    "signals": [
+      "flagging its tail",
+      "white-tailed deer"
+    ],
+    "raw": "{\"method\":\"t2i\",\"confidence\":0.85,\"reason\":\"The query specifies a behavior ('flagging its tail') and is concise, suggesting a text-to-image method is suitable. The query also contains a clear, specific noun phrase ('white-tailed deer').\",\"signals\":[\"flagging its tail\",\"white-tailed deer\"]}",
+    "invalid_decision": false
+  }
+}

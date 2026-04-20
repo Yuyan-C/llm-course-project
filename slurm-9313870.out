@@ -1,0 +1,195 @@
+Running orchestrator for model=vit-b-32, split=test
+/home/mila/e/echchabo/projects/llm-course-project/.venv/lib/python3.12/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+Using the latest cached version of the dataset since evendrow/INQUIRE-Rerank couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'default' at /home/mila/e/echchabo/.cache/huggingface/datasets/evendrow___inquire-rerank/default/0.0.0/b9a849f91cc16ff9b4ad274ce9b06cfce3496fd1 (last modified on Mon Apr  6 12:51:23 2026).
+Running on device=cuda
+Queries with usable web images: 159/160
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 31892.80it/s]
+[1mCLIPModel LOAD REPORT[0m from: openai/clip-vit-base-patch32
+Key                                  | Status     |  | 
+-------------------------------------+------------+--+-
+text_model.embeddings.position_ids   | UNEXPECTED |  | 
+vision_model.embeddings.position_ids | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+warming up with batch size 1 on cuda
+done warming up in 0.3295612335205078s
+Encoding dataset images:   0%|          | 0/62 [00:00<?, ?it/s]Encoding dataset images:   2%|▏         | 1/62 [00:01<01:29,  1.46s/it]Encoding dataset images:   3%|▎         | 2/62 [00:01<00:40,  1.47it/s]Encoding dataset images:   5%|▍         | 3/62 [00:01<00:25,  2.31it/s]Encoding dataset images:   6%|▋         | 4/62 [00:01<00:18,  3.19it/s]Encoding dataset images:   8%|▊         | 5/62 [00:02<00:25,  2.27it/s]Encoding dataset images:  10%|▉         | 6/62 [00:02<00:19,  2.93it/s]Encoding dataset images:  11%|█▏        | 7/62 [00:02<00:15,  3.64it/s]Encoding dataset images:  13%|█▎        | 8/62 [00:02<00:12,  4.22it/s]Encoding dataset images:  15%|█▍        | 9/62 [00:03<00:21,  2.42it/s]Encoding dataset images:  16%|█▌        | 10/62 [00:03<00:17,  3.06it/s]Encoding dataset images:  18%|█▊        | 11/62 [00:04<00:13,  3.71it/s]Encoding dataset images:  19%|█▉        | 12/62 [00:04<00:11,  4.41it/s]Encoding dataset images:  21%|██        | 13/62 [00:04<00:18,  2.69it/s]Encoding dataset images:  23%|██▎       | 14/62 [00:05<00:14,  3.34it/s]Encoding dataset images:  24%|██▍       | 15/62 [00:05<00:11,  4.03it/s]Encoding dataset images:  26%|██▌       | 16/62 [00:05<00:09,  4.69it/s]Encoding dataset images:  27%|██▋       | 17/62 [00:05<00:14,  3.02it/s]Encoding dataset images:  29%|██▉       | 18/62 [00:06<00:11,  3.67it/s]Encoding dataset images:  31%|███       | 19/62 [00:06<00:12,  3.36it/s]Encoding dataset images:  32%|███▏      | 20/62 [00:06<00:10,  4.03it/s]Encoding dataset images:  34%|███▍      | 21/62 [00:06<00:12,  3.28it/s]Encoding dataset images:  35%|███▌      | 22/62 [00:07<00:10,  3.95it/s]Encoding dataset images:  37%|███▋      | 23/62 [00:07<00:12,  3.11it/s]Encoding dataset images:  39%|███▊      | 24/62 [00:07<00:12,  3.14it/s]Encoding dataset images:  40%|████      | 25/62 [00:08<00:09,  3.78it/s]Encoding dataset images:  42%|████▏     | 26/62 [00:08<00:08,  4.45it/s]Encoding dataset images:  44%|████▎     | 27/62 [00:08<00:11,  3.12it/s]Encoding dataset images:  45%|████▌     | 28/62 [00:09<00:12,  2.66it/s]Encoding dataset images:  47%|████▋     | 29/62 [00:09<00:09,  3.32it/s]Encoding dataset images:  48%|████▊     | 30/62 [00:09<00:07,  4.00it/s]Encoding dataset images:  50%|█████     | 31/62 [00:09<00:10,  3.04it/s]Encoding dataset images:  52%|█████▏    | 32/62 [00:10<00:11,  2.57it/s]Encoding dataset images:  53%|█████▎    | 33/62 [00:10<00:09,  3.19it/s]Encoding dataset images:  55%|█████▍    | 34/62 [00:10<00:07,  3.82it/s]Encoding dataset images:  56%|█████▋    | 35/62 [00:11<00:08,  3.37it/s]Encoding dataset images:  58%|█████▊    | 36/62 [00:11<00:09,  2.82it/s]Encoding dataset images:  60%|█████▉    | 37/62 [00:11<00:07,  3.49it/s]Encoding dataset images:  61%|██████▏   | 38/62 [00:11<00:05,  4.16it/s]Encoding dataset images:  63%|██████▎   | 39/62 [00:12<00:05,  4.11it/s]Encoding dataset images:  65%|██████▍   | 40/62 [00:12<00:08,  2.64it/s]Encoding dataset images:  66%|██████▌   | 41/62 [00:12<00:06,  3.22it/s]Encoding dataset images:  68%|██████▊   | 42/62 [00:13<00:05,  3.87it/s]Encoding dataset images:  69%|██████▉   | 43/62 [00:13<00:04,  4.51it/s]Encoding dataset images:  71%|███████   | 44/62 [00:14<00:08,  2.22it/s]Encoding dataset images:  73%|███████▎  | 45/62 [00:14<00:06,  2.81it/s]Encoding dataset images:  74%|███████▍  | 46/62 [00:14<00:04,  3.35it/s]Encoding dataset images:  76%|███████▌  | 47/62 [00:14<00:03,  3.90it/s]Encoding dataset images:  77%|███████▋  | 48/62 [00:15<00:05,  2.53it/s]Encoding dataset images:  79%|███████▉  | 49/62 [00:15<00:04,  3.13it/s]Encoding dataset images:  81%|████████  | 50/62 [00:15<00:03,  3.85it/s]Encoding dataset images:  82%|████████▏ | 51/62 [00:15<00:02,  4.51it/s]Encoding dataset images:  84%|████████▍ | 52/62 [00:16<00:03,  2.57it/s]Encoding dataset images:  85%|████████▌ | 53/62 [00:16<00:02,  3.18it/s]Encoding dataset images:  87%|████████▋ | 54/62 [00:16<00:02,  3.87it/s]Encoding dataset images:  89%|████████▊ | 55/62 [00:17<00:01,  4.45it/s]Encoding dataset images:  90%|█████████ | 56/62 [00:17<00:02,  2.60it/s]Encoding dataset images:  92%|█████████▏| 57/62 [00:17<00:01,  3.25it/s]Encoding dataset images:  95%|█████████▌| 59/62 [00:18<00:00,  4.81it/s]Encoding dataset images:  97%|█████████▋| 60/62 [00:18<00:00,  2.97it/s]Encoding dataset images: 100%|██████████| 62/62 [00:18<00:00,  4.41it/s]Encoding dataset images: 63it [00:19,  3.31it/s]                        
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/326 [00:00<?, ?it/s]Loading weights:   0%|          | 1/326 [00:00<02:16,  2.37it/s]Loading weights:  17%|█▋        | 57/326 [00:00<00:01, 139.37it/s]Loading weights:  27%|██▋       | 87/326 [00:00<00:01, 156.90it/s]Loading weights:  34%|███▍      | 112/326 [00:00<00:01, 157.75it/s]Loading weights:  41%|████      | 134/326 [00:00<00:01, 157.77it/s]Loading weights:  48%|████▊     | 156/326 [00:01<00:00, 171.69it/s]Loading weights:  54%|█████▍    | 177/326 [00:01<00:00, 149.96it/s]Loading weights:  62%|██████▏   | 201/326 [00:01<00:00, 166.02it/s]Loading weights:  67%|██████▋   | 220/326 [00:01<00:00, 154.35it/s]Loading weights:  73%|███████▎  | 238/326 [00:01<00:00, 159.43it/s]Loading weights:  79%|███████▊  | 256/326 [00:01<00:00, 161.39it/s]Loading weights:  87%|████████▋ | 282/326 [00:01<00:00, 183.98it/s]Loading weights:  93%|█████████▎| 302/326 [00:01<00:00, 183.25it/s]Loading weights:  98%|█████████▊| 321/326 [00:02<00:00, 181.27it/s]Loading weights: 100%|██████████| 326/326 [00:02<00:00, 157.64it/s]
+Routing+Eval:   0%|          | 0/160 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Routing+Eval:   1%|          | 1/160 [00:01<04:53,  1.85s/it]Routing+Eval:   1%|▏         | 2/160 [00:03<04:17,  1.63s/it]Routing+Eval:   2%|▏         | 3/160 [00:05<04:27,  1.70s/it]Routing+Eval:   2%|▎         | 4/160 [00:06<04:02,  1.55s/it]Routing+Eval:   3%|▎         | 5/160 [00:07<03:40,  1.42s/it]Routing+Eval:   4%|▍         | 6/160 [00:09<03:41,  1.44s/it]Routing+Eval:   4%|▍         | 7/160 [00:10<03:22,  1.33s/it]Routing+Eval:   5%|▌         | 8/160 [00:11<03:14,  1.28s/it]Routing+Eval:   6%|▌         | 9/160 [00:12<03:13,  1.28s/it]Routing+Eval:   6%|▋         | 10/160 [00:13<03:14,  1.29s/it]Routing+Eval:   7%|▋         | 11/160 [00:14<02:53,  1.16s/it]Routing+Eval:   8%|▊         | 12/160 [00:16<03:01,  1.22s/it]Routing+Eval:   8%|▊         | 13/160 [00:17<03:06,  1.27s/it]Routing+Eval:   9%|▉         | 14/160 [00:18<02:55,  1.20s/it]Routing+Eval:   9%|▉         | 15/160 [00:19<03:00,  1.25s/it]Routing+Eval:  10%|█         | 16/160 [00:21<03:15,  1.36s/it]Routing+Eval:  11%|█         | 17/160 [00:22<03:10,  1.33s/it]Routing+Eval:  11%|█▏        | 18/160 [00:24<03:06,  1.31s/it]Routing+Eval:  12%|█▏        | 19/160 [00:25<02:48,  1.19s/it]Routing+Eval:  12%|█▎        | 20/160 [00:26<02:39,  1.14s/it]Routing+Eval:  13%|█▎        | 21/160 [00:27<02:35,  1.12s/it]Routing+Eval:  14%|█▍        | 22/160 [00:28<02:27,  1.07s/it]Routing+Eval:  14%|█▍        | 23/160 [00:29<02:41,  1.18s/it]Routing+Eval:  15%|█▌        | 24/160 [00:30<02:48,  1.24s/it]Routing+Eval:  16%|█▌        | 25/160 [00:32<02:51,  1.27s/it]Routing+Eval:  16%|█▋        | 26/160 [00:33<02:35,  1.16s/it]Routing+Eval:  17%|█▋        | 27/160 [00:35<03:04,  1.39s/it]Routing+Eval:  18%|█▊        | 28/160 [00:36<02:49,  1.29s/it]Routing+Eval:  18%|█▊        | 29/160 [00:37<02:43,  1.25s/it]Loading model: Qwen/Qwen3-VL-4B-Instruct
+
+Loading weights:   0%|          | 0/713 [00:00<?, ?it/s][A
+Loading weights:   0%|          | 1/713 [00:01<17:15,  1.45s/it][A
+Loading weights:   1%|          | 4/713 [00:01<03:37,  3.26it/s][A
+Loading weights:   1%|          | 6/713 [00:01<02:19,  5.06it/s][A
+Loading weights:   2%|▏         | 11/713 [00:01<01:03, 11.13it/s][A
+Loading weights:   2%|▏         | 15/713 [00:01<00:45, 15.41it/s][A
+Loading weights:   3%|▎         | 21/713 [00:02<00:30, 22.35it/s][A
+Loading weights:   4%|▎         | 26/713 [00:02<00:25, 26.73it/s][A
+Loading weights:   4%|▍         | 30/713 [00:02<00:23, 29.12it/s][A
+Loading weights:   5%|▍         | 35/713 [00:02<00:21, 31.44it/s][A
+Loading weights:   5%|▌         | 39/713 [00:02<00:20, 32.46it/s][A
+Loading weights:   6%|▋         | 46/713 [00:02<00:18, 35.51it/s][A
+Loading weights:   7%|▋         | 50/713 [00:02<00:18, 35.39it/s][A
+Loading weights:   8%|▊         | 59/713 [00:02<00:15, 41.45it/s][A
+Loading weights:  10%|▉         | 69/713 [00:03<00:13, 47.27it/s][A
+Loading weights:  10%|█         | 74/713 [00:03<00:14, 44.60it/s][A
+Loading weights:  11%|█         | 80/713 [00:03<00:15, 40.67it/s][A
+Loading weights:  12%|█▏        | 85/713 [00:03<00:19, 31.80it/s][A
+Loading weights:  13%|█▎        | 91/713 [00:03<00:19, 32.64it/s][A
+Loading weights:  13%|█▎        | 95/713 [00:03<00:18, 33.03it/s][A
+Loading weights:  14%|█▍        | 103/713 [00:04<00:17, 35.67it/s][A
+Loading weights:  15%|█▌        | 110/713 [00:04<00:15, 38.71it/s][A
+Loading weights:  16%|█▌        | 114/713 [00:04<00:18, 32.82it/s][A
+Loading weights:  17%|█▋        | 124/713 [00:04<00:15, 37.52it/s][A
+Loading weights:  19%|█▊        | 132/713 [00:04<00:13, 42.17it/s][A
+Loading weights:  19%|█▉        | 137/713 [00:05<00:17, 32.65it/s][A
+Loading weights:  20%|█▉        | 141/713 [00:05<00:16, 33.73it/s][A
+Loading weights:  21%|██        | 148/713 [00:05<00:15, 36.48it/s][A
+Loading weights:  22%|██▏       | 157/713 [00:05<00:13, 41.64it/s][A
+Loading weights:  23%|██▎       | 162/713 [00:05<00:13, 40.58it/s][A
+Loading weights:  23%|██▎       | 167/713 [00:05<00:14, 37.06it/s][A
+Loading weights:  24%|██▍       | 171/713 [00:06<00:17, 31.08it/s][A
+Loading weights:  25%|██▍       | 178/713 [00:06<00:15, 33.60it/s][A
+Loading weights:  26%|██▌       | 182/713 [00:06<00:18, 28.67it/s][A
+Loading weights:  26%|██▌       | 185/713 [00:06<00:18, 28.87it/s][A
+Loading weights:  27%|██▋       | 191/713 [00:06<00:17, 29.08it/s][A
+Loading weights:  27%|██▋       | 194/713 [00:06<00:18, 28.57it/s][A
+Loading weights:  28%|██▊       | 200/713 [00:07<00:17, 29.87it/s][A
+Loading weights:  28%|██▊       | 203/713 [00:07<00:19, 26.55it/s][A
+Loading weights:  30%|██▉       | 212/713 [00:07<00:14, 34.62it/s][A
+Loading weights:  30%|███       | 216/713 [00:07<00:17, 28.30it/s][A
+Loading weights:  31%|███▏      | 223/713 [00:07<00:15, 32.40it/s][A
+Loading weights:  32%|███▏      | 227/713 [00:08<00:17, 27.45it/s][A
+Loading weights:  32%|███▏      | 230/713 [00:08<00:17, 27.42it/s][A
+Loading weights:  33%|███▎      | 235/713 [00:08<00:15, 30.30it/s][A
+Loading weights:  34%|███▍      | 241/713 [00:08<00:13, 35.04it/s][A
+Loading weights:  34%|███▍      | 245/713 [00:08<00:12, 36.14it/s][A
+Loading weights:  35%|███▍      | 249/713 [00:08<00:13, 35.57it/s][A
+Loading weights:  35%|███▌      | 253/713 [00:08<00:13, 34.47it/s][A
+Loading weights:  36%|███▌      | 257/713 [00:08<00:17, 26.40it/s][A
+Loading weights:  37%|███▋      | 267/713 [00:09<00:13, 33.33it/s][A
+Loading weights:  38%|███▊      | 271/713 [00:09<00:15, 28.67it/s][A
+Loading weights:  39%|███▉      | 278/713 [00:09<00:13, 31.82it/s][A
+Loading weights:  40%|███▉      | 282/713 [00:09<00:13, 32.09it/s][A
+Loading weights:  41%|████      | 290/713 [00:09<00:11, 35.87it/s][A
+Loading weights:  42%|████▏     | 300/713 [00:10<00:09, 43.36it/s][A
+Loading weights:  43%|████▎     | 305/713 [00:10<00:09, 43.04it/s][A
+Loading weights:  44%|████▍     | 312/713 [00:10<00:09, 40.78it/s][A
+Loading weights:  45%|████▍     | 319/713 [00:10<00:08, 45.64it/s][A
+Loading weights:  45%|████▌     | 324/713 [00:10<00:10, 38.60it/s][A
+Loading weights:  47%|████▋     | 333/713 [00:10<00:09, 42.09it/s][A
+Loading weights:  47%|████▋     | 338/713 [00:11<00:11, 32.77it/s][A
+Loading weights:  48%|████▊     | 342/713 [00:11<00:11, 32.34it/s][A
+Loading weights:  49%|████▊     | 346/713 [00:11<00:14, 24.54it/s][A
+Loading weights:  50%|████▉     | 355/713 [00:11<00:11, 32.54it/s][A
+Loading weights:  50%|█████     | 359/713 [00:11<00:10, 32.80it/s][A
+Loading weights:  51%|█████▏    | 367/713 [00:11<00:09, 36.68it/s][A
+Loading weights:  52%|█████▏    | 371/713 [00:12<00:09, 35.28it/s][A
+Loading weights:  53%|█████▎    | 375/713 [00:12<00:09, 34.98it/s][A
+Loading weights:  53%|█████▎    | 379/713 [00:12<00:13, 24.65it/s][A
+Loading weights:  54%|█████▍    | 388/713 [00:12<00:10, 31.47it/s][A
+Loading weights:  55%|█████▍    | 392/713 [00:12<00:11, 28.01it/s][A
+Loading weights:  57%|█████▋    | 406/713 [00:13<00:06, 47.48it/s][A
+Loading weights:  59%|█████▉    | 424/713 [00:13<00:03, 72.93it/s][A
+Loading weights:  62%|██████▏   | 442/713 [00:13<00:02, 95.74it/s][A
+Loading weights:  65%|██████▍   | 462/713 [00:13<00:02, 119.63it/s][A
+Loading weights:  67%|██████▋   | 476/713 [00:13<00:01, 124.42it/s][A
+Loading weights:  69%|██████▊   | 490/713 [00:13<00:01, 123.60it/s][A
+Loading weights:  72%|███████▏  | 510/713 [00:13<00:01, 141.91it/s][A
+Loading weights:  74%|███████▍  | 526/713 [00:13<00:01, 140.12it/s][A
+Loading weights:  76%|███████▋  | 544/713 [00:13<00:01, 148.72it/s][A
+Loading weights:  79%|███████▊  | 560/713 [00:14<00:01, 148.69it/s][A
+Loading weights:  81%|████████  | 578/713 [00:14<00:00, 152.37it/s][A
+Loading weights:  83%|████████▎ | 594/713 [00:14<00:00, 142.68it/s][A
+Loading weights:  86%|████████▌ | 610/713 [00:14<00:00, 142.34it/s][A
+Loading weights:  88%|████████▊ | 630/713 [00:14<00:00, 151.14it/s][A
+Loading weights:  91%|█████████ | 646/713 [00:14<00:00, 144.49it/s][A
+Loading weights:  93%|█████████▎| 666/713 [00:14<00:00, 153.77it/s][A
+Loading weights:  96%|█████████▌| 682/713 [00:14<00:00, 149.68it/s][A
+Loading weights:  98%|█████████▊| 698/713 [00:15<00:00, 112.47it/s][A
+Loading weights: 100%|█████████▉| 711/713 [00:15<00:00, 95.14it/s] [ALoading weights: 100%|██████████| 713/713 [00:15<00:00, 46.67it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Routing+Eval:  19%|█▉        | 30/160 [02:40<1:21:42, 37.71s/it]Routing+Eval:  19%|█▉        | 31/160 [02:41<57:37, 26.80s/it]  Routing+Eval:  20%|██        | 32/160 [02:42<40:50, 19.14s/it]Routing+Eval:  21%|██        | 33/160 [02:44<29:11, 13.79s/it]Routing+Eval:  21%|██▏       | 34/160 [02:44<20:48,  9.91s/it]Routing+Eval:  22%|██▏       | 35/160 [02:46<15:17,  7.34s/it]Routing+Eval:  22%|██▎       | 36/160 [02:47<11:31,  5.57s/it]Routing+Eval:  23%|██▎       | 37/160 [02:48<08:37,  4.20s/it]Routing+Eval:  24%|██▍       | 38/160 [02:50<07:07,  3.50s/it]Routing+Eval:  24%|██▍       | 39/160 [02:51<05:44,  2.85s/it]Routing+Eval:  25%|██▌       | 40/160 [02:52<04:35,  2.30s/it]Routing+Eval:  26%|██▌       | 41/160 [02:53<03:49,  1.93s/it]Routing+Eval:  26%|██▋       | 42/160 [02:55<03:20,  1.70s/it]Routing+Eval:  27%|██▋       | 43/160 [02:56<03:06,  1.59s/it]Routing+Eval:  28%|██▊       | 44/160 [02:57<03:03,  1.58s/it]Routing+Eval:  28%|██▊       | 45/160 [02:59<02:56,  1.53s/it]Routing+Eval:  29%|██▉       | 46/160 [03:00<02:33,  1.35s/it]Routing+Eval:  29%|██▉       | 47/160 [03:01<02:18,  1.23s/it]Routing+Eval:  30%|███       | 48/160 [03:03<02:38,  1.42s/it]Routing+Eval:  31%|███       | 49/160 [03:04<02:32,  1.37s/it]Routing+Eval:  31%|███▏      | 50/160 [03:05<02:35,  1.41s/it]Routing+Eval:  32%|███▏      | 51/160 [03:07<02:30,  1.38s/it]Routing+Eval:  32%|███▎      | 52/160 [03:08<02:27,  1.37s/it]Routing+Eval:  33%|███▎      | 53/160 [03:09<02:21,  1.32s/it]Routing+Eval:  34%|███▍      | 54/160 [03:11<02:21,  1.33s/it]Routing+Eval:  34%|███▍      | 55/160 [03:12<02:27,  1.40s/it]Routing+Eval:  35%|███▌      | 56/160 [03:13<02:17,  1.32s/it]Routing+Eval:  36%|███▌      | 57/160 [03:15<02:33,  1.49s/it]Routing+Eval:  36%|███▋      | 58/160 [03:16<02:23,  1.41s/it]Routing+Eval:  37%|███▋      | 59/160 [03:18<02:13,  1.32s/it]Routing+Eval:  38%|███▊      | 60/160 [03:19<02:10,  1.31s/it]Routing+Eval:  38%|███▊      | 61/160 [03:20<02:00,  1.22s/it]Routing+Eval:  39%|███▉      | 62/160 [03:21<01:59,  1.22s/it]Routing+Eval:  39%|███▉      | 63/160 [03:22<02:01,  1.26s/it]Routing+Eval:  40%|████      | 64/160 [03:24<01:57,  1.23s/it]Routing+Eval:  41%|████      | 65/160 [03:25<02:16,  1.43s/it]Routing+Eval:  41%|████▏     | 66/160 [03:27<02:19,  1.49s/it]Routing+Eval:  42%|████▏     | 67/160 [03:28<01:59,  1.28s/it]Routing+Eval:  42%|████▎     | 68/160 [03:29<01:52,  1.22s/it]Routing+Eval:  43%|████▎     | 69/160 [03:30<01:46,  1.17s/it]Routing+Eval:  44%|████▍     | 70/160 [03:31<01:42,  1.14s/it]Routing+Eval:  44%|████▍     | 71/160 [03:32<01:35,  1.08s/it]Routing+Eval:  45%|████▌     | 72/160 [03:33<01:31,  1.04s/it]Routing+Eval:  46%|████▌     | 73/160 [03:35<01:44,  1.20s/it]Routing+Eval:  46%|████▋     | 74/160 [03:36<01:51,  1.29s/it]Routing+Eval:  47%|████▋     | 75/160 [03:37<01:42,  1.21s/it]Routing+Eval:  48%|████▊     | 76/160 [03:39<01:53,  1.36s/it]Routing+Eval:  48%|████▊     | 77/160 [03:40<01:43,  1.24s/it]Routing+Eval:  49%|████▉     | 78/160 [03:41<01:46,  1.30s/it]Routing+Eval:  49%|████▉     | 79/160 [03:42<01:34,  1.17s/it]Routing+Eval:  50%|█████     | 80/160 [03:43<01:36,  1.21s/it]Routing+Eval:  51%|█████     | 81/160 [03:44<01:30,  1.14s/it]Routing+Eval:  51%|█████▏    | 82/160 [03:46<01:41,  1.30s/it]Routing+Eval:  52%|█████▏    | 83/160 [03:48<01:45,  1.37s/it]Routing+Eval:  52%|█████▎    | 84/160 [03:49<01:47,  1.41s/it]Routing+Eval:  53%|█████▎    | 85/160 [03:50<01:40,  1.34s/it]Routing+Eval:  54%|█████▍    | 86/160 [03:52<01:41,  1.37s/it]Routing+Eval:  54%|█████▍    | 87/160 [03:53<01:33,  1.28s/it]Routing+Eval:  55%|█████▌    | 88/160 [03:55<01:44,  1.45s/it]Routing+Eval:  56%|█████▌    | 89/160 [03:56<01:45,  1.48s/it]Routing+Eval:  56%|█████▋    | 90/160 [03:57<01:38,  1.40s/it]Routing+Eval:  57%|█████▋    | 91/160 [03:59<01:35,  1.38s/it]Routing+Eval:  57%|█████▊    | 92/160 [04:01<01:47,  1.58s/it]Routing+Eval:  58%|█████▊    | 93/160 [04:02<01:47,  1.60s/it]Routing+Eval:  59%|█████▉    | 94/160 [04:04<01:38,  1.49s/it]Routing+Eval:  59%|█████▉    | 95/160 [04:05<01:28,  1.36s/it]Routing+Eval:  60%|██████    | 96/160 [04:06<01:28,  1.38s/it]Routing+Eval:  61%|██████    | 97/160 [04:07<01:17,  1.24s/it]Routing+Eval:  61%|██████▏   | 98/160 [04:08<01:18,  1.27s/it]Routing+Eval:  62%|██████▏   | 99/160 [04:09<01:10,  1.16s/it]Routing+Eval:  62%|██████▎   | 100/160 [04:11<01:12,  1.21s/it]Routing+Eval:  63%|██████▎   | 101/160 [04:12<01:12,  1.23s/it]Routing+Eval:  64%|██████▍   | 102/160 [04:14<01:19,  1.37s/it]Routing+Eval:  64%|██████▍   | 103/160 [04:15<01:13,  1.29s/it]Routing+Eval:  65%|██████▌   | 104/160 [04:16<01:16,  1.36s/it]Routing+Eval:  66%|██████▌   | 105/160 [04:17<01:14,  1.36s/it]Routing+Eval:  66%|██████▋   | 106/160 [04:19<01:14,  1.39s/it]Routing+Eval:  67%|██████▋   | 107/160 [04:21<01:17,  1.46s/it]Routing+Eval:  68%|██████▊   | 108/160 [04:21<01:06,  1.29s/it]Routing+Eval:  68%|██████▊   | 109/160 [04:22<00:58,  1.14s/it]Routing+Eval:  69%|██████▉   | 110/160 [04:24<01:11,  1.43s/it]Routing+Eval:  69%|██████▉   | 111/160 [04:26<01:10,  1.44s/it]Routing+Eval:  70%|███████   | 112/160 [04:28<01:15,  1.57s/it]Routing+Eval:  71%|███████   | 113/160 [04:29<01:07,  1.44s/it]Routing+Eval:  71%|███████▏  | 114/160 [04:30<00:59,  1.29s/it]Routing+Eval:  72%|███████▏  | 115/160 [04:31<00:57,  1.28s/it]Routing+Eval:  72%|███████▎  | 116/160 [04:32<00:52,  1.20s/it]Routing+Eval:  73%|███████▎  | 117/160 [04:33<00:51,  1.20s/it]Routing+Eval:  74%|███████▍  | 118/160 [04:34<00:48,  1.15s/it]Routing+Eval:  74%|███████▍  | 119/160 [04:35<00:47,  1.16s/it]Routing+Eval:  75%|███████▌  | 120/160 [04:37<00:47,  1.19s/it]Routing+Eval:  76%|███████▌  | 121/160 [04:38<00:50,  1.30s/it]Routing+Eval:  76%|███████▋  | 122/160 [04:40<00:56,  1.48s/it]Routing+Eval:  77%|███████▋  | 123/160 [04:41<00:48,  1.32s/it]Routing+Eval:  78%|███████▊  | 124/160 [04:42<00:45,  1.27s/it]Routing+Eval:  78%|███████▊  | 125/160 [04:43<00:43,  1.25s/it]Routing+Eval:  79%|███████▉  | 126/160 [04:45<00:47,  1.38s/it]Routing+Eval:  79%|███████▉  | 127/160 [04:46<00:43,  1.31s/it]Routing+Eval:  80%|████████  | 128/160 [04:47<00:39,  1.22s/it]Routing+Eval:  81%|████████  | 129/160 [04:49<00:39,  1.28s/it]Routing+Eval:  81%|████████▏ | 130/160 [04:50<00:34,  1.15s/it]Routing+Eval:  82%|████████▏ | 131/160 [04:51<00:32,  1.10s/it]Routing+Eval:  82%|████████▎ | 132/160 [04:52<00:32,  1.17s/it]Routing+Eval:  83%|████████▎ | 133/160 [04:53<00:33,  1.25s/it]Routing+Eval:  84%|████████▍ | 134/160 [04:54<00:30,  1.17s/it]Routing+Eval:  84%|████████▍ | 135/160 [04:55<00:28,  1.13s/it]Routing+Eval:  85%|████████▌ | 136/160 [04:57<00:30,  1.27s/it]Routing+Eval:  86%|████████▌ | 137/160 [04:59<00:33,  1.48s/it]Routing+Eval:  86%|████████▋ | 138/160 [05:00<00:30,  1.39s/it]Routing+Eval:  87%|████████▋ | 139/160 [05:01<00:26,  1.25s/it]Routing+Eval:  88%|████████▊ | 140/160 [05:02<00:24,  1.24s/it]Routing+Eval:  88%|████████▊ | 141/160 [05:03<00:22,  1.21s/it]Routing+Eval:  89%|████████▉ | 142/160 [05:05<00:22,  1.23s/it]Routing+Eval:  89%|████████▉ | 143/160 [05:07<00:24,  1.45s/it]Routing+Eval:  90%|█████████ | 144/160 [05:08<00:21,  1.36s/it]Routing+Eval:  91%|█████████ | 145/160 [05:09<00:19,  1.27s/it]Routing+Eval:  91%|█████████▏| 146/160 [05:10<00:18,  1.32s/it]Routing+Eval:  92%|█████████▏| 147/160 [05:12<00:16,  1.30s/it]Routing+Eval:  92%|█████████▎| 148/160 [05:12<00:14,  1.19s/it]Routing+Eval:  93%|█████████▎| 149/160 [05:14<00:13,  1.22s/it]Routing+Eval:  94%|█████████▍| 150/160 [05:15<00:13,  1.36s/it]Routing+Eval:  94%|█████████▍| 151/160 [05:17<00:11,  1.31s/it]Routing+Eval:  95%|█████████▌| 152/160 [05:18<00:10,  1.34s/it]Routing+Eval:  96%|█████████▌| 153/160 [05:20<00:09,  1.40s/it]Routing+Eval:  96%|█████████▋| 154/160 [05:21<00:08,  1.36s/it]Routing+Eval:  97%|█████████▋| 155/160 [05:22<00:06,  1.35s/it]Routing+Eval:  98%|█████████▊| 156/160 [05:24<00:05,  1.35s/it]Routing+Eval:  98%|█████████▊| 157/160 [05:25<00:04,  1.41s/it]Routing+Eval:  99%|█████████▉| 158/160 [05:26<00:02,  1.31s/it]Routing+Eval:  99%|█████████▉| 159/160 [05:27<00:01,  1.31s/it]Routing+Eval: 100%|██████████| 160/160 [05:29<00:00,  1.30s/it]Routing+Eval: 100%|██████████| 160/160 [05:29<00:00,  2.06s/it]
+    'Yes' token: 9454
+    'No' token:  2753
+
+=== Orchestrator Results ===
+Model: vit-b-32
+Queries: 160
+Fallbacks: 0 (0.0%)
+AP: 30.24  nDCG: 59.04  MRR: 0.459
+
+By executed method:
+   model executed_method        ap      ndcg     mrr  precision  recall  n_queries  query_share
+vit-b-32             t2t 54.541213 86.036826 1.00000   0.270000     1.0          1      0.00625
+vit-b-32             i2i 30.487482 62.790460 0.42381   0.238000     1.0          5      0.03125
+vit-b-32             t2i 30.069740 58.745289 0.45690   0.183831     1.0        154      0.96250
+
+By chosen->executed usage:
+   model chosen_method executed_method  n_queries  fallback_rate  avg_router_confidence        ap      ndcg     mrr  query_share
+vit-b-32           i2i             i2i          5            0.0               0.910000 30.487482 62.790460 0.42381      0.03125
+vit-b-32           t2i             t2i        154            0.0               0.855844 30.069740 58.745289 0.45690      0.96250
+vit-b-32           t2t             t2t          1            0.0               0.850000 54.541213 86.036826 1.00000      0.00625
+
+Method counts (chosen and executed):
+   model usage_type method  n_queries  query_share
+vit-b-32     chosen    t2i        154      0.96250
+vit-b-32     chosen    i2i          5      0.03125
+vit-b-32     chosen    t2t          1      0.00625
+vit-b-32   executed    t2i        154      0.96250
+vit-b-32   executed    i2i          5      0.03125
+vit-b-32   executed    t2t          1      0.00625
+
+Saved query-level results to: output/retrieval/method_router/results_orchestrator_vit-b-32_test.csv
+Saved method summary to: output/retrieval/method_router/results_orchestrator_vit-b-32_test_summary.csv
+Saved usage summary to: output/retrieval/method_router/results_orchestrator_vit-b-32_test_usage.csv
+Saved method counts to: output/retrieval/method_router/results_orchestrator_vit-b-32_test_usage_method_counts.csv
+Saved decision cache to: output/retrieval/method_router/decision_cache_vit-b-32_test.json
+Saved caption cache to: output/retrieval/method_router/caption_cache_test.json
+Done.
+
+======== GPU REPORT ========
+
+==============NVSMI LOG==============
+
+Timestamp                                 : Mon Apr 20 14:37:52 2026
+Driver Version                            : 580.95.05
+CUDA Version                              : 13.0
+
+Attached GPUs                             : 1
+GPU 00000000:4A:00.0
+    Accounting Mode                       : Enabled
+    Accounting Mode Buffer Size           : 4000
+    Accounted Processes
+        Process ID                        : 922620
+            GPU Utilization               : 60 %
+            Memory Utilization            : 51 %
+            Max memory usage              : 15740 MiB
+            Time                          : 354818 ms
+            Is Running                    : 0
+
+Mon Apr 20 14:37:52 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.95.05              Driver Version: 580.95.05      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40S                    On  |   00000000:4A:00.0 Off |                    0 |
+| N/A   44C    P0            107W /  325W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+

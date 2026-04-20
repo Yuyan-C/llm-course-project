@@ -1,0 +1,7 @@
+model,usage_type,method,n_queries,query_share
+siglip-vit-b-16,chosen,t2i,154,0.9625
+siglip-vit-b-16,chosen,i2i,5,0.03125
+siglip-vit-b-16,chosen,t2t,1,0.00625
+siglip-vit-b-16,executed,t2i,154,0.9625
+siglip-vit-b-16,executed,i2i,5,0.03125
+siglip-vit-b-16,executed,t2t,1,0.00625
