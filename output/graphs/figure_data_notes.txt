@@ -1,0 +1,17 @@
+Paper Figure Generation Notes
+
+Data sources:
+- Orchestrator per-query CSVs: /home/mila/e/echchabo/projects/llm-course-project/output/retrieval/method_router
+- T2I fixed runs: results_rerank_with_clip_test_bio.csv, results_rerank_with_clip_test_siglip.csv
+- I2I fixed run: /home/mila/e/echchabo/projects/llm-course-project/archive/results_top8_filtered_topk_all_models_test.csv
+- T2T proxy run: /home/mila/e/echchabo/projects/llm-course-project/results_rerank_with_llm_test_qwen4b_cap.csv
+
+Important caveat:
+- Per-model fixed T2T retrieval CSVs were not found in this workspace.
+- Figures that require T2T per-query per-model use qwen4b caption run as a cross-model proxy.
+
+Record counts by model:
+- vit-b-32: 160 queries
+- bioclip: 160 queries
+- biocap: 160 queries
+- siglip-vit-b-16: 160 queries
