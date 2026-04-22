@@ -1,0 +1,49 @@
+Traceback (most recent call last):
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 57, in <module>
+    main()
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 42, in main
+    raise FileNotFoundError(path)
+FileNotFoundError: output/retrieval/method_benchmarks/shards/test/caption_cache_test_shard3_of6.json
+Traceback (most recent call last):
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 57, in <module>
+    main()
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 42, in main
+    raise FileNotFoundError(path)
+FileNotFoundError: output/retrieval/method_benchmarks/shards/test/caption_cache_test_shard3_of6.json
+Traceback (most recent call last):
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 57, in <module>
+    main()
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 42, in main
+    raise FileNotFoundError(path)
+FileNotFoundError: output/retrieval/method_benchmarks/shards/test/caption_cache_test_shard3_of6.json
+Traceback (most recent call last):
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 57, in <module>
+    main()
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 42, in main
+    raise FileNotFoundError(path)
+FileNotFoundError: output/retrieval/method_benchmarks/shards/test/caption_cache_test_shard3_of6.json
+Traceback (most recent call last):
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 57, in <module>
+    main()
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 42, in main
+    raise FileNotFoundError(path)
+FileNotFoundError: output/retrieval/method_benchmarks/shards/test/caption_cache_test_shard3_of6.json
+Traceback (most recent call last):
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 57, in <module>
+    main()
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 42, in main
+    raise FileNotFoundError(path)
+FileNotFoundError: output/retrieval/method_benchmarks/shards/test/caption_cache_test_shard3_of6.json
+Traceback (most recent call last):
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 57, in <module>
+    main()
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 42, in main
+    raise FileNotFoundError(path)
+FileNotFoundError: output/retrieval/method_benchmarks/shards/test/caption_cache_test_shard3_of6.json
+Traceback (most recent call last):
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 57, in <module>
+    main()
+  File "/home/mila/e/echchabo/projects/llm-course-project/scripts/merge_caption_shards.py", line 42, in main
+    raise FileNotFoundError(path)
+FileNotFoundError: output/retrieval/method_benchmarks/shards/test/caption_cache_test_shard4_of6.json
+Merged 6 shards into output/retrieval/method_benchmarks/caption_cache_test.json (3400 entries).

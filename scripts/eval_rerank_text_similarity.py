@@ -92,6 +92,29 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Ignore existing caption cache and regenerate captions.",
     )
+    parser.add_argument(
+        "--caption-only",
+        action="store_true",
+        help="Generate/update caption cache and exit without running text reranking.",
+    )
+    parser.add_argument(
+        "--caption-num-shards",
+        type=int,
+        default=1,
+        help="Split caption generation into N deterministic shards.",
+    )
+    parser.add_argument(
+        "--caption-shard-index",
+        type=int,
+        default=0,
+        help="0-based shard index to run when --caption-num-shards > 1.",
+    )
+    parser.add_argument(
+        "--caption-save-every",
+        type=int,
+        default=200,
+        help="Persist caption cache every N generated captions (0 disables periodic saves).",
+    )
     return parser.parse_args()
 
 
@@ -150,6 +173,24 @@ def _caption_key(image_id: Any, caption_model: str) -> str:
     return f"{caption_model}::inat24:{image_id}"
 
 
+def select_image_ids_for_shard(
+    image_ids: list[Any],
+    *,
+    num_shards: int,
+    shard_index: int,
+) -> list[Any]:
+    if num_shards < 1:
+        raise ValueError("--caption-num-shards must be >= 1.")
+    if shard_index < 0 or shard_index >= num_shards:
+        raise ValueError(
+            f"--caption-shard-index must be in [0, {num_shards - 1}] when --caption-num-shards={num_shards}.",
+        )
+    unique_image_ids = list(dict.fromkeys(image_ids))
+    if num_shards == 1:
+        return unique_image_ids
+    return [image_id for idx, image_id in enumerate(unique_image_ids) if idx % num_shards == shard_index]
+
+
 def load_caption_model_with_retries(args: argparse.Namespace, *, device: str) -> ModelWrapper:
     last_exc: Exception | None = None
     for attempt in range(1, args.caption_load_retries + 2):
@@ -181,6 +222,9 @@ def generate_missing_captions(
     caption_prompt: str,
     caption_max_new_tokens: int,
     caption_temperature: float,
+    caption_cache_path: Path,
+    caption_save_every: int,
+    progress_desc: str,
 ) -> None:
     missing_ids: list[Any] = []
     for image_id in dict.fromkeys(image_ids):
@@ -193,7 +237,7 @@ def generate_missing_captions(
     if not missing_ids:
         return
 
-    for image_id in tqdm(missing_ids, desc="Captioning test images"):
+    for processed, image_id in enumerate(tqdm(missing_ids, desc=progress_desc), start=1):
         key = _caption_key(image_id, caption_model_name)
         idx = image_id_to_index[image_id]
         try:
@@ -208,6 +252,8 @@ def generate_missing_captions(
             caption_cache[key] = " ".join(str(caption).split()) if caption else "unlabeled image"
         except Exception as exc:
             caption_cache[key] = f"unlabeled image ({exc.__class__.__name__})"
+        if caption_save_every > 0 and (processed % caption_save_every == 0):
+            save_caption_cache(caption_cache_path, caption_cache)
 
 
 def _tokenize_for_model(tokenizer: Any, texts: list[str], device: str) -> Any:
@@ -265,6 +311,14 @@ def main() -> None:
     args = parse_args()
     patch_transformers_tokenizer_compat()
 
+    if args.caption_num_shards < 1:
+        raise ValueError("--caption-num-shards must be >= 1.")
+    if args.caption_shard_index < 0 or args.caption_shard_index >= args.caption_num_shards:
+        raise ValueError(
+            f"--caption-shard-index must be in [0, {args.caption_num_shards - 1}] "
+            f"when --caption-num-shards={args.caption_num_shards}.",
+        )
+
     split = args.split
     save_results_path = args.save_results_path or f"results_rerank_text_similarity_{split}.csv"
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -294,6 +348,16 @@ def main() -> None:
         for query in unique_queries
         for idx in query_to_indices.get(query, [])
     ]
+    shard_image_ids = select_image_ids_for_shard(
+        required_image_ids,
+        num_shards=args.caption_num_shards,
+        shard_index=args.caption_shard_index,
+    )
+    print(
+        "Caption shard selection: "
+        f"{len(shard_image_ids)} unique images in shard "
+        f"{args.caption_shard_index + 1}/{args.caption_num_shards}."
+    )
 
     caption_cache = {} if args.force_regenerate_captions else load_caption_cache(caption_cache_path)
     print(f"Caption cache entries loaded: {len(caption_cache)} from {caption_cache_path}")
@@ -301,7 +365,7 @@ def main() -> None:
     print(f"Loading caption VLM on {device}: {args.caption_vlm_model}")
     caption_wrapper = load_caption_model_with_retries(args, device=device)
     generate_missing_captions(
-        image_ids=required_image_ids,
+        image_ids=shard_image_ids,
         caption_cache=caption_cache,
         force_regenerate=args.force_regenerate_captions,
         caption_model_name=args.caption_vlm_model,
@@ -311,6 +375,13 @@ def main() -> None:
         caption_prompt=args.caption_prompt,
         caption_max_new_tokens=args.caption_max_new_tokens,
         caption_temperature=args.caption_temperature,
+        caption_cache_path=caption_cache_path,
+        caption_save_every=max(0, int(args.caption_save_every)),
+        progress_desc=(
+            f"Captioning {split} images (shard {args.caption_shard_index + 1}/{args.caption_num_shards})"
+            if args.caption_num_shards > 1
+            else f"Captioning {split} images"
+        ),
     )
     save_caption_cache(caption_cache_path, caption_cache)
     print(f"Saved caption cache to {caption_cache_path} ({len(caption_cache)} entries)")
@@ -321,6 +392,10 @@ def main() -> None:
         del caption_wrapper.processor
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
+
+    if args.caption_only:
+        print("Caption-only mode enabled; skipping text reranking.")
+        return
 
     all_models_available = {
         "vit-b-32": "hf_clip:openai/clip-vit-base-patch32",
